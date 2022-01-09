@@ -213,6 +213,7 @@ $lang['error_to_update_data'] = "Error to update data";
 $lang['multiple_choice_multiple_answer'] = "Multiple Choice Multiple Answer";
 $lang['multiple_choice_single_answer'] = "Multiple Choice Single Answer";
 $lang['match_the_column'] = "Match the Column";
+$lang['Match the Column'] = "Match the Column";
 $lang['short_answer'] = "Short Answer";
 $lang['submit_quiz'] = "Submit Quiz";
 $lang['clear'] = "Clear";
