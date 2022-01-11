@@ -658,9 +658,9 @@ function saved_answers($rid){
 	}
 	$percentage_obtained=($marks/(array_sum($correct_score)))*100;
 	if($percentage_obtained >= $quiz['pass_percentage']){
-		$qr=$this->lang->line('pass');
+		$qr='pass';
 	}else{
-		$qr=$this->lang->line('fail');
+		$qr='fail';
 		
 	}
 	 $userdata=array(
@@ -670,7 +670,7 @@ function saved_answers($rid){
 	 'manual_valuation'=>$manual_valuation
 	 );
 	 if($manual_valuation == 1){
-		 $userdata['result_status']=$this->lang->line('pending');
+		 $userdata['result_status']='pending';
 	}else{
 		$userdata['result_status']=$qr;
 	}
@@ -748,9 +748,9 @@ function saved_answers($rid){
 	$percentage_obtained=($marks/($quiz['noq']*$correct_score))*100;
 	}
 	if($percentage_obtained >= $quiz['pass_percentage']){
-		$qr=$this->lang->line('pass');
+		$qr='pass';
 	}else{
-		$qr=$this->lang->line('fail');
+		$qr='fail';
 		
 	}
 	 $userdata=array(
@@ -761,7 +761,7 @@ function saved_answers($rid){
 	 'manual_valuation'=>$manual_valuation
 	 );
 	 if($manual_valuation == 1){
-		 $userdata['result_status']=$this->lang->line('pending');
+		 $userdata['result_status']='pending';
 	}else{
 		$userdata['result_status']=$qr;
 	}

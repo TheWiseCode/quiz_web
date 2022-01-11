@@ -60,7 +60,7 @@ CREATE TABLE `appointment_request` (
   `to_id` int(11) NOT NULL,
   `appointment_timing` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `appointment_time_zone` varchar(100) NOT NULL DEFAULT 'Asia/Kolkata',
-  `appointment_status` varchar(100) NOT NULL DEFAULT 'Pending'
+  `appointment_status` varchar(100) NOT NULL DEFAULT 'pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -633,7 +633,7 @@ CREATE TABLE `savsoft_payment` (
   `amount` float NOT NULL,
   `paid_date` int(11) NOT NULL,
   `payment_gateway` varchar(100) NOT NULL DEFAULT 'Paypal',
-  `payment_status` varchar(100) NOT NULL DEFAULT 'Pending',
+  `payment_status` varchar(100) NOT NULL DEFAULT 'pending',
   `transaction_id` varchar(1000) NOT NULL,
   `other_data` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -653,7 +653,7 @@ INSERT INTO `savsoft_payment` (`pid`, `uid`, `gid`, `quid`, `amount`, `paid_date
 
 CREATE TABLE `savsoft_qbank` (
   `qid` int(11) NOT NULL,
-  `question_type` varchar(100) NOT NULL DEFAULT 'Multiple Choice Single Answer',
+  `question_type` varchar(100) NOT NULL DEFAULT 'multiple_choice_single_answer',
   `question` text NOT NULL,
   `description` text NOT NULL,
   `question1` text,
@@ -676,18 +676,18 @@ CREATE TABLE `savsoft_qbank` (
 --
 
 INSERT INTO `savsoft_qbank` (`qid`, `question_type`, `question`, `description`, `question1`, `description1`, `cid`, `lid`, `no_time_served`, `no_time_corrected`, `no_time_incorrected`, `no_time_unattempted`, `inserted_by`, `inserted_by_name`, `paragraph`, `paragraph1`, `parent_id`) VALUES
-(79, 'Multiple Choice Single Answer', ' what is 2+2 =?', '  description here', ' what is 2+2 =? &ndash; This is second language question Note &ndash; keep question number same as its primary language question', '  description here', 1, 1, 55, 16, 15, 24, 0, NULL, NULL, NULL, 0),
-(80, 'Multiple Choice Single Answer', ' what is 2+2 =? &ndash; This is second language question Note &ndash; keep question number same as its primary language question', '  description here', NULL, NULL, 1, 1, 21, 2, 10, 9, 0, NULL, NULL, NULL, 0),
-(81, 'Multiple Choice Multiple Answer', ' what is 2+6 =?', '  ', NULL, NULL, 2, 1, 48, 13, 19, 16, 0, NULL, NULL, NULL, 0),
-(82, 'Multiple Choice Single Answer', ' Who is in the picture?<img src=&#34;http://localhost/savsoftquiz_v4.0_enterprise/upload/word_images/15090303561.jpeg&#34;>', '  ', NULL, NULL, 1, 1, 0, 0, 0, 0, 0, NULL, NULL, NULL, 0),
-(111, 'Multiple Choice Single Answer', ' what is 2+2 =?', '  description here', ' what is 2+2 =? &ndash; This is second language question Note &ndash; keep question number same as its primary language question', '  description here', 2, 1, 0, 0, 0, 0, 0, NULL, '', NULL, 0),
-(112, 'Multiple Choice Single Answer', ' what is 2+2 =? &ndash; This is second language question Note &ndash; keep question number same as its primary language question', '  description here', NULL, NULL, 2, 1, 0, 0, 0, 0, 0, NULL, '', NULL, 0),
-(113, 'Multiple Choice Multiple Answer', ' what is 2+6 =?', '  ', NULL, NULL, 2, 1, 0, 0, 0, 0, 0, NULL, '', NULL, 0),
-(114, 'Multiple Choice Single Answer', ' Who is in the picture?<img src=&#34;http://localhost/savsoftquiz_v4.0_enterprise/upload/word_images/15091000591.jpeg&#34;>', '  ', NULL, NULL, 2, 1, 0, 0, 0, 0, 0, NULL, '', NULL, 0),
-(115, 'Multiple Choice Single Answer', ' what is 2+2 =?', '  description here', ' what is 2+2 =? &ndash; This is second language question Note &ndash; keep question number same as its primary language question', '  description here', 2, 1, 2, 0, 1, 1, 0, NULL, ' Paragraph here', ' Paragraph here', 0),
-(116, 'Multiple Choice Single Answer', ' what is 2+2 =? &ndash; This is second language question Note &ndash; keep question number same as its primary language question', '  description here', NULL, NULL, 2, 1, 0, 0, 0, 0, 0, NULL, ' Paragraph here', NULL, 0),
-(117, 'Multiple Choice Multiple Answer', ' what is 2+6 =?', '  ', NULL, NULL, 2, 1, 2, 0, 0, 2, 0, NULL, '', NULL, 0),
-(118, 'Multiple Choice Single Answer', '<p>Who is in the picture?<img src=\"../../../../savsoftquiz_v4.0_enterprise/upload/word_images/15091002001.jpeg\" /></p>', '', NULL, NULL, 2, 1, 2, 0, 0, 2, 0, NULL, NULL, NULL, 0);
+(79, 'multiple_choice_single_answer', ' what is 2+2 =?', '  description here', ' what is 2+2 =? &ndash; This is second language question Note &ndash; keep question number same as its primary language question', '  description here', 1, 1, 55, 16, 15, 24, 0, NULL, NULL, NULL, 0),
+(80, 'multiple_choice_single_answer', ' what is 2+2 =? &ndash; This is second language question Note &ndash; keep question number same as its primary language question', '  description here', NULL, NULL, 1, 1, 21, 2, 10, 9, 0, NULL, NULL, NULL, 0),
+(81, 'multiple_choice_multiple_answer', ' what is 2+6 =?', '  ', NULL, NULL, 2, 1, 48, 13, 19, 16, 0, NULL, NULL, NULL, 0),
+(82, 'multiple_choice_single_answer', ' Who is in the picture?<img src=&#34;http://localhost/savsoftquiz_v4.0_enterprise/upload/word_images/15090303561.jpeg&#34;>', '  ', NULL, NULL, 1, 1, 0, 0, 0, 0, 0, NULL, NULL, NULL, 0),
+(111, 'multiple_choice_single_answer', ' what is 2+2 =?', '  description here', ' what is 2+2 =? &ndash; This is second language question Note &ndash; keep question number same as its primary language question', '  description here', 2, 1, 0, 0, 0, 0, 0, NULL, '', NULL, 0),
+(112, 'multiple_choice_single_answer', ' what is 2+2 =? &ndash; This is second language question Note &ndash; keep question number same as its primary language question', '  description here', NULL, NULL, 2, 1, 0, 0, 0, 0, 0, NULL, '', NULL, 0),
+(113, 'multiple_choice_multiple_answer', ' what is 2+6 =?', '  ', NULL, NULL, 2, 1, 0, 0, 0, 0, 0, NULL, '', NULL, 0),
+(114, 'multiple_choice_single_answer', ' Who is in the picture?<img src=&#34;http://localhost/savsoftquiz_v4.0_enterprise/upload/word_images/15091000591.jpeg&#34;>', '  ', NULL, NULL, 2, 1, 0, 0, 0, 0, 0, NULL, '', NULL, 0),
+(115, 'multiple_choice_single_answer', ' what is 2+2 =?', '  description here', ' what is 2+2 =? &ndash; This is second language question Note &ndash; keep question number same as its primary language question', '  description here', 2, 1, 2, 0, 1, 1, 0, NULL, ' Paragraph here', ' Paragraph here', 0),
+(116, 'multiple_choice_single_answer', ' what is 2+2 =? &ndash; This is second language question Note &ndash; keep question number same as its primary language question', '  description here', NULL, NULL, 2, 1, 0, 0, 0, 0, 0, NULL, ' Paragraph here', NULL, 0),
+(117, 'multiple_choice_multiple_answer', ' what is 2+6 =?', '  ', NULL, NULL, 2, 1, 2, 0, 0, 2, 0, NULL, '', NULL, 0),
+(118, 'multiple_choice_single_answer', '<p>Who is in the picture?<img src=\"../../../../savsoftquiz_v4.0_enterprise/upload/word_images/15091002001.jpeg\" /></p>', '', NULL, NULL, 2, 1, 2, 0, 0, 2, 0, NULL, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -790,24 +790,24 @@ CREATE TABLE `savsoft_result` (
 --
 
 INSERT INTO `savsoft_result` (`rid`, `quid`, `uid`, `result_status`, `start_time`, `end_time`, `categories`, `category_range`, `r_qids`, `individual_time`, `total_time`, `score_obtained`, `percentage_obtained`, `attempted_ip`, `score_individual`, `photo`, `manual_valuation`) VALUES
-(1, 8, 1, 'Pass', 1511412687, 1511412701, 'General knowledge,Math', '2,1', '79,80,81', '0,6,0', 6, 3, 100, '::1', '1,1,1', '', 0),
-(2, 6, 1, 'Fail', 1511413331, 1511413340, 'Math,General knowledge', '1,1', '81,79', '5,0', 5, 0, 0, '::1', '0,0', '', 0),
-(3, 6, 1, 'Fail', 1511413356, 1511413383, 'Math,General knowledge', '1,1', '81,79', '0,5', 5, 0, 0, '::1', '2,2', '', 0),
-(4, 8, 1, 'Pass', 1513919539, 1513919552, 'General knowledge,Math', '2,1', '79,80,81', '0,4,0', 4, 3, 100, '::1', '1,1,1', '', 0),
-(5, 8, 1, 'Fail', 1514276635, 1514276648, 'General knowledge,Math', '2,1', '79,80,81', '0,5,4', 9, 0.5, 5.55556, '::1', '1,2,2', '', 0),
-(6, 8, 1, 'Fail', 1514276724, 1514276735, 'General knowledge,Math', '2,1', '79,80,81', '0,5,3', 8, -0.5, -5.55556, '::1', '1,2,2', '', 0),
-(7, 8, 1, 'Fail', 1552662063, 1552662225, 'General knowledge,Math', '2,1', '79,80,81', '89,7,0', 96, -2.5, -83.3333, '::1', '2,2,2', '', 0),
-(8, 8, 1, 'Fail', 1552669931, 1552669944, 'General knowledge,Math', '2,1', '79,80,81', '0,7,2', 9, -0.5, -16.6667, '::1', '1,2,2', '', 0),
-(9, 8, 1, 'Fail', 1552889514, 1552889691, 'General knowledge,Math', '2,1', '79,80,81', '35,43,53', 131, -0.5, -16.6667, '::1', '1,2,2', '', 0),
-(10, 8, 5, 'Fail', 1552913410, 1552913423, 'General knowledge,Math', '2,1', '79,80,81', '0,5,0', 5, -2.5, -83.3333, '::1', '2,2,2', '', 0),
-(11, 8, 1, 'Fail', 1553771627, 1553771665, 'General knowledge,Math', '2,1', '79,80,81', '0,0,0', 0, -1, -33.3333, '::1', '2,0,0', '', 0),
-(12, 8, 1, 'Fail', 1553771675, 1553771682, 'General knowledge,Math', '2,1', '79,80,81', '3,0,0', 3, -1, -33.3333, '::1', '2,0,0', '', 0),
-(13, 7, 1, 'Fail', 1556044127, 1556044162, 'Math', '3', '115,117,118', '0,30,0', 30, 0, 0, '::1', '2,0,0', '', 0),
-(14, 6, 1, 'Fail', 1556044200, 1556044253, 'Math,General knowledge', '1,1', '81,79', '7,41', 48, 0, 0, '::1', '2,2', '', 0),
-(15, 6, 1, 'Pass', 1557312571, 1557313635, 'Math,General knowledge', '1,1', '81,79', '268,760', 1028, 1, 50, '::1', '2,1', '', 0),
-(16, 6, 1, 'Pass', 1557313955, 1557314164, 'Math,General knowledge', '1,1', '81,79', '0,205', 205, 1, 50, '::1', '1,0', '', 0),
-(17, 8, 13, 'Fail', 1558001409, 1558001423, 'General knowledge,Math', '2,1', '79,80,81', '0,6,0', 6, -2, -66.6667, '::1', '2,2,0', '', 0),
-(18, 8, 1, 'Fail', 1558082971, 1558082983, 'General knowledge,Math', '2,1', '79,80,81', '0,3,0', 3, -2, -66.6667, '::1', '2,2,0', '', 0);
+(1, 8, 1, 'pass', 1511412687, 1511412701, 'General knowledge,Math', '2,1', '79,80,81', '0,6,0', 6, 3, 100, '::1', '1,1,1', '', 0),
+(2, 6, 1, 'fail', 1511413331, 1511413340, 'Math,General knowledge', '1,1', '81,79', '5,0', 5, 0, 0, '::1', '0,0', '', 0),
+(3, 6, 1, 'fail', 1511413356, 1511413383, 'Math,General knowledge', '1,1', '81,79', '0,5', 5, 0, 0, '::1', '2,2', '', 0),
+(4, 8, 1, 'pass', 1513919539, 1513919552, 'General knowledge,Math', '2,1', '79,80,81', '0,4,0', 4, 3, 100, '::1', '1,1,1', '', 0),
+(5, 8, 1, 'fail', 1514276635, 1514276648, 'General knowledge,Math', '2,1', '79,80,81', '0,5,4', 9, 0.5, 5.55556, '::1', '1,2,2', '', 0),
+(6, 8, 1, 'fail', 1514276724, 1514276735, 'General knowledge,Math', '2,1', '79,80,81', '0,5,3', 8, -0.5, -5.55556, '::1', '1,2,2', '', 0),
+(7, 8, 1, 'fail', 1552662063, 1552662225, 'General knowledge,Math', '2,1', '79,80,81', '89,7,0', 96, -2.5, -83.3333, '::1', '2,2,2', '', 0),
+(8, 8, 1, 'fail', 1552669931, 1552669944, 'General knowledge,Math', '2,1', '79,80,81', '0,7,2', 9, -0.5, -16.6667, '::1', '1,2,2', '', 0),
+(9, 8, 1, 'fail', 1552889514, 1552889691, 'General knowledge,Math', '2,1', '79,80,81', '35,43,53', 131, -0.5, -16.6667, '::1', '1,2,2', '', 0),
+(10, 8, 5, 'fail', 1552913410, 1552913423, 'General knowledge,Math', '2,1', '79,80,81', '0,5,0', 5, -2.5, -83.3333, '::1', '2,2,2', '', 0),
+(11, 8, 1, 'fail', 1553771627, 1553771665, 'General knowledge,Math', '2,1', '79,80,81', '0,0,0', 0, -1, -33.3333, '::1', '2,0,0', '', 0),
+(12, 8, 1, 'fail', 1553771675, 1553771682, 'General knowledge,Math', '2,1', '79,80,81', '3,0,0', 3, -1, -33.3333, '::1', '2,0,0', '', 0),
+(13, 7, 1, 'fail', 1556044127, 1556044162, 'Math', '3', '115,117,118', '0,30,0', 30, 0, 0, '::1', '2,0,0', '', 0),
+(14, 6, 1, 'fail', 1556044200, 1556044253, 'Math,General knowledge', '1,1', '81,79', '7,41', 48, 0, 0, '::1', '2,2', '', 0),
+(15, 6, 1, 'pass', 1557312571, 1557313635, 'Math,General knowledge', '1,1', '81,79', '268,760', 1028, 1, 50, '::1', '2,1', '', 0),
+(16, 6, 1, 'pass', 1557313955, 1557314164, 'Math,General knowledge', '1,1', '81,79', '0,205', 205, 1, 50, '::1', '1,0', '', 0),
+(17, 8, 13, 'fail', 1558001409, 1558001423, 'General knowledge,Math', '2,1', '79,80,81', '0,6,0', 6, -2, -66.6667, '::1', '2,2,0', '', 0),
+(18, 8, 1, 'fail', 1558082971, 1558082983, 'General knowledge,Math', '2,1', '79,80,81', '0,3,0', 3, -2, -66.6667, '::1', '2,2,0', '', 0);
 
 -- --------------------------------------------------------
 

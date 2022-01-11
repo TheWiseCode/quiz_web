@@ -129,19 +129,19 @@
                         <td>
                             <?php
                             $qn = 1;
-                            if ($val['question_type'] == $this->lang->line('multiple_choice_single_answer')) {
+                            if ($val['question_type'] ==('multiple_choice_single_answer')) {
                                 $qn = 1;
                             }
-                            if ($val['question_type'] == $this->lang->line('multiple_choice_multiple_answer')) {
+                            if ($val['question_type'] ==('multiple_choice_multiple_answer')) {
                                 $qn = 2;
                             }
-                            if ($val['question_type'] == $this->lang->line('match_the_column')) {
+                            if ($val['question_type'] ==('match_the_column')) {
                                 $qn = 3;
                             }
-                            if ($val['question_type'] == $this->lang->line('short_answer')) {
+                            if ($val['question_type'] ==('short_answer')) {
                                 $qn = 4;
                             }
-                            if ($val['question_type'] == $this->lang->line('long_answer')) {
+                            if ($val['question_type'] ==('long_answer')) {
                                 $qn = 5;
                             }
 

@@ -633,7 +633,7 @@ foreach($questions as $qk => $question){
 		<div style="padding:10px;" >
 		 <?php 
 		 // multiple single choice
-		 if($question['question_type']==$this->lang->line('multiple_choice_single_answer')){
+		 if($question['question_type']==('multiple_choice_single_answer')){
 			 
 			 			 			 $save_ans=array();
 			 foreach($saved_answers as $svk => $saved_answer){
@@ -670,7 +670,7 @@ foreach($questions as $qk => $question){
 			
 // multiple_choice_multiple_answer	
 
-		 if($question['question_type']==$this->lang->line('multiple_choice_multiple_answer')){
+		 if($question['question_type']==('multiple_choice_multiple_answer')){
 			 			 $save_ans=array();
 			 foreach($saved_answers as $svk => $saved_answer){
 				 if($question['qid']==$saved_answer['qid']){
@@ -705,7 +705,7 @@ foreach($questions as $qk => $question){
 			 
 	// short answer	
 
-		 if($question['question_type']==$this->lang->line('short_answer')){
+		 if($question['question_type']==('short_answer')){
 			 			 $save_ans="";
 			 foreach($saved_answers as $svk => $saved_answer){
 				 if($question['qid']==$saved_answer['qid']){
@@ -739,7 +739,7 @@ foreach($questions as $qk => $question){
 		 
 		 	// long answer	
 
-		 if($question['question_type']==$this->lang->line('long_answer')){
+		 if($question['question_type']==('long_answer')){
 			 $save_ans="";
 			 foreach($saved_answers as $svk => $saved_answer){
 				 if($question['qid']==$saved_answer['qid']){
@@ -784,7 +784,7 @@ foreach($questions as $qk => $question){
 		
 		// matching	
 
-		 if($question['question_type']==$this->lang->line('match_the_column')){
+		 if($question['question_type']==('match_the_column')){
 			 			 			 $save_ans=array();
 			 foreach($saved_answers as $svk => $saved_answer){
 				 if($question['qid']==$saved_answer['qid']){
