@@ -113,9 +113,9 @@
 
                                                 ?>
                                                 <a href="javascript: if(confirm('Do you really want to remove this class?')){ window.location='<?php echo site_url('liveclass/remove_class/' . $row['class_id']); ?>'; }"
-                                                   class="btn btn-danger">Remove</a>
+                                                   class="btn btn-danger"><?php echo $this->lang->line('remove'); ?></a>
                                                 <a href="<?php echo site_url('liveclass/edit_class/' . $row['class_id']); ?>"
-                                                   class="btn btn-info">Edit</a>
+                                                   class="btn btn-info"><?php echo $this->lang->line('edit'); ?></a>
                                                 <?php
                                             }
                                             ?>

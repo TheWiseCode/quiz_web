@@ -103,9 +103,10 @@
 
     function ordinal($number)
     {
-        $ends = array('th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th');
+        //TODO: TRADUCCION ORDINAL
+        $ends = array('mo', 'ro', 'do', 'er', 'to', 'to', 'to', 'mo', 'vo', 'no');
         if ((($number % 100) >= 11) && (($number % 100) <= 13))
-            return $number . 'th';
+            return $number . 'mo';
         else
             return $number . $ends[$number % 10];
     }
@@ -945,7 +946,7 @@
                                                 <?php
 
                                                 // multiple single choice
-                                                if ($question['question_type'] == $this->lang->line('multiple_choice_single_answer')) {
+                                                if ($this->lang->line($question['question_type']) == $this->lang->line('multiple_choice_single_answer')) {
 
                                                     $save_ans = array();
                                                     foreach ($saved_answers as $svk => $saved_answer) {
@@ -985,7 +986,7 @@
 
                                                 // multiple_choice_multiple_answer
 
-                                                if ($question['question_type'] == $this->lang->line('multiple_choice_multiple_answer')) {
+                                                if ($this->lang->line($question['question_type']) == $this->lang->line('multiple_choice_multiple_answer')) {
                                                     $save_ans = array();
                                                     foreach ($saved_answers as $svk => $saved_answer) {
                                                         if ($question['qid'] == $saved_answer['qid']) {
@@ -1026,7 +1027,7 @@
 
                                                 // short answer
 
-                                                if ($question['question_type'] == $this->lang->line('short_answer')) {
+                                                if ($this->lang->line($question['question_type']) == $this->lang->line('short_answer')) {
                                                     $save_ans = "";
                                                     foreach ($saved_answers as $svk => $saved_answer) {
                                                         if ($question['qid'] == $saved_answer['qid']) {
@@ -1060,7 +1061,7 @@
 
                                                 // long answer
 
-                                                if ($question['question_type'] == $this->lang->line('long_answer')) {
+                                                if ($this->lang->line($question['question_type']) == $this->lang->line('long_answer')) {
                                                     $save_ans = "";
                                                     foreach ($saved_answers as $svk => $saved_answer) {
                                                         if ($question['qid'] == $saved_answer['qid']) {
@@ -1106,7 +1107,7 @@
 
                                                 // matching
 
-                                                if ($question['question_type'] == $this->lang->line('match_the_column')) {
+                                                if ($this->lang->line($question['question_type']) == $this->lang->line('match_the_column')) {
                                                     $save_ans = array();
                                                     foreach ($saved_answers as $svk => $saved_answer) {
                                                         if ($question['qid'] == $saved_answer['qid']) {

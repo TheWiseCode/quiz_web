@@ -94,9 +94,9 @@ foreach($group_list as $gk => $group){
  <th><?php echo $this->lang->line('status');?>
  <select onChange="sort_result('<?php echo $limit;?>',this.value);">
  <option value="0"><?php echo $this->lang->line('all');?></option>
- <option value="<?php echo $this->lang->line('pass');?>" <?php if($status==$this->lang->line('pass')){ echo 'selected'; } ?> ><?php echo $this->lang->line('pass');?></option>
- <option value="<?php echo $this->lang->line('fail');?>" <?php if($status==$this->lang->line('fail')){ echo 'selected'; } ?> ><?php echo $this->lang->line('fail');?></option>
- <option value="<?php echo $this->lang->line('pending');?>" <?php if($status==$this->lang->line('pending')){ echo 'selected'; } ?> ><?php echo $this->lang->line('pending');?></option>
+ <option value="<?php echo $this->lang->line('pass');?>" <?php if($this->lang->line($status)==$this->lang->line('pass')){ echo 'selected'; } ?> ><?php echo $this->lang->line('pass');?></option>
+ <option value="<?php echo $this->lang->line('fail');?>" <?php if($this->lang->line($status)==$this->lang->line('fail')){ echo 'selected'; } ?> ><?php echo $this->lang->line('fail');?></option>
+ <option value="<?php echo $this->lang->line('pending');?>" <?php if($this->lang->line($status)==$this->lang->line('pending')){ echo 'selected'; } ?> ><?php echo $this->lang->line('pending');?></option>
  </select>
  </th>
  <th><?php echo $this->lang->line('percentage_obtained');?></th>

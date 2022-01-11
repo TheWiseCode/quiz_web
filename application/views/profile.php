@@ -211,7 +211,7 @@ foreach($questions as $k => $qv){
       </div>
       <div class="modal-body">
 <?php 
- if($qv['question_type']==$this->lang->line('multiple_choice_single_answer') || $qv['question_type']==$this->lang->line('multiple_choice_multiple_answer')){
+ if($this->lang->line($qv['question_type'])==$this->lang->line('multiple_choice_single_answer') || $this->lang->line($qv['question_type'])==$this->lang->line('multiple_choice_multiple_answer')){
  foreach($options as $ok => $option){
 	if($option['qid']==$qv['qid']){
 		if($option['score'] >= 0.1){
@@ -229,10 +229,10 @@ foreach($questions as $k => $qv){
                   }
          }
  }
- 
- 
- 
-  if($qv['question_type']==$this->lang->line('match_the_column')){
+
+
+
+  if($this->lang->line($qv['question_type'])==$this->lang->line('match_the_column')){
  foreach($options as $ok => $option){
 	if($option['qid']==$qv['qid']){
  echo $option['q_option']; 
@@ -245,7 +245,7 @@ foreach($questions as $k => $qv){
 
 
 
- if($qv['question_type']==$this->lang->line('short_answer')){
+ if($this->lang->line($qv['question_type'])==$this->lang->line('short_answer')){
  foreach($options as $ok => $option){
 	if($option['qid']==$qv['qid']){
  ?>
@@ -256,7 +256,7 @@ foreach($questions as $k => $qv){
          }
  }
 
-if($qv['question_type']==$this->lang->line('long_answer')){
+if($this->lang->line($qv['question_type'])==$this->lang->line('long_answer')){
  
  }
 

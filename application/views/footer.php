@@ -97,7 +97,7 @@ if($this->config->item('tinymce')){
 
 	
 	?>
-	<script type="text/javascript" src="<?php echo base_url();?>editor/tinymce.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?><?php echo $this->lang->line('edit'); ?>or/tinymce.min.js"></script>
 	 
  <?php 
  if($this->uri->segment(2)=='edit_quiz' || ($this->uri->segment(2)=='add_new' && $this->uri->segment(1)=='quiz')){

@@ -4,19 +4,19 @@ foreach ($result as $key => $val) {
     ?>
     <?php
     $qn = 1;
-    if ($val['question_type'] == $this->lang->line('multiple_choice_single_answer')) {
+    if ($this->lang->line($val['question_type']) == $this->lang->line('multiple_choice_single_answer')) {
         $qn = 1;
     }
-    if ($val['question_type'] == $this->lang->line('multiple_choice_multiple_answer')) {
+    if ($this->lang->line($val['question_type']) == $this->lang->line('multiple_choice_multiple_answer')) {
         $qn = 2;
     }
-    if ($val['question_type'] == $this->lang->line('match_the_column')) {
+    if ($this->lang->line($val['question_type']) == $this->lang->line('match_the_column')) {
         $qn = 3;
     }
-    if ($val['question_type'] == $this->lang->line('short_answer')) {
+    if ($this->lang->line($val['question_type']) == $this->lang->line('short_answer')) {
         $qn = 4;
     }
-    if ($val['question_type'] == $this->lang->line('long_answer')) {
+    if ($this->lang->line($val['question_type']) == $this->lang->line('long_answer')) {
         $qn = 5;
     }
 

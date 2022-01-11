@@ -1,13 +1,9 @@
 <div class="container">
 
-
     <div id="update_notice"></div>
 
-
     <div class="row">
-
         <div class="col-md-4">
-
             <div class="card border-left-primary shadow  py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -25,12 +21,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
 
         <div class="col-md-4">
-
             <div class="card border-left-success shadow  py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -52,7 +46,6 @@
         </div>
 
         <div class="col-md-4">
-
             <div class="card border-left-warning shadow  py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -168,12 +161,12 @@
                         foreach ($result as $key => $val) {
                             ?>
                             <tr>
-                            <td>
-                                <a href="<?php echo site_url('user/edit_user/' . $val['uid']); ?>"><?php echo $val['email']; ?><?php echo $val['wp_user']; ?></a>
-                            </td>
-                            <td class="text-xs-right"><?php echo $val['first_name']; ?><?php echo $val['last_name']; ?></td>
-                            <td class="text-xs-right"><?php echo $val['group_name']; ?></td>
-                            <td class="text-xs-right"><?php echo $val['contact_no']; ?></td>
+                                <td>
+                                    <a href="<?php echo site_url('user/edit_user/' . $val['uid']); ?>"><?php echo $val['email']; ?><?php echo $val['wp_user']; ?></a>
+                                </td>
+                                <td class="text-xs-right"><?php echo $val['first_name']; ?><?php echo $val['last_name']; ?></td>
+                                <td class="text-xs-right"><?php echo $val['group_name']; ?></td>
+                                <td class="text-xs-right"><?php echo $val['contact_no']; ?></td>
 
 
                             </tr>
