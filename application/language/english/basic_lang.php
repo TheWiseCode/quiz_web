@@ -443,3 +443,6 @@ $lang['quiz_list'] = "Quiz List";
 $lang['result_list'] = "Result List";
 $lang['enabled'] = "Enabled";
 $lang['disabled'] = "Disabled";
+$lang['update_quiz'] = "Update Quiz";
+$lang['select_level'] = "Select Level";
+$lang['select_category'] = "Select Category";

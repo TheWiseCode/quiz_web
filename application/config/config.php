@@ -577,7 +577,7 @@ $config['sharethis']=$csetting['Enable_sharethis'];
 $config['sharethis_property']=$csetting['Sharethis_property_id'];
 
   
- 
+
 // display advertisement after X number of seconds of starting quiz
 $config['showadvertisement_after']=$csetting['Advertisement_display_after_seconds'];
 // display advertisement during quiz for seconds

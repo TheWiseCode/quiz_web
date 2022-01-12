@@ -200,7 +200,7 @@
 
 
                                 <select class="js-example-basic-multiple form-control" name="uids[]"
-                                        multiple="multiple">
+                                        multiple="multiple" style="width: 400px">
                                     <?php foreach ($user_list as $k => $uval) { ?>
                                         <option value="<?php echo $uval['uid']; ?>" <?php if (in_array($uval['uid'], explode(',', $quiz['uids']))) {
                                             echo 'selected';
@@ -229,7 +229,7 @@
                             </div>
 
 
-                            <div class="form-group">
+                            <div class="form-group" hidden>
                                 <label for="inputEmail"><?php echo $this->lang->line('quiz_price'); ?></label> <br>
                                 <input type="text" name="quiz_price" value="<?php echo $quiz['quiz_price']; ?>"
                                        class="form-control" placeholder="<?php echo $this->lang->line('quiz_price'); ?>"
@@ -401,7 +401,7 @@
 
                                 <div class="form-group">
                                     <select name="cid[]">
-                                        <option value="0"><?php echo $this->lang->line('select'); ?><?php echo $this->lang->line('category_name'); ?></option>
+                                        <option value="0"><?php echo $this->lang->line('select_category'); ?></option>
                                         <?php
                                         foreach ($category_list as $key => $val) {
                                             ?>
@@ -414,7 +414,7 @@
                                         ?>
                                     </select>
                                     <select name="lid[]">
-                                        <option value="0"><?php echo $this->lang->line('select'); ?><?php echo $this->lang->line('level_name'); ?></option>
+                                        <option value="0"><?php echo $this->lang->line('select_level'); ?></option>
                                         <?php
                                         foreach ($level_list as $key => $val) {
                                             ?>
@@ -451,7 +451,7 @@
                             ?>
                             <div class="form-group">
                                 <select name="cid[]" id="cid">
-                                    <option value="0"><?php echo $this->lang->line('select'); ?><?php echo $this->lang->line('category_name'); ?></option>
+                                    <option value="0"><?php echo $this->lang->line('select_category'); ?></option>
                                     <?php
                                     foreach ($category_list as $key => $val) {
                                         ?>
@@ -462,9 +462,11 @@
                                     ?>
                                 </select>
                                 <select name="lid[]" onChange="no_q_available(this.value);">
-                                    <option value="0"><?php echo $this->lang->line('select'); ?><?php echo $this->lang->line('level_name'); ?></option>
+                                    <option value="0"><?php echo $this->lang->line('select_level'); ?></option>
                                     <?php
-                                    foreach ($level_list as $key => $val) {
+                                    foreach ($level_list
+
+                                             as $key => $val) {
                                         ?>
 
                                         <option value="<?php echo $val['lid']; ?>"><?php echo $val['level_name']; ?></option>
@@ -501,7 +503,7 @@
                                href="<?php echo site_url('quiz'); ?>"><?php echo $this->lang->line('back'); ?></a>
                         <?php } else { ?>
                             <button class="btn btn-success"
-                                    type="submit"><?php echo $this->lang->line('update'); ?><?php echo $this->lang->line('quiz'); ?></button>
+                                    type="submit"><?php echo $this->lang->line('update_quiz'); ?></button>
                             <?php
                         }
                         ?>

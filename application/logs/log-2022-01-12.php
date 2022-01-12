@@ -311,3 +311,59 @@ ERROR - 2022-01-12 06:45:42 --> Severity: Warning --> count(): Parameter must be
 ERROR - 2022-01-12 06:45:47 --> Could not find the language line "hello"
 ERROR - 2022-01-12 06:45:47 --> Could not find the language line "user_id"
 ERROR - 2022-01-12 06:45:47 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 357
+ERROR - 2022-01-12 06:51:09 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') order by FIELD(savsoft_options.qid,)' at line 1 - Invalid query: select * from savsoft_options where qid in () order by FIELD(savsoft_options.qid,)
+ERROR - 2022-01-12 06:51:09 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 316
+ERROR - 2022-01-12 06:51:13 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 237
+ERROR - 2022-01-12 01:30:30 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:30:30 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:30:48 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:30:48 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:30:59 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:30:59 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:31:10 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:31:10 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:31:30 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:31:30 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:31:41 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:31:41 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:31:56 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:31:56 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:32:06 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 01:32:06 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-12 07:02:59 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 155
+ERROR - 2022-01-12 07:03:49 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 193
+ERROR - 2022-01-12 07:04:03 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 193
+ERROR - 2022-01-12 07:04:15 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 193
+ERROR - 2022-01-12 07:07:06 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 193
+ERROR - 2022-01-12 07:07:33 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 193
+ERROR - 2022-01-12 07:07:43 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 193
+ERROR - 2022-01-12 07:07:53 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 193
+ERROR - 2022-01-12 07:08:01 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 193
+ERROR - 2022-01-12 07:08:14 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 193
+ERROR - 2022-01-12 07:09:16 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 620
+ERROR - 2022-01-12 07:09:56 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 193
+ERROR - 2022-01-12 07:10:39 --> Severity: Warning --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() C:\xampp\htdocs\savsoftquiz_v5\system\libraries\Email.php 1896
+ERROR - 2022-01-12 07:10:39 --> Could not find the language line "hello"
+ERROR - 2022-01-12 07:10:39 --> Could not find the language line "user_id"
+ERROR - 2022-01-12 07:10:39 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 357
+ERROR - 2022-01-12 07:12:53 --> Severity: Warning --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() C:\xampp\htdocs\savsoftquiz_v5\system\libraries\Email.php 1896
+ERROR - 2022-01-12 07:12:53 --> Could not find the language line "hello"
+ERROR - 2022-01-12 07:12:53 --> Could not find the language line "user_id"
+ERROR - 2022-01-12 07:12:53 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 357
+ERROR - 2022-01-12 07:13:32 --> Severity: Warning --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() C:\xampp\htdocs\savsoftquiz_v5\system\libraries\Email.php 1896
+ERROR - 2022-01-12 07:13:32 --> Could not find the language line "hello"
+ERROR - 2022-01-12 07:13:32 --> Could not find the language line "user_id"
+ERROR - 2022-01-12 07:13:32 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 357
+ERROR - 2022-01-12 07:14:11 --> Severity: Warning --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() C:\xampp\htdocs\savsoftquiz_v5\system\libraries\Email.php 1896
+ERROR - 2022-01-12 07:14:12 --> Could not find the language line "hello"
+ERROR - 2022-01-12 07:14:12 --> Could not find the language line "user_id"
+ERROR - 2022-01-12 07:14:12 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 357
+ERROR - 2022-01-12 07:16:36 --> Severity: Warning --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() C:\xampp\htdocs\savsoftquiz_v5\system\libraries\Email.php 1896
+ERROR - 2022-01-12 07:16:37 --> Could not find the language line "hello"
+ERROR - 2022-01-12 07:16:37 --> Could not find the language line "user_id"
+ERROR - 2022-01-12 07:16:37 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 357
+ERROR - 2022-01-12 07:21:04 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 193
+ERROR - 2022-01-12 07:26:37 --> Severity: Warning --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() C:\xampp\htdocs\savsoftquiz_v5\system\libraries\Email.php 1896
+ERROR - 2022-01-12 07:26:37 --> Could not find the language line "hello"
+ERROR - 2022-01-12 07:26:37 --> Could not find the language line "user_id"
+ERROR - 2022-01-12 07:26:37 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 357

@@ -129,19 +129,19 @@
                         <td>
                             <?php
                             $qn = 1;
-                            if ($val['question_type'] ==('multiple_choice_single_answer')) {
+                            if ($val['question_type'] == ('multiple_choice_single_answer')) {
                                 $qn = 1;
                             }
-                            if ($val['question_type'] ==('multiple_choice_multiple_answer')) {
+                            if ($val['question_type'] == ('multiple_choice_multiple_answer')) {
                                 $qn = 2;
                             }
-                            if ($val['question_type'] ==('match_the_column')) {
+                            if ($val['question_type'] == ('match_the_column')) {
                                 $qn = 3;
                             }
-                            if ($val['question_type'] ==('short_answer')) {
+                            if ($val['question_type'] == ('short_answer')) {
                                 $qn = 4;
                             }
-                            if ($val['question_type'] ==('long_answer')) {
+                            if ($val['question_type'] == ('long_answer')) {
                                 $qn = 5;
                             }
 
@@ -232,7 +232,7 @@
     </div>
 
 
-    <div class="card" style="margin-top:20px;">
+    <div class="card" style="margin-top:20px;" hidden>
         <div class="card-heading">
             <h4><?php echo $this->lang->line('import_question2'); ?></h4>
         </div>
