@@ -93,7 +93,7 @@
             <table class="table table-bordered">
                 <tr>
                     <th><?php echo $this->lang->line('result_id'); ?></th>
-                    <th><?php echo $this->lang->line('first_name'); ?><?php echo $this->lang->line('last_name'); ?></th>
+                    <th><?php echo $this->lang->line('first_name') . ' '; ?><?php echo $this->lang->line('last_name'); ?></th>
                     <th><?php echo $this->lang->line('quiz_name'); ?></th>
                     <th><?php echo $this->lang->line('status'); ?>
                         <select onChange="sort_result('<?php echo $limit; ?>',this.value);">
@@ -127,7 +127,7 @@
                     ?>
                     <tr>
                         <td><?php echo $val['rid']; ?></td>
-                        <td><?php echo $val['first_name']; ?><?php echo $val['last_name']; ?></td>
+                        <td><?php echo $val['first_name'] . ' '; ?><?php echo $val['last_name']; ?></td>
                         <td><?php echo $val['quiz_name']; ?></td>
                         <td><?php echo $this->lang->line($val['result_status']); ?></td>
                         <td><?php echo $val['percentage_obtained']; ?>%</td>
