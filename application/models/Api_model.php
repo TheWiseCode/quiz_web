@@ -71,7 +71,7 @@ class Api_model extends CI_Model
     function no_pass($user)
     {
         $uid = $user['uid'];
-        $query = $this->db->query("select * from savsoft_result where uid='$uid' and result_status='Pass' group by quid");
+        $query = $this->db->query("select * from savsoft_result where uid='$uid' and result_status='pass' group by quid");
         return $query->num_rows();
 
     }
@@ -79,7 +79,7 @@ class Api_model extends CI_Model
     function no_fail($user)
     {
         $uid = $user['uid'];
-        $query = $this->db->query("select * from savsoft_result where uid='$uid' and result_status='Fail' group by quid");
+        $query = $this->db->query("select * from savsoft_result where uid='$uid' and result_status='fail' group by quid");
         return $query->num_rows();
 
     }
@@ -119,12 +119,10 @@ class Api_model extends CI_Model
 
     }
 
-
     function get_notification($user, $limit)
     {
         $logged_in = $user;
         $uid = $logged_in['uid'];
-
         $this->db->select('title,message,notification_date');
         $this->db->or_where('savsoft_notification.uid', $uid);
         $this->db->or_where('savsoft_notification.uid', '0');
@@ -132,7 +130,6 @@ class Api_model extends CI_Model
         $this->db->order_by('nid', 'desc');
         $query = $this->db->get('savsoft_notification');
         return $query->result_array();
-
     }
 
 
@@ -140,7 +137,6 @@ class Api_model extends CI_Model
     {
         $logged_in = $user;
         $email = $logged_in['email'];
-
         $query = $this->db->query("select * from savsoft_result join savsoft_quiz on savsoft_result.quid=savsoft_quiz.quid where savsoft_result.rid='$rid' ");
         $quiz = $query->row_array();
         $score_ind = explode(',', $quiz['score_individual']);
@@ -171,7 +167,7 @@ class Api_model extends CI_Model
         }
         $percentage_obtained = ($marks / $quiz['noq']) * 100;
         if ($percentage_obtained >= $quiz['pass_percentage']) {
-            $qr ='pass';
+            $qr = 'pass';
         } else {
             $qr = $this->lang->line('fail');
 
@@ -184,7 +180,7 @@ class Api_model extends CI_Model
             'manual_valuation' => $manual_valuation
         );
         if ($manual_valuation == 1) {
-            $userdata['result_status'] ='pending';
+            $userdata['result_status'] = 'pending';
         } else {
             $userdata['result_status'] = $qr;
         }
