@@ -83,11 +83,8 @@ function updatecategory(vall,cid){
 		});
 	
 }
-
-
-
 function getexpiry(){
-	 var gid=document.getElementById('gid').value;
+	var gid=document.getElementById('gid').value;
 	var formData = {gid:gid};
 	$.ajax({
 		 type: "POST",
@@ -101,9 +98,52 @@ function getexpiry(){
 			//alert(status);
 			}	
 		});
-	
 }
 
+function workingDaysBetweenDates() {
+	
+	//
+	subscription_expired_init = document.getElementById('subscription_expired_init');
+	subscription_expired_end = document.getElementById('subscription_expired_end');
+	
+    var startDate = parseDate(subscription_expired_init.value);
+    var endDate = parseDate(subscription_expired_end.value);  
+	
+    if (endDate < startDate)
+        return 0;
+    var millisecondsPerDay = 86400 * 1000; 
+    startDate.setHours(0,0,0,1); 
+    endDate.setHours(23,59,59,999);
+    var diff = endDate - startDate;
+    var days = Math.ceil(diff / millisecondsPerDay);
+
+    var weeks = Math.floor(days / 7);
+    days = days - (weeks * 2);
+
+    var startDay = startDate.getDay();
+    var endDay = endDate.getDay();
+
+    if (startDay - endDay > 1)         
+        days = days - 2;      
+
+    if (startDay == 0 && endDay != 6)
+        days = days - 1  
+
+    if (endDay == 6 && startDay != 0)
+        days = days - 1  
+
+		
+	valid_for_days = document.getElementById('valid_for_days');
+	valid_for_days.value = days;
+	
+    return days;
+}
+function parseDate(input) {
+
+  var parts = input.match(/(\d+)/g);
+  // new Date(year, month [, date [, hours[, minutes[, seconds[, ms]]]]])
+  return new Date(parts[0], parts[1]-1, parts[2]); 
+}
 
 function updatelevel(vall,lid){
 	 

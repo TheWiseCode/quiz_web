@@ -104,7 +104,6 @@ function getexpiry(){
 	
 }
 
-
 function updatelevel(vall,lid){
 	 
 	var formData = {level_name:vall};

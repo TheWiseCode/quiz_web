@@ -29,6 +29,14 @@
 			<div class="form-group">	  
 					<label for="inputPassword" class="sr-only"><?php echo $this->lang->line('password');?></label>
 					<input type="password" id="inputPassword" name="password"  class="form-control" placeholder="<?php echo $this->lang->line('password');?>" required >
+			</div>
+				<div class="form-group">	 
+					<label for="inputEmail" class="sr-only"><?php echo "CI";?></label> 
+					<input type="text" name="ci"  class="form-control" placeholder="<?php echo "CI";?>"   autofocus>
+			</div>
+				<div class="form-group">	 
+					<label for="inputEmail" class="sr-only"><?php echo "Expedido";?></label> 
+					<input type="text" name="exp"  class="form-control" placeholder="<?php echo "Expedido";?>"   autofocus>
 			 </div>
 				<div class="form-group">	 
 					<label for="inputEmail" class="sr-only"><?php echo $this->lang->line('first_name');?></label> 
@@ -37,6 +45,19 @@
 				<div class="form-group">	 
 					<label for="inputEmail" class="sr-only"><?php echo $this->lang->line('last_name');?></label> 
 					<input type="text"   name="last_name"  class="form-control" placeholder="<?php echo $this->lang->line('last_name');?>"   autofocus>
+			</div>
+				<div class="form-group">	 
+					<label for="inputEmail" class="sr-only"><?php echo "Codigo de estudiante";?></label> 
+					<input type="text" name="code_student"  class="form-control" placeholder="<?php echo "Codigo de estudiante";?>"   autofocus>
+			
+			</div>
+				<div class="form-group">	 
+					<label for="inputEmail" class="sr-only"><?php echo "Primera opcion de carrera";?></label> 
+					<input type="text"   name="first_opt_univ_degree"  class="form-control" placeholder="<?php echo "Primera opcion de carrera";?>"   autofocus>
+			</div>
+				<div class="form-group">	 
+					<label for="inputEmail" class="sr-only"><?php echo "Segunda opcion de carrera";?></label> 
+					<input type="text"   name="second_opt_univ_degree"  class="form-control" placeholder="<?php echo "Segunda opcion de carrera";?>"   autofocus>
 			</div>
 				<div class="form-group">	 
 					<label for="inputEmail" class="sr-only"><?php echo $this->lang->line('contact_no');?></label> 
@@ -49,7 +70,7 @@
 					foreach($group_list as $key => $val){
 						?>
 						
-						<option value="<?php echo $val['gid'];?>"><?php echo $val['group_name'];?> (<?php echo $this->lang->line('price_');?>: <?php echo $val['price'];?>)</option>
+						<option value="<?php echo $val['gid'];?>"><?php echo $val['group_name'];?></option>
 						<?php 
 					}
 					?>
@@ -57,7 +78,7 @@
 			</div>
 			<div class="form-group">	 
 					<label for="inputEmail"  ><?php echo $this->lang->line('subscription_expired');?></label> 
-					<input type="text" name="subscription_expired"  id="subscription_expired" class="form-control" placeholder="<?php echo $this->lang->line('subscription_expired');?>"    autofocus>
+					<input type="date" name="subscription_expired"  id="subscription_expired" class="form-control" placeholder="<?php echo $this->lang->line('subscription_expired');?>"    autofocus>
 			</div>
 
 				<div class="form-group">	 

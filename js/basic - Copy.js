@@ -87,7 +87,7 @@ function updatecategory(vall,cid){
 
 
 function getexpiry(){
-	 var gid=document.getElementById('gid').value;
+	var gid=document.getElementById('gid').value;
 	var formData = {gid:gid};
 	$.ajax({
 		 type: "POST",
@@ -101,7 +101,6 @@ function getexpiry(){
 			//alert(status);
 			}	
 		});
-	
 }
 
 

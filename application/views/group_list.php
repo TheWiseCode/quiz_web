@@ -20,7 +20,7 @@
 <table class="table table-bordered">
 <tr>
  <th><?php echo $this->lang->line('group_name');?></th>
- <th><?php echo $this->lang->line('price'); ?></th>
+ <th><?php echo $this->lang->line('description'); ?></th>
  <th><?php echo $this->lang->line('valid_for_days');?></th>
 <th><?php echo $this->lang->line('action');?> </th>
 </tr>
@@ -40,8 +40,8 @@ foreach($group_list as $key => $val){
 <tr>
  <td> <?php echo $val['group_name'];?></td>
  <td>
- <?php echo $this->config->item('base_currency_prefix');?> <?php echo $val['price'];?>
-  <?php echo $this->config->item('base_currency_sufix');?>  </td>
+  <?php echo $val['description'];?>
+  </td>
  <td><?php echo $val['valid_for_days'];?></td>
 <td>
 <a href="<?php echo site_url('user/edit_group/'.$val['gid']);?>"><img src="<?php echo base_url('images/edit.png');?>"></a>
