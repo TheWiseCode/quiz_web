@@ -89,7 +89,7 @@ $hres = $hquery->result_Array();
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://savsoftquiz.com">
 
             <div class="sidebar-brand-text mx-3"><?php if ($hres[0]['setting_value'] == "") { ?>Savsoft Quiz
                     <sup>5.0</sup><?php } else {
@@ -144,7 +144,7 @@ $hres = $hquery->result_Array();
                         if (in_array('List', explode(',', $logged_in['users'])) || in_array('List_all', explode(',', $logged_in['users']))) {
                             ?>
                             <a class="collapse-item"
-                               href="<?php echo site_url('user'); ?>"><?php echo $this->lang->line('users'); ?><?php echo $this->lang->line('list'); ?></a>
+                               href="<?php echo site_url('user'); ?>"><?php echo $this->lang->line('user_list'); ?></a>
                         <?php } ?>
                         <?php
                         if (in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
@@ -184,7 +184,7 @@ $hres = $hquery->result_Array();
                         if (in_array('List', explode(',', $logged_in['questions'])) || in_array('List_all', explode(',', $logged_in['questions']))) {
                             ?>
                             <a class="collapse-item"
-                               href="<?php echo site_url('qbank'); ?>"><?php echo $this->lang->line('question'); ?><?php echo $this->lang->line('list'); ?></a>
+                               href="<?php echo site_url('qbank'); ?>"><?php echo $this->lang->line('question_list'); ?></a>
                             <?php
                         }
                         ?>
@@ -193,6 +193,11 @@ $hres = $hquery->result_Array();
             </li>
 
         <?php } ?>
+
+
+
+
+
 
         <?php
         if (in_array('List', explode(',', $logged_in['quiz'])) || in_array('List_all', explode(',', $logged_in['quiz']))) {
@@ -216,7 +221,7 @@ $hres = $hquery->result_Array();
                         if (in_array('List', explode(',', $logged_in['quiz'])) || in_array('List_all', explode(',', $logged_in['quiz']))) {
                             ?>
                             <a class="collapse-item"
-                               href="<?php echo site_url('quiz'); ?>"><?php echo $this->lang->line('quiz'); ?><?php echo $this->lang->line('list'); ?></a>
+                               href="<?php echo site_url('quiz'); ?>"><?php echo $this->lang->line('quiz_list'); ?></a>
                             <?php
                         }
                         ?>
@@ -235,12 +240,14 @@ $hres = $hquery->result_Array();
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseResult"
                    aria-expanded="true" aria-controls="collapseResult">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span><?php echo $this->lang->line('result'); ?></span></a>
+                    <span><?php echo $this->lang->line('result'); ?></a></span>
+                </a>
                 <div id="collapseResult" class="collapse" aria-labelledby="headingPages"
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
+
                         <a class="collapse-item"
-                           href="<?php echo site_url('result'); ?>"><?php echo $this->lang->line('result'); ?><?php echo $this->lang->line('list'); ?></a>
+                           href="<?php echo site_url('result'); ?>"><?php echo $this->lang->line('result_list'); ?></a>
 
                     </div>
                 </div>
@@ -299,13 +306,15 @@ $hres = $hquery->result_Array();
                         <a class="collapse-item"
                            href="<?php echo site_url('qbank/level_list'); ?>"><?php echo $this->lang->line('level_list'); ?></a>
                         <a class="collapse-item"
-                           href="<?php echo site_url('account'); ?>"><?php echo $this->lang->line('account_type'); ?></a>
+                           href="<?php echo site_url('account'); ?>"><?php echo $this->lang->line('account_type'); ?></a></a>
                         <a class="collapse-item"
                            href="<?php echo site_url('user/custom_fields'); ?>"><?php echo $this->lang->line('custom_forms'); ?></a>
-                        <a class="collapse-item"
-                           href="<?php echo site_url('payment_gateway'); ?>"><?php echo $this->lang->line('payment_history'); ?></a>
-                        <a class="collapse-item"
-                           href="<?php echo site_url('payment_gateway'); ?>"><?php echo $this->lang->line('advertisment'); ?></a>
+                        <div hidden>
+                            <a class="collapse-item"
+                               href="<?php echo site_url('payment_gateway'); ?>"><?php echo $this->lang->line('payment_history'); ?></a>
+                            <a class="collapse-item"
+                               href="<?php echo site_url('payment_gateway'); ?>"><?php echo $this->lang->line('advertisment'); ?></a>
+                        </div>
                     </div>
                 </div>
             </li>
@@ -316,7 +325,58 @@ $hres = $hquery->result_Array();
         if (!in_array('List_all', explode(',', $logged_in['quiz']))) {
             ?>
             <a href="<?php echo site_url('user/switch_group'); ?>" class="btn btn-danger"
-               style="border-radius:0;"><?php echo $this->lang->line('change_group'); ?></a>
+               style="border-radius:0px;"><?php echo $this->lang->line('change_group'); ?></a>
+            <?php
+        }
+        ?>
+
+        <?php
+        if (in_array('All', explode(',', $logged_in['setting'])) && false) {
+            ?>
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupport"
+                   aria-expanded="true" aria-controls="collapseStudy">
+                    <i class="fas fa-fw fa-question-circle"></i>
+                    <span>Support</span>
+                </a>
+                <div id="collapseSupport" class="collapse" aria-labelledby="headingPages"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+
+                        <a class="collapse-item" href="https://savsoftquiz.com/support.php">Support</a>
+                    </div>
+                </div>
+            </li>
+
+            <?php
+        }
+        ?>
+        <?php
+        if (in_array('All', explode(',', $logged_in['setting'])) && false) {
+            ?>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLanding"
+                   aria-expanded="true" aria-controls="collapseStudy">
+                    <i class="fas fa-fw fa-puzzle-piece"></i>
+                    <span>Landing Page</span>
+                </a>
+                <div id="collapseLanding" class="collapse" aria-labelledby="headingPages"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+
+                        <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Menu</a>
+
+                        <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Pages/Post</a>
+                        <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Slider</a>
+                        <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Design</a>
+                    </div>
+                </div>
+            </li>
+
+
             <?php
         }
         ?>
@@ -349,7 +409,7 @@ $hres = $hquery->result_Array();
                     $uid = $logged_in['uid'];
                     $query = $this->db->query("select * from appointment_request 
 	join savsoft_users on savsoft_users.uid=appointment_request.request_by 
-	 where appointment_request.to_id='$uid' and appointment_request.appointment_status='Pending' ");
+	 where appointment_request.to_id='$uid' and appointment_request.appointment_status='pending' ");
                     $invitations = $query->result_array();
 
                     $query = $this->db->query("select * from savsoft_notification 
@@ -371,7 +431,7 @@ $hres = $hquery->result_Array();
                         <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="alertsDropdown">
                             <h6 class="dropdown-header">
-                                Notification
+                                <?php echo $this->lang->line('notification'); ?>
                             </h6>
                             <?php
                             if (count($invitations) >= 1) {
@@ -447,7 +507,7 @@ $hres = $hquery->result_Array();
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="<?php echo site_url('user/logout'); ?>">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Logout
+                                <?php echo $this->lang->line('logout'); ?>
                             </a>
                         </div>
                     </li>

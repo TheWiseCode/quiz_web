@@ -103,8 +103,7 @@
 
     function ordinal($number)
     {
-        //TODO: TRADUCCION ORDINAL
-        $ends = array('mo', 'ro', 'do', 'er', 'to', 'to', 'to', 'mo', 'vo', 'no');
+        $ends = array('mo', 'ro', 'do', 'ro', 'to', 'to', 'to', 'mo', 'vo', 'mo');
         if ((($number % 100) >= 11) && (($number % 100) <= 13))
             return $number . 'mo';
         else
@@ -290,7 +289,7 @@
 
                 <div class="col-lg-2" style="text-align:center;">
                     <p><?php echo $this->lang->line('status'); ?></p>
-                    <p style="color:#e39500;"><?php echo $result['result_status']; ?></p>
+                    <p style="color:#e39500;"><?php echo $this->lang->line($result['result_status']); ?></p>
 
                 </div>
 
@@ -427,7 +426,7 @@
                         </tr>
                         <tr>
                             <td><?php echo $this->lang->line('status'); ?></td>
-                            <td><?php echo $result['result_status']; ?></td>
+                            <td><?php echo $this->lang->line($result['result_status']); ?></td>
                         </tr>
 
                     </table>
@@ -821,6 +820,8 @@
 
                         }
                     }
+
+
                     ?></center>
 
                 <div id="page_break"></div>
@@ -946,7 +947,7 @@
                                                 <?php
 
                                                 // multiple single choice
-                                                if ($this->lang->line($question['question_type']) == $this->lang->line('multiple_choice_single_answer')) {
+                                                if ($question['question_type'] == ('multiple_choice_single_answer')) {
 
                                                     $save_ans = array();
                                                     foreach ($saved_answers as $svk => $saved_answer) {
@@ -986,7 +987,7 @@
 
                                                 // multiple_choice_multiple_answer
 
-                                                if ($this->lang->line($question['question_type']) == $this->lang->line('multiple_choice_multiple_answer')) {
+                                                if ($question['question_type'] == ('multiple_choice_multiple_answer')) {
                                                     $save_ans = array();
                                                     foreach ($saved_answers as $svk => $saved_answer) {
                                                         if ($question['qid'] == $saved_answer['qid']) {
@@ -1027,7 +1028,7 @@
 
                                                 // short answer
 
-                                                if ($this->lang->line($question['question_type']) == $this->lang->line('short_answer')) {
+                                                if ($question['question_type'] == ('short_answer')) {
                                                     $save_ans = "";
                                                     foreach ($saved_answers as $svk => $saved_answer) {
                                                         if ($question['qid'] == $saved_answer['qid']) {
@@ -1061,7 +1062,7 @@
 
                                                 // long answer
 
-                                                if ($this->lang->line($question['question_type']) == $this->lang->line('long_answer')) {
+                                                if ($question['question_type'] == ('long_answer')) {
                                                     $save_ans = "";
                                                     foreach ($saved_answers as $svk => $saved_answer) {
                                                         if ($question['qid'] == $saved_answer['qid']) {
@@ -1079,7 +1080,7 @@
                                                         <?php echo $this->lang->line('word_counts'); ?>  <?php echo str_word_count($save_ans); ?>
                                                         <textarea name="answer[<?php echo $qk; ?>][]"
                                                                   id="answer_value<?php echo $qk; ?>"
-                                                                  style="width:100%;height:100%;"
+                                                                  style="width:100%;height:200px;min-height: 100px"
                                                                   onKeyup="count_char(this.value,'char_count<?php echo $qk; ?>');"><?php echo $save_ans; ?></textarea>
                                                     </div>
                                                     <?php
@@ -1107,7 +1108,7 @@
 
                                                 // matching
 
-                                                if ($this->lang->line($question['question_type']) == $this->lang->line('match_the_column')) {
+                                                if ($question['question_type'] == ('match_the_column')) {
                                                     $save_ans = array();
                                                     foreach ($saved_answers as $svk => $saved_answer) {
                                                         if ($question['qid'] == $saved_answer['qid']) {

@@ -12,11 +12,13 @@
                 <div class="login-panel panel panel-default">
                     <div class="panel-body">
 
+
                         <?php
                         if ($this->session->flashdata('message')) {
                             echo $this->session->flashdata('message');
                         }
                         ?>
+
 
                         <div class="form-group">
                             <label><?php echo $this->lang->line('name'); ?></label>
@@ -123,6 +125,7 @@
 
                         <div class="form-group">
                             <label><?php echo $this->lang->line('result'); ?></label><br>
+
 
                             <label class="checkbox-inline">
                                 <input type="checkbox" value="View"
@@ -239,6 +242,7 @@
                             </label>
 
                         </div>
+
 
                         <div class="form-group">
                             <label><?php echo $this->lang->line('setting'); ?></label><br>

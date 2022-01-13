@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/language/es_BO/duplicate_lang.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/language/es_BO/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/logs/log-2022-01-12.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/computacion_d1.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/computacion_f1.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/fisica_d1.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/fisica_f1.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ingles_d1.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ingles_f1.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/matematicas_d1.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/matematicas_f1.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/sq_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/sq_config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Quiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Quiz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Result.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Result.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/User2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/language/english/basic_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/english/basic_lang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/language/es_BO/profiler_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/es_BO/profiler_lang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Api_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Api_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Qbank_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Qbank_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Quiz_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Quiz_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/eoptional/Quiz_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/eoptional/Quiz_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/account_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/account_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/add_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/add_group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/add_question_into_quiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/add_question_into_quiz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/attempt_class.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/attempt_class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/duplicate_question_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/duplicate_question_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/edit_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/edit_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/edit_quiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_quiz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/group_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/group_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/new_question_1.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_question_1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/new_question_2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_question_2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/new_question_3.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_question_3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/new_question_4.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_question_4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/new_question_5.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_question_5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/new_quiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_quiz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pre_new_question.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pre_new_question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/question_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/question_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/quiz_attempt_Advance.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/quiz_attempt_Advance.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/quiz_attempt_Default.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/quiz_attempt_Default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/quiz_attempt_Practice.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/quiz_attempt_Practice.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/quiz_attempt_android.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/quiz_attempt_android.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/quiz_detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/quiz_detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/result_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/result_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/setting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/studymaterial_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/studymaterial_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/view_assignment.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_assignment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/view_result.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_result.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/view_result2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_result2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/view_result_android.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_result_android.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/view_studymaterial.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_studymaterial.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/savsoftquiz_v5_0.sql" beforeDir="false" afterPath="$PROJECT_DIR$/savsoftquiz_v5_0.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/core/Log.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/core/Log.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="9003">
+    <xdebug_debug_ports port="9003" />
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="074df649-cc2d-4047-8440-52d428549400" name="local" port="8080" />
+    </servers>
+  </component>
+  <component name="PhpWebServerValidation" path_to_validation_script="C:\xampp\htdocs" selected_validation_type="LOCAL" web_path_to_validation_script="http://localhost:8080/" />
+  <component name="ProjectId" id="23ZtFBj6BbUnggvwkBDHbiO3N23" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/models" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="web" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="local" start_url="http://localhost:8080/savsoftquiz_v5">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="" />
+      <created>1641953335702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1641953335702</updated>
+      <workItem from="1641953339647" duration="109000" />
+      <workItem from="1641989316400" duration="11000" />
+      <workItem from="1642001012211" duration="9829000" />
+      <workItem from="1642012220886" duration="2473000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

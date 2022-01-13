@@ -1,5 +1,6 @@
 <div class="container">
 
+
     <h3><?php echo $title; ?></h3>
     <div class="row">
 
@@ -11,6 +12,8 @@
                     <span class="input-group-btn">
         <button class="btn btn-default" type="submit"><?php echo $this->lang->line('search'); ?></button>
       </span>
+
+
                 </div><!-- /input-group -->
             </form>
         </div><!-- /.col-lg-6 -->
@@ -47,6 +50,7 @@
                         <?php
                         foreach ($level_list as $key => $val) {
                             ?>
+
                             <option value="<?php echo $val['lid']; ?>" <?php if ($val['lid'] == $lid) {
                                 echo 'selected';
                             } ?> ><?php echo $val['level_name']; ?></option>
@@ -75,6 +79,8 @@
                     <tr>
                         <td colspan="3"><?php echo $this->lang->line('no_record_found'); ?></td>
                     </tr>
+
+
                     <?php
                 }
                 foreach ($result as $key => $val) {
@@ -84,6 +90,8 @@
                             <a href="javascript:show_question_stat('<?php echo $val['qid']; ?>');">+</a> <?php echo $val['qid']; ?>
                         </td>
                         <td><?php echo substr(strip_tags($val['question']), 0, 40); ?>
+
+
                             <span style="display:none;" id="stat-<?php echo $val['qid']; ?>">
   
  
@@ -99,8 +107,9 @@
 
  </span>
 
+
                         </td>
-                        <td><?php echo $val['question_type']; ?></td>
+                        <td><?php echo $this->lang->line($val['question_type']); ?></td>
                         <td><?php echo $val['category_name']; ?> / <span
                                     style="font-size:12px;"><?php echo $val['level_name']; ?></span></td>
 
@@ -120,21 +129,22 @@
                         <td>
                             <?php
                             $qn = 1;
-                            if ($this->lang->line($val['question_type']) == $this->lang->line('multiple_choice_single_answer')) {
+                            if ($val['question_type'] == ('multiple_choice_single_answer')) {
                                 $qn = 1;
                             }
-                            if ($this->lang->line($val['question_type']) == $this->lang->line('multiple_choice_multiple_answer')) {
+                            if ($val['question_type'] == ('multiple_choice_multiple_answer')) {
                                 $qn = 2;
                             }
-                            if ($this->lang->line($val['question_type']) == $this->lang->line('match_the_column')) {
+                            if ($val['question_type'] == ('match_the_column')) {
                                 $qn = 3;
                             }
-                            if ($this->lang->line($val['question_type']) == $this->lang->line('short_answer')) {
+                            if ($val['question_type'] == ('short_answer')) {
                                 $qn = 4;
                             }
-                            if ($this->lang->line($val['question_type']) == $this->lang->line('long_answer')) {
+                            if ($val['question_type'] == ('long_answer')) {
                                 $qn = 5;
                             }
+
 
                             ?>
                             <a href="<?php echo site_url('qbank/edit_question_' . $qn . '/' . $val['qid']); ?>"><img
@@ -210,11 +220,10 @@
             <input type="hidden" name="size" value="3500000">
             <input type="file" name="xlsfile" style="width:150px;float:left;margin-left:10px;">
             <div style="clear:both;margin-bottom:15px;"></div>
-            <input type="submit" value="<?php echo $this->lang->line('import'); ?>" style="margin-top:5px;"
-                   class="btn btn-default">
+            <input type="submit" value="Import" style="margin-top:5px;" class="btn btn-default">
 
-            <a href="<?php echo base_url(); ?>sample/sample.xls"
-               target="new"><?php echo $this->lang->line('click_here'); ?></a> <?php echo $this->lang->line('upload_excel_info'); ?>
+            <a href="<?php echo base_url(); ?>sample/sample.xls" target="new">Click
+                here</a> <?php echo $this->lang->line('upload_excel_info'); ?>
             </form>
 
         </div>
@@ -223,7 +232,7 @@
     </div>
 
 
-    <div class="card" style="margin-top:20px;">
+    <div class="card" style="margin-top:20px;" hidden>
         <div class="card-heading">
             <h4><?php echo $this->lang->line('import_question2'); ?></h4>
         </div>
@@ -290,11 +299,10 @@
                 </table>
             </div>
 
-            <input type="submit" value="<?php echo $this->lang->line('import'); ?>" style="margin-top:5px;"
-                   class="btn btn-default">
+            <input type="submit" value="Import" style="margin-top:5px;" class="btn btn-default">
 
-            <a href="<?php echo base_url(); ?>sample/sample.docx"
-               target="new"><?php echo $this->lang->line('click_here'); ?></a> <?php echo $this->lang->line('upload_doc_info'); ?>
+            <a href="<?php echo base_url(); ?>sample/sample.docx" target="new">Click
+                here</a> <?php echo $this->lang->line('upload_doc_info'); ?>
             </form>
 
         </div>
@@ -304,8 +312,11 @@
     <script>
 
         function advanceconfig() {
+
             $('#advanceconfig').toggle();
+
         }
+
 
     </script>
     <br><br><br><br>

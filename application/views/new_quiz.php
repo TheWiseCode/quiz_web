@@ -2,7 +2,9 @@
 <script src="<?php echo base_url('js/select2.min.js'); ?>"></script>
 <div class="container">
 
+
     <h3><?php echo $title; ?></h3>
+
 
     <div class="row">
         <form method="post" action="<?php echo site_url('quiz/insert_quiz/'); ?>">
@@ -11,6 +13,7 @@
                 <br>
                 <div class="login-panel panel panel-default">
                     <div class="panel-body">
+
 
                         <?php
                         if ($this->session->flashdata('message')) {
@@ -140,8 +143,9 @@
 
                                 <label><?php echo $this->lang->line('assign_to_student'); ?></label> <br>
 
-                                <select class="js-example-basic-multiple form-control" name="uids[]" style="width: 500px"
-                                        multiple="multiple">
+
+                                <select class="js-example-basic-multiple form-control" name="uids[]"
+                                        multiple="multiple" style="width: 400px">
                                     <?php foreach ($user_list as $k => $uval) { ?>
                                         <option value="<?php echo $uval['uid']; ?>"><?php echo $uval['first_name'] . ' ' . $uval['last_name'] . ' (' . $uval['email'] . ')'; ?></option>
                                     <?php } ?>
@@ -151,7 +155,7 @@
                                 </script>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group" hidden>
                                 <label><?php echo $this->lang->line('quiz_template'); ?></label> <br>
                                 <select name="quiz_template">
                                     <?php
@@ -163,8 +167,8 @@
                                     ?>
 
                                 </select><br>
-                                <a href="<?php echo site_url('payment_gateway'); ?>"><?php echo $this->lang->line('enable_advance_template'); ?></a>
-                                <p><?php echo $this->lang->line('based_on_indian'); ?></p>
+                                <a href="<?php echo site_url('payment_gateway'); ?>">Enable Advance Template</a>
+                                <p>Based on indian examination system</p>
                             </div>
 
                             <div class="form-group">
@@ -177,7 +181,7 @@
                             </div>
 
 
-                            <div class="form-group">
+                            <div class="form-group" hidden>
                                 <label for="inputEmail"><?php echo $this->lang->line('quiz_price'); ?></label> <br>
                                 <input type="text" name="quiz_price" value="0" class="form-control"
                                        placeholder="<?php echo $this->lang->line('quiz_price'); ?>" readonly=readonly
