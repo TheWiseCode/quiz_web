@@ -8,17 +8,17 @@
 -- PHP Version: 7.2.6
 
 SET
-SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+    SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET
-AUTOCOMMIT = 0;
+    AUTOCOMMIT = 0;
 START TRANSACTION;
 SET
-time_zone = "+00:00";
+    time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT = @@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS = @@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION = @@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
 --
@@ -33,7 +33,7 @@ time_zone = "+00:00";
 
 CREATE TABLE `account_type`
 (
-    `account_id`     int(11) NOT NULL,
+    `account_id`     int(11)       NOT NULL,
     `users`          varchar(1000) DEFAULT NULL,
     `quiz`           varchar(1000) DEFAULT NULL,
     `results`        varchar(1000) DEFAULT NULL,
@@ -42,7 +42,8 @@ CREATE TABLE `account_type`
     `setting`        varchar(100)  DEFAULT NULL,
     `study_material` varchar(1000) NOT NULL,
     `appointment`    varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = latin1;
 
 --
 -- Dumping data for table `account_type`
@@ -63,13 +64,14 @@ VALUES (1, 'Add,Edit,View,List,List_all,Myaccount,Remove', 'Attempt,Add,Edit,Vie
 
 CREATE TABLE `appointment_request`
 (
-    `appointment_id`        int(11) NOT NULL,
-    `request_by`            int(11) NOT NULL,
-    `to_id`                 int(11) NOT NULL,
+    `appointment_id`        int(11)      NOT NULL,
+    `request_by`            int(11)      NOT NULL,
+    `to_id`                 int(11)      NOT NULL,
     `appointment_timing`    timestamp    NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `appointment_time_zone` varchar(100) NOT NULL DEFAULT 'Asia/Kolkata',
     `appointment_status`    varchar(100) NOT NULL DEFAULT 'pending'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = latin1;
 
 --
 -- Dumping data for table `appointment_request`
@@ -94,7 +96,8 @@ CREATE TABLE `ci_sessions`
     `ip_address` varchar(45) NOT NULL DEFAULT '0',
     `data`       text        NOT NULL,
     `timestamp`  timestamp   NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
 -- --------------------------------------------------------
 
@@ -104,13 +107,14 @@ CREATE TABLE `ci_sessions`
 
 CREATE TABLE `savsoftquiz_custom_form`
 (
-    `field_id`       int(11) NOT NULL,
+    `field_id`       int(11)       NOT NULL,
     `field_title`    varchar(100)  NOT NULL,
     `field_type`     varchar(100)  NOT NULL DEFAULT 'text',
     `field_validate` varchar(1000) NOT NULL DEFAULT 'pattern="[A-Za-z0-9]{1,100}"',
     `field_value`    varchar(100)           DEFAULT NULL,
     `display_at`     varchar(100)  NOT NULL DEFAULT 'Registration'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = latin1;
 
 -- --------------------------------------------------------
 
@@ -120,13 +124,14 @@ CREATE TABLE `savsoftquiz_custom_form`
 
 CREATE TABLE `savsoftquiz_setting`
 (
-    `setting_id`          int(11) NOT NULL,
+    `setting_id`          int(11)       NOT NULL,
     `setting_name`        varchar(1000) NOT NULL,
     `setting_value`       varchar(1000)          DEFAULT 'true',
     `setting_group_name`  varchar(100)  NOT NULL DEFAULT 'General',
-    `order_by`            int(11) NOT NULL,
+    `order_by`            int(11)       NOT NULL,
     `setting_description` varchar(1000)          DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
 --
 -- Dumping data for table `savsoftquiz_setting`
@@ -213,13 +218,14 @@ VALUES (1, 'App_Name', '', 'General', 1, NULL),
 
 CREATE TABLE `savsoft_add`
 (
-    `add_id`             int(11) NOT NULL,
+    `add_id`             int(11)       NOT NULL,
     `advertisement_code` text          NOT NULL,
     `banner`             varchar(1000) NOT NULL,
     `banner_link`        varchar(1000)          DEFAULT NULL,
     `position`           varchar(100)  NOT NULL,
     `add_status`         varchar(100)  NOT NULL DEFAULT 'Active'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = latin1;
 
 --
 -- Dumping data for table `savsoft_add`
@@ -241,12 +247,13 @@ CREATE TABLE `savsoft_answers`
 (
     `aid`      int(11) NOT NULL,
     `qid`      int(11) NOT NULL,
-    `q_option` text  NOT NULL,
+    `q_option` text    NOT NULL,
     `uid`      int(11) NOT NULL,
-    `score_u`  float NOT NULL DEFAULT '0',
+    `score_u`  float   NOT NULL DEFAULT '0',
     `rid`      int(11) NOT NULL,
     `qn`       int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
 --
 -- Dumping data for table `savsoft_answers`
@@ -302,9 +309,10 @@ VALUES (8, 79, '300', 1, 1, 1, 0),
 
 CREATE TABLE `savsoft_category`
 (
-    `cid`           int(11) NOT NULL,
+    `cid`           int(11)       NOT NULL,
     `category_name` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
 --
 -- Dumping data for table `savsoft_category`
@@ -322,12 +330,13 @@ VALUES (1, 'General knowledge'),
 
 CREATE TABLE `savsoft_group`
 (
-    `gid`            int(11) NOT NULL,
+    `gid`            int(11)       NOT NULL,
     `group_name`     varchar(1000) NOT NULL,
     `price`          float         NOT NULL,
-    `valid_for_days` int(11) NOT NULL DEFAULT '0',
+    `valid_for_days` int(11)       NOT NULL DEFAULT '0',
     `description`    text          NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
 --
 -- Dumping data for table `savsoft_group`
@@ -346,9 +355,10 @@ VALUES (1, 'Free', 0, 0, '10 Free quiz'),
 
 CREATE TABLE `savsoft_level`
 (
-    `lid`        int(11) NOT NULL,
+    `lid`        int(11)       NOT NULL,
     `level_name` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
 --
 -- Dumping data for table `savsoft_level`
@@ -366,16 +376,17 @@ VALUES (1, 'Easy'),
 
 CREATE TABLE `savsoft_notification`
 (
-    `nid`               int(11) NOT NULL,
+    `nid`               int(11)   NOT NULL,
     `notification_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `title`             varchar(100)       DEFAULT NULL,
     `message`           varchar(1000)      DEFAULT NULL,
     `click_action`      varchar(100)       DEFAULT NULL,
     `notification_to`   varchar(1000)      DEFAULT NULL,
     `response`          text,
-    `uid`               int(11) NOT NULL,
-    `viewed`            int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `uid`               int(11)   NOT NULL,
+    `viewed`            int(11)   NOT NULL
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
 --
 -- Dumping data for table `savsoft_notification`
@@ -400,12 +411,13 @@ CREATE TABLE `savsoft_options`
 (
     `oid`             int(11) NOT NULL,
     `qid`             int(11) NOT NULL,
-    `q_option`        text  NOT NULL,
-    `q_option_match`  varchar(1000)  DEFAULT NULL,
-    `q_option1`       text  NOT NULL,
-    `score`           float NOT NULL DEFAULT '0',
-    `q_option_match1` text  NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `q_option`        text    NOT NULL,
+    `q_option_match`  varchar(1000)    DEFAULT NULL,
+    `q_option1`       text    NOT NULL,
+    `score`           float   NOT NULL DEFAULT '0',
+    `q_option_match1` text    NOT NULL
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
 --
 -- Dumping data for table `savsoft_options`
@@ -657,17 +669,18 @@ VALUES (46, 6, 'Good Morning', 'Good Night', '', 0.25, ''),
 
 CREATE TABLE `savsoft_payment`
 (
-    `pid`             int(11) NOT NULL,
-    `uid`             int(11) NOT NULL,
-    `gid`             int(11) NOT NULL,
-    `quid`            int(11) NOT NULL DEFAULT '0',
+    `pid`             int(11)       NOT NULL,
+    `uid`             int(11)       NOT NULL,
+    `gid`             int(11)       NOT NULL,
+    `quid`            int(11)       NOT NULL DEFAULT '0',
     `amount`          float         NOT NULL,
-    `paid_date`       int(11) NOT NULL,
+    `paid_date`       int(11)       NOT NULL,
     `payment_gateway` varchar(100)  NOT NULL DEFAULT 'Paypal',
     `payment_status`  varchar(100)  NOT NULL DEFAULT 'pending',
     `transaction_id`  varchar(1000) NOT NULL,
     `other_data`      text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
 --
 -- Dumping data for table `savsoft_payment`
@@ -685,24 +698,25 @@ VALUES (1, 10, 3, 0, 100, 0, 'Paypal', 'Paid', '1233423DCFDFD', NULL);
 
 CREATE TABLE `savsoft_qbank`
 (
-    `qid`                 int(11) NOT NULL,
+    `qid`                 int(11)      NOT NULL,
     `question_type`       varchar(100) NOT NULL DEFAULT 'multiple_choice_single_answer',
     `question`            text         NOT NULL,
     `description`         text         NOT NULL,
     `question1`           text,
     `description1`        text,
-    `cid`                 int(11) NOT NULL,
-    `lid`                 int(11) NOT NULL,
-    `no_time_served`      int(11) NOT NULL DEFAULT '0',
-    `no_time_corrected`   int(11) NOT NULL DEFAULT '0',
-    `no_time_incorrected` int(11) NOT NULL DEFAULT '0',
-    `no_time_unattempted` int(11) NOT NULL DEFAULT '0',
-    `inserted_by`         int(11) NOT NULL,
+    `cid`                 int(11)      NOT NULL,
+    `lid`                 int(11)      NOT NULL,
+    `no_time_served`      int(11)      NOT NULL DEFAULT '0',
+    `no_time_corrected`   int(11)      NOT NULL DEFAULT '0',
+    `no_time_incorrected` int(11)      NOT NULL DEFAULT '0',
+    `no_time_unattempted` int(11)      NOT NULL DEFAULT '0',
+    `inserted_by`         int(11)      NOT NULL,
     `inserted_by_name`    varchar(100)          DEFAULT NULL,
     `paragraph`           text,
     `paragraph1`          text,
-    `parent_id`           int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `parent_id`           int(11)      NOT NULL
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
 --
 -- Dumping data for table `savsoft_qbank`
@@ -758,9 +772,10 @@ CREATE TABLE `savsoft_qcl`
     `cid`         int(11) NOT NULL,
     `lid`         int(11) NOT NULL,
     `noq`         int(11) NOT NULL,
-    `i_correct`   text NOT NULL,
-    `i_incorrect` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `i_correct`   text    NOT NULL,
+    `i_incorrect` text    NOT NULL
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
 --
 -- Dumping data for table `savsoft_qcl`
@@ -779,33 +794,34 @@ VALUES (80, 2, 1, 1, 3, '1', '0'),
 
 CREATE TABLE `savsoft_quiz`
 (
-    `quid`               int(11) NOT NULL,
+    `quid`               int(11)       NOT NULL,
     `quiz_name`          varchar(1000) NOT NULL,
     `description`        text          NOT NULL,
-    `start_date`         int(11) NOT NULL,
-    `end_date`           int(11) NOT NULL,
+    `start_date`         int(11)       NOT NULL,
+    `end_date`           int(11)       NOT NULL,
     `gids`               text          NOT NULL,
     `qids`               text          NOT NULL,
-    `noq`                int(11) NOT NULL,
+    `noq`                int(11)       NOT NULL,
     `correct_score`      text          NOT NULL,
     `incorrect_score`    text          NOT NULL,
     `ip_address`         text          NOT NULL,
-    `duration`           int(11) NOT NULL DEFAULT '10',
-    `maximum_attempts`   int(11) NOT NULL DEFAULT '1',
+    `duration`           int(11)       NOT NULL DEFAULT '10',
+    `maximum_attempts`   int(11)       NOT NULL DEFAULT '1',
     `pass_percentage`    float         NOT NULL DEFAULT '50',
-    `view_answer`        int(11) NOT NULL DEFAULT '1',
-    `camera_req`         int(11) NOT NULL DEFAULT '1',
-    `question_selection` int(11) NOT NULL DEFAULT '1',
-    `gen_certificate`    int(11) NOT NULL DEFAULT '0',
+    `view_answer`        int(11)       NOT NULL DEFAULT '1',
+    `camera_req`         int(11)       NOT NULL DEFAULT '1',
+    `question_selection` int(11)       NOT NULL DEFAULT '1',
+    `gen_certificate`    int(11)       NOT NULL DEFAULT '0',
     `certificate_text`   text,
-    `with_login`         int(11) NOT NULL DEFAULT '1',
+    `with_login`         int(11)       NOT NULL DEFAULT '1',
     `quiz_template`      varchar(100)  NOT NULL DEFAULT 'Default',
     `uids`               varchar(1000)          DEFAULT NULL,
-    `inserted_by`        int(11) NOT NULL DEFAULT '1',
+    `inserted_by`        int(11)       NOT NULL DEFAULT '1',
     `inserted_by_name`   varchar(100)           DEFAULT 'Admin',
-    `show_chart_rank`    int(11) NOT NULL DEFAULT '1',
+    `show_chart_rank`    int(11)       NOT NULL DEFAULT '1',
     `quiz_price`         float         NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
 --
 -- Dumping data for table `savsoft_quiz`
@@ -833,24 +849,25 @@ VALUES (6, '1BPS', '<p>Description here</p>', 1509030367, 1572102367, '1', '81,7
 
 CREATE TABLE `savsoft_result`
 (
-    `rid`                 int(11) NOT NULL,
-    `quid`                int(11) NOT NULL,
-    `uid`                 int(11) NOT NULL,
+    `rid`                 int(11)      NOT NULL,
+    `quid`                int(11)      NOT NULL,
+    `uid`                 int(11)      NOT NULL,
     `result_status`       varchar(100) NOT NULL DEFAULT 'open',
-    `start_time`          int(11) NOT NULL,
-    `end_time`            int(11) NOT NULL,
+    `start_time`          int(11)      NOT NULL,
+    `end_time`            int(11)      NOT NULL,
     `categories`          text         NOT NULL,
     `category_range`      text         NOT NULL,
     `r_qids`              text         NOT NULL,
     `individual_time`     text         NOT NULL,
-    `total_time`          int(11) NOT NULL DEFAULT '0',
+    `total_time`          int(11)      NOT NULL DEFAULT '0',
     `score_obtained`      float        NOT NULL DEFAULT '0',
     `percentage_obtained` float        NOT NULL DEFAULT '0',
     `attempted_ip`        varchar(100) NOT NULL,
     `score_individual`    text         NOT NULL,
     `photo`               varchar(100) NOT NULL,
-    `manual_valuation`    int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `manual_valuation`    int(11)      NOT NULL DEFAULT '0'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
 --
 -- Dumping data for table `savsoft_result`
@@ -904,18 +921,18 @@ VALUES (1, 8, 1, 'pass', 1511412687, 1511412701, 'General knowledge,Math', '2,1'
 
 CREATE TABLE `savsoft_users`
 (
-    `uid`                  int(11) NOT NULL,
+    `uid`                  int(11)       NOT NULL,
     `password`             varchar(1000) NOT NULL,
     `email`                varchar(100)           DEFAULT NULL,
-    `first_name`           varchar(100)           DEFAULT NULL,
+    `name`           varchar(100)           DEFAULT NULL,
     `last_name`            varchar(100)           DEFAULT NULL,
     `contact_no`           varchar(1000)          DEFAULT NULL,
     `connection_key`       varchar(1000)          DEFAULT NULL,
     `gid`                  varchar(100)  NOT NULL DEFAULT '1',
-    `su`                   int(11) NOT NULL DEFAULT '0',
-    `inserted_by`          int(11) NOT NULL DEFAULT '0',
-    `subscription_expired` int(11) NOT NULL DEFAULT '0',
-    `verify_code`          int(11) NOT NULL DEFAULT '0',
+    `su`                   int(11)       NOT NULL DEFAULT '0',
+    `inserted_by`          int(11)       NOT NULL DEFAULT '0',
+    `subscription_expired` int(11)       NOT NULL DEFAULT '0',
+    `verify_code`          int(11)       NOT NULL DEFAULT '0',
     `wp_user`              varchar(100)           DEFAULT NULL,
     `registered_date`      timestamp     NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `photo`                varchar(1000)          DEFAULT NULL,
@@ -924,7 +941,8 @@ CREATE TABLE `savsoft_users`
     `android_token`        varchar(1000)          DEFAULT NULL,
     `skype_id`             varchar(100)           DEFAULT NULL,
     `time_zone`            varchar(100)           DEFAULT 'Asia/Kolkata'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
 --
 -- Dumping data for table `savsoft_users`
@@ -961,11 +979,12 @@ VALUES (1, '21232f297a57a5a743894a0e4a801fc3', 'admin@example.com', 'Admin', 'Ad
 
 CREATE TABLE `savsoft_users_custom`
 (
-    `c_id`         int(11) NOT NULL,
-    `field_id`     int(11) NOT NULL,
-    `uid`          int(11) NOT NULL,
+    `c_id`         int(11)      NOT NULL,
+    `field_id`     int(11)      NOT NULL,
+    `uid`          int(11)      NOT NULL,
     `field_values` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = latin1;
 
 --
 -- Dumping data for table `savsoft_users_custom`
@@ -985,14 +1004,15 @@ VALUES (10, 3, 5, '1234567890'),
 
 CREATE TABLE `social_group`
 (
-    `sg_id`        int(11) NOT NULL,
+    `sg_id`        int(11)       NOT NULL,
     `sg_name`      varchar(30)   NOT NULL,
     `about`        varchar(1000) NOT NULL,
     `sg_status`    varchar(100)  NOT NULL DEFAULT 'Public',
-    `no_member`    int(11) NOT NULL,
+    `no_member`    int(11)       NOT NULL,
     `created_date` timestamp     NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `created_by`   int(11) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+    `created_by`   int(11)       NOT NULL DEFAULT '1'
+) ENGINE = InnoDB
+  DEFAULT CHARSET = latin1;
 
 --
 -- Dumping data for table `social_group`
@@ -1010,11 +1030,12 @@ VALUES (1, 'Quiz Star', 'Join masters and compare your ranking', 'Public', 3, '2
 
 CREATE TABLE `social_group_joined`
 (
-    `join_id`     int(11) NOT NULL,
-    `sg_id`       int(11) NOT NULL,
-    `uid`         int(11) NOT NULL,
+    `join_id`     int(11)   NOT NULL,
+    `sg_id`       int(11)   NOT NULL,
+    `uid`         int(11)   NOT NULL,
     `joined_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = latin1;
 
 --
 -- Dumping data for table `social_group_joined`
@@ -1036,15 +1057,16 @@ VALUES (3, 1, 1, '2017-08-27 08:06:39'),
 
 CREATE TABLE `study_material`
 (
-    `stid`              int(11) NOT NULL,
+    `stid`              int(11)       NOT NULL,
     `title`             varchar(100)  NOT NULL,
     `study_description` text          NOT NULL,
     `gids`              varchar(100)  NOT NULL,
-    `cid`               int(11) NOT NULL,
+    `cid`               int(11)       NOT NULL,
     `created_date`      timestamp     NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `created_by`        int(11) NOT NULL,
+    `created_by`        int(11)       NOT NULL,
     `attachment`        varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = latin1;
 
 --
 -- Dumping data for table `study_material`
@@ -1064,12 +1086,13 @@ VALUES (8, 'GitHub',
 
 CREATE TABLE `warning_message`
 (
-    `wid`             int(11) NOT NULL,
-    `rid`             int(11) NOT NULL,
-    `uid`             int(11) NOT NULL,
-    `warning_time`    int(11) NOT NULL,
+    `wid`             int(11)       NOT NULL,
+    `rid`             int(11)       NOT NULL,
+    `uid`             int(11)       NOT NULL,
+    `warning_time`    int(11)       NOT NULL,
     `warning_message` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE = InnoDB
+  DEFAULT CHARSET = latin1;
 
 --
 -- Dumping data for table `warning_message`
@@ -1542,135 +1565,156 @@ ALTER TABLE `warning_message`
 -- AUTO_INCREMENT for table `account_type`
 --
 ALTER TABLE `account_type`
-    MODIFY `account_id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+    MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 3;
 
 --
 -- AUTO_INCREMENT for table `appointment_request`
 --
 ALTER TABLE `appointment_request`
-    MODIFY `appointment_id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+    MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 6;
 
 --
 -- AUTO_INCREMENT for table `savsoftquiz_custom_form`
 --
 ALTER TABLE `savsoftquiz_custom_form`
-    MODIFY `field_id` int (11) NOT NULL AUTO_INCREMENT;
+    MODIFY `field_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `savsoftquiz_setting`
 --
 ALTER TABLE `savsoftquiz_setting`
-    MODIFY `setting_id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+    MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 68;
 
 --
 -- AUTO_INCREMENT for table `savsoft_add`
 --
 ALTER TABLE `savsoft_add`
-    MODIFY `add_id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+    MODIFY `add_id` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 5;
 
 --
 -- AUTO_INCREMENT for table `savsoft_answers`
 --
 ALTER TABLE `savsoft_answers`
-    MODIFY `aid` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
+    MODIFY `aid` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 151;
 
 --
 -- AUTO_INCREMENT for table `savsoft_category`
 --
 ALTER TABLE `savsoft_category`
-    MODIFY `cid` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+    MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 3;
 
 --
 -- AUTO_INCREMENT for table `savsoft_group`
 --
 ALTER TABLE `savsoft_group`
-    MODIFY `gid` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+    MODIFY `gid` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 5;
 
 --
 -- AUTO_INCREMENT for table `savsoft_level`
 --
 ALTER TABLE `savsoft_level`
-    MODIFY `lid` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+    MODIFY `lid` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 3;
 
 --
 -- AUTO_INCREMENT for table `savsoft_notification`
 --
 ALTER TABLE `savsoft_notification`
-    MODIFY `nid` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+    MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 3;
 
 --
 -- AUTO_INCREMENT for table `savsoft_options`
 --
 ALTER TABLE `savsoft_options`
-    MODIFY `oid` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=484;
+    MODIFY `oid` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 484;
 
 --
 -- AUTO_INCREMENT for table `savsoft_payment`
 --
 ALTER TABLE `savsoft_payment`
-    MODIFY `pid` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+    MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 2;
 
 --
 -- AUTO_INCREMENT for table `savsoft_qbank`
 --
 ALTER TABLE `savsoft_qbank`
-    MODIFY `qid` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+    MODIFY `qid` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 119;
 
 --
 -- AUTO_INCREMENT for table `savsoft_qcl`
 --
 ALTER TABLE `savsoft_qcl`
-    MODIFY `qcl_id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+    MODIFY `qcl_id` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 83;
 
 --
 -- AUTO_INCREMENT for table `savsoft_quiz`
 --
 ALTER TABLE `savsoft_quiz`
-    MODIFY `quid` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+    MODIFY `quid` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 10;
 
 --
 -- AUTO_INCREMENT for table `savsoft_result`
 --
 ALTER TABLE `savsoft_result`
-    MODIFY `rid` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+    MODIFY `rid` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 19;
 
 --
 -- AUTO_INCREMENT for table `savsoft_users`
 --
 ALTER TABLE `savsoft_users`
-    MODIFY `uid` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+    MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 14;
 
 --
 -- AUTO_INCREMENT for table `savsoft_users_custom`
 --
 ALTER TABLE `savsoft_users_custom`
-    MODIFY `c_id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+    MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 20;
 
 --
 -- AUTO_INCREMENT for table `social_group`
 --
 ALTER TABLE `social_group`
-    MODIFY `sg_id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+    MODIFY `sg_id` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 4;
 
 --
 -- AUTO_INCREMENT for table `social_group_joined`
 --
 ALTER TABLE `social_group_joined`
-    MODIFY `join_id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+    MODIFY `join_id` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 15;
 
 --
 -- AUTO_INCREMENT for table `study_material`
 --
 ALTER TABLE `study_material`
-    MODIFY `stid` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+    MODIFY `stid` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 9;
 
 --
 -- AUTO_INCREMENT for table `warning_message`
 --
 ALTER TABLE `warning_message`
-    MODIFY `wid` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=316;
+    MODIFY `wid` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 316;
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT = @OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS = @OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION = @OLD_COLLATION_CONNECTION */;

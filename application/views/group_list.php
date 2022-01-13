@@ -1,9 +1,5 @@
 <div class="container">
-
-
     <h3><?php echo $title; ?></h3>
-
-
     <div class="row">
 
         <div class="col-md-12">
@@ -15,13 +11,12 @@
             ?>
             <div id="message"></div>
 
-            <a href="<?php echo site_url('user/add_new_group'); ?>"
-               class="btn btn-success"><?php echo $this->lang->line('add_new'); ?></a>
-            <br><br>
+            <a href="<?php echo site_url('user/add_new_group'); ?>" class="btn btn-success"><?php echo $this->lang->line('add_new'); ?></a>
+
             <table class="table table-bordered">
                 <tr>
                     <th><?php echo $this->lang->line('group_name'); ?></th>
-                    <th><?php echo $this->lang->line('price'); ?></th>
+                    <th><?php echo $this->lang->line('description'); ?></th>
                     <th><?php echo $this->lang->line('valid_for_days'); ?></th>
                     <th><?php echo $this->lang->line('action'); ?> </th>
                 </tr>
@@ -41,8 +36,8 @@
                     <tr>
                         <td> <?php echo $val['group_name']; ?></td>
                         <td>
-                            <?php echo $this->config->item('base_currency_prefix'); ?><?php echo $val['price']; ?>
-                            <?php echo $this->config->item('base_currency_sufix'); ?>  </td>
+                            <?php echo $val['description']; ?>
+                        </td>
                         <td><?php echo $val['valid_for_days']; ?></td>
                         <td>
                             <a href="<?php echo site_url('user/edit_group/' . $val['gid']); ?>"><img

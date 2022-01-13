@@ -30,17 +30,23 @@
                             <label for="inputEmail"><?php echo $this->lang->line('description'); ?></label>
                             <textarea name="description" class="form-control"></textarea>
                         </div>
-
-                        <div class="form-group" hidden>
-                            <label for="inputEmail"><?php echo $this->lang->line('price'); ?></label>
-                            <input type="text" required name="price" class="form-control" value="0"> <br>
-                            <p class="alert alert-warning">Free version doesn't support payment gateway. <br>Create free
-                                group (with zero price) or <a href="<?php echo site_url('payment_gateway'); ?>">Upgrade
-                                    version</a>
+                        <div class="form-group">
+                            <label for="inputEmail"><?php echo "Fecha Inicio"; ?></label>
+                            <input type="date" name="subscription_expired_init" id="subscription_expired_init"
+                                   class="form-control"
+                                   placeholder="<?php echo $this->lang->line('subscription_expired'); ?>" autofocus>
                         </div>
                         <div class="form-group">
+                            <label for="inputEmail"><?php echo "Fecha Finalizacion"; ?></label>
+                            <input type="date" name="subscription_expired_end" id="subscription_expired_end"
+                                   onChange="workingDaysBetweenDates();" class="form-control"
+                                   placeholder="<?php echo $this->lang->line('subscription_expired'); ?>" autofocus>
+                        </div>
+
+                        <div class="form-group">
                             <label for="inputEmail"><?php echo $this->lang->line('valid_for_days'); ?></label>
-                            <input type="text" required name="valid_for_days" class="form-control" value="0">
+                            <input type="text" required name="valid_for_days" class="form-control" value=0
+                                   id="valid_for_days">
                         </div>
 
 
@@ -57,3 +63,6 @@
 
 
 </div>
+<script>
+    workingDaysBetweenDates();
+</script>

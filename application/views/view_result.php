@@ -248,7 +248,7 @@
         }
         ?>
         <div class="col-lg-12"
-             style="background-image:url('<?php echo base_url('images/result_bg.jpg'); ?>');background-size:cover;font-size:18px;padding:20px;color:#ffffff;min-height:400px;">
+             style="background-image:url('<?php echo base_url('images/result_bg.jpg'); ?>');background-size:cover;font-size:18px;padding:20px;color:#ffffff;min-height:300px;">
             <div class="col-lg-12">
                 <center><h3><span style="color:#e39500;">
 <?php echo $this->lang->line('hello'); ?> <?php echo $result['first_name']; ?>
@@ -301,19 +301,19 @@
                     if ($result['view_answer'] == '1' || $logged_in['su'] == '1') {
 
                         ?>
-                        <a href="#answers_i" class="btn btn-info"
+                        <a href="#answers_i" class="btn btn-info" hidden
                            style="margin-top:10px;"><?php echo $this->lang->line('answer_sheet'); ?></a>
                         <?php
                     }
                     ?>
 
-                    <a href="javascript:print();" class="btn btn-success printbtn"
+                    <a hidden href="javascript:print();" class="btn btn-success printbtn"
                        style="margin-top:10px;"><?php echo $this->lang->line('print'); ?></a>
 
                     <?php
                     if ($result['gen_certificate'] == '1') {
                         ?>
-                        <a href="<?php echo site_url('result/generate_certificate/' . $result['rid']); ?>"
+                        <a hidden href="<?php echo site_url('result/generate_certificate/' . $result['rid']); ?>"
                            class="btn btn-warning printbtn"
                            style="margin-top:10px;"><?php echo $this->lang->line('download_certificate'); ?></a>
 
@@ -324,7 +324,7 @@
                     if (in_array('List', $acp)) {
                         ?>
 
-                        <a href="<?php echo site_url('appointment/get_appointment/' . $result['inserted_by']); ?>"
+                        <a hidden href="<?php echo site_url('appointment/get_appointment/' . $result['inserted_by']); ?>"
                            class="btn btn-primary printbtn"
                            style="margin-top:10px;"><?php echo $this->lang->line('appointment_with_expert'); ?></a>
 
@@ -699,7 +699,7 @@
             }
             if ($this->config->item('sharethis')) {
                 ?>
-                <div class="col-md-12">
+                <div class="col-md-12" hidden>
                     <h3><?php echo $this->lang->line('share_on'); ?></h3>
                     <script type="text/javascript"
                             src="//platform-api.sharethis.com/js/sharethis.js#property=<?php echo $this->config->item('sharethis_property'); ?>&product=inline-share-buttons"></script>
@@ -856,7 +856,7 @@
                                 chart.draw(data, options);
                             }
                         </script>
-                        <div id="chart_div" style="width: 800px; height: 500px;"></div>
+                        <div id="chart_div" style="width: 800px; height: 500px;" hidden></div>
 
 
                         <!-- google chart starts -->

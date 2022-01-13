@@ -3,31 +3,27 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class User extends CI_Controller
 {
-
     function __construct()
     {
         parent::__construct();
         $this->load->database();
         $this->load->helper('url');
-        $this->load->model("user_model");
-        $this->load->model("account_model");
+        $this->load->model('user_model');
+        $this->load->model('account_model');
         $this->lang->load('basic', $this->config->item('language'));
         // redirect if not loggedin
         if (!$this->session->userdata('logged_in')) {
             redirect('login');
-
         }
         $logged_in = $this->session->userdata('logged_in');
         if ($logged_in['base_url'] != base_url()) {
             $this->session->unset_userdata('logged_in');
             redirect('login');
         }
-
     }
 
     public function index($limit = '0')
     {
-
         $logged_in = $this->session->userdata('logged_in');
 
         $user_p = explode(',', $logged_in['users']);
@@ -35,11 +31,11 @@ class User extends CI_Controller
             exit($this->lang->line('permission_denied'));
         }
 
-
         $data['limit'] = $limit;
         $data['title'] = $this->lang->line('userlist');
         // fetching user list
         $data['result'] = $this->user_model->user_list($limit);
+        $data['group_list'] = $this->user_model->get_group_all($limit);
         $this->load->view('header', $data);
         $this->load->view('user_list', $data);
         $this->load->view('footer', $data);
@@ -47,15 +43,14 @@ class User extends CI_Controller
 
     public function new_user()
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $user_p = explode(',', $logged_in['users']);
         if (!in_array('Add', $user_p)) {
             exit($this->lang->line('permission_denied'));
         }
 
-
-        $data['title'] = $this->lang->line('add_new') . ' ' . $this->lang->line('user');
+        $data['title'] =
+            $this->lang->line('add_new') . ' ' . $this->lang->line('user');
         // fetching group list
         $data['group_list'] = $this->user_model->group_list();
         $data['account_type'] = $this->account_model->account_list(0);
@@ -66,34 +61,48 @@ class User extends CI_Controller
 
     public function insert_user()
     {
-
-
         $logged_in = $this->session->userdata('logged_in');
         $user_p = explode(',', $logged_in['users']);
         if (!in_array('Add', $user_p)) {
             exit($this->lang->line('permission_denied'));
         }
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('email', 'Email', 'required|is_unique[savsoft_users.email]');
-        $this->form_validation->set_rules('password', 'Password', 'required');
-        if ($this->form_validation->run() == FALSE) {
-            $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . validation_errors() . " </div>");
+        $this->form_validation->set_rules(
+            'email',
+            'Email',
+            'required|is_unique[savsoft_users.email]'
+        );
+        //$this->form_validation->set_rules('password', 'Password', 'required');
+        if ($this->form_validation->run() == false) {
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                    validation_errors() .
+                    ' </div>'
+            );
             redirect('user/new_user/');
         } else {
             if ($this->user_model->insert_user()) {
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_added_successfully') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_added_successfully') .
+                        ' </div>'
+                );
             } else {
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_add_data') . " </div>");
-
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_add_data') .
+                        ' </div>'
+                );
             }
             redirect('user/new_user/');
         }
-
     }
 
     public function remove_user($uid)
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $user_p = explode(',', $logged_in['users']);
         if (!in_array('Remove', $user_p)) {
@@ -104,34 +113,41 @@ class User extends CI_Controller
         }
 
         if ($this->user_model->remove_user($uid)) {
-            $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('removed_successfully') . " </div>");
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-success'>" .
+                    $this->lang->line('removed_successfully') .
+                    ' </div>'
+            );
         } else {
-            $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_remove') . " </div>");
-
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                    $this->lang->line('error_to_remove') .
+                    ' </div>'
+            );
         }
         redirect('user');
-
-
     }
-
 
     public function edit_user_fill_custom($uid, $rid)
     {
         if ($this->input->post('custom')) {
-
             foreach ($_POST['custom'] as $ck => $cv) {
                 if ($cv != '') {
                     $this->db->where('uid', $uid);
                     $this->db->where('field_id', $ck);
                     $this->db->delete('savsoft_users_custom');
 
-
-                    $savsoft_users_custom = array(
+                    $savsoft_users_custom = [
                         'field_id' => $ck,
                         'uid' => $uid,
-                        'field_values' => $cv
+                        'field_values' => $cv,
+                    ];
+                    $this->db->insert(
+                        'savsoft_users_custom',
+                        $savsoft_users_custom
                     );
-                    $this->db->insert('savsoft_users_custom', $savsoft_users_custom);
                 }
             }
             redirect('result/view_result/' . $rid);
@@ -151,10 +167,8 @@ class User extends CI_Controller
         $this->load->view('footer', $data);
     }
 
-
     public function edit_user($uid)
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $user_p = explode(',', $logged_in['users']);
 
@@ -166,16 +180,18 @@ class User extends CI_Controller
             }
         }
 
-
         $data['uid'] = $uid;
-        $data['title'] = $this->lang->line('edit') . ' ' . $this->lang->line('user');
+        $data['title'] =
+            $this->lang->line('edit') . ' ' . $this->lang->line('user');
         // fetching user
         $data['result'] = $this->user_model->get_user($uid);
         $data['custom_form_user'] = $this->user_model->custom_form_user($uid);
 
         $data['custom_form'] = $this->user_model->custom_form('All');
-        $this->load->model("payment_model");
-        $data['payment_history'] = $this->payment_model->get_payment_history($uid);
+        $this->load->model('payment_model');
+        $data['payment_history'] = $this->payment_model->get_payment_history(
+            $uid
+        );
         // fetching group list
         $data['group_list'] = $this->user_model->group_list();
         $data['account_type'] = $this->account_model->account_list(0);
@@ -184,15 +200,12 @@ class User extends CI_Controller
             $this->load->view('edit_user', $data);
         } else {
             $this->load->view('myaccount', $data);
-
         }
         $this->load->view('footer', $data);
     }
 
     public function update_user($uid)
     {
-
-
         $logged_in = $this->session->userdata('logged_in');
 
         if ($logged_in['su'] != '1') {
@@ -200,25 +213,36 @@ class User extends CI_Controller
         }
         $this->load->library('form_validation');
         $this->form_validation->set_rules('email', 'Email', 'required');
-        if ($this->form_validation->run() == FALSE) {
-            $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . validation_errors() . " </div>");
+        if ($this->form_validation->run() == false) {
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                    validation_errors() .
+                    ' </div>'
+            );
             redirect('user/edit_user/' . $uid);
         } else {
             if ($this->user_model->update_user($uid)) {
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_updated_successfully') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_updated_successfully') .
+                        ' </div>'
+                );
             } else {
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_update_data') . " </div>");
-
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_update_data') .
+                        ' </div>'
+                );
             }
             redirect('user/edit_user/' . $uid);
         }
-
     }
-
 
     public function group_list()
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $setting_p = explode(',', $logged_in['setting']);
         if (!in_array('All', $setting_p)) {
@@ -230,8 +254,6 @@ class User extends CI_Controller
         $this->load->view('header', $data);
         $this->load->view('group_list', $data);
         $this->load->view('footer', $data);
-
-
     }
 
     public function add_new_group()
@@ -241,12 +263,22 @@ class User extends CI_Controller
         if (!in_array('All', $setting_p)) {
             exit($this->lang->line('permission_denied'));
         }
+
         if ($this->input->post('group_name')) {
             if ($this->user_model->insert_group()) {
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_added_successfully') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_added_successfully') .
+                        ' </div>'
+                );
             } else {
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_update_data') . " </div>");
-
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_update_data') .
+                        ' </div>'
+                );
             }
             redirect('user/group_list');
         }
@@ -256,7 +288,6 @@ class User extends CI_Controller
         $this->load->view('add_group', $data);
         $this->load->view('footer', $data);
     }
-
 
     public function edit_group($gid)
     {
@@ -268,10 +299,19 @@ class User extends CI_Controller
 
         if ($this->input->post('group_name')) {
             if ($this->user_model->update_group($gid)) {
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_updated_successfully') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_updated_successfully') .
+                        ' </div>'
+                );
             } else {
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_update_data') . " </div>");
-
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_update_data') .
+                        ' </div>'
+                );
             }
             redirect('user/group_list');
         }
@@ -282,8 +322,6 @@ class User extends CI_Controller
         $this->load->view('header', $data);
         $this->load->view('edit_group', $data);
         $this->load->view('footer', $data);
-
-
     }
 
     public function upgid($gid)
@@ -295,33 +333,41 @@ class User extends CI_Controller
         if (!in_array($gid, $gids)) {
             $group = $this->user_model->get_group($gid);
             if ($group['price'] != '0') {
-                redirect('payment_gateway_2/subscribe/' . $gid . '/' . $logged_in['uid']);
+                redirect(
+                    'payment_gateway_2/subscribe/' .
+                        $gid .
+                        '/' .
+                        $logged_in['uid']
+                );
             } else {
-                $subscription_expired = time() + (365 * 20 * 24 * 60 * 60);
+                $subscription_expired = time() + 365 * 20 * 24 * 60 * 60;
                 $gids[] = $gid;
             }
 
-            $userdata = array(
+            $userdata = [
                 'gid' => implode(',', $gids),
-                'subscription_expired' => $subscription_expired
-            );
+                'subscription_expired' => $subscription_expired,
+            ];
 
             $this->db->where('uid', $uid);
             $this->db->update('savsoft_users', $userdata);
-            $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('group_updated_successfully') . " </div>");
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-success'>" .
+                    $this->lang->line('group_updated_successfully') .
+                    ' </div>'
+            );
         } else {
-            $this->session->set_flashdata('message', "<div class='alert alert-success'>You already subscribed this group! </div>");
-
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-success'>You already subscribed this group! </div>"
+            );
         }
 
         redirect('user/edit_user/' . $logged_in['uid']);
-
-
     }
-
     public function switch_group()
     {
-
         $logged_in = $this->session->userdata('logged_in');
         if (!$this->config->item('allow_switch_group')) {
             redirect('user/edit_user/' . $logged_in['uid']);
@@ -343,14 +389,10 @@ class User extends CI_Controller
         $this->load->view('header', $data);
         $this->load->view('pre_remove_group', $data);
         $this->load->view('footer', $data);
-
-
     }
 
     public function insert_group()
     {
-
-
         $logged_in = $this->session->userdata('logged_in');
         $setting_p = explode(',', $logged_in['setting']);
         if (!in_array('All', $setting_p)) {
@@ -358,19 +400,25 @@ class User extends CI_Controller
         }
 
         if ($this->user_model->insert_group()) {
-            $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_added_successfully') . " </div>");
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-success'>" .
+                    $this->lang->line('data_added_successfully') .
+                    ' </div>'
+            );
         } else {
-            $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_add_data') . " </div>");
-
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                    $this->lang->line('error_to_add_data') .
+                    ' </div>'
+            );
         }
         redirect('user/group_list/');
-
     }
 
     public function update_group($gid)
     {
-
-
         $logged_in = $this->session->userdata('logged_in');
         $setting_p = explode(',', $logged_in['setting']);
         if (!in_array('All', $setting_p)) {
@@ -378,27 +426,23 @@ class User extends CI_Controller
         }
 
         if ($this->user_model->update_group($gid)) {
-            echo "<div class='alert alert-success'>" . $this->lang->line('data_updated_successfully') . " </div>";
+            echo "<div class='alert alert-success'>" .
+                $this->lang->line('data_updated_successfully') .
+                ' </div>';
         } else {
-            echo "<div class='alert alert-danger'>" . $this->lang->line('error_to_update_data') . " </div>";
-
+            echo "<div class='alert alert-danger'>" .
+                $this->lang->line('error_to_update_data') .
+                ' </div>';
         }
-
-
     }
-
 
     function get_expiry($gid)
     {
-
         echo $this->user_model->get_expiry($gid);
-
     }
-
 
     public function remove_group($gid)
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
@@ -406,20 +450,27 @@ class User extends CI_Controller
         }
 
         $mgid = $this->input->post('mgid');
-        $this->db->query(" update savsoft_users set gid='$mgid' where gid='$gid' ");
-
+        $this->db->query(
+            " update savsoft_users set gid='$mgid' where gid='$gid' "
+        );
 
         if ($this->user_model->remove_group($gid)) {
-            $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('removed_successfully') . " </div>");
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-success'>" .
+                    $this->lang->line('removed_successfully') .
+                    ' </div>'
+            );
         } else {
-            $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_remove') . " </div>");
-
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                    $this->lang->line('error_to_remove') .
+                    ' </div>'
+            );
         }
         redirect('user/group_list');
-
-
     }
-
 
     function remove_custom($field_id)
     {
@@ -429,7 +480,12 @@ class User extends CI_Controller
             exit($this->lang->line('permission_denied'));
         }
         $this->user_model->remove_custom($field_id);
-        $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('removed_successfully') . " </div>");
+        $this->session->set_flashdata(
+            'message',
+            "<div class='alert alert-danger'>" .
+                $this->lang->line('removed_successfully') .
+                ' </div>'
+        );
 
         redirect('user/custom_fields');
     }
@@ -445,11 +501,14 @@ class User extends CI_Controller
         if ($this->input->post()) {
             $this->user_model->insert_custom();
 
-
-            $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_added_successfully') . " </div>");
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-success'>" .
+                    $this->lang->line('data_added_successfully') .
+                    ' </div>'
+            );
 
             redirect('user/custom_fields');
-
         }
 
         $data['custom_fields_list'] = $this->user_model->custom_fields_list();
@@ -457,10 +516,7 @@ class User extends CI_Controller
         $this->load->view('header', $data);
         $this->load->view('custom_fields_list', $data);
         $this->load->view('footer', $data);
-
-
     }
-
 
     function edit_custom($field_id)
     {
@@ -473,11 +529,14 @@ class User extends CI_Controller
         if ($this->input->post()) {
             $this->user_model->update_custom($field_id);
 
-
-            $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_updated_successfully') . " </div>");
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-success'>" .
+                    $this->lang->line('data_updated_successfully') .
+                    ' </div>'
+            );
 
             redirect('user/custom_fields');
-
         }
 
         $data['custom'] = $this->user_model->get_custom($field_id);
@@ -486,19 +545,123 @@ class User extends CI_Controller
         $this->load->view('header', $data);
         $this->load->view('edit_custom', $data);
         $this->load->view('footer', $data);
-
-
     }
-
 
     function logout()
     {
-
         $this->session->unset_userdata('logged_in');
         if ($this->session->userdata('logged_in_raw')) {
             $this->session->unset_userdata('logged_in_raw');
         }
         redirect('login');
+    }
 
+    function import()
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $acp = explode(',', $logged_in['quiz']);
+        if (!in_array('Add', $acp)) {
+            exit($this->lang->line('permission_denied'));
+        }
+
+        $this->load->helper('xlsimport/php-excel-reader/excel_reader2');
+        $this->load->helper('xlsimport/spreadsheetreader.php');
+
+        if (isset($_FILES['xlsfile'])) {
+            $config['upload_path'] = './xls/';
+            $config['allowed_types'] = 'xls';
+            $config['max_size'] = 10000;
+            $this->load->library('upload', $config);
+            if (!$this->upload->do_upload('xlsfile')) {
+                $error = ['error' => $this->upload->display_errors()];
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $error['error'] .
+                        ' </div>'
+                );
+                redirect('user');
+                exit();
+            } else {
+                $data = ['upload_data' => $this->upload->data()];
+                $targets = 'xls/';
+                $targets =
+                    $targets . basename($data['upload_data']['file_name']);
+                $Filepath = $targets;
+
+                $allxlsdata = [];
+                date_default_timezone_set('UTC');
+
+                $StartMem = memory_get_usage();
+                //echo '---------------------------------'.PHP_EOL;
+                //echo 'Starting memory: '.$StartMem.PHP_EOL;
+                //echo '---------------------------------'.PHP_EOL;
+
+                try {
+                    $Spreadsheet = new SpreadsheetReader($Filepath);
+                    $BaseMem = memory_get_usage();
+
+                    $Sheets = $Spreadsheet->Sheets();
+
+                    //echo '---------------------------------'.PHP_EOL;
+                    //echo 'Spreadsheets:'.PHP_EOL;
+                    //print_r($Sheets);
+                    //echo '---------------------------------'.PHP_EOL;
+                    //echo '---------------------------------'.PHP_EOL;
+
+                    foreach ($Sheets as $Index => $Name) {
+                        //echo '---------------------------------'.PHP_EOL;
+                        //echo '*** Sheet '.$Name.' ***'.PHP_EOL;
+                        //echo '---------------------------------'.PHP_EOL;
+
+                        $Time = microtime(true);
+
+                        $Spreadsheet->ChangeSheet($Index);
+
+                        foreach ($Spreadsheet as $Key => $Row) {
+                            //echo $Key.': ';
+                            if ($Row) {
+                                //print_r($Row);
+                                $allxlsdata[] = $Row;
+                            } else {
+                                var_dump($Row);
+                            }
+                            $CurrentMem = memory_get_usage();
+
+                            //echo 'Memory: '.($CurrentMem - $BaseMem).' current, '.$CurrentMem.' base'.PHP_EOL;
+                            //echo '---------------------------------'.PHP_EOL;
+
+                            if ($Key && $Key % 500 == 0) {
+                                //echo '---------------------------------'.PHP_EOL;
+                                //echo 'Time: '.(microtime(true) - $Time);
+                                //echo '---------------------------------'.PHP_EOL;
+                            }
+                        }
+
+                        //	echo PHP_EOL.'---------------------------------'.PHP_EOL;
+                        //echo 'Time: '.(microtime(true) - $Time);
+                        //echo PHP_EOL;
+
+                        //echo '---------------------------------'.PHP_EOL;
+                        //echo '*** End of sheet '.$Name.' ***'.PHP_EOL;
+                        //echo '---------------------------------'.PHP_EOL;
+                    }
+                } catch (Exception $E) {
+                    echo $E->getMessage();
+                }
+
+                $this->user_model->import_users($allxlsdata);
+               
+            }
+        } else {
+            echo 'Error: ' . $_FILES['file']['error'];
+        }
+        $this->session->set_flashdata(
+            'message',
+            "<div class='alert alert-success'>" .
+                $this->lang->line('data_imported_successfully') .
+                ' </div>'
+        );
+        redirect('user');
     }
 }

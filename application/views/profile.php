@@ -161,50 +161,47 @@
                 </table>
             </div>
 
-
-            <h3><?php echo $this->lang->line('payment_history'); ?></h3>
-
-            <div class="table-responsive">
-                <table class="table table-hover">
-
-                    <tbody>
-
-
-                    <tr>
-                        <th><?php echo $this->lang->line('payment_gateway'); ?></th>
-                        <th><?php echo $this->lang->line('paid_date'); ?> </th>
-                        <th><?php echo $this->lang->line('amount'); ?></th>
-                        <th><?php echo $this->lang->line('transaction_id'); ?> </th>
-                        <th><?php echo $this->lang->line('status'); ?> </th>
-                    </tr>
-                    <?php
-                    if (count($payment_history) == 0) {
-                        ?>
+            <div hidden>
+                <h3><?php echo $this->lang->line('payment_history'); ?></h3>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <tbody>
                         <tr>
-                            <td colspan="5"><?php echo $this->lang->line('no_record_found'); ?></td>
+                            <th><?php echo $this->lang->line('payment_gateway'); ?></th>
+                            <th><?php echo $this->lang->line('paid_date'); ?> </th>
+                            <th><?php echo $this->lang->line('amount'); ?></th>
+                            <th><?php echo $this->lang->line('transaction_id'); ?> </th>
+                            <th><?php echo $this->lang->line('status'); ?> </th>
                         </tr>
-
-
                         <?php
-                    }
-                    foreach ($payment_history as $key => $val) {
+                        if (count($payment_history) == 0) {
+                            ?>
+                            <tr>
+                                <td colspan="5"><?php echo $this->lang->line('no_record_found'); ?></td>
+                            </tr>
+
+
+                            <?php
+                        }
+                        foreach ($payment_history as $key => $val) {
+                            ?>
+                            <tr>
+                                <td><?php echo $val['payment_gateway']; ?></td>
+                                <td><?php echo date('Y-m-d H:i:s', $val['paid_date']); ?></td>
+                                <td><?php echo $val['amount']; ?></td>
+                                <td><?php echo $val['transaction_id']; ?></td>
+                                <td><?php echo $val['payment_status']; ?></td>
+
+                            </tr>
+
+                            <?php
+                        }
                         ?>
-                        <tr>
-                            <td><?php echo $val['payment_gateway']; ?></td>
-                            <td><?php echo date('Y-m-d H:i:s', $val['paid_date']); ?></td>
-                            <td><?php echo $val['amount']; ?></td>
-                            <td><?php echo $val['transaction_id']; ?></td>
-                            <td><?php echo $val['payment_status']; ?></td>
-
-                        </tr>
-
-                        <?php
-                    }
-                    ?>
 
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
         </div><!--/tab-pane-->

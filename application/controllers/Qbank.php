@@ -3,18 +3,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Qbank extends CI_Controller
 {
-
     function __construct()
     {
         parent::__construct();
         $this->load->database();
         $this->load->helper('url');
-        $this->load->model("qbank_model");
+        $this->load->model('qbank_model');
         $this->lang->load('basic', $this->config->item('language'));
         // redirect if not loggedin
         if (!$this->session->userdata('logged_in')) {
             redirect('login');
-
         }
         $logged_in = $this->session->userdata('logged_in');
         if ($logged_in['base_url'] != base_url()) {
@@ -30,7 +28,6 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (in_array('List_all', $acp) || in_array('List', $acp)) {
-
         } else {
             exit($this->lang->line('permission_denied'));
         }
@@ -42,7 +39,6 @@ class Qbank extends CI_Controller
         $data['cid'] = $cid;
         $data['lid'] = $lid;
 
-
         $data['title'] = $this->lang->line('qbank');
         // fetching user list
         $data['result'] = $this->qbank_model->question_list($limit, $cid, $lid);
@@ -53,7 +49,6 @@ class Qbank extends CI_Controller
 
     public function remove_question($qid)
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Remove', $acp)) {
@@ -61,16 +56,22 @@ class Qbank extends CI_Controller
         }
 
         if ($this->qbank_model->remove_question($qid)) {
-            $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('removed_successfully') . " </div>");
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-success'>" .
+                    $this->lang->line('removed_successfully') .
+                    ' </div>'
+            );
         } else {
-            $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_remove') . " </div>");
-
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                    $this->lang->line('error_to_remove') .
+                    ' </div>'
+            );
         }
         redirect('qbank');
-
-
     }
-
 
     function pre_question_list($limit = '0', $cid = '0', $lid = '0')
     {
@@ -79,16 +80,12 @@ class Qbank extends CI_Controller
         redirect('qbank/index/' . $limit . '/' . $cid . '/' . $lid);
     }
 
-
     public function pre_new_question()
     {
-
         $para = 0;
         if ($this->input->post('with_paragraph')) {
             $para = 1;
-
         }
-
 
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
@@ -132,10 +129,10 @@ class Qbank extends CI_Controller
                 }
                 redirect('qbank/new_question_5/' . $nop . '/' . $para);
             }
-
         }
 
-        $data['title'] = $this->lang->line('add_new') . ' ' . $this->lang->line('question');
+        $data['title'] =
+            $this->lang->line('add_new') . ' ' . $this->lang->line('question');
         $this->load->view('header', $data);
         $this->load->view('pre_new_question', $data);
         $this->load->view('footer', $data);
@@ -143,18 +140,26 @@ class Qbank extends CI_Controller
 
     public function new_question_1($nop = '4', $para = '0')
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Add', $acp)) {
             exit($this->lang->line('permission_denied'));
         }
         if ($this->input->post('question')) {
-
             if ($this->qbank_model->insert_question_1()) {
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_added_successfully') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_added_successfully') .
+                        ' </div>'
+                );
             } else {
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_add_data') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_add_data') .
+                        ' </div>'
+                );
             }
             if ($this->input->post('parag') == 1) {
                 redirect('qbank/new_question_1/' . $nop . '/' . $para);
@@ -163,8 +168,9 @@ class Qbank extends CI_Controller
             }
         }
         if ($this->session->flashdata('qid')) {
-            $data['qp'] = $this->qbank_model->get_question($this->session->flashdata('qid'));
-
+            $data['qp'] = $this->qbank_model->get_question(
+                $this->session->flashdata('qid')
+            );
         }
         $data['para'] = $para;
         $data['nop'] = $nop;
@@ -178,10 +184,8 @@ class Qbank extends CI_Controller
         $this->load->view('footer', $data);
     }
 
-
     public function new_question_2($nop = '4', $para = '0')
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Add', $acp)) {
@@ -189,9 +193,19 @@ class Qbank extends CI_Controller
         }
         if ($this->input->post('question')) {
             if ($this->qbank_model->insert_question_2()) {
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_added_successfully') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_added_successfully') .
+                        ' </div>'
+                );
             } else {
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_add_data') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_add_data') .
+                        ' </div>'
+                );
             }
             if ($this->input->post('parag') == 1) {
                 redirect('qbank/new_question_2/' . $nop . '/' . $para);
@@ -200,8 +214,9 @@ class Qbank extends CI_Controller
             }
         }
         if ($this->session->flashdata('qid')) {
-            $data['qp'] = $this->qbank_model->get_question($this->session->flashdata('qid'));
-
+            $data['qp'] = $this->qbank_model->get_question(
+                $this->session->flashdata('qid')
+            );
         }
         $data['para'] = $para;
         $data['nop'] = $nop;
@@ -215,10 +230,8 @@ class Qbank extends CI_Controller
         $this->load->view('footer', $data);
     }
 
-
     public function new_question_3($nop = '4', $para = '0')
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Add', $acp)) {
@@ -226,9 +239,19 @@ class Qbank extends CI_Controller
         }
         if ($this->input->post('question')) {
             if ($this->qbank_model->insert_question_3()) {
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_added_successfully') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_added_successfully') .
+                        ' </div>'
+                );
             } else {
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_add_data') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_add_data') .
+                        ' </div>'
+                );
             }
             if ($this->input->post('parag') == 1) {
                 redirect('qbank/new_question_3/' . $nop . '/' . $para);
@@ -237,8 +260,9 @@ class Qbank extends CI_Controller
             }
         }
         if ($this->session->flashdata('qid')) {
-            $data['qp'] = $this->qbank_model->get_question($this->session->flashdata('qid'));
-
+            $data['qp'] = $this->qbank_model->get_question(
+                $this->session->flashdata('qid')
+            );
         }
         $data['para'] = $para;
         $data['nop'] = $nop;
@@ -252,10 +276,8 @@ class Qbank extends CI_Controller
         $this->load->view('footer', $data);
     }
 
-
     public function new_question_4($nop = '4', $para = '0')
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Add', $acp)) {
@@ -263,9 +285,19 @@ class Qbank extends CI_Controller
         }
         if ($this->input->post('question')) {
             if ($this->qbank_model->insert_question_4()) {
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_added_successfully') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_added_successfully') .
+                        ' </div>'
+                );
             } else {
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_add_data') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_add_data') .
+                        ' </div>'
+                );
             }
             if ($this->input->post('parag') == 1) {
                 redirect('qbank/new_question_4/' . $nop . '/' . $para);
@@ -274,8 +306,9 @@ class Qbank extends CI_Controller
             }
         }
         if ($this->session->flashdata('qid')) {
-            $data['qp'] = $this->qbank_model->get_question($this->session->flashdata('qid'));
-
+            $data['qp'] = $this->qbank_model->get_question(
+                $this->session->flashdata('qid')
+            );
         }
         $data['para'] = $para;
         $data['nop'] = $nop;
@@ -289,10 +322,8 @@ class Qbank extends CI_Controller
         $this->load->view('footer', $data);
     }
 
-
     public function new_question_5($nop = '4', $para = '0')
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Add', $acp)) {
@@ -300,9 +331,19 @@ class Qbank extends CI_Controller
         }
         if ($this->input->post('question')) {
             if ($this->qbank_model->insert_question_5()) {
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_added_successfully') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_added_successfully') .
+                        ' </div>'
+                );
             } else {
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_add_data') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_add_data') .
+                        ' </div>'
+                );
             }
             if ($this->input->post('parag') == 1) {
                 redirect('qbank/new_question_5/' . $nop . '/' . $para);
@@ -311,8 +352,9 @@ class Qbank extends CI_Controller
             }
         }
         if ($this->session->flashdata('qid')) {
-            $data['qp'] = $this->qbank_model->get_question($this->session->flashdata('qid'));
-
+            $data['qp'] = $this->qbank_model->get_question(
+                $this->session->flashdata('qid')
+            );
         }
         $data['para'] = $para;
         $data['nop'] = $nop;
@@ -326,10 +368,8 @@ class Qbank extends CI_Controller
         $this->load->view('footer', $data);
     }
 
-
     public function edit_question_1($qid)
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Edit', $acp)) {
@@ -337,13 +377,22 @@ class Qbank extends CI_Controller
         }
         if ($this->input->post('question')) {
             if ($this->qbank_model->update_question_1($qid)) {
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_updated_successfully') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_updated_successfully') .
+                        ' </div>'
+                );
             } else {
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_update_data') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_update_data') .
+                        ' </div>'
+                );
             }
             redirect('qbank/edit_question_1/' . $qid);
         }
-
 
         $data['title'] = $this->lang->line('edit');
         // fetching question
@@ -358,10 +407,8 @@ class Qbank extends CI_Controller
         $this->load->view('footer', $data);
     }
 
-
     public function edit_question_2($qid)
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Edit', $acp)) {
@@ -369,13 +416,22 @@ class Qbank extends CI_Controller
         }
         if ($this->input->post('question')) {
             if ($this->qbank_model->update_question_2($qid)) {
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_updated_successfully') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_updated_successfully') .
+                        ' </div>'
+                );
             } else {
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_update_data') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_update_data') .
+                        ' </div>'
+                );
             }
             redirect('qbank/edit_question_2/' . $qid);
         }
-
 
         $data['title'] = $this->lang->line('edit');
         // fetching question
@@ -390,10 +446,8 @@ class Qbank extends CI_Controller
         $this->load->view('footer', $data);
     }
 
-
     public function edit_question_3($qid)
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Edit', $acp)) {
@@ -401,13 +455,22 @@ class Qbank extends CI_Controller
         }
         if ($this->input->post('question')) {
             if ($this->qbank_model->update_question_3($qid)) {
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_updated_successfully') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_updated_successfully') .
+                        ' </div>'
+                );
             } else {
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_update_data') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_update_data') .
+                        ' </div>'
+                );
             }
             redirect('qbank/edit_question_3/' . $qid);
         }
-
 
         $data['title'] = $this->lang->line('edit');
         // fetching question
@@ -422,10 +485,8 @@ class Qbank extends CI_Controller
         $this->load->view('footer', $data);
     }
 
-
     public function edit_question_4($qid)
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Edit', $acp)) {
@@ -433,13 +494,22 @@ class Qbank extends CI_Controller
         }
         if ($this->input->post('question')) {
             if ($this->qbank_model->update_question_4($qid)) {
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_updated_successfully') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_updated_successfully') .
+                        ' </div>'
+                );
             } else {
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_update_data') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_update_data') .
+                        ' </div>'
+                );
             }
             redirect('qbank/edit_question_4/' . $qid);
         }
-
 
         $data['title'] = $this->lang->line('edit');
         // fetching question
@@ -454,10 +524,8 @@ class Qbank extends CI_Controller
         $this->load->view('footer', $data);
     }
 
-
     public function edit_question_5($qid)
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Edit', $acp)) {
@@ -465,13 +533,22 @@ class Qbank extends CI_Controller
         }
         if ($this->input->post('question')) {
             if ($this->qbank_model->update_question_5($qid)) {
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_updated_successfully') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_updated_successfully') .
+                        ' </div>'
+                );
             } else {
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_update_data') . " </div>");
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_update_data') .
+                        ' </div>'
+                );
             }
             redirect('qbank/edit_question_5/' . $qid);
         }
-
 
         $data['title'] = $this->lang->line('edit');
         // fetching question
@@ -485,7 +562,6 @@ class Qbank extends CI_Controller
         $this->load->view('edit_question_5', $data);
         $this->load->view('footer', $data);
     }
-
 
     // category functions start
     public function category_list()
@@ -501,15 +577,10 @@ class Qbank extends CI_Controller
         $this->load->view('header', $data);
         $this->load->view('category_list', $data);
         $this->load->view('footer', $data);
-
-
     }
-
 
     public function insert_category()
     {
-
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
@@ -517,19 +588,25 @@ class Qbank extends CI_Controller
         }
 
         if ($this->qbank_model->insert_category()) {
-            $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_added_successfully') . " </div>");
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-success'>" .
+                    $this->lang->line('data_added_successfully') .
+                    ' </div>'
+            );
         } else {
-            $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_add_data') . " </div>");
-
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                    $this->lang->line('error_to_add_data') .
+                    ' </div>'
+            );
         }
         redirect('qbank/category_list/');
-
     }
 
     public function update_category($cid)
     {
-
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
@@ -537,19 +614,18 @@ class Qbank extends CI_Controller
         }
 
         if ($this->qbank_model->update_category($cid)) {
-            echo "<div class='alert alert-success'>" . $this->lang->line('data_updated_successfully') . " </div>";
+            echo "<div class='alert alert-success'>" .
+                $this->lang->line('data_updated_successfully') .
+                ' </div>';
         } else {
-            echo "<div class='alert alert-danger'>" . $this->lang->line('error_to_update_data') . " </div>";
-
+            echo "<div class='alert alert-danger'>" .
+                $this->lang->line('error_to_update_data') .
+                ' </div>';
         }
-
-
     }
-
 
     public function remove_category($cid)
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
@@ -557,26 +633,31 @@ class Qbank extends CI_Controller
         }
 
         $mcid = $this->input->post('mcid');
-        $this->db->query(" update savsoft_qbank set cid='$mcid' where cid='$cid' ");
-
+        $this->db->query(
+            " update savsoft_qbank set cid='$mcid' where cid='$cid' "
+        );
 
         if ($this->qbank_model->remove_category($cid)) {
-            $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('removed_successfully') . " </div>");
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-success'>" .
+                    $this->lang->line('removed_successfully') .
+                    ' </div>'
+            );
         } else {
-            $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_remove') . " </div>");
-
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                    $this->lang->line('error_to_remove') .
+                    ' </div>'
+            );
         }
         redirect('qbank/category_list');
-
-
     }
-
     // category functions end
-
 
     public function pre_remove_category($cid)
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
@@ -590,10 +671,7 @@ class Qbank extends CI_Controller
         $this->load->view('header', $data);
         $this->load->view('pre_remove_category', $data);
         $this->load->view('footer', $data);
-
-
     }
-
 
     // level functions start
     public function level_list()
@@ -610,15 +688,10 @@ class Qbank extends CI_Controller
         $this->load->view('header', $data);
         $this->load->view('level_list', $data);
         $this->load->view('footer', $data);
-
-
     }
-
 
     public function insert_level()
     {
-
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
@@ -626,19 +699,25 @@ class Qbank extends CI_Controller
         }
 
         if ($this->qbank_model->insert_level()) {
-            $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_added_successfully') . " </div>");
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-success'>" .
+                    $this->lang->line('data_added_successfully') .
+                    ' </div>'
+            );
         } else {
-            $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_add_data') . " </div>");
-
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                    $this->lang->line('error_to_add_data') .
+                    ' </div>'
+            );
         }
         redirect('qbank/level_list/');
-
     }
 
     public function update_level($lid)
     {
-
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
@@ -646,40 +725,46 @@ class Qbank extends CI_Controller
         }
 
         if ($this->qbank_model->update_level($lid)) {
-            echo "<div class='alert alert-success'>" . $this->lang->line('data_updated_successfully') . " </div>";
+            echo "<div class='alert alert-success'>" .
+                $this->lang->line('data_updated_successfully') .
+                ' </div>';
         } else {
-            echo "<div class='alert alert-danger'>" . $this->lang->line('error_to_update_data') . " </div>";
-
+            echo "<div class='alert alert-danger'>" .
+                $this->lang->line('error_to_update_data') .
+                ' </div>';
         }
-
-
     }
-
 
     public function remove_level($lid)
     {
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
             exit($this->lang->line('permission_denied'));
         }
         $mlid = $this->input->post('mlid');
-        $this->db->query(" update savsoft_qbank set lid='$mlid' where lid='$lid' ");
+        $this->db->query(
+            " update savsoft_qbank set lid='$mlid' where lid='$lid' "
+        );
 
         if ($this->qbank_model->remove_level($lid)) {
-            $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('removed_successfully') . " </div>");
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-success'>" .
+                    $this->lang->line('removed_successfully') .
+                    ' </div>'
+            );
         } else {
-            $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_remove') . " </div>");
-
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                    $this->lang->line('error_to_remove') .
+                    ' </div>'
+            );
         }
         redirect('qbank/level_list');
-
-
     }
-
     // level functions end
-
 
     public function pre_remove_level($lid)
     {
@@ -690,10 +775,7 @@ class Qbank extends CI_Controller
         $this->load->view('header', $data);
         $this->load->view('pre_remove_level', $data);
         $this->load->view('footer', $data);
-
-
     }
-
 
     function import()
     {
@@ -706,25 +788,29 @@ class Qbank extends CI_Controller
         $this->load->helper('xlsimport/php-excel-reader/excel_reader2');
         $this->load->helper('xlsimport/spreadsheetreader.php');
 
-
         if (isset($_FILES['xlsfile'])) {
-
             $config['upload_path'] = './xls/';
             $config['allowed_types'] = 'xls';
             $config['max_size'] = 10000;
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('xlsfile')) {
-                $error = array('error' => $this->upload->display_errors());
-                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $error['error'] . " </div>");
+                $error = ['error' => $this->upload->display_errors()];
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $error['error'] .
+                        ' </div>'
+                );
                 redirect('qbank');
-                exit;
+                exit();
             } else {
-                $data = array('upload_data' => $this->upload->data());
+                $data = ['upload_data' => $this->upload->data()];
                 $targets = 'xls/';
-                $targets = $targets . basename($data['upload_data']['file_name']);
+                $targets =
+                    $targets . basename($data['upload_data']['file_name']);
                 $Filepath = $targets;
 
-                $allxlsdata = array();
+                $allxlsdata = [];
                 date_default_timezone_set('UTC');
 
                 $StartMem = memory_get_usage();
@@ -766,7 +852,7 @@ class Qbank extends CI_Controller
                             //echo 'Memory: '.($CurrentMem - $BaseMem).' current, '.$CurrentMem.' base'.PHP_EOL;
                             //echo '---------------------------------'.PHP_EOL;
 
-                            if ($Key && ($Key % 500 == 0)) {
+                            if ($Key && $Key % 500 == 0) {
                                 //echo '---------------------------------'.PHP_EOL;
                                 //echo 'Time: '.(microtime(true) - $Time);
                                 //echo '---------------------------------'.PHP_EOL;
@@ -781,22 +867,21 @@ class Qbank extends CI_Controller
                         //echo '*** End of sheet '.$Name.' ***'.PHP_EOL;
                         //echo '---------------------------------'.PHP_EOL;
                     }
-
                 } catch (Exception $E) {
                     echo $E->getMessage();
                 }
 
-
                 $this->qbank_model->import_question($allxlsdata);
-
             }
-
         } else {
-            echo "Error: " . $_FILES["file"]["error"];
+            echo 'Error: ' . $_FILES['file']['error'];
         }
-        $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('data_imported_successfully') . " </div>");
+        $this->session->set_flashdata(
+            'message',
+            "<div class='alert alert-success'>" .
+                $this->lang->line('data_imported_successfully') .
+                ' </div>'
+        );
         redirect('qbank');
     }
-
-
 }

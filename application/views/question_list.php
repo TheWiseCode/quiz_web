@@ -222,8 +222,9 @@
             <div style="clear:both;margin-bottom:15px;"></div>
             <input type="submit" value="Import" style="margin-top:5px;" class="btn btn-default">
 
-            <a href="<?php echo base_url(); ?>sample/sample.xls" target="new">Click
-                here</a> <?php echo $this->lang->line('upload_excel_info'); ?>
+            <a href="<?php echo base_url(); ?>sample/sample.xls"
+               target="new"><?php echo $this->lang->line('click_here'); ?>
+            </a> <?php echo $this->lang->line('upload_excel_info'); ?>
             </form>
 
         </div>
@@ -301,8 +302,9 @@
 
             <input type="submit" value="Import" style="margin-top:5px;" class="btn btn-default">
 
-            <a href="<?php echo base_url(); ?>sample/sample.docx" target="new">Click
-                here</a> <?php echo $this->lang->line('upload_doc_info'); ?>
+            <a href="<?php echo base_url(); ?>sample/sample.docx"
+               target="new"><?php echo $this->lang->line('click_here'); ?>
+                e</a> <?php echo $this->lang->line('upload_doc_info'); ?>
             </form>
 
         </div>

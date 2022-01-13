@@ -148,7 +148,7 @@ $hres = $hquery->result_Array();
                         <?php } ?>
                         <?php
                         if (in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
-                            <a class="collapse-item"
+                            <a hidden class="collapse-item"
                                href="<?php echo site_url('appointment/myappointment/'); ?>"><?php echo $this->lang->line('myappointment'); ?></a>
                         <?php } ?>
                     </div>
