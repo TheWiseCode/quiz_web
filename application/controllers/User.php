@@ -35,6 +35,7 @@ class User extends CI_Controller
         $data['title'] = $this->lang->line('userlist');
         // fetching user list
         $data['result'] = $this->user_model->user_list($limit);
+        $data['career_list'] = $this->user_model->get_career_all();
         $data['group_list'] = $this->user_model->get_group_all($limit);
         $this->load->view('header', $data);
         $this->load->view('user_list', $data);
@@ -53,6 +54,7 @@ class User extends CI_Controller
             $this->lang->line('add_new') . ' ' . $this->lang->line('user');
         // fetching group list
         $data['group_list'] = $this->user_model->group_list();
+        $data['career_list'] = $this->user_model->get_career_all();
         $data['account_type'] = $this->account_model->account_list(0);
         $this->load->view('header', $data);
         $this->load->view('new_user', $data);
@@ -72,7 +74,23 @@ class User extends CI_Controller
             'Email',
             'required|is_unique[savsoft_users.email]'
         );
-        //$this->form_validation->set_rules('password', 'Password', 'required');
+        if($this->input->post('password'))
+        {
+            
+            if($_POST['password'] != $_POST['repeat_password'])
+            {
+               
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                    'Las contraseñas no coinciden' .
+                        ' </div>'
+                );
+                redirect('user/new_user/');
+            }
+        }
+        $this->form_validation->set_rules('password', 'Password', 'required');
+        $this->form_validation->set_rules('repeat_password', 'Password', 'required');
         if ($this->form_validation->run() == false) {
             $this->session->set_flashdata(
                 'message',
@@ -255,6 +273,19 @@ class User extends CI_Controller
         $this->load->view('group_list', $data);
         $this->load->view('footer', $data);
     }
+    public function career_list(){
+        $logged_in = $this->session->userdata('logged_in');
+        $setting_p = explode(',', $logged_in['setting']);
+        if (!in_array('All', $setting_p)) {
+            exit($this->lang->line('permission_denied'));
+        }
+        // fetching group list
+        $data['career_list'] = $this->user_model->career_list();
+        $data['title'] = $this->lang->line('career_list');
+        $this->load->view('header', $data);
+        $this->load->view('career_list', $data);
+        $this->load->view('footer', $data);
+    }
 
     public function add_new_group()
     {
@@ -286,6 +317,38 @@ class User extends CI_Controller
         $data['title'] = $this->lang->line('add_group');
         $this->load->view('header', $data);
         $this->load->view('add_group', $data);
+        $this->load->view('footer', $data);
+    }
+    public function add_new_career()
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $setting_p = explode(',', $logged_in['setting']);
+        if (!in_array('All', $setting_p)) {
+            exit($this->lang->line('permission_denied'));
+        }
+
+        if ($this->input->post('career_name')) {
+            if ($this->user_model->insert_career()) {
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_added_successfully') .
+                        ' </div>'
+                );
+            } else {
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_update_data') .
+                        ' </div>'
+                );
+            }
+            redirect('user/career_list');
+        }
+        // fetching group list
+        $data['title'] = $this->lang->line('add_career');
+        $this->load->view('header', $data);
+        $this->load->view('add_career', $data);
         $this->load->view('footer', $data);
     }
 
@@ -321,6 +384,40 @@ class User extends CI_Controller
         $data['title'] = $this->lang->line('edit_group');
         $this->load->view('header', $data);
         $this->load->view('edit_group', $data);
+        $this->load->view('footer', $data);
+    }
+    public function edit_career($id)
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $setting_p = explode(',', $logged_in['setting']);
+        if (!in_array('All', $setting_p)) {
+            exit($this->lang->line('permission_denied'));
+        }
+
+        if ($this->input->post('career_name')) {
+            if ($this->user_model->update_group($id)) {
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                        $this->lang->line('data_updated_successfully') .
+                        ' </div>'
+                );
+            } else {
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_update_data') .
+                        ' </div>'
+                );
+            }
+            redirect('user/group_list');
+        }
+        // fetching group list
+        $data['career'] = $this->user_model->get_career($id);
+        $data['id'] = $id;
+        $data['title'] = $this->lang->line('edit_career');
+        $this->load->view('header', $data);
+        $this->load->view('edit_career', $data);
         $this->load->view('footer', $data);
     }
 

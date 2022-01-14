@@ -1,7 +1,7 @@
 <div class="container">
 
    
- <h3>Remove Account</h3>
+ <h3><?php echo $this->lang->line('remove'); ?> Account</h3>
 
 
   <div class="row">

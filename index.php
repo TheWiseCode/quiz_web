@@ -5,7 +5,7 @@ header('Access-Control-Allow-Origin: *');
  * Set default time zone
  * find supported parameter or time zones at http://php.net/manual/en/timezones.php
  */
-date_default_timezone_set('Asia/Kolkata');
+date_default_timezone_set('America/La_Paz');
 /**
  * CodeIgniter
  *
@@ -33,13 +33,13 @@ date_default_timezone_set('Asia/Kolkata');
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * @package	CodeIgniter
- * @author	EllisLab Dev Team
- * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
- * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
- * @license	https://opensource.org/licenses/MIT	MIT License
- * @link	https://codeigniter.com
- * @since	Version 1.0.0
+ * @package    CodeIgniter
+ * @author    EllisLab Dev Team
+ * @copyright    Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
+ * @copyright    Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
+ * @license    https://opensource.org/licenses/MIT	MIT License
+ * @link    https://codeigniter.com
+ * @since    Version 1.0.0
  * @filesource
  */
 
@@ -85,11 +85,11 @@ switch (ENVIRONMENT) {
         if (version_compare(PHP_VERSION, '5.3', '>=')) {
             error_reporting(
                 E_ALL &
-                    ~E_NOTICE &
-                    ~E_DEPRECATED &
-                    ~E_STRICT &
-                    ~E_USER_NOTICE &
-                    ~E_USER_DEPRECATED
+                ~E_NOTICE &
+                ~E_DEPRECATED &
+                ~E_STRICT &
+                ~E_USER_NOTICE &
+                ~E_USER_DEPRECATED
             );
         } else {
             error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_USER_NOTICE);

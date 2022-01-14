@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/application/logs/log-2022-01-13.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sample/ejemplo lista de estudiantes.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes1.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes2.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes3.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes4.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes5.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes_(1).xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes_(1)1.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes_(1)2.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes_(1)3.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes_(1)4.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes_(1)5.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes_(1)6.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes_(1)7.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/lista.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/lista1.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/lista10.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/lista11.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/lista12.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/lista2.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/lista3.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/lista4.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/lista5.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/lista6.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/lista7.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/lista8.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/lista9.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample10.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample11.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample12.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample13.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample14.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample15.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample16.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample17.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample18.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample19.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample2.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample20.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample21.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample22.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample23.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample24.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample25.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample26.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample27.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample28.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample29.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample3.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample30.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample31.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample32.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample33.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample34.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample35.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample36.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample37.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample38.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample39.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample4.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample5.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample6.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample7.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample8.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample9.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser1.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser10.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser11.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser12.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser13.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser14.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser15.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser16.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser17.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser18.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser19.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser2.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser20.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser21.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser22.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser23.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser24.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser25.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser26.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser27.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser28.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser29.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser3.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser30.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser31.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser32.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser33.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser34.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser35.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser36.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser37.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser38.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser39.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser4.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser40.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser41.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser42.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser43.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser44.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser45.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser46.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser47.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser48.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser49.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser5.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser50.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser51.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser52.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser53.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser54.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser55.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser56.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser57.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser58.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser59.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser6.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser60.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser61.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser62.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser63.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser64.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser65.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser66.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser67.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser68.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser69.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser7.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser70.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser71.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser72.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser73.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser74.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser75.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser76.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser77.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser78.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser79.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser8.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser80.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser81.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser82.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser83.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser84.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser85.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser86.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser87.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser88.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser89.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser9.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser90.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser91.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser92.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser93.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser94.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser95.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser96.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser97.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser98.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sampleUser99.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample_(1).xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample_(1)1.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample_(1)2.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample_(1)3.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample_(1)4.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample_(1)5.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample_(1)6.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample_(1)7.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/sample_(1)8.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Appointment.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Appointment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Qbank.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Qbank.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-09.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-09.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-10.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-10.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-11.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-11.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Appointment_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Appointment_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Qbank_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Qbank_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/add_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/add_group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/group_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/group_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/new_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/question_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/question_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/user_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/view_result.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_result.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/IN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/basic - Copy.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/basic - Copy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/basic.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/basic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/savsoftquiz_v5_0.sql" beforeDir="false" afterPath="$PROJECT_DIR$/savsoftquiz_v5_0.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="9003" break_at_first_line="true">
+    <xdebug_debug_ports port="9003" />
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="074df649-cc2d-4047-8440-52d428549400" name="local" port="8080" />
+    </servers>
+  </component>
+  <component name="PhpWebServerValidation" path_to_validation_script="C:\xampp\htdocs" selected_validation_type="LOCAL" web_path_to_validation_script="http://localhost:8080/" />
+  <component name="ProjectId" id="23ZtFBj6BbUnggvwkBDHbiO3N23" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/models" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="web" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="local" start_url="http://localhost:8080/savsoftquiz_v5">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="" />
+      <created>1641953335702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1641953335702</updated>
+      <workItem from="1641953339647" duration="109000" />
+      <workItem from="1641989316400" duration="11000" />
+      <workItem from="1642001012211" duration="9829000" />
+      <workItem from="1642012220886" duration="2473000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/Appointment.php</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

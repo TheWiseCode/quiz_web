@@ -40,14 +40,14 @@ foreach($result as $row){
 <td data-th="Closed Time"><?php echo date('Y/m/d H:i:s',$row['closed_time']);?></td>
 <td>
 
-<a href="<?php echo site_url('liveclass/view/'.$row['class_id']);?>"  class="btn btn-info btn-xs">View</a>
+<a href="<?php echo site_url('liveclass/view/'.$row['class_id']);?>"  class="btn btn-info btn-xs"><?php echo $this->lang->line('view'); ?></a>
 &nbsp;&nbsp;
 
 <?php
 if($logged_in['su']=="1"){
 ?>
 
-<a href="javascript: if(confirm('Do you really want to remove this class?')){ window.location='<?php echo site_url('liveclass/remove_class/'.$row['class_id'] );?>'; }" class="btn btn-danger btn-xs">Remove</a>
+<a href="javascript: if(confirm('Do you really want to remove this class?')){ window.location='<?php echo site_url('liveclass/remove_class/'.$row['class_id'] );?>'; }" class="btn btn-danger btn-xs"><?php echo $this->lang->line('remove'); ?></a>
  <?php
 }
 ?>

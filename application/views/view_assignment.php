@@ -108,13 +108,13 @@ $sbt=1;
 <br>
 <span style="font-size:11px;"><?php echo $this->lang->line('submitted_on').' '.$vals['reported_date']; ?></span>
 <br>
-<?php echo $this->lang->line('score');?>: <?php if($vals['evaluated']=='Pending'){ echo 'Pending';} else{ echo $vals['score'];}?>  
+<?php echo $this->lang->line('score');?>: <?php if($vals['evaluated']=='pending'){ echo 'Pending';} else{ echo $vals['score'];}?>  
 </div>
 <div class="col-lg-6">
 <?php 
 $acp=explode(',',$logged_in['assignment']);
 		         if(in_array('Add',$acp) || in_array('Edit',$acp)){
-		        if($vals['evaluated']=='Pending'){ ?>
+		        if($vals['evaluated']=='pending'){ ?>
 <form method="post" action="<?php echo site_url('assignment/insert_score/'.$result['assignment_id'].'/'.$vals['report_id']);?>" >
 <input type="text" name="score"  placeholder="<?php echo $this->lang->line('score');?>" >
 <input type="submit" value="<?php echo $this->lang->line('submit');?>">
