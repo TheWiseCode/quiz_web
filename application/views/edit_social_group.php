@@ -1,4 +1,4 @@
-  <h3><?php echo $title;?></h3>
+  <h3 class="font-weight-bold"><?php echo $title;?></h3>
     <?php if($this->session->flashdata('message')){
        
        echo $this->session->flashdata('message'); 

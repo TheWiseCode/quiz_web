@@ -17,7 +17,7 @@
  
    <div style="margin-top:50px;margin-bottom:50px;">
 
- <h3><?php echo $title;?></h3>
+ <h3 class="font-weight-bold"><?php echo $title;?></h3>
    </div>
      
 <?php 

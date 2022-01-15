@@ -1,7 +1,7 @@
 <div class="container">
 
 
-    <h3><?php echo $title; ?></h3>
+    <h3 class="font-weight-bold"><?php echo $title; ?></h3>
     <a href="<?php echo site_url('quiz/edit_quiz/' . $quid); ?>"
        class="btn btn-info"><?php echo $this->lang->line('close'); ?></a><br><br>
     <div class="row">

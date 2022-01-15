@@ -324,7 +324,7 @@ $hres = $hquery->result_Array();
         <?php
         if (!in_array('List_all', explode(',', $logged_in['quiz']))) {
             ?>
-            <a href="<?php echo site_url('user/switch_group'); ?>" class="btn btn-danger"
+            <a hidden href="<?php echo site_url('user/switch_group'); ?>" class="btn btn-danger"
                style="border-radius:0px;"><?php echo $this->lang->line('change_group'); ?></a>
             <?php
         }
@@ -498,7 +498,7 @@ $hres = $hquery->result_Array();
 
                             <?php
                             if (in_array('List', explode(',', $logged_in['appointment'])) && !in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
-                                <a class="dropdown-item" href="<?php echo site_url('appointment/myappointment/'); ?>"><i
+                                <a hidden class="dropdown-item" href="<?php echo site_url('appointment/myappointment/'); ?>"><i
                                             class="fas fa-mobile fa-sm fa-fw mr-2 text-gray-400"></i><?php echo $this->lang->line('myappointment'); ?>
                                 </a>
                             <?php } ?>

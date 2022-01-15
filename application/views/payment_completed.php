@@ -13,7 +13,7 @@ if(!$this->session->userdata('logged_in')){
 }
 ?>
 	
- <h3><?php echo $title;?></h3>
+ <h3 class="font-weight-bold"><?php echo $title;?></h3>
    <br><br>
    
    <?php echo $this->lang->line('payment_success_message');?>

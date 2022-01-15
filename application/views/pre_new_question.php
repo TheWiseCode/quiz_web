@@ -1,8 +1,11 @@
+<style>
+    label{
+        font-weight: bold;
+    }
+</style>
 <div class="container">
 
-
-    <h3><?php echo $title; ?></h3>
-
+    <h3 class="font-weight-bold"><?php echo $title; ?></h3>
 
     <div class="row">
         <form method="post" action="<?php echo site_url('qbank/pre_new_question/'); ?>">
@@ -32,14 +35,14 @@
 
                         <div class="form-group" id="nop">
                             <label for="inputEmail"><?php echo $this->lang->line('nop'); ?></label>
-                            <input type="text" name="nop" class="form-control" value="4">
+                            <input type="number" name="nop" class="form-control" value="4">
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="with_paragraph"
                                    value="1"> <?php echo $this->lang->line('with_paragraph'); ?></div>
 
 
-                        <button class="btn btn-default" type="submit"><?php echo $this->lang->line('next'); ?></button>
+                        <button class="btn btn-primary" type="submit"><?php echo $this->lang->line('next'); ?></button>
 
                     </div>
                 </div>

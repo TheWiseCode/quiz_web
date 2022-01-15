@@ -46,7 +46,7 @@ class User2 extends CI_Controller
         $query2 = $this->db->query(" select * from savsoft_result where uid='$uid' and result_status='pass' ");
         $query3 = $this->db->query(" select * from savsoft_result where uid='$uid' and result_status='fail' ");
         if ($query1->num_rows() == 0) {
-            $data['lastattempt'] = "Not attempted any quiz";
+            $data['lastattempt'] = $this->lang->line('not_attempted');
         } else {
             $data['lastattempt'] = date('Y-m-d h:i:s', $res1[0]['start_time']);
         }

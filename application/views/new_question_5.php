@@ -3,7 +3,7 @@
     $lang = $this->config->item('question_lang');
     ?>
 
-    <h3><?php echo $title; ?></h3>
+    <h3 class="font-weight-bold"><?php echo $title; ?></h3>
 
 
     <div class="row">
@@ -22,48 +22,53 @@
                         ?>
 
 
-                        <div class="form-group">
+                        <div class="form-group font-weight-bold">
                             <?php echo $this->lang->line('long_answer'); ?>
 
                         </div>
 
 
-                        <div class="form-group">
-                            <label><?php echo $this->lang->line('select_category'); ?></label>
-                            <select class="form-control" name="cid">
-                                <?php
-                                foreach ($category_list as $key => $val) {
-                                    ?>
+                        <div class="row">
+                            <div class="col col-md-6">
+                                <div class="form-group">
+                                    <label class="font-weight-bold"><?php echo $this->lang->line('select_category'); ?></label>
+                                    <select class="form-control" name="cid">
+                                        <?php
+                                        foreach ($category_list as $key => $val) {
+                                            ?>
 
-                                    <option value="<?php echo $val['cid']; ?>"><?php echo $val['category_name']; ?></option>
-                                    <?php
-                                }
-                                ?>
-                            </select>
+                                            <option value="<?php echo $val['cid']; ?>"><?php echo $val['category_name']; ?></option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col col-md-6">
+                                <div class="form-group">
+                                    <label class="font-weight-bold"><?php echo $this->lang->line('select_level'); ?></label>
+                                    <select class="form-control" name="lid">
+                                        <?php
+                                        foreach ($level_list as $key => $val) {
+                                            ?>
+
+                                            <option value="<?php echo $val['lid']; ?>"><?php echo $val['level_name']; ?></option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-
-
-                        <div class="form-group">
-                            <label><?php echo $this->lang->line('select_level'); ?></label>
-                            <select class="form-control" name="lid">
-                                <?php
-                                foreach ($level_list as $key => $val) {
-                                    ?>
-
-                                    <option value="<?php echo $val['lid']; ?>"><?php echo $val['level_name']; ?></option>
-                                    <?php
-                                }
-                                ?>
-                            </select>
-                        </div>
-
 
                         <?php
                         if ($para == 1) {
                             ?>
 
                             <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('paragraph'); ?></label>
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('paragraph'); ?></label>
                                 <textarea name="paragraph" class="form-control"><?php
                                     if (isset($qp)) {
                                         echo $qp['paragraph'];
@@ -77,17 +82,19 @@
 
 
                         <div class="form-group">
-                            <label for="inputEmail"><?php echo $this->lang->line('question'); ?></label>
+                            <label for="inputEmail"
+                                   class="font-weight-bold"><?php echo $this->lang->line('question'); ?></label>
                             <textarea name="question" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail"><?php echo $this->lang->line('description'); ?></label>
+                            <label for="inputEmail"
+                                   class="font-weight-bold"><?php echo $this->lang->line('description'); ?></label>
                             <textarea name="description" class="form-control"></textarea>
                         </div>
 
 
                         <input type="hidden" name="parag" id="parag" value="0">
-                        <button class="btn btn-default"
+                        <button class="btn btn-primary"
                                 type="submit"><?php echo $this->lang->line('submit'); ?></button>
                         <?php
                         if ($para == 1) {

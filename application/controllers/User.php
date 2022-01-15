@@ -48,9 +48,7 @@ class User extends CI_Controller
         if (!in_array('Add', $user_p)) {
             exit($this->lang->line('permission_denied'));
         }
-
-        $data['title'] =
-            $this->lang->line('add_new') . ' ' . $this->lang->line('user');
+        $data['title'] = $this->lang->line('add_new_user');
         // fetching group list
         $data['group_list'] = $this->user_model->group_list();
         $data['account_type'] = $this->account_model->account_list(0);
@@ -77,8 +75,8 @@ class User extends CI_Controller
             $this->session->set_flashdata(
                 'message',
                 "<div class='alert alert-danger'>" .
-                    validation_errors() .
-                    ' </div>'
+                validation_errors() .
+                ' </div>'
             );
             redirect('user/new_user/');
         } else {
@@ -86,15 +84,15 @@ class User extends CI_Controller
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-success'>" .
-                        $this->lang->line('data_added_successfully') .
-                        ' </div>'
+                    $this->lang->line('data_added_successfully') .
+                    ' </div>'
                 );
             } else {
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-danger'>" .
-                        $this->lang->line('error_to_add_data') .
-                        ' </div>'
+                    $this->lang->line('error_to_add_data') .
+                    ' </div>'
                 );
             }
             redirect('user/new_user/');
@@ -116,15 +114,15 @@ class User extends CI_Controller
             $this->session->set_flashdata(
                 'message',
                 "<div class='alert alert-success'>" .
-                    $this->lang->line('removed_successfully') .
-                    ' </div>'
+                $this->lang->line('removed_successfully') .
+                ' </div>'
             );
         } else {
             $this->session->set_flashdata(
                 'message',
                 "<div class='alert alert-danger'>" .
-                    $this->lang->line('error_to_remove') .
-                    ' </div>'
+                $this->lang->line('error_to_remove') .
+                ' </div>'
             );
         }
         redirect('user');
@@ -181,8 +179,7 @@ class User extends CI_Controller
         }
 
         $data['uid'] = $uid;
-        $data['title'] =
-            $this->lang->line('edit') . ' ' . $this->lang->line('user');
+        $data['title'] = $this->lang->line('edit_user');
         // fetching user
         $data['result'] = $this->user_model->get_user($uid);
         $data['custom_form_user'] = $this->user_model->custom_form_user($uid);
@@ -217,8 +214,8 @@ class User extends CI_Controller
             $this->session->set_flashdata(
                 'message',
                 "<div class='alert alert-danger'>" .
-                    validation_errors() .
-                    ' </div>'
+                validation_errors() .
+                ' </div>'
             );
             redirect('user/edit_user/' . $uid);
         } else {
@@ -226,15 +223,15 @@ class User extends CI_Controller
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-success'>" .
-                        $this->lang->line('data_updated_successfully') .
-                        ' </div>'
+                    $this->lang->line('data_updated_successfully') .
+                    ' </div>'
                 );
             } else {
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-danger'>" .
-                        $this->lang->line('error_to_update_data') .
-                        ' </div>'
+                    $this->lang->line('error_to_update_data') .
+                    ' </div>'
                 );
             }
             redirect('user/edit_user/' . $uid);
@@ -269,15 +266,15 @@ class User extends CI_Controller
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-success'>" .
-                        $this->lang->line('data_added_successfully') .
-                        ' </div>'
+                    $this->lang->line('data_added_successfully') .
+                    ' </div>'
                 );
             } else {
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-danger'>" .
-                        $this->lang->line('error_to_update_data') .
-                        ' </div>'
+                    $this->lang->line('error_to_update_data') .
+                    ' </div>'
                 );
             }
             redirect('user/group_list');
@@ -302,15 +299,15 @@ class User extends CI_Controller
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-success'>" .
-                        $this->lang->line('data_updated_successfully') .
-                        ' </div>'
+                    $this->lang->line('data_updated_successfully') .
+                    ' </div>'
                 );
             } else {
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-danger'>" .
-                        $this->lang->line('error_to_update_data') .
-                        ' </div>'
+                    $this->lang->line('error_to_update_data') .
+                    ' </div>'
                 );
             }
             redirect('user/group_list');
@@ -335,9 +332,9 @@ class User extends CI_Controller
             if ($group['price'] != '0') {
                 redirect(
                     'payment_gateway_2/subscribe/' .
-                        $gid .
-                        '/' .
-                        $logged_in['uid']
+                    $gid .
+                    '/' .
+                    $logged_in['uid']
                 );
             } else {
                 $subscription_expired = time() + 365 * 20 * 24 * 60 * 60;
@@ -354,8 +351,8 @@ class User extends CI_Controller
             $this->session->set_flashdata(
                 'message',
                 "<div class='alert alert-success'>" .
-                    $this->lang->line('group_updated_successfully') .
-                    ' </div>'
+                $this->lang->line('group_updated_successfully') .
+                ' </div>'
             );
         } else {
             $this->session->set_flashdata(
@@ -366,6 +363,7 @@ class User extends CI_Controller
 
         redirect('user/edit_user/' . $logged_in['uid']);
     }
+
     public function switch_group()
     {
         $logged_in = $this->session->userdata('logged_in');
@@ -403,15 +401,15 @@ class User extends CI_Controller
             $this->session->set_flashdata(
                 'message',
                 "<div class='alert alert-success'>" .
-                    $this->lang->line('data_added_successfully') .
-                    ' </div>'
+                $this->lang->line('data_added_successfully') .
+                ' </div>'
             );
         } else {
             $this->session->set_flashdata(
                 'message',
                 "<div class='alert alert-danger'>" .
-                    $this->lang->line('error_to_add_data') .
-                    ' </div>'
+                $this->lang->line('error_to_add_data') .
+                ' </div>'
             );
         }
         redirect('user/group_list/');
@@ -458,15 +456,15 @@ class User extends CI_Controller
             $this->session->set_flashdata(
                 'message',
                 "<div class='alert alert-success'>" .
-                    $this->lang->line('removed_successfully') .
-                    ' </div>'
+                $this->lang->line('removed_successfully') .
+                ' </div>'
             );
         } else {
             $this->session->set_flashdata(
                 'message',
                 "<div class='alert alert-danger'>" .
-                    $this->lang->line('error_to_remove') .
-                    ' </div>'
+                $this->lang->line('error_to_remove') .
+                ' </div>'
             );
         }
         redirect('user/group_list');
@@ -483,8 +481,8 @@ class User extends CI_Controller
         $this->session->set_flashdata(
             'message',
             "<div class='alert alert-danger'>" .
-                $this->lang->line('removed_successfully') .
-                ' </div>'
+            $this->lang->line('removed_successfully') .
+            ' </div>'
         );
 
         redirect('user/custom_fields');
@@ -504,8 +502,8 @@ class User extends CI_Controller
             $this->session->set_flashdata(
                 'message',
                 "<div class='alert alert-success'>" .
-                    $this->lang->line('data_added_successfully') .
-                    ' </div>'
+                $this->lang->line('data_added_successfully') .
+                ' </div>'
             );
 
             redirect('user/custom_fields');
@@ -532,8 +530,8 @@ class User extends CI_Controller
             $this->session->set_flashdata(
                 'message',
                 "<div class='alert alert-success'>" .
-                    $this->lang->line('data_updated_successfully') .
-                    ' </div>'
+                $this->lang->line('data_updated_successfully') .
+                ' </div>'
             );
 
             redirect('user/custom_fields');
@@ -577,8 +575,8 @@ class User extends CI_Controller
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-danger'>" .
-                        $error['error'] .
-                        ' </div>'
+                    $error['error'] .
+                    ' </div>'
                 );
                 redirect('user');
                 exit();
@@ -651,7 +649,7 @@ class User extends CI_Controller
                 }
 
                 $this->user_model->import_users($allxlsdata);
-               
+
             }
         } else {
             echo 'Error: ' . $_FILES['file']['error'];
@@ -659,8 +657,8 @@ class User extends CI_Controller
         $this->session->set_flashdata(
             'message',
             "<div class='alert alert-success'>" .
-                $this->lang->line('data_imported_successfully') .
-                ' </div>'
+            $this->lang->line('data_imported_successfully') .
+            ' </div>'
         );
         redirect('user');
     }

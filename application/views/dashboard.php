@@ -87,7 +87,7 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                         <a href="<?php echo site_url('user'); ?>">
-                                            <?php echo $this->lang->line('active'); ?><?php echo $this->lang->line('users'); ?>
+                                            <?php echo $this->lang->line('active_users'); ?>
                                         </a>
                                     </div>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $active_users; ?></div>
@@ -110,7 +110,7 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                         <a href="<?php echo site_url('user'); ?>">
-                                            <?php echo $this->lang->line('inactive'); ?><?php echo $this->lang->line('users'); ?>
+                                            <?php echo $this->lang->line('inactive_users'); ?>
                                         </a>
                                     </div>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $inactive_users; ?></div>
@@ -131,7 +131,7 @@
             <!-- recent users -->
 
             <div class="card  shadow  py-2" style="margin-top:20px;">
-                <div class="card-heading" style="padding:5px;">
+                <div class="card-header" style="padding:5px;">
                     <h6 class="m-0 font-weight-bold text-primary">
                         <?php echo $this->lang->line('recently_registered'); ?>
                     </h6>
@@ -195,7 +195,7 @@
 
             <?php
 
-            $months = array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
+            $months = $this->lang->line('months');
             ?>
 
             <div class="card shadow mb-4">
@@ -281,7 +281,7 @@
 
             <!-- References -->
 
-            <div class="panel">
+            <div class="panel" hidden>
                 <div class="panel-heading">
                     <div class="panel-title"><?php echo $this->lang->line('recent_sub'); ?></div>
                 </div>

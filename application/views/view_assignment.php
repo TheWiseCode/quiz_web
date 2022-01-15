@@ -16,7 +16,7 @@
 <br> 
  <div class="panel panel-default">
  <div class="panel-heading">
- <h3><?php echo $title.' : '.$result['assignment_title']; ?></h3>
+ <h3 class="font-weight-bold"><?php echo $title.' : '.$result['assignment_title']; ?></h3>
  </div>
 		<div class="panel-body"> 
 	

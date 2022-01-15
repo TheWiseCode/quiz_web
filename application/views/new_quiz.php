@@ -2,9 +2,7 @@
 <script src="<?php echo base_url('js/select2.min.js'); ?>"></script>
 <div class="container">
 
-
-    <h3><?php echo $title; ?></h3>
-
+    <h3 class="font-weight-bold"><?php echo $title; ?></h3>
 
     <div class="row">
         <form method="post" action="<?php echo site_url('quiz/insert_quiz/'); ?>">
@@ -24,12 +22,13 @@
 
                         <div class="form-group">
                             <label for="inputEmail"
-                                   class="sr-only"><?php echo $this->lang->line('quiz_name'); ?></label>
+                                   class=" font-weight-bold"><?php echo $this->lang->line('quiz_name'); ?></label>
                             <input type="text" name="quiz_name" class="form-control"
                                    placeholder="<?php echo $this->lang->line('quiz_name'); ?>" required autofocus>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail"><?php echo $this->lang->line('description'); ?></label>
+                            <label for="inputEmail"
+                                   class="font-weight-bold"><?php echo $this->lang->line('description'); ?></label>
                             <textarea name="description" class="form-control tinymce_textarea"></textarea>
                         </div>
 
@@ -39,56 +38,71 @@
                         <div id="advance_options" class="collapse">
 
                             <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('start_date'); ?></label>
-                                <input type="text" name="start_date" value="<?php echo date('Y-m-d H:i:s', time()); ?>"
+                                <!--TODO: FIX ERROR EN LOS SEGUNDOS-->
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('start_date'); ?></label>
+                                <input type="datetime-local" name="start_date"
+                                       value="<?php echo date('Y-m-d H:i:s', time()); ?>"
                                        class="form-control" placeholder="<?php echo $this->lang->line('start_date'); ?>"
                                        required>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('end_date'); ?></label>
-                                <input type="text" name="end_date"
+                                <!--TODO: FIX ERROR EN LOS SEGUNDOS-->
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('end_date'); ?></label>
+                                <input type="datetime-local" name="end_date"
                                        value="<?php echo date('Y-m-d H:i:s', (time() + (60 * 60 * 24 * 365))); ?>"
                                        class="form-control" placeholder="<?php echo $this->lang->line('end_date'); ?>"
                                        required>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('duration'); ?></label>
-                                <input type="text" name="duration" value="10" class="form-control"
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('duration'); ?></label>
+                                <input type="number" name="duration" value="10" class="form-control"
                                        placeholder="<?php echo $this->lang->line('duration'); ?>" required>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('maximum_attempts'); ?></label>
-                                <input type="text" name="maximum_attempts" value="10" class="form-control"
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('maximum_attempts'); ?></label>
+                                <input type="number" name="maximum_attempts" value="10" class="form-control"
                                        placeholder="<?php echo $this->lang->line('maximum_attempts'); ?>" required>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('pass_percentage'); ?></label>
-                                <input type="text" name="pass_percentage" value="50" class="form-control"
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('pass_percentage'); ?></label>
+                                <input type="number" name="pass_percentage" value="50" class="form-control"
                                        placeholder="<?php echo $this->lang->line('pass_percentage'); ?>" required>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('correct_score'); ?></label>
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('correct_score'); ?></label>
                                 <input type="text" name="correct_score" value="1" class="form-control"
                                        placeholder="<?php echo $this->lang->line('correct_score'); ?>" required>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('incorrect_score'); ?></label>
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('incorrect_score'); ?></label>
                                 <input type="text" name="incorrect_score" value="0" class="form-control"
                                        placeholder="<?php echo $this->lang->line('incorrect_score'); ?>" required>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('ip_address'); ?></label>
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('ip_address'); ?></label>
                                 <input type="text" name="ip_address" value="" class="form-control"
                                        placeholder="<?php echo $this->lang->line('ip_address'); ?>">
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('view_answer'); ?></label> <br>
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('view_answer'); ?></label>
+                                <br>
                                 <input type="radio" name="view_answer" value="1"
                                        checked> <?php echo $this->lang->line('yes'); ?>&nbsp;&nbsp;&nbsp;
                                 <input type="radio" name="view_answer" value="0"> <?php echo $this->lang->line('no'); ?>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('open_quiz'); ?></label> <br>
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('open_quiz'); ?></label>
+                                <br>
                                 <input type="radio" name="with_login" value="0"> <?php echo $this->lang->line('yes'); ?>
                                 &nbsp;&nbsp;&nbsp;
                                 <input type="radio" name="with_login" value="1"
@@ -96,7 +110,9 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('show_rank'); ?></label> <br>
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('show_rank'); ?></label>
+                                <br>
                                 <input type="radio" name="show_chart_rank" value="1"
                                        checked> <?php echo $this->lang->line('yes'); ?>&nbsp;&nbsp;&nbsp;
                                 <input type="radio" name="show_chart_rank"
@@ -108,7 +124,8 @@
                             if ($this->config->item('webcam') == true) {
                                 ?>
                                 <div class="form-group">
-                                    <label for="inputEmail"><?php echo $this->lang->line('capture_photo'); ?></label>
+                                    <label for="inputEmail"
+                                           class="font-weight-bold"><?php echo $this->lang->line('capture_photo'); ?></label>
                                     <br>
                                     <input type="radio" name="camera_req"
                                            value="1"> <?php echo $this->lang->line('yes'); ?>&nbsp;&nbsp;&nbsp;
@@ -124,7 +141,8 @@
                             }
                             ?>
                             <div class="form-group">
-                                <label><?php echo $this->lang->line('assign_to_group'); ?></label> <br>
+                                <label class="font-weight-bold"><?php echo $this->lang->line('assign_to_group'); ?></label>
+                                <br>
                                 <?php
                                 foreach ($group_list as $key => $val) {
                                     ?>
@@ -141,7 +159,8 @@
 
                             <div class="form-group">
 
-                                <label><?php echo $this->lang->line('assign_to_student'); ?></label> <br>
+                                <label class="font-weight-bold"><?php echo $this->lang->line('assign_to_student'); ?></label>
+                                <br>
 
 
                                 <select class="js-example-basic-multiple form-control" name="uids[]"
@@ -156,7 +175,8 @@
                             </div>
 
                             <div class="form-group" hidden>
-                                <label><?php echo $this->lang->line('quiz_template'); ?></label> <br>
+                                <label class="font-weight-bold"><?php echo $this->lang->line('quiz_template'); ?></label>
+                                <br>
                                 <select name="quiz_template">
                                     <?php
                                     foreach ($this->config->item('quiz_templates') as $qk => $val) {
@@ -172,7 +192,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('question_selection'); ?></label>
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('question_selection'); ?></label>
                                 <br>
                                 <input type="radio" name="question_selection"
                                        value="1"> <?php echo $this->lang->line('automatically'); ?><br>
@@ -182,25 +203,26 @@
 
 
                             <div class="form-group" hidden>
-                                <label for="inputEmail"><?php echo $this->lang->line('quiz_price'); ?></label> <br>
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('quiz_price'); ?></label>
+                                <br>
                                 <input type="text" name="quiz_price" value="0" class="form-control"
                                        placeholder="<?php echo $this->lang->line('quiz_price'); ?>" readonly=readonly
                                        required>
                                 <a href="<?php echo site_url('payment_gateway'); ?>">Enable this feature</a>
                             </div>
-
-
-                            <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('generate_certificate'); ?></label>
+                            <div class="form-group" hidden>
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('generate_certificate'); ?></label>
                                 <br>
                                 <input type="radio" name="gen_certificate"
                                        value="1"> <?php echo $this->lang->line('yes'); ?><br>
                                 <input type="radio" name="gen_certificate" value="0"
                                        checked> <?php echo $this->lang->line('no'); ?>
                             </div>
-
-                            <div class="form-group">
-                                <label for="inputEmail"><?php echo $this->lang->line('certificate_text'); ?></label>
+                            <div class="form-group" hidden>
+                                <label for="inputEmail"
+                                       class="font-weight-bold"><?php echo $this->lang->line('certificate_text'); ?></label>
                                 <textarea name="certificate_text" class="form-control"></textarea><br>
                                 <?php echo $this->lang->line('tags_use'); ?> <?php echo htmlentities("<br>  <center></center>  <b></b>  <h1></h1>  <h2></h2>   <h3></h3>    <font></font>"); ?>
                                 <br>
@@ -211,9 +233,9 @@
                         </div>
                         <br><br>
 
-                        <button class="btn btn-success" type="submit"><?php echo $this->lang->line('next'); ?></button>
+                        <button class="btn btn-primary" type="submit"><?php echo $this->lang->line('next'); ?></button>
 
-                        <br><br><br>
+                        <br><br>
                         <?php echo $this->lang->line('open_quiz_warning'); ?>
                     </div>
                 </div>

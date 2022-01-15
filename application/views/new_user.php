@@ -1,5 +1,5 @@
 <div class="container">
-    <h3><?php echo $title; ?></h3>
+    <h3 class="font-weight-bold"><?php echo $title; ?></h3>
     <div class="row">
         <form method="post" action="<?php echo site_url('user/insert_user/'); ?>">
 

@@ -3,14 +3,14 @@
     $logged_in = $this->session->userdata('logged_in');
     ?>
 
-    <h3><?php echo $title; ?></h3>
+    <h3 class="font-weight-bold"><?php echo $title; ?></h3>
     <div class="row">
         <div class="col-lg-6">
             <form method="post" action="<?php echo site_url('study_material/index/'); ?>">
                 <div class="input-group">
                     <input type="text" class="form-control" name="search"
                            placeholder="<?php echo $this->lang->line('search'); ?>...">
-                    <span class="input-group-btn">
+                    <span class="input-group-append">
         <button class="btn btn-default" type="submit"><?php echo $this->lang->line('search'); ?></button>
       </span>
                 </div><!-- /input-group -->

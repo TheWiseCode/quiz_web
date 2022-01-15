@@ -1,5 +1,5 @@
 <div class="container">
-    <h3><?php echo $title; ?></h3>
+    <h3 class="font-weight-bold"><?php echo $title; ?></h3>
     <div class="row">
 
         <div class="col-md-12">
@@ -11,8 +11,9 @@
             ?>
             <div id="message"></div>
 
-            <a href="<?php echo site_url('user/add_new_group'); ?>" class="btn btn-success"><?php echo $this->lang->line('add_new'); ?></a>
-
+            <a href="<?php echo site_url('user/add_new_group'); ?>"
+               class="btn btn-success"><?php echo $this->lang->line('add_new'); ?></a>
+            <br><br>
             <table class="table table-bordered">
                 <tr>
                     <th><?php echo $this->lang->line('group_name'); ?></th>

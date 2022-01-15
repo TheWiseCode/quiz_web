@@ -16,7 +16,7 @@
  <div class="container">
 
    
- <h3><?php echo $title;?></h3>
+ <h3 class="font-weight-bold"><?php echo $title;?></h3>
    
  
 

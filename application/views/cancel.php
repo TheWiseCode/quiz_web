@@ -8,7 +8,7 @@
 		<div class="panel-body"> 
 	  	<img src="<?php echo base_url('images/logo.png');?>">
 	
- <h3><?php echo $title;?></h3>
+ <h3 class="font-weight-bold"><?php echo $title;?></h3>
    
  <br>
  <a href="<?php echo site_url('login');?>"><?php echo $this->lang->line('login');?></a> 

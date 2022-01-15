@@ -1,4 +1,4 @@
-<h3><?php echo $this->lang->line('setting'); ?></h3>
+<h3 class="font-weight-bold"><?php echo $this->lang->line('setting'); ?></h3>
 
 <form method="post" action="<?php echo site_url('setting/update'); ?>">
 
@@ -7,10 +7,10 @@
         foreach ($tabs as $k => $val) {
             if ($val != 'Payment_Gateway') {
                 ?>
-                <li class="<?php if ($k == 0) {
+                <li class="nav-link <?php if ($k == 0) {
                     echo 'active';
-                } ?>" style="background:#dddddd;margin-right:5px;"><a data-toggle="tab"
-                                                                      href="#tab<?php echo $k; ?>"><?php echo str_replace('_', ' ', $val); ?></a>
+                } ?>" style="background:#dddddd;margin-right:5px;">
+                    <a data-toggle="tab" href="#tab<?php echo $k; ?>"><?php echo str_replace('_', ' ', $val); ?></a>
                 </li>
                 <?php
             }
@@ -24,10 +24,10 @@
             <div id="tab<?php echo $k; ?>" class="tab-pane fade in <?php if ($k == 0) {
                 echo 'active show';
             } ?> ">
-
-
                 <div class="card card-default">
-                    <div class="card-heading" style="padding:5px;"><?php echo str_replace('_', ' ', $val); ?>  </div>
+                    <div class="card-header" style="padding:5px;">
+                        <span class="font-weight-bold"><?php echo str_replace('_', ' ', $val); ?></span>
+                    </div>
                     <div class="card-body">
                         <?php
                         $set = $settings[$val];
@@ -67,15 +67,11 @@
 
                     </div>
                 </div>
-
-
             </div>
         <?php } ?>
     </div>
-
-
     <br>
-    <button class="btn btn-default"><?php echo $this->lang->line('update'); ?></button>
+    <button class="btn btn-primary"><?php echo $this->lang->line('update'); ?></button>
 </form>
 		
 		
