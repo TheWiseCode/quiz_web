@@ -44,9 +44,9 @@
                                     $hres = $hquery->result_Array();
                                     ?>
                                     <h1 class="h4 text-gray-900 mb-4">
-
-                                        <?php if ($hres[0]['setting_value'] == "") { ?>Savsoft Quiz
-                                            <sup>5.0</sup><?php } else {
+                                        <?php if ($hres[0]['setting_value'] == "") { ?>
+                                            UAGRM Examenes
+                                            <?php } else {
                                             echo $hres[0]['setting_value'];
                                         } ?>
 
@@ -106,7 +106,7 @@
                                     <a class="btn btn-danger btn-user btn-block"
                                        href="<?php echo site_url('login/pre_registration'); ?>"><?php echo $this->lang->line('register_new_account'); ?></a>
 
-                                    <p style="margin-top:40px;""><a class="small" href="https://savsoftquiz.com"
+                                    <p hidden style="margin-top:40px;""><a class="small" href="https://savsoftquiz.com"
                                                                     style="float:right;">Powered by Savsoft Quiz
                                         v5.0</a></p>
 

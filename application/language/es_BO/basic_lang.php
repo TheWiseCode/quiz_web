@@ -1,5 +1,5 @@
 <?php
-$lang['savsoft_quiz'] = "Savsoft Quiz v5.0";
+$lang['savsoft_quiz'] = "Prueba de Examenes";
 $lang['installation_process'] = "Proceso de Instalación";
 $lang['installation_completed'] = "Instalacion Completa. Visita la URL {base_url} para iniciar sesion.<br><br>Informacion de inicio por defecto:<br> Email: ADMINEMAIL <br>Contraseña: ADMINPASS<br><br>Para mas información o personalizacion visite <a href='http://savsoftquiz.com/'>www.SavsoftQuiz.com/</a> ";
 $lang['installation_failed'] = "Instalación Fallida";
@@ -83,7 +83,7 @@ $lang['time_in_sec'] = "Tiempo en Segundos";
 $lang['top_10_result'] = "Mejores 10 resultados de la Prueba:";
 $lang['time_spent_on_ind'] = "Tiempo dedicado a una pregunta (en segundos)";
 $lang['percent_categories'] = "Porcentaje obtenido por categorías";
-$lang['attempt_time'] = "Tiempo del intento";
+$lang['attempt_time'] = "Hora del intento";
 $lang['time_spent'] = "Tiempo invertido (Aprox.)";
 $lang['date_from'] = "Desde la Fecha aaaa-mm-dd";
 $lang['date_to'] = "Hasta la Fecha  aaaa-mm-dd";

@@ -97,10 +97,7 @@
     $logged_in = $this->session->userdata('logged_in');
     ?>
 
-
-
     <?php
-
     function ordinal($number)
     {
         $ends = array('mo', 'ro', 'do', 'ro', 'to', 'to', 'to', 'mo', 'vo', 'mo');
@@ -113,14 +110,11 @@
     function questioninwhichcategory($key, $c_range)
     {
         foreach ($c_range as $k => $cv) {
-
             if ($key >= $cv[0] && $key <= $cv[1]) {
                 return $k;
             }
         }
-
     }
-
 
     function cia_cat($narray, $c_range)
     {
@@ -128,7 +122,6 @@
         $correct = array();
         $incorrect = array();
         foreach ($narray as $k => $val) {
-
             if ($val == 0) {
                 if (isset($unattempted[questioninwhichcategory($k, $c_range)])) {
                     $unattempted[questioninwhichcategory($k, $c_range)] += 1;
@@ -150,13 +143,9 @@
                     $incorrect[questioninwhichcategory($k, $c_range)] = 1;
                 }
             }
-
-
         }
-
         return array($correct, $incorrect, $unattempted);
     }
-
 
     function cia_tim_cate($narray, $tim, $c_range)
     {
@@ -188,7 +177,6 @@
             }
 
         }
-
         return array($correct, $incorrect, $unattempted);
     }
 
@@ -219,7 +207,6 @@
 
     function per_nonzero($arr)
     {
-
         $totallen = count($arr);
         $filt = array_filter($arr);
         $per = (count($filt) / $totallen) * 100;
@@ -247,59 +234,66 @@
             echo $this->session->flashdata('message');
         }
         ?>
-        <div class="col-lg-12"
-             style="background-image:url('<?php echo base_url('images/result_bg.jpg'); ?>');background-size:cover;font-size:18px;padding:20px;color:#ffffff;min-height:300px;">
+        <div class="col-lg-12">
             <div class="col-lg-12">
-                <center><h3><span style="color:#e39500;">
+                <div style="text-align: center;" class="font-weight-bold"><h3 class="font-weight-bold"><span
+                                class="text-primary">
 <?php echo $this->lang->line('hello'); ?> <?php echo $result['first_name']; ?>
                             <?php echo $result['last_name']; ?>!</span> <?php echo str_replace('{attempt_no}', ordinal($attempt), $this->lang->line('title_result')); ?>
-                    </h3></center>
+                    </h3></div>
             </div>
             <div class="col-lg-12">
-                <center>
-                    <h2><span style="color:#e39500;"><?php echo $result['quiz_name']; ?>   </span></h2>
-                </center>
+                <div style="text-align: center;">
+                    <h2><span class="text-primary font-weight-bold"><?php echo $result['quiz_name']; ?>   </span></h2>
+                </div>
             </div>
             <div class="row" style="margin-top:20px;">
                 <div class="col-lg-2" style="text-align:center;">
-                    <p><?php echo $this->lang->line('score_obtained'); ?></p>
-                    <p style="color:#e39500;"><?php echo $result['score_obtained']; ?></p>
+                    <p class="font-weight-bold"><?php echo $this->lang->line('score_obtained'); ?></p>
                 </div>
                 <div class="col-lg-2" style="text-align:center;">
-                    <p><?php echo $this->lang->line('time_spent'); ?></p>
-                    <p style="color:#e39500;"><?php echo secintomin($result['total_time']); ?> Min.</p>
-
+                    <p class="font-weight-bold"><?php echo $this->lang->line('time_spent'); ?></p>
                 </div>
                 <div class="col-lg-2" style="text-align:center;">
-                    <p><?php echo $this->lang->line('attempt_time'); ?></p>
-                    <p style="color:#e39500;font-size:14px;"><?php echo date('Y-m-d H:i:s', $result['start_time']); ?></p>
-
+                    <p class="font-weight-bold"><?php echo $this->lang->line('attempt_time'); ?></p>
                 </div>
                 <div class="col-lg-2" style="text-align:center;">
-                    <p><?php echo $this->lang->line('percentage_obtained'); ?></p>
-                    <p style="color:#e39500;"><?php echo $result['percentage_obtained']; ?>%</p>
-
+                    <p class="font-weight-bold"><?php echo $this->lang->line('percentage_obtained'); ?></p>
                 </div>
                 <div class="col-lg-2" style="text-align:center;">
-                    <p><?php echo $this->lang->line('percentile_obtained'); ?></p>
-                    <p style="color:#e39500;"><?php echo substr(((($percentile[1] + 1) / $percentile[0]) * 100), 0, 5); ?>
-                        %</p>
-
+                    <p class="font-weight-bold"><?php echo $this->lang->line('percentile_obtained'); ?></p>
                 </div>
 
                 <div class="col-lg-2" style="text-align:center;">
-                    <p><?php echo $this->lang->line('status'); ?></p>
-                    <p style="color:#e39500;"><?php echo $this->lang->line($result['result_status']); ?></p>
-
+                    <p class="font-weight-bold"><?php echo $this->lang->line('status'); ?></p>
                 </div>
-
-
             </div>
+            <div class="row">
+                <div class="col-lg-2" style="text-align:center;">
+                    <p class="text-primary font-weight-bold"><?php echo $result['score_obtained']; ?></p>
+                </div>
+                <div class="col-lg-2" style="text-align:center;">
+                    <p class="text-primary font-weight-bold"><?php echo secintomin($result['total_time']); ?> Min.</p>
+                </div>
+                <div class="col-lg-2" style="text-align:center;">
+                    <p class="text-primary font-weight-bold"><?php echo date('Y-m-d H:i:s', $result['start_time']); ?></p>
+                </div>
+                <div class="col-lg-2" style="text-align:center;">
+                    <p class="text-primary font-weight-bold"><?php echo $result['percentage_obtained']; ?>%</p>
+                </div>
+                <div class="col-lg-2" style="text-align:center;">
+                    <p class="text-primary font-weight-bold"><?php echo substr(((($percentile[1] + 1) / $percentile[0]) * 100), 0, 5); ?>
+                        %</p>
+                </div>
+                <div class="col-lg-2" style="text-align:center;">
+                    <p class="text-primary font-weight-bold"><?php echo $this->lang->line($result['result_status']); ?></p>
+                </div>
+            </div>
+
             <div class="col-lg-12" style="margin-top:20px;">
-                <center>
+                <div style="text-align: center;">
                     <?php
                     if ($result['view_answer'] == '1' || $logged_in['su'] == '1') {
-
                         ?>
                         <a href="#answers_i" class="btn btn-info" hidden
                            style="margin-top:10px;"><?php echo $this->lang->line('answer_sheet'); ?></a>
@@ -323,33 +317,23 @@
                     $acp = explode(',', $logged_in['appointment']);
                     if (in_array('List', $acp)) {
                         ?>
-
-                        <a hidden href="<?php echo site_url('appointment/get_appointment/' . $result['inserted_by']); ?>"
+                        <a hidden
+                           href="<?php echo site_url('appointment/get_appointment/' . $result['inserted_by']); ?>"
                            class="btn btn-primary printbtn"
                            style="margin-top:10px;"><?php echo $this->lang->line('appointment_with_expert'); ?></a>
 
                         <?php
                     }
                     ?>
-                </center>
+                </div>
             </div>
 
-            <div class="col-lg-12" style="margin-top:50px;color:#dddddd;font-size:14px;">
-
-
-                <center>
-                    <?php echo $this->lang->line('result_id'); ?> <?php echo $result['rid']; ?> &nbsp;&nbsp;&nbsp;
-                    <?php echo $this->lang->line('user_id'); ?> <?php echo $result['uid']; ?>&nbsp;&nbsp;&nbsp;
+            <div class="col-lg-12" style="margin-top:50px;color:#dddddd;font-size:14px;" hidden>
+                <div style="text-align: center;">
                     <?php echo $this->lang->line('email'); ?>: <?php echo $result['email']; ?>
-                </center>
-
-
+                </div>
             </div>
-
-
         </div>
-
-
     </div>
 
 
@@ -367,16 +351,13 @@
     ?>
 
     <div class="row">
-
         <div class="col-md-12">
             <br>
             <div class="login-panel panel panel-default onlyprint">
                 <div class="panel-body">
 
-
                     <table class="table table-bordered">
                         <?php
-
                         if ($result['camera_req'] == '1') {
                             ?>
                             <tr>
@@ -428,10 +409,7 @@
                             <td><?php echo $this->lang->line('status'); ?></td>
                             <td><?php echo $this->lang->line($result['result_status']); ?></td>
                         </tr>
-
                     </table>
-
-
                 </div>
             </div>
             <br>
@@ -710,14 +688,12 @@
             if ($result['show_chart_rank'] == "1"){
             ?>
             <div class="col-md-12">
-
-
                 <?php
                 // print_r($result['incorrect_score']);
                 $ind_score = explode(',', $result['score_individual']);
                 ?>
                 <div class="col-md-12">
-                    <h3><?php echo $this->lang->line('categorywise'); ?></h3>
+                    <h3 class="font-weight-bold"><?php echo $this->lang->line('categorywise'); ?></h3>
                     <table class="table table-bordered">
                         <thead>
                         <tr>
@@ -804,7 +780,7 @@
                 </div>
 
 
-                <center><?php
+                <div style="text-align: center;"><?php
 
                     $this->db->where("add_status", "Active");
                     $this->db->where("position", "Center_Result");
@@ -817,22 +793,15 @@
                                                                         target="new_add">
                             <img src="<?php echo base_url('upload/' . $ad['banner']); ?>" class="img-responsive">
                             </a> <?php
-
                         }
                     }
-
-
-                    ?></center>
+                    ?></div>
 
                 <div id="page_break"></div>
                 <div class="col-md-12">
                     <?php
-
-
                     if ($this->config->item('google_chart') == true) {
                         ?>
-
-
                         <!-- google chart starts-->
                         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
@@ -876,10 +845,8 @@
                                 chart.draw(data, options);
                             }
                         </script>
-                        <div id="chart_div2" style="width:800px; height: 500px;"></div>
+                        <div id="chart_div2" style="height: 500px;"></div>
                         <!-- google chart ends -->
-
-
                         <?php
                     }
 
@@ -896,7 +863,7 @@
                         <div class="login-panel panel panel-default noprint">
                             <div class="panel-body">
                                 <a name="answers_i"></a>
-                                <h3><?php echo $this->lang->line('answer_sheet'); ?></h3>
+                                <h3 class="font-weight-bold"><?php echo $this->lang->line('answer_sheet'); ?></h3>
 
                                 <?php
                                 $abc = array(
@@ -919,327 +886,313 @@
                                 }
                                 foreach ($questions as $qk => $question) {
 // remove below condition for all solution at one page
-
                                     ?>
-
                                     <div class="rqn" id="qn<?php echo $qk; ?>" style=" <?php if ($qk == 0) {
                                         echo 'display:block;';
                                     } else {
                                         echo 'display:none;';
                                     } ?>">
-
-
-                                        <div class="col-md-12 " id="q<?php echo $qk; ?>" class=""
-                                             style="margin:10px;padding:10px;<?php if ($ind_score[$qk] == '1') { ?>background-color:#71ba5d; color:#ffffff;<?php } else if ($ind_score[$qk] == '2') { ?>background-color:#ff5e5e; color:#ffffff;<?php } else if ($ind_score[$qk] == '3') { ?>background-color:#fdfbcf;<?php } else { ?>background-color:#ffffff;<?php } ?>">
-                                            <div class="col-md-2 col-sm-2">
-                                                <div style="height:45px; width:45px; background-color:#ffffff;border-radius:50%;color:#4b7d42;
+                                        <div class="row">
+                                            <div class="col-md-12 " id="q<?php echo $qk; ?>" class=""
+                                                 style="margin:10px;padding:10px;<?php if ($ind_score[$qk] == '1') { ?>background-color:#71ba5d; color:#ffffff;<?php } else if ($ind_score[$qk] == '2') { ?>background-color:#ff5e5e; color:#ffffff;<?php } else if ($ind_score[$qk] == '3') { ?>background-color:#fdfbcf;<?php } else { ?>background-color:#ffffff;<?php } ?>">
+                                                <div class="col-md-2 col-sm-2">
+                                                    <div style="height:45px; width:45px; background-color:#ffffff;border-radius:50%;color:#4b7d42;
 		margin-top:6px;padding:14px;border:1px solid #666666;"><b><?php echo $qk + 1; ?></b></div>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8">
-                                                <?php
-                                                if (strip_tags($question['paragraph']) != "") {
-                                                    echo $this->lang->line('paragraph') . "<br>";
-                                                    echo $question['paragraph'] . "<hr>";
-                                                }
-                                                echo str_replace('../../../', base_url(), str_replace('../../../../', base_url(), $question['question'])); ?>
-                                                <br>
-
-                                                <?php
-
-                                                // multiple single choice
-                                                if ($question['question_type'] == ('multiple_choice_single_answer')) {
-
-                                                    $save_ans = array();
-                                                    foreach ($saved_answers as $svk => $saved_answer) {
-                                                        if ($question['qid'] == $saved_answer['qid']) {
-                                                            $save_ans[] = $saved_answer['q_option'];
-                                                        }
-                                                    }
-
-
-                                                    ?>
-                                                    <input type="hidden" name="question_type[]"
-                                                           id="q_type<?php echo $qk; ?>" value="1">
+                                                </div>
+                                                <div class="col-md-8 col-sm-8">
                                                     <?php
-                                                    $i = 0;
-                                                    $correct_options = array();
-                                                    foreach ($options as $ok => $option) {
-                                                        if ($option['qid'] == $question['qid']) {
-                                                            if ($option['score'] >= 0.1) {
-                                                                $correct_options[] = $option['q_option'];
+                                                    if (strip_tags($question['paragraph']) != "") {
+                                                        echo $this->lang->line('paragraph') . "<br>";
+                                                        echo $question['paragraph'] . "<hr>";
+                                                    }
+                                                    echo str_replace('../../../', base_url(), str_replace('../../../../', base_url(), $question['question'])); ?>
+                                                    <br>
+
+                                                    <?php
+
+                                                    // multiple single choice
+                                                    if ($question['question_type'] == ('multiple_choice_single_answer')) {
+
+                                                        $save_ans = array();
+                                                        foreach ($saved_answers as $svk => $saved_answer) {
+                                                            if ($question['qid'] == $saved_answer['qid']) {
+                                                                $save_ans[] = $saved_answer['q_option'];
                                                             }
-                                                            ?>
-                                                            <?php if (in_array($option['oid'], $save_ans)) {
-                                                                echo '<b>' . $this->lang->line('your_answer') . '</b>:' . $option['q_option'];
-                                                            } ?>
-
-
-                                                            <?php
-                                                            $i += 1;
-                                                        } else {
-                                                            $i = 0;
-
                                                         }
-                                                    }
-                                                    echo "<br>";
-                                                    echo "<b>" . $this->lang->line('correct_options') . '</b>: ' . implode(', ', array_map('trim', ($correct_options)));
-                                                }
 
-                                                // multiple_choice_multiple_answer
-
-                                                if ($question['question_type'] == ('multiple_choice_multiple_answer')) {
-                                                    $save_ans = array();
-                                                    foreach ($saved_answers as $svk => $saved_answer) {
-                                                        if ($question['qid'] == $saved_answer['qid']) {
-                                                            $save_ans[] = $saved_answer['q_option'];
-                                                        }
-                                                    }
-
-                                                    ?>
-                                                    <input type="hidden" name="question_type[]"
-                                                           id="q_type<?php echo $qk; ?>" value="2">
-                                                    <?php echo '<b>' . $this->lang->line('your_answer') . '</b>:';
-                                                    $i = 0;
-                                                    $correct_options = array();
-                                                    foreach ($options as $ok => $option) {
-                                                        if ($option['qid'] == $question['qid']) {
-                                                            if ($option['score'] >= 0.1) {
-                                                                $correct_options[] = $option['q_option'];
-                                                            }
-                                                            ?>
-
-                                                            <?php
-
-                                                            if (in_array($option['oid'], $save_ans)) {
-                                                                echo trim($option['q_option']) . ', ';
-                                                            } ?>
-
-
-                                                            <?php
-                                                            $i += 1;
-                                                        } else {
-                                                            $i = 0;
-
-                                                        }
-                                                    }
-                                                    echo "<br>";
-                                                    echo "<b>" . $this->lang->line('correct_options') . '</b>: ' . implode(', ', $correct_options);
-                                                }
-
-                                                // short answer
-
-                                                if ($question['question_type'] == ('short_answer')) {
-                                                    $save_ans = "";
-                                                    foreach ($saved_answers as $svk => $saved_answer) {
-                                                        if ($question['qid'] == $saved_answer['qid']) {
-                                                            $save_ans = $saved_answer['q_option'];
-                                                        }
-                                                    }
-                                                    ?>
-                                                    <input type="hidden" name="question_type[]"
-                                                           id="q_type<?php echo $qk; ?>" value="3">
-
-                                                    <?php
-
-
-                                                    ?>
-
-                                                    <div class="op">
-                                                        <?php echo '<b>' . $this->lang->line('your_answer') . '</b>:'; ?>
-                                                        <?php echo $save_ans; ?>
-                                                    </div>
-
-
-                                                    <?php
-                                                    foreach ($options as $ok => $option) {
-                                                        if ($option['qid'] == $question['qid']) {
-                                                            echo "<b>" . $this->lang->line('correct_answer') . '</b>: ' . $option['q_option'];
-                                                        }
-                                                    }
-
-                                                }
-
-
-                                                // long answer
-
-                                                if ($question['question_type'] == ('long_answer')) {
-                                                    $save_ans = "";
-                                                    foreach ($saved_answers as $svk => $saved_answer) {
-                                                        if ($question['qid'] == $saved_answer['qid']) {
-                                                            $save_ans = $saved_answer['q_option'];
-                                                        }
-                                                    }
-                                                    ?>
-                                                    <input type="hidden" name="question_type[]"
-                                                           id="q_type<?php echo $qk; ?>" value="4">
-                                                    <?php
-                                                    ?>
-
-                                                    <div class="op">
-                                                        <?php echo $this->lang->line('answer'); ?> <br>
-                                                        <?php echo $this->lang->line('word_counts'); ?>  <?php echo str_word_count($save_ans); ?>
-                                                        <textarea name="answer[<?php echo $qk; ?>][]"
-                                                                  id="answer_value<?php echo $qk; ?>"
-                                                                  style="width:100%;height:200px;min-height: 100px"
-                                                                  onKeyup="count_char(this.value,'char_count<?php echo $qk; ?>');"><?php echo $save_ans; ?></textarea>
-                                                    </div>
-                                                    <?php
-                                                    if ($logged_in['su'] == '1') {
-                                                        if ($ind_score[$qk] == '3') {
-
-                                                            ?>
-                                                            <div id="assign_score<?php echo $qk; ?>">
-                                                                <?php echo $this->lang->line('evaluate'); ?>
-                                                                <a href="javascript:assign_score('<?php echo $result['rid']; ?>','<?php echo $qk; ?>','1');"
-                                                                   class="btn btn-success"><?php echo $this->lang->line('correct'); ?></a>
-                                                                <a href="javascript:assign_score('<?php echo $result['rid']; ?>','<?php echo $qk; ?>','2');"
-                                                                   class="btn btn-danger"><?php echo $this->lang->line('incorrect'); ?></a>
-                                                            </div>
-                                                            <?php
-                                                        }
-                                                    }
-                                                    ?>
-
-                                                    <?php
-
-
-                                                }
-
-
-                                                // matching
-
-                                                if ($question['question_type'] == ('match_the_column')) {
-                                                    $save_ans = array();
-                                                    foreach ($saved_answers as $svk => $saved_answer) {
-                                                        if ($question['qid'] == $saved_answer['qid']) {
-                                                            // $exp_match=explode('__',$saved_answer['q_option_match']);
-                                                            $save_ans[] = $saved_answer['q_option'];
-                                                        }
-                                                    }
-
-
-                                                    ?>
-                                                    <input type="hidden" name="question_type[]"
-                                                           id="q_type<?php echo $qk; ?>" value="5">
-                                                    <?php
-                                                    $i = 0;
-                                                    $match_1 = array();
-                                                    $match_2 = array();
-                                                    foreach ($options as $ok => $option) {
-                                                        if ($option['qid'] == $question['qid']) {
-                                                            $match_1[] = $option['q_option'];
-                                                            $match_2[] = $option['q_option_match'];
-                                                            ?>
-
-
-                                                            <?php
-                                                            $i += 1;
-                                                        } else {
-                                                            $i = 0;
-
-                                                        }
-                                                    }
-                                                    ?>
-                                                    <div class="op">
-                                                        <table>
-                                                            <tr>
-                                                                <td></td>
-                                                                <td><?php echo "<b>" . $this->lang->line('your_answer') . '</b> '; ?></td>
-                                                                <td><?php echo "<b>" . $this->lang->line('correct_answer') . '</b> '; ?></td>
-                                                            </tr>
-                                                            <?php
-
-                                                            foreach ($match_1 as $mk1 => $mval) {
+                                                        ?>
+                                                        <input type="hidden" name="question_type[]"
+                                                               id="q_type<?php echo $qk; ?>" value="1">
+                                                        <?php
+                                                        $i = 0;
+                                                        $correct_options = array();
+                                                        foreach ($options as $ok => $option) {
+                                                            if ($option['qid'] == $question['qid']) {
+                                                                if ($option['score'] >= 0.1) {
+                                                                    $correct_options[] = $option['q_option'];
+                                                                }
                                                                 ?>
-                                                                <tr>
-                                                                    <td>
-                                                                        <?php echo $abc[$mk1]; ?>) <?php echo $mval; ?>
-                                                                    </td>
-                                                                    <td>
-
-
-                                                                        <?php
-                                                                        foreach ($match_2 as $mk2 => $mval2) {
-                                                                            ?>
-                                                                            <?php $m1 = $mval . '___' . $mval2;
-                                                                            if (in_array($m1, $save_ans)) {
-                                                                                echo $mval2;
-                                                                            } ?>
-                                                                            <?php
-                                                                        }
-                                                                        ?>
-
-
-                                                                    </td>
-
-                                                                    <td>
-                                                                        <?php
-                                                                        echo $match_2[$mk1];
-                                                                        ?>
-                                                                    </td>
-
-                                                                </tr>
+                                                                <?php if (in_array($option['oid'], $save_ans)) {
+                                                                    echo '<b>' . $this->lang->line('your_answer') . '</b>:' . $option['q_option'];
+                                                                } ?>
 
 
                                                                 <?php
+                                                                $i += 1;
+                                                            } else {
+                                                                $i = 0;
+
                                                             }
-
-
-                                                            ?>
-                                                        </table>
-                                                    </div>
-                                                    <?php
-
-                                                }
-
-                                                ?>
-                                                <p><?php
-                                                    if ($question['description'] != '') {
-                                                        echo '<b>' . $this->lang->line('description') . '</b>:';
-                                                        echo $question['description'];
+                                                        }
+                                                        echo "<br>";
+                                                        echo "<div hidden><b>" . $this->lang->line('correct_options') . '</b>: ' . implode(', ', array_map('trim', ($correct_options))) . "</div>";
                                                     }
 
-                                                    ?></p>
-
-                                                <?php
-                                                if ($this->config->item('q2a')) {
-                                                    $q2a_path = $this->config->item('q2a_path');
-                                                    ?>
-                                                    <div id="q2a<?php echo $qk; ?>">
-                                                    </div>
-                                                    <script>
-                                                        $("#q2a<?php echo $qk;?>").html('loading...');
-                                                        var question = "<?php echo strip_tags($question['question']);?>";
-                                                        var formData = {question: question};
-                                                        $.ajax({
-                                                            type: "POST",
-                                                            data: formData,
-                                                            url: "<?php echo $q2a_path;?>SQapi.php?findq=1",
-                                                            success: function (data) {
-                                                                $("#q2a<?php echo $qk;?>").html(data);
-
-                                                            },
-                                                            error: function (xhr, status, strErr) {
-                                                                //alert(status);
+                                                    // multiple_choice_multiple_answer
+                                                    if ($question['question_type'] == ('multiple_choice_multiple_answer')) {
+                                                        $save_ans = array();
+                                                        foreach ($saved_answers as $svk => $saved_answer) {
+                                                            if ($question['qid'] == $saved_answer['qid']) {
+                                                                $save_ans[] = $saved_answer['q_option'];
                                                             }
-                                                        });
-                                                    </script>
+                                                        }
+
+                                                        ?>
+                                                        <input type="hidden" name="question_type[]"
+                                                               id="q_type<?php echo $qk; ?>" value="2">
+                                                        <?php echo '<b>' . $this->lang->line('your_answer') . '</b>:';
+                                                        $i = 0;
+                                                        $correct_options = array();
+                                                        foreach ($options as $ok => $option) {
+                                                            if ($option['qid'] == $question['qid']) {
+                                                                if ($option['score'] >= 0.1) {
+                                                                    $correct_options[] = $option['q_option'];
+                                                                }
+                                                                ?>
+
+                                                                <?php
+
+                                                                if (in_array($option['oid'], $save_ans)) {
+                                                                    echo trim($option['q_option']) . ', ';
+                                                                } ?>
+
+
+                                                                <?php
+                                                                $i += 1;
+                                                            } else {
+                                                                $i = 0;
+
+                                                            }
+                                                        }
+                                                        echo "<br>";
+                                                        echo "<div hidden><b>" . $this->lang->line('correct_options') . '</b>: ' . implode(', ', $correct_options) . "</div>";
+                                                    }
+
+                                                    // short answer
+                                                    if ($question['question_type'] == ('short_answer')) {
+                                                        $save_ans = "";
+                                                        foreach ($saved_answers as $svk => $saved_answer) {
+                                                            if ($question['qid'] == $saved_answer['qid']) {
+                                                                $save_ans = $saved_answer['q_option'];
+                                                            }
+                                                        }
+                                                        ?>
+                                                        <input type="hidden" name="question_type[]"
+                                                               id="q_type<?php echo $qk; ?>" value="3">
+
+                                                        <?php
+
+
+                                                        ?>
+
+                                                        <div class="op">
+                                                            <?php echo '<b>' . $this->lang->line('your_answer') . '</b>:'; ?>
+                                                            <?php echo $save_ans; ?>
+                                                        </div>
+
+
+                                                        <?php
+                                                        foreach ($options as $ok => $option) {
+                                                            if ($option['qid'] == $question['qid']) {
+                                                                echo "<div hidden><b>" . $this->lang->line('correct_answer') . '</b>: ' . $option['q_option'] . "</div>";
+                                                            }
+                                                        }
+
+                                                    }
+
+
+                                                    // long answer
+                                                    if ($question['question_type'] == ('long_answer')) {
+                                                        $save_ans = "";
+                                                        foreach ($saved_answers as $svk => $saved_answer) {
+                                                            if ($question['qid'] == $saved_answer['qid']) {
+                                                                $save_ans = $saved_answer['q_option'];
+                                                            }
+                                                        }
+                                                        ?>
+                                                        <input type="hidden" name="question_type[]"
+                                                               id="q_type<?php echo $qk; ?>" value="4">
+                                                        <?php
+                                                        ?>
+
+                                                        <div class="op">
+                                                            <?php echo $this->lang->line('answer'); ?> <br>
+                                                            <?php echo $this->lang->line('word_counts'); ?>  <?php echo str_word_count($save_ans); ?>
+                                                            <textarea name="answer[<?php echo $qk; ?>][]"
+                                                                      id="answer_value<?php echo $qk; ?>"
+                                                                      style="width:100%;height:200px;min-height: 100px"
+                                                                      onKeyup="count_char(this.value,'char_count<?php echo $qk; ?>');"><?php echo $save_ans; ?></textarea>
+                                                        </div>
+                                                        <?php
+                                                        if ($logged_in['su'] == '1') {
+                                                            if ($ind_score[$qk] == '3') {
+
+                                                                ?>
+                                                                <div id="assign_score<?php echo $qk; ?>">
+                                                                    <?php echo $this->lang->line('evaluate'); ?>
+                                                                    <a href="javascript:assign_score('<?php echo $result['rid']; ?>','<?php echo $qk; ?>','1');"
+                                                                       class="btn btn-success"><?php echo $this->lang->line('correct'); ?></a>
+                                                                    <a href="javascript:assign_score('<?php echo $result['rid']; ?>','<?php echo $qk; ?>','2');"
+                                                                       class="btn btn-danger"><?php echo $this->lang->line('incorrect'); ?></a>
+                                                                </div>
+                                                                <?php
+                                                            }
+                                                        }
+                                                        ?>
+
+                                                        <?php
+
+
+                                                    }
+
+
+                                                    // matching
+                                                    if ($question['question_type'] == ('match_the_column')) {
+                                                        $save_ans = array();
+                                                        foreach ($saved_answers as $svk => $saved_answer) {
+                                                            if ($question['qid'] == $saved_answer['qid']) {
+                                                                // $exp_match=explode('__',$saved_answer['q_option_match']);
+                                                                $save_ans[] = $saved_answer['q_option'];
+                                                            }
+                                                        }
+                                                        ?>
+                                                        <input type="hidden" name="question_type[]"
+                                                               id="q_type<?php echo $qk; ?>" value="5">
+                                                        <?php
+                                                        $i = 0;
+                                                        $match_1 = array();
+                                                        $match_2 = array();
+                                                        foreach ($options as $ok => $option) {
+                                                            if ($option['qid'] == $question['qid']) {
+                                                                $match_1[] = $option['q_option'];
+                                                                $match_2[] = $option['q_option_match'];
+                                                                ?>
+                                                                <?php
+                                                                $i += 1;
+                                                            } else {
+                                                                $i = 0;
+
+                                                            }
+                                                        }
+                                                        ?>
+                                                        <p><?php
+                                                            if ($question['description'] != '') {
+                                                                echo '<b>' . $this->lang->line('description') . '</b>:';
+                                                                echo $question['description'];
+                                                            }
+                                                            ?></p>
+                                                        <div class="op">
+                                                            <table>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td><?php echo "<b>" . $this->lang->line('your_answer') . '</b> '; ?></td>
+                                                                    <td hidden><?php echo "<b>" . $this->lang->line('correct_answer') . '</b> '; ?></td>
+                                                                </tr>
+                                                                <?php
+
+                                                                foreach ($match_1 as $mk1 => $mval) {
+                                                                    ?>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <?php echo $abc[$mk1]; ?>
+                                                                            ) <?php echo $mval; ?>
+                                                                        </td>
+                                                                        <td>
+                                                                            <?php
+                                                                            foreach ($match_2 as $mk2 => $mval2) {
+                                                                                ?>
+                                                                                <?php $m1 = $mval . '___' . $mval2;
+                                                                                if (in_array($m1, $save_ans)) {
+                                                                                    echo $mval2;
+                                                                                } ?>
+                                                                                <?php
+                                                                            }
+                                                                            ?>
+
+
+                                                                        </td>
+
+                                                                        <td hidden>
+                                                                            <?php
+                                                                            echo $match_2[$mk1];
+                                                                            ?>
+                                                                        </td>
+
+                                                                    </tr>
+
+
+                                                                    <?php
+                                                                }
+
+
+                                                                ?>
+                                                            </table>
+                                                        </div>
+                                                        <?php
+
+                                                    }
+
+                                                    ?>
                                                     <?php
-                                                }
-                                                ?>
+                                                    if ($this->config->item('q2a')) {
+                                                        $q2a_path = $this->config->item('q2a_path');
+                                                        ?>
+                                                        <div id="q2a<?php echo $qk; ?>">
+                                                        </div>
+                                                        <script>
+                                                            $("#q2a<?php echo $qk;?>").html('loading...');
+                                                            var question = "<?php echo strip_tags($question['question']);?>";
+                                                            var formData = {question: question};
+                                                            $.ajax({
+                                                                type: "POST",
+                                                                data: formData,
+                                                                url: "<?php echo $q2a_path;?>SQapi.php?findq=1",
+                                                                success: function (data) {
+                                                                    $("#q2a<?php echo $qk;?>").html(data);
 
+                                                                },
+                                                                error: function (xhr, status, strErr) {
+                                                                    //alert(status);
+                                                                }
+                                                            });
+                                                        </script>
+                                                        <?php
+                                                    }
+                                                    ?>
+
+                                                </div>
+                                                <div class="col-md-2 col-sm-2" id="q<?php echo $qk; ?>"
+                                                     style="font-size:30px;">
+
+                                                    <?php if ($ind_score[$qk] == '1') { ?><i
+                                                            class="glyphicon glyphicon-ok"></i>  <?php } else if ($ind_score[$qk] == '2') { ?>
+                                                        <i class="glyphicon glyphicon-remove"></i> <?php } ?>
+
+
+                                                </div>
                                             </div>
-                                            <div class="col-md-2 col-sm-2" id="q<?php echo $qk; ?>"
-                                                 style="font-size:30px;">
 
-                                                <?php if ($ind_score[$qk] == '1') { ?><i
-                                                        class="glyphicon glyphicon-ok"></i>  <?php } else if ($ind_score[$qk] == '2') { ?>
-                                                    <i class="glyphicon glyphicon-remove"></i> <?php } ?>
-
-
-                                            </div>
                                         </div>
-
 
                                         <div id="page_break"></div>
 
@@ -1253,12 +1206,12 @@
                                 foreach ($questions as $qk => $question) {
                                     ?>
                                     <a href="javascript:shoq('<?php echo $qk; ?>');"
-                                       class="btn btn-default"><?php echo $qk + 1; ?></a>
+                                       class="btn btn-outline-primary"><?php echo $qk + 1; ?></a>
                                     <?php
                                 }
                                 ?>
                                 <a href="javascript:shoq('-1');"
-                                   class="btn btn-default"><?php echo $this->lang->line('view_all'); ?></a>
+                                   class="btn btn-primary"><?php echo $this->lang->line('view_all'); ?></a>
                             </div>
                         </div>
                         <?php

@@ -73,7 +73,7 @@
 
 
     <div class="row" style="margin-top:20px;">
-        <div class="col-lg-7">
+        <div class="col-lg-12">
 
 
             <div class="row">
@@ -121,7 +121,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
 
 
@@ -198,7 +197,7 @@
             $months = $this->lang->line('months');
             ?>
 
-            <div class="card shadow mb-4">
+            <div class="card shadow mb-4" hidden>
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary"><?php echo $this->lang->line('revenue'); ?>
@@ -342,7 +341,7 @@
 
     </div>
 
-    <div class="row text-center" style="margin-top:30px;">
+    <div class="row text-center" style="margin-top:30px;" hidden>
 
         <?php
         echo "Page rendered in <strong> {elapsed_time} </strong> seconds. You may improve it by hosting on recommended hosting. <a href='http://savsoftquiz.com/affiliate.php' target='af'>Click here</a> ";

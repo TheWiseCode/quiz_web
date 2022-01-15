@@ -84,10 +84,6 @@ if ($this->uri->segment(3) != 'ph') {
         <?php
     }
     ?>
-
-    <div hidden class="container" style="text-align:right;">
-        Powered by <a href="https://savsoftquiz.com">Savsoft Quiz</a>
-    </div>
     </div>
 
 

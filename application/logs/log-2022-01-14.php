@@ -127,3 +127,10 @@ ERROR - 2022-01-14 21:24:21 --> Could not find the language line "hello"
 ERROR - 2022-01-14 21:24:21 --> Could not find the language line "user_id"
 ERROR - 2022-01-14 21:24:21 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 357
 ERROR - 2022-01-14 21:32:49 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 217
+ERROR - 2022-01-14 22:11:28 --> Severity: Warning --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() C:\xampp\htdocs\savsoftquiz_v5\system\libraries\Email.php 1896
+ERROR - 2022-01-14 22:11:29 --> Could not find the language line "hello"
+ERROR - 2022-01-14 22:11:29 --> Could not find the language line "user_id"
+ERROR - 2022-01-14 22:11:29 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 357
+ERROR - 2022-01-14 22:11:41 --> Could not find the language line "hello"
+ERROR - 2022-01-14 22:11:41 --> Could not find the language line "user_id"
+ERROR - 2022-01-14 22:11:41 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 357

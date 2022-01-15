@@ -89,16 +89,17 @@ $hres = $hquery->result_Array();
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://savsoftquiz.com">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
 
-            <div class="sidebar-brand-text mx-3"><?php if ($hres[0]['setting_value'] == "") { ?>Savsoft Quiz
-                    <sup>5.0</sup><?php } else {
+            <div class="sidebar-brand-text mx-3"><?php if ($hres[0]['setting_value'] == "") { ?>
+                    UAGRM Examenes
+                    <?php } else {
                     echo $hres[0]['setting_value'];
                 } ?> </div>
 
 
         </a>
-        <center><span style="color:#ffffff;"><?php echo $hres[1]['setting_value']; ?> </span></center>
+        <div style="text-align: center;"><span style="color:#ffffff;"><?php echo $hres[1]['setting_value']; ?> </span></div>
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
         <?php
@@ -498,7 +499,8 @@ $hres = $hquery->result_Array();
 
                             <?php
                             if (in_array('List', explode(',', $logged_in['appointment'])) && !in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
-                                <a hidden class="dropdown-item" href="<?php echo site_url('appointment/myappointment/'); ?>"><i
+                                <a hidden class="dropdown-item"
+                                   href="<?php echo site_url('appointment/myappointment/'); ?>"><i
                                             class="fas fa-mobile fa-sm fa-fw mr-2 text-gray-400"></i><?php echo $this->lang->line('myappointment'); ?>
                                 </a>
                             <?php } ?>
