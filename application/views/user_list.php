@@ -37,6 +37,7 @@
                     <th><?php echo 'Nombre '; ?><?php echo 'Completo'; ?></th>
                     <th><?php echo 'Telefono'; ?> </th>
                     <th><?php echo 'Codigo de Estudiante'; ?> </th>
+                    <th><?php echo $this->lang->line('first_career'); ?> </th>
                     <th><?php echo $this->lang->line('action'); ?> </th>
                 </tr>
                 <?php
@@ -54,6 +55,7 @@
                         <td><?php echo $val['first_name'] . ' '; ?><?php echo $val['last_name']; ?></td>
                         <td><?php echo $val['contact_no']; ?></td>
                         <td><?php echo $val['cod_student']; ?> </td>
+                        <td><?php echo $val['first_opt_univ_degree']; ?></td>
                         <td>
                             <a href="<?php echo site_url(
                                 'user2/view_user/' . $val['uid']

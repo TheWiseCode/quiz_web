@@ -52,7 +52,7 @@ foreach($category_list as $key => $val){
  
  <input type="text"   class="form-control"   name="category_name" value="" placeholder="<?php echo $this->lang->line('category_name');?>"  required ></td>
 <td>
-<button class="btn btn-default" type="submit"><?php echo $this->lang->line('add_new');?></button>
+<button class="btn btn-default" type="submit"><?php echo $this->lang->line('add_new1');?></button>
  
 </td>
 </tr>

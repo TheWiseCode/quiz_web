@@ -16,7 +16,7 @@
     if (in_array('Add', $acp)) {
         ?>
         <a href="<?php echo site_url('social_group/add_new'); ?>"
-           class="btn btn-success"><?php echo $this->lang->line('add_new'); ?><?php echo $this->lang->line('social_group'); ?></a>
+           class="btn btn-success"><?php echo $this->lang->line('add_new1'); ?><?php echo $this->lang->line('social_group'); ?></a>
         <br><br>
         <?php
     }

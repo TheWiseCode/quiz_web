@@ -3,7 +3,7 @@
 } ?>
 <div class="col-lg-12">
     <div class="col-lg-8">
-        <h3 class="font-weight-bold"><?php echo $this->lang->line('add_new'); ?> </h3>
+        <h3 class="font-weight-bold"><?php echo $this->lang->line('add_new1'); ?> </h3>
         <form method="post" action="<?php echo site_url('user/custom_fields'); ?>">
             <br>
             <div class="form-group">

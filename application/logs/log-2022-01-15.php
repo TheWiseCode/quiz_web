@@ -130,3 +130,50 @@ ERROR - 2022-01-15 09:37:41 --> Could not find the language line "hello"
 ERROR - 2022-01-15 09:37:41 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 341
 ERROR - 2022-01-15 09:37:58 --> Could not find the language line "hello"
 ERROR - 2022-01-15 09:37:58 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 341
+ERROR - 2022-01-15 09:46:19 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 09:46:26 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-15 09:47:30 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-15 09:48:25 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-15 09:49:09 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-15 09:49:09 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-15 09:49:52 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-15 09:49:52 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-15 09:52:47 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 09:56:24 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 151
+ERROR - 2022-01-15 09:56:24 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 226
+ERROR - 2022-01-15 09:56:29 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 151
+ERROR - 2022-01-15 09:56:29 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 226
+ERROR - 2022-01-15 09:57:10 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 152
+ERROR - 2022-01-15 09:57:10 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 227
+ERROR - 2022-01-15 09:57:23 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 152
+ERROR - 2022-01-15 09:57:23 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 227
+ERROR - 2022-01-15 09:57:37 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 152
+ERROR - 2022-01-15 09:57:37 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 227
+ERROR - 2022-01-15 09:57:46 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 152
+ERROR - 2022-01-15 09:57:46 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 227
+ERROR - 2022-01-15 09:58:06 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 152
+ERROR - 2022-01-15 09:58:06 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 227
+ERROR - 2022-01-15 09:58:14 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 152
+ERROR - 2022-01-15 09:58:14 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 227
+ERROR - 2022-01-15 09:59:00 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 153
+ERROR - 2022-01-15 09:59:00 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 228
+ERROR - 2022-01-15 09:59:44 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 155
+ERROR - 2022-01-15 09:59:44 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 230
+ERROR - 2022-01-15 09:59:53 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 146
+ERROR - 2022-01-15 09:59:53 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 221
+ERROR - 2022-01-15 10:00:16 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 148
+ERROR - 2022-01-15 10:00:16 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 223
+ERROR - 2022-01-15 10:01:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 148
+ERROR - 2022-01-15 10:01:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 223
+ERROR - 2022-01-15 10:01:16 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 148
+ERROR - 2022-01-15 10:01:16 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 223
+ERROR - 2022-01-15 10:01:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 150
+ERROR - 2022-01-15 10:01:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 225
+ERROR - 2022-01-15 10:01:42 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 150
+ERROR - 2022-01-15 10:01:42 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 225
+ERROR - 2022-01-15 10:01:51 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 150
+ERROR - 2022-01-15 10:01:51 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 225
+ERROR - 2022-01-15 10:02:19 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 150
+ERROR - 2022-01-15 10:02:19 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 225
+ERROR - 2022-01-15 10:02:20 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 150
+ERROR - 2022-01-15 10:02:20 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 225

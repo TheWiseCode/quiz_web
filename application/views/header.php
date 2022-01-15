@@ -139,7 +139,7 @@ $hres = $hquery->result_Array();
                         if (in_array('Add', explode(',', $logged_in['users']))) {
                             ?>
                             <a class="collapse-item"
-                               href="<?php echo site_url('user/new_user'); ?>"><?php echo $this->lang->line('add_new'); ?></a>
+                               href="<?php echo site_url('user/new_user'); ?>"><?php echo $this->lang->line('add_new2'); ?></a>
                         <?php } ?>
                         <?php
                         if (in_array('List', explode(',', $logged_in['users'])) || in_array('List_all', explode(',', $logged_in['users']))) {
@@ -178,7 +178,7 @@ $hres = $hquery->result_Array();
                         if (in_array('Add', explode(',', $logged_in['questions']))) {
                             ?>
                             <a class="collapse-item"
-                               href="<?php echo site_url('qbank/pre_new_question'); ?>"><?php echo $this->lang->line('add_new'); ?></a>
+                               href="<?php echo site_url('qbank/pre_new_question'); ?>"><?php echo $this->lang->line('add_new1'); ?></a>
                             <?php
                         }
 
@@ -216,7 +216,7 @@ $hres = $hquery->result_Array();
                         if (in_array('Add', explode(',', $logged_in['quiz']))) {
                             ?>
                             <a class="collapse-item"
-                               href="<?php echo site_url('quiz/add_new'); ?>"><?php echo $this->lang->line('add_new'); ?></a>
+                               href="<?php echo site_url('quiz/add_new'); ?>"><?php echo $this->lang->line('add_new1'); ?></a>
                             <?php
                         }
                         if (in_array('List', explode(',', $logged_in['quiz'])) || in_array('List_all', explode(',', $logged_in['quiz']))) {
@@ -306,6 +306,9 @@ $hres = $hquery->result_Array();
                            href="<?php echo site_url('qbank/category_list'); ?>"><?php echo $this->lang->line('category_list'); ?></a>
                         <a class="collapse-item"
                            href="<?php echo site_url('qbank/level_list'); ?>"><?php echo $this->lang->line('level_list'); ?></a>
+                        <a class="collapse-item"
+                           href="<?php echo site_url('user/career_list'); ?>"><?php echo $this->lang->line('career_list'); ?></a>
+                    
                         <a class="collapse-item"
                            href="<?php echo site_url('account'); ?>"><?php echo $this->lang->line('account_type'); ?></a></a>
                         <a class="collapse-item"

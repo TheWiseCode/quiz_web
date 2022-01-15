@@ -6,7 +6,7 @@
     <div class="col-lg-12">
         <!--TODO: NO FUNCIONA VERSION FREE-->
         <a href="<?php echo site_url('payment_gateway'); ?>"
-           class="btn btn-success"><?php echo $this->lang->line('add_new'); ?></a><br><br>
+           class="btn btn-success"><?php echo $this->lang->line('add_new1'); ?></a><br><br>
 
         <div style="text-align: center;">
             <table class="table table-hover table-bordered">

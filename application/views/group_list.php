@@ -12,12 +12,14 @@
             <div id="message"></div>
 
             <a href="<?php echo site_url('user/add_new_group'); ?>"
-               class="btn btn-success"><?php echo $this->lang->line('add_new'); ?></a>
+               class="btn btn-success"><?php echo $this->lang->line('add_new1'); ?></a>
             <br><br>
             <table class="table table-bordered">
                 <tr>
                     <th><?php echo $this->lang->line('group_name'); ?></th>
                     <th><?php echo $this->lang->line('description'); ?></th>
+                    <th><?php echo $this->lang->line('date_init'); ?></th>
+                    <th><?php echo $this->lang->line('date_end'); ?></th>
                     <th><?php echo $this->lang->line('valid_for_days'); ?></th>
                     <th><?php echo $this->lang->line('action'); ?> </th>
                 </tr>
@@ -38,6 +40,12 @@
                         <td> <?php echo $val['group_name']; ?></td>
                         <td>
                             <?php echo $val['description']; ?>
+                        </td>
+                        <td>
+                            <?php echo $val['date_init']; ?>
+                        </td>
+                        <td>
+                            <?php echo $val['date_end']; ?>
                         </td>
                         <td><?php echo $val['valid_for_days']; ?></td>
                         <td>

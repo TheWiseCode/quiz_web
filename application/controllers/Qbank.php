@@ -173,7 +173,7 @@ class Qbank extends CI_Controller
         }
         $data['para'] = $para;
         $data['nop'] = $nop;
-        $data['title'] = $this->lang->line('add_new');
+        $data['title'] = $this->lang->line('add_new1');
         // fetching category list
         $data['category_list'] = $this->qbank_model->category_list();
         // fetching level list
@@ -219,7 +219,7 @@ class Qbank extends CI_Controller
         }
         $data['para'] = $para;
         $data['nop'] = $nop;
-        $data['title'] = $this->lang->line('add_new');
+        $data['title'] = $this->lang->line('add_new1');
         // fetching category list
         $data['category_list'] = $this->qbank_model->category_list();
         // fetching level list
@@ -265,7 +265,7 @@ class Qbank extends CI_Controller
         }
         $data['para'] = $para;
         $data['nop'] = $nop;
-        $data['title'] = $this->lang->line('add_new');
+        $data['title'] = $this->lang->line('add_new1');
         // fetching category list
         $data['category_list'] = $this->qbank_model->category_list();
         // fetching level list
@@ -311,7 +311,7 @@ class Qbank extends CI_Controller
         }
         $data['para'] = $para;
         $data['nop'] = $nop;
-        $data['title'] = $this->lang->line('add_new');
+        $data['title'] = $this->lang->line('add_new1');
         // fetching category list
         $data['category_list'] = $this->qbank_model->category_list();
         // fetching level list
@@ -357,7 +357,7 @@ class Qbank extends CI_Controller
         }
         $data['para'] = $para;
         $data['nop'] = $nop;
-        $data['title'] = $this->lang->line('add_new');
+        $data['title'] = $this->lang->line('add_new1');
         // fetching category list
         $data['category_list'] = $this->qbank_model->category_list();
         // fetching level list

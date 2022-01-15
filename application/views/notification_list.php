@@ -37,7 +37,7 @@
                 ?>
 
                 <a href="<?php echo site_url('notification/add_new'); ?>"
-                   class="btn btn-success"><?php echo $this->lang->line('add_new'); ?></a><br><br>
+                   class="btn btn-success"><?php echo $this->lang->line('add_new1'); ?></a><br><br>
                 <?php
             }
             ?>

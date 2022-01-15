@@ -6,9 +6,12 @@ ERROR - 2022-01-13 02:16:16 --> Severity: error --> Exception: syntax error, une
 ERROR - 2022-01-13 02:16:25 --> Severity: error --> Exception: syntax error, unexpected '=>' (T_DOUBLE_ARROW) C:\xampp\htdocs\quiz_web\application\controllers\User.php 653
 ERROR - 2022-01-13 02:16:43 --> Severity: error --> Exception: syntax error, unexpected '=>' (T_DOUBLE_ARROW) C:\xampp\htdocs\quiz_web\application\controllers\User.php 653
 ERROR - 2022-01-13 02:17:16 --> Severity: error --> Exception: syntax error, unexpected '=>' (T_DOUBLE_ARROW) C:\xampp\htdocs\quiz_web\application\controllers\User.php 653
-ERROR - 2022-01-13 02:17:31 --> Severity: error --> Exception: syntax error, unexpected '?>', expecting function (T_FUNCTION) C:\xampp\htdocs\quiz_web\application\models\User_model.php 817
-ERROR - 2022-01-13 02:17:41 --> Severity: error --> Exception: syntax error, unexpected '?>', expecting function (T_FUNCTION) C:\xampp\htdocs\quiz_web\application\models\User_model.php 811
-ERROR - 2022-01-13 02:17:48 --> Severity: error --> Exception: syntax error, unexpected '?>', expecting function (T_FUNCTION) C:\xampp\htdocs\quiz_web\application\models\User_model.php 801
+ERROR - 2022-01-13 02:17:31 --> Severity: error --> Exception: syntax error, unexpected '?>
+', expecting function (T_FUNCTION) C:\xampp\htdocs\quiz_web\application\models\User_model.php 817
+ERROR - 2022-01-13 02:17:41 --> Severity: error --> Exception: syntax error, unexpected '?>
+', expecting function (T_FUNCTION) C:\xampp\htdocs\quiz_web\application\models\User_model.php 811
+ERROR - 2022-01-13 02:17:48 --> Severity: error --> Exception: syntax error, unexpected '?>
+', expecting function (T_FUNCTION) C:\xampp\htdocs\quiz_web\application\models\User_model.php 801
 ERROR - 2022-01-13 02:18:30 --> Severity: error --> Exception: syntax error, unexpected 'isValid' (T_STRING), expecting function (T_FUNCTION) C:\xampp\htdocs\quiz_web\application\models\User_model.php 803
 ERROR - 2022-01-13 02:18:45 --> Severity: error --> Exception: syntax error, unexpected 'isValid' (T_STRING), expecting function (T_FUNCTION) C:\xampp\htdocs\quiz_web\application\models\User_model.php 803
 ERROR - 2022-01-13 02:27:32 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\models\User_model.php 452
@@ -521,3 +524,5 @@ ERROR - 2022-01-13 20:30:18 --> Query error: You have an error in your SQL synta
 ERROR - 2022-01-13 20:30:20 --> Could not find the language line "hello"
 ERROR - 2022-01-13 20:30:20 --> Could not find the language line "user_id"
 ERROR - 2022-01-13 20:30:20 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 357
+ERROR - 2022-01-13 07:08:01 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 237
+ERROR - 2022-01-13 07:11:47 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 237
