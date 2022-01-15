@@ -21,47 +21,99 @@
 		}
 		?>	
 		
-				<div class="form-group">	 
-				<?php echo $this->lang->line('group_name');?>: <?php echo $result['group_name'];?> (<?php echo $this->lang->line('price_');?>: <?php echo $result['price'];?>)
-				</div>
+				<?php /*<div class="form-group">	 
+				<?php echo $this->lang->line('group_name');?>: <?php echo $result['group_name'];?>
+				</div>*/?>
 				
 				
 		
+				<div class="form-group">
+					<label   ><?php echo $this->lang->line('ci');?></label> 
+                            <input type="text" name="ci" class="form-control" value="<?php echo $result['ci'];?>"
+                                   autofocus>
+                </div>
+				
+				<div class="form-group">
+                            <label><?php echo "Seleccionar Expedido"; ?></label>
+                            <select class="form-control" name="exp" id="exp" placeholder="<?php echo "Expedido"; ?>">
+
+                                <option <?php if ($result['exp']=='BE'){ echo selected ;} ?> value="BE">Beni</option>
+                                <option <?php if ($result['exp']=='PD'){ echo selected ;} ?> value="PD">Pando</option>
+                                <option <?php if ($result['exp']=='SC'){ echo selected ;} ?> value="SC">Santa Cruz</option>
+                                <option <?php if ($result['exp']=='CBB'){ echo selected ;} ?> value="CB">Cochabamba</option>
+                                <option <?php if ($result['exp']=='CH'){ echo selected ;} ?> value="CH">Chuquisaca</option>
+                                <option <?php if ($result['exp']=='TJ'){ echo selected ;} ?> value="TJ">Tarija</option>
+                                <option <?php if ($result['exp']=='LP'){ echo selected ;} ?> value="LP">La Paz</option>
+                                <option <?php if ($result['exp']=='OR'){ echo selected ;} ?> value="OR">Oruro</option>
+                                <option <?php if ($result['exp']=='OR'){ echo selected ;} ?> value="PT">Potosi</option>
+                          
+                            </select>
+                        </div>
+						
+						
 				<div class="form-group">	 
-					<label for="inputEmail" class="sr-only"><?php echo $this->lang->line('email_address');?></label> 
-					<input type="email" id="inputEmail" name="email" value="<?php echo $result['email'];?>" class="form-control" placeholder="<?php echo $this->lang->line('email_address');?>" required autofocus>
-			</div>
-			<div class="form-group">	  
-					<label for="inputPassword" class="sr-only"><?php echo $this->lang->line('password');?></label>
-					<input type="password" id="inputPassword" name="password"   value=""  class="form-control" placeholder="<?php echo $this->lang->line('password');?>"   >
-			 </div>
-				<div class="form-group">	 
-					<label for="inputEmail" class="sr-only"><?php echo $this->lang->line('first_name');?></label> 
+				<label   ><?php echo $this->lang->line('first_name');?></label>  
 					<input type="text"  name="first_name"  class="form-control"  value="<?php echo $result['first_name'];?>"  placeholder="<?php echo $this->lang->line('first_name');?>"   autofocus>
 			</div>
 				<div class="form-group">	 
-					<label for="inputEmail" class="sr-only"><?php echo $this->lang->line('last_name');?></label> 
+					<label ><?php echo $this->lang->line('last_name');?></label> 
 					<input type="text"   name="last_name"  class="form-control"  value="<?php echo $result['last_name'];?>"  placeholder="<?php echo $this->lang->line('last_name');?>"   autofocus>
 			</div>
+
+			<div class="form-group">
+                            <label ><?php echo "Codigo de estudiante"; ?></label>
+                            <input type="text" name="code_student" class="form-control" value="<?php echo $result['cod_student'];?>"
+                                   placeholder="<?php echo "Codigo de estudiante"; ?>" autofocus>
+
+                        </div>
+
+			<div class="form-group">
+                            <label><?php echo $this->lang->line('select_first_career'); ?></label>
+                            <select class="form-control" name="first_opt_univ_degree" id="first_opt_univ_degree">
+                                <?php
+                                foreach ($career_list as $key => $val) {
+                                    ?>
+
+                                    <option <?php if ($result['first_opt_univ_degree']=== $val['name']){ echo selected;} ?> value="<?php echo $val['id']; ?>"><?php echo $val['name']; ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label><?php echo $this->lang->line('select_second_career'); ?></label>
+                            <select class="form-control" name="second_opt_univ_degree" id="second_opt_univ_degree">
+                                <?php
+                                foreach ($career_list as $key => $val) {
+                                    ?>
+
+                                    <option <?php if ($result['second_opt_univ_degree']=== $val['name']){ echo selected;} ?> value="<?php echo $val['id']; ?>"><?php echo $val['name']; ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
 				<div class="form-group">	 
-					<label for="inputEmail" class="sr-only"><?php echo $this->lang->line('contact_no');?></label> 
+					<label ><?php echo $this->lang->line('contact_no');?></label> 
 					<input type="text" name="contact_no"  class="form-control"  value="<?php echo $result['contact_no'];?>"  placeholder="<?php echo $this->lang->line('contact_no');?>"   autofocus>
 			</div>
 
 
-				<div class="form-group">	 
+				<?php /*<div class="form-group">	 
 					<label for="inputEmail" class="sr-only"><?php echo $this->lang->line('skype_id');?></label> 
 					<input type="text" name="skype_id"  class="form-control"  value="<?php echo $result['skype_id'];?>"  placeholder="<?php echo $this->lang->line('skype_id');?>"   autofocus>
-			</div>
+			</div>*/?>
 
 				<div class="form-group">	 
 					<label   ><?php echo $this->lang->line('select_group');?></label> 
-					<select class="form-control" name="gid"  onChange="getexpiry();" id="gid">
+					<select class="form-control" name="gid"  onChange="getexpiry2();" id="gid">
 					<?php 
+					
 					foreach($group_list as $key => $val){
 						?>
 						
-						<option value="<?php echo $val['gid'];?>" <?php if($result['gid']==$val['gid']){ echo 'selected';}?> ><?php echo $val['group_name'];?> (<?php echo $this->lang->line('price_');?>: <?php echo $val['price'];?>)</option>
+						<option <?php if ($result['gid']=== $val['gid']){ echo selected;} ?> value="<?php echo $val['gid'];?>"><?php echo $val['group_name'];?> </option>
 						<?php 
 					}
 					?>
@@ -75,7 +127,7 @@
 
 				<div class="form-group">	 
 					<label   ><?php echo $this->lang->line('account_type');?></label> 
-					<select class="form-control" name="su">
+					<select disabled="disabled" class="form-control" name="su">
 						<?php 
 						foreach($account_type as $ak =>$val){
 						?>
@@ -106,6 +158,18 @@
 	<?php
 	}
 	?>	
+	<div class="form-group">	 
+					<label for="inputEmail" class="sr-only"><?php echo $this->lang->line('email_address');?></label> 
+					<input type="email" id="inputEmail" name="email" value="<?php echo $result['email'];?>" class="form-control" placeholder="<?php echo $this->lang->line('email_address');?>" required autofocus>
+			</div>
+			<div class="form-group">	  
+					<label for="inputPassword" class="sr-only"><?php echo $this->lang->line('password');?></label>
+					<input type="password" id="inputPassword" name="password"   value=""  class="form-control" placeholder="<?php echo $this->lang->line('password');?>"   >
+			 </div>
+			 <div class="form-group">	  
+					<label for="inputPassword" class="sr-only"><?php echo $this->lang->line('repeat_password');?></label>
+					<input type="password" id="repeat_password" name="repeat_password"   value=""  class="form-control" placeholder="<?php echo $this->lang->line('repeat_password');?>"   >
+			 </div>
  
 	<button class="btn btn-default" type="submit"><?php echo $this->lang->line('submit');?></button>
  
@@ -118,12 +182,14 @@
 </div>
       </form>
 </div>
+<script>
+    getexpiry2();
+</script>
 
 
-
-<div class="row">
+<?php /*<div class="row">
 <div class="col-md-8">
-<h3><?php echo $this->lang->line('payment_history');?></h3>
+<h3> <?php echo $this->lang->line('payment_history');?></h3>
 <table class="table table-bordered">
 <tr>
  <th><?php echo $this->lang->line('payment_gateway');?></th>
@@ -167,4 +233,4 @@ foreach($payment_history as $key => $val){
 
 
 
-</div>
+</div>-->

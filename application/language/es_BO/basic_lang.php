@@ -459,3 +459,5 @@ $lang['date_init'] = "Fecha de Inicio";
 $lang['date_end'] = "Fecha finalizacion";
 $lang['photo'] = "Editar Foto";
 $lang['first_career'] = "Primera Carrera";
+$lang['ci'] = "Cedula de identidad";
+$lang['repeat_password'] = "Repetir Contraseña";

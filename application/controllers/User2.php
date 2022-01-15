@@ -168,8 +168,9 @@ class User2 extends CI_Controller
 
         $data['uploadSuccess'] = $this->upload->data();
         //$photo = $data['uploadSuccess']['full_path'];
-        $photo = $data['uploadSuccess']['orig_name'];
-       
+        $photo = 'photo/users/' . $data['uploadSuccess']['orig_name'];
+      
+            
         if(!$this->user_model->submit_photo($uid,$photo))
             {
                 $this->session->set_flashdata(

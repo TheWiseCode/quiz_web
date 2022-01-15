@@ -89,7 +89,7 @@
                         </div>
                         <div class="form-group">
                             <label><?php echo $this->lang->line('select_group'); ?></label>
-                            <select class="form-control" name="gid" id="gid" onChange="getexpiry();">
+                            <select class="form-control" name="gid" id="gid" onChange="getexpiry2();">
                                 <?php
                                 foreach ($group_list as $key => $val) {
                                     ?>
@@ -125,7 +125,7 @@
                             <label for="inputPassword"
                                    class="sr-only"><?php echo $this->lang->line('repeat_password'); ?></label>
                             <input type="password" id="inputPassword" name="repeat_password" class="form-control"
-                                   placeholder="<?php echo $this->lang->line('password'); ?>" required>
+                                   placeholder="<?php echo $this->lang->line('repeat_password'); ?>" required>
                         </div>
                         <button class="btn btn-default"
                                 type="submit"><?php echo $this->lang->line('submit'); ?></button>
@@ -141,5 +141,5 @@
 
 </div>
 <script>
-    getexpiry();
+    getexpiry2();
 </script>

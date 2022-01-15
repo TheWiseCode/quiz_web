@@ -37,6 +37,8 @@ class User extends CI_Controller
         $data['result'] = $this->user_model->user_list($limit);
         $data['career_list'] = $this->user_model->get_career_all();
         $data['group_list'] = $this->user_model->get_group_all($limit);
+        	
+            
         $this->load->view('header', $data);
         $this->load->view('user_list', $data);
         $this->load->view('footer', $data);
@@ -203,15 +205,18 @@ class User extends CI_Controller
             $this->lang->line('edit') . ' ' . $this->lang->line('user');
         // fetching user
         $data['result'] = $this->user_model->get_user($uid);
+        
         $data['custom_form_user'] = $this->user_model->custom_form_user($uid);
-
+        $data['result'] = $this->user_model->get_user($uid);
         $data['custom_form'] = $this->user_model->custom_form('All');
         $this->load->model('payment_model');
         $data['payment_history'] = $this->payment_model->get_payment_history(
             $uid
         );
         // fetching group list
+        $data['career_list'] = $this->user_model->get_career_all();
         $data['group_list'] = $this->user_model->group_list();
+        
         $data['account_type'] = $this->account_model->account_list(0);
         $this->load->view('header', $data);
         if ($logged_in['su'] == '1') {
@@ -229,6 +234,22 @@ class User extends CI_Controller
         if ($logged_in['su'] != '1') {
             $uid = $logged_in['uid'];
         }
+        if($this->input->post('password'))
+        {
+            
+            if($_POST['inputPassword'] != $_POST['repeat_password'])
+            {
+               
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                    'Las contraseñas no coinciden' .
+                        ' </div>'
+                );
+                redirect('user/edit_user/' . $uid);
+            }
+        }
+        
         $this->load->library('form_validation');
         $this->form_validation->set_rules('email', 'Email', 'required');
         if ($this->form_validation->run() == false) {
@@ -395,7 +416,7 @@ class User extends CI_Controller
         }
 
         if ($this->input->post('career_name')) {
-            if ($this->user_model->update_group($id)) {
+            if ($this->user_model->update_career($id)) {
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-success'>" .
@@ -410,7 +431,7 @@ class User extends CI_Controller
                         ' </div>'
                 );
             }
-            redirect('user/group_list');
+            redirect('user/career_list');
         }
         // fetching group list
         $data['career'] = $this->user_model->get_career($id);
@@ -536,6 +557,10 @@ class User extends CI_Controller
     function get_expiry($gid)
     {
         echo $this->user_model->get_expiry($gid);
+    }
+    function get_expiry2($gid)
+    {
+        echo $this->user_model->get_expiry2($gid);
     }
 
     public function remove_group($gid)

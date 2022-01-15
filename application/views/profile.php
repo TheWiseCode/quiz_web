@@ -4,7 +4,7 @@
         <div class="col-sm-10"><h1><?php echo $result['first_name'] . ' ' . $result['last_name']; ?></h1></div>
         <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image"
                                                                        class="img-circle img-responsive"
-                                                                       src="<?php echo base_url(); ?>/photo/users/photo.jpeg"<?php echo md5($result['email']); ?>?s=100"></a>
+                                                                       src="<?php echo base_url() . $result['photo']; ?>?s=100" width="100" height="100"></a>
         </div>
     </div>
     <div class="row">
@@ -49,15 +49,7 @@
                 <li class="list-group-item text-right"><span
                             class="pull-left"><strong><?php echo $this->lang->line('last_attempt'); ?></strong></span> <?php echo $lastattempt; ?>
                 </li>
-                <li class="list-group-item text-muted"><?php echo $this->lang->line('photo'); ?> <i
-                            class="fa fa-dashboard fa-1x"></i></li>
-                            
-                <li class="list-group-item text-right">
-                    <form action ="" method= "post" enctype="multipart/form-data">
-                        <input type ="file" name ="upload">
-                        <input type = "submit" value ="Submit">
-                    </form>
-                </li>
+                
             </ul>
 
             
