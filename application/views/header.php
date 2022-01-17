@@ -121,30 +121,31 @@ $hres = $hquery->result_Array();
   -->
 
 
+        
         <?php
         if (in_array('List_all', explode(',', $logged_in['users']))) {
             ?>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                   aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers"
+                   aria-expanded="true" aria-controls="collapseUsers">
                     <i class="fas fa-fw fa-users"></i>
                     <span><?php echo $this->lang->line('users'); ?></span>
                 </a>
 
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapseUsers" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <?php
                         if (in_array('Add', explode(',', $logged_in['users']))) {
                             ?>
                             <a class="collapse-item"
-                               href="<?php echo site_url('user/new_user'); ?>"><?php echo $this->lang->line('add_new'); ?></a>
+                               href="<?php echo site_url('user/new_user2'); ?>"><?php echo $this->lang->line('add_new_'); ?></a>
                         <?php } ?>
                         <?php
                         if (in_array('List', explode(',', $logged_in['users'])) || in_array('List_all', explode(',', $logged_in['users']))) {
                             ?>
                             <a class="collapse-item"
-                               href="<?php echo site_url('user'); ?>"><?php echo $this->lang->line('user_list'); ?></a>
+                               href="<?php echo site_url('user/index2'); ?>"><?php echo $this->lang->line('user_list'); ?></a>
                         <?php } ?>
                         <?php
                         if (in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
@@ -157,7 +158,42 @@ $hres = $hquery->result_Array();
             <?php
         }
         ?>
+        <?php
+        if (in_array('List_all', explode(',', $logged_in['users']))) {
+            ?>
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-user-graduate"></i>
+                    <span><?php echo $this->lang->line('users_students'); ?></span>
+                </a>
 
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <?php
+                        if (in_array('Add', explode(',', $logged_in['users']))) {
+                            ?>
+                            <a class="collapse-item"
+                               href="<?php echo site_url('user/new_user'); ?>"><?php echo $this->lang->line('add_new_'); ?></a>
+                        <?php } ?>
+                        <?php
+                        if (in_array('List', explode(',', $logged_in['users'])) || in_array('List_all', explode(',', $logged_in['users']))) {
+                            ?>
+                            <a class="collapse-item"
+                               href="<?php echo site_url('user'); ?>"><?php echo $this->lang->line('user_list_students'); ?></a>
+                        <?php } ?>
+                        <?php
+                        if (in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
+                            <a hidden class="collapse-item"
+                               href="<?php echo site_url('appointment/myappointment/'); ?>"><?php echo $this->lang->line('myappointment'); ?></a>
+                        <?php } ?>
+                    </div>
+                </div>
+            </li>
+            <?php
+        }
+        ?>
 
         <?php
         if (in_array('List', explode(',', $logged_in['questions'])) || in_array('List_all', explode(',', $logged_in['questions']))) {

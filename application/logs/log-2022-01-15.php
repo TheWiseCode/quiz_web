@@ -283,3 +283,13 @@ ERROR - 2022-01-15 18:05:49 --> Severity: Warning --> Invalid argument supplied 
 ERROR - 2022-01-15 18:05:49 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 219
 ERROR - 2022-01-15 18:05:58 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 144
 ERROR - 2022-01-15 18:05:58 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 219
+ERROR - 2022-01-15 20:11:41 --> Severity: Warning --> Missing argument 3 for Login::addtocart(), called in C:\xampp\htdocs\quiz_web\system\core\CodeIgniter.php on line 532 and defined C:\xampp\htdocs\quiz_web\application\controllers\Login.php 69
+ERROR - 2022-01-15 20:17:08 --> Severity: Warning --> Missing argument 3 for Login::addtocart(), called in C:\xampp\htdocs\quiz_web\system\core\CodeIgniter.php on line 532 and defined C:\xampp\htdocs\quiz_web\application\controllers\Login.php 69
+ERROR - 2022-01-15 20:18:08 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\models\User_model.php 557
+ERROR - 2022-01-15 20:18:48 --> Severity: Warning --> Missing argument 3 for Login::addtocart(), called in C:\xampp\htdocs\quiz_web\system\core\CodeIgniter.php on line 532 and defined C:\xampp\htdocs\quiz_web\application\controllers\Login.php 69
+ERROR - 2022-01-15 20:19:27 --> Severity: Warning --> Missing argument 3 for Login::addtocart(), called in C:\xampp\htdocs\quiz_web\system\core\CodeIgniter.php on line 532 and defined C:\xampp\htdocs\quiz_web\application\controllers\Login.php 69
+ERROR - 2022-01-15 20:19:52 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\models\User_model.php 557
+ERROR - 2022-01-15 20:20:49 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\models\User_model.php 557
+ERROR - 2022-01-15 20:48:19 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 217
+ERROR - 2022-01-15 20:48:26 --> Severity: Compile Warning --> Unterminated comment starting line 190 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 190
+ERROR - 2022-01-15 21:39:50 --> Severity: Compile Warning --> Unterminated comment starting line 190 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 190

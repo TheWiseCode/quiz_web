@@ -43,9 +43,9 @@
                                    placeholder="<?php echo $this->lang->line('subscription_expired'); ?>" autofocus>
                         </div>
 
-                        <div class="form-group">
-                            <label for="inputEmail"><?php echo $this->lang->line('valid_for_days'); ?></label>
-                            <input type="text" required name="valid_for_days" class="form-control" value=0
+                        <div  class="form-group">
+                            <label  for="inputEmail"><?php echo $this->lang->line('valid_for_days'); ?></label>
+                            <input disabled type="text" required name="valid_for_days" class="form-control" value=0
                                    id="valid_for_days">
                         </div>
 

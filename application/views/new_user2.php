@@ -1,7 +1,7 @@
 <div class="container">
     <h3><?php echo $title; ?></h3>
     <div class="row">
-        <form method="post" action="<?php echo site_url('user/insert_user/'); ?>">
+        <form method="post" action="<?php echo site_url('user/insert_user2/'); ?>">
 
             <div class="col-md-8">
                 <br>
@@ -47,92 +47,27 @@
                             <input type="text" name="last_name" class="form-control"
                                    placeholder="<?php echo $this->lang->line('last_name'); ?>" autofocus>
                         </div>
-                        <div hidden class="form-group">
-                            <label><?php echo $this->lang->line('civil_status_select'); ?></label>
-                            <select class="form-control" name="civil_status" id="civil_status"  placeholder="<?php echo $this->lang->line('civil_status'); ?>">
-
-                                <option value="Soltero(a)">Soltero(a)</option>
-                                <option value="Casado(a)">Casado(a)</option>
-                                <option value="Viduo(a)">Viduo(a)</option>
-                                <option value="Divorciado(a)">Divorciado(a)</option>
-                            
-                          
-                            </select>
-                        </div>
-                        <div hidden class="form-group">
-                            <label><?php echo $this->lang->line('gender_select'); ?></label>
-                            <select class="form-control" name="gender" id="gender"  placeholder="<?php echo $this->lang->line('gender'); ?>">
-
-                                <option value="Femenino">Femenino</option>
-                                <option value="Masculino">Masculino</option>
-                             
-                            
-                          
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="inputEmail" class="sr-only"><?php echo "Codigo de estudiante"; ?></label>
-                            <input type="text" name="code_student" class="form-control"
-                                   placeholder="<?php echo "Codigo de estudiante"; ?>" autofocus>
-
-                        </div>
-                        <div class="form-group">
-                            <label><?php echo $this->lang->line('select_first_career'); ?></label>
-                            <select class="form-control" name="first_opt_univ_degree" id="first_opt_univ_degree">
-                                <?php
-                                foreach ($career_list as $key => $val) {
-                                    ?>
-
-                                    <option value="<?php echo $val['id']; ?>"><?php echo $val['name']; ?></option>
-                                    <?php
-                                }
-                                ?>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label><?php echo $this->lang->line('select_second_career'); ?></label>
-                            <select class="form-control" name="second_opt_univ_degree" id="second_opt_univ_degree">
-                                <?php
-                                foreach ($career_list as $key => $val) {
-                                    ?>
-
-                                    <option value="<?php echo $val['id']; ?>"><?php echo $val['name']; ?></option>
-                                    <?php
-                                }
-                                ?>
-                            </select>
-                        </div>
-
+                        
                         <div class="form-group">
                             <label for="inputEmail"
                                    class="sr-only"><?php echo $this->lang->line('contact_no'); ?></label>
                             <input type="text" name="contact_no" class="form-control"
                                    placeholder="<?php echo $this->lang->line('contact_no'); ?>" autofocus>
                         </div>
-                        <div class="form-group">
-                            <label><?php echo $this->lang->line('select_group'); ?></label>
-                            <select class="form-control" name="gid" id="gid" onChange="getexpiry2();">
-                                <?php
-                                foreach ($group_list as $key => $val) {
-                                    ?>
-
-                                    <option value="<?php echo $val['gid']; ?>"><?php echo $val['group_name']; ?></option>
-                                    <?php
-                                }
-                                ?>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail"><?php echo $this->lang->line('subscription_expired'); ?></label>
-                            <input type="date" name="subscription_expired" id="subscription_expired"
-                                   class="form-control"
-                                   placeholder="<?php echo $this->lang->line('subscription_expired'); ?>" autofocus>
-                        </div>
-
+                        <div class="form-group">	 
+					        <label   ><?php echo $this->lang->line('account_type');?></label> 
+					        <select class="form-control" name="su">
+						        <?php 
+						            foreach($account_type as $ak =>$val){
+						                ?>
+						                    <option value="<?php echo $val['account_id'];?>"><?php echo $val['account_name'];?></option>
+						                <?php 
+						            }
+						            ?>
+						 
+					        </select>
+			            </div>
                         
-
                         <div class="form-group">
                             <label for="inputEmail"
                                    class="sr-only"><?php echo $this->lang->line('email_address'); ?></label>
