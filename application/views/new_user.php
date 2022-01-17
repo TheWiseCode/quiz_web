@@ -70,7 +70,18 @@
                           
                             </select>
                         </div>
-
+                        <div hidden class="form-group">
+                            <label for="inputEmail"
+                                   class="sr-only"><?php echo $this->lang->line('address'); ?></label>
+                            <input type="text" name="address" class="form-control"
+                                   placeholder="<?php echo $this->lang->line('address'); ?>" autofocus>
+                        </div>
+                        <div hidden class="form-group">
+                            <label for="inputEmail"
+                                   class="sr-only"><?php echo $this->lang->line('nationality'); ?></label>
+                            <input type="text" name="nationality" class="form-control"
+                                   placeholder="<?php echo $this->lang->line('nationality'); ?>" autofocus>
+                        </div>
                         <div class="form-group">
                             <label for="inputEmail" class="sr-only"><?php echo "Codigo de estudiante"; ?></label>
                             <input type="text" name="code_student" class="form-control"
@@ -104,7 +115,36 @@
                                 ?>
                             </select>
                         </div>
+                      
 
+                        <div hidden class="form-group">
+                            <link  type="text/css" href="select2/select2.min.css">
+                            <script src="select2/select2.min.js"></script>
+                            <label><?php echo $this->lang->line('select_university'); ?></label>
+                            <select class="form-control" name="university" id="university">
+                                <?php
+                                foreach ($university_list as $key => $val) {
+                                    ?>
+
+                                    <option value="<?php echo $val['id']; ?>"><?php echo $val['name']; ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div hidden class="form-group">
+                            <label><?php echo $this->lang->line('select_specialties'); ?></label>
+                            <select class="form-control" name="specialties" id="specialties">
+                                <?php
+                                foreach ($specialties_list as $key => $val) {
+                                    ?>
+
+                                    <option value="<?php echo $val['id']; ?>"><?php echo $val['name']; ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
                         <div class="form-group">
                             <label for="inputEmail"
                                    class="sr-only"><?php echo $this->lang->line('contact_no'); ?></label>
@@ -166,4 +206,11 @@
 </div>
 <script>
     getexpiry2();
+    
+
+</script>
+<script>
+        $(document).ready(function(){
+            $('#university').select2();
+        });
 </script>

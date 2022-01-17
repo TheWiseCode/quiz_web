@@ -5,6 +5,12 @@
         <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image"
                                                                        class="img-circle img-responsive"
                                                                        src="<?php echo base_url() . $result['photo']; ?>?s=100" width="100" height="100"></a>
+                                                                       <style type = "text/css"> </style>
+
+                                                       
+
+
+
         </div>
     </div>
     <div class="row">

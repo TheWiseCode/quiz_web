@@ -474,3 +474,7 @@ $lang['specialty'] = "Especialidad";
 $lang['college'] = "Universidad";
 $lang['civil_status_select'] = "Seleccionar Estado Civil";
 $lang['gender_select'] = "Seleccionar Género";
+$lang['address'] = "Dirección";
+$lang['select_university'] = "Seleccionar Universidad";
+$lang['select_specialties'] = "Seleccionar Especialidad";
+

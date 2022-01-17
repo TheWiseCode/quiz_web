@@ -291,6 +291,14 @@ class User_model extends CI_Model
         $query = $this->db->get('savsoft_group');
         return $query->result_array();
     }
+    function get_university_all(){
+        $query = $this->db->get('university');
+        return $query->result_array();
+    }
+    function get_specialties_all(){
+        $query = $this->db->get('specialties');
+        return $query->result_array();
+    }
     function get_account_type()
     {
         $query = $this->db->get('account_type');

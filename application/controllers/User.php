@@ -37,6 +37,8 @@ class User extends CI_Controller
         $data['result'] = $this->user_model->user_list($limit);
         $data['career_list'] = $this->user_model->get_career_all();
         $data['group_list'] = $this->user_model->get_group_all($limit);
+        
+       	
         	
             
         $this->load->view('header', $data);
@@ -81,6 +83,8 @@ class User extends CI_Controller
         $data['group_list'] = $this->user_model->group_list();
         $data['career_list'] = $this->user_model->get_career_all();
         $data['account_type'] = $this->account_model->account_list(0);
+        $data['university_list'] = $this->user_model->get_university_all();
+        $data['specialties_list'] = $this->user_model->get_specialties_all();
         $this->load->view('header', $data);
         $this->load->view('new_user', $data);
         $this->load->view('footer', $data);
