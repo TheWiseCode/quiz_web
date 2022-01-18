@@ -83,39 +83,75 @@ function getexpiry() {
         }
     });
 }
-function getexpiry2(){
-	
-	var gid=document.getElementById('gid').value;
-	var formData = {gid:gid};
-	$.ajax({
-		 type: "POST",
-		 data : formData,
-			url: base_url + "index.php/user/get_expiry2/"+gid,
-		success: function(data){
-			
-		$("#subscription_expired").val(data);
-			
-			},
-		error: function(xhr,status,strErr){
-			//alert(status);
-			}	
-		});
+
+function getexpiry2() {
+
+    var gid = document.getElementById('gid').value;
+    var formData = {gid: gid};
+    $.ajax({
+        type: "POST",
+        data: formData,
+        url: base_url + "index.php/user/get_expiry2/" + gid,
+        success: function (data) {
+
+            $("#subscription_expired").val(data);
+
+        },
+        error: function (xhr, status, strErr) {
+            //alert(status);
+        }
+    });
 }
+
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function(e) {
-            $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+        reader.onload = function (e) {
+            $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
             $('#imagePreview').hide();
             $('#imagePreview').fadeIn(650);
         }
         reader.readAsDataURL(input.files[0]);
     }
 }
-$("#imageUpload").change(function() {
+
+$("#imageUpload").change(function () {
     readURL(this);
 });
 
+/*
+function send_form() {
+    var code_student = document.getElementsByName('code_student').value;
+    var ci = document.getElementsByName('ci').value;
+    var exp = document.getElementsById('exp').value;
+    var first_name = document.getElementsByName('first_name').value;
+    var last_name = document.getElementsByName('last_name').value;
+    var civil_status = document.getElementsByName('civil_status').value;
+    var gender = document.getElementsByName('gender').value;
+    var address = document.getElementsByName('address').value;
+    var nationality = document.getElementsByName('nationality').value;
+    var university = document.getElementsById('university').value;
+    var specialties = document.getElementsByID('specialties').value;
+    var contact_no = document.getElementsByName('contact_no').value;
+    var subscription_expired = document.getElementsByID('subscription_expired').value;
+    var email = document.getElementsByName('email').value;
+    var password = document.getElementsByName('password').value;
+    var formData = {gid: gid};
+    $.ajax({
+        type: "POST",
+        data: formData,
+        url: base_url + "index.php/user/get_expiry/" + gid,
+        success: function (data) {
+            $("#subscription_expired").val(data);
+
+        },
+        error: function (xhr, status, strErr) {
+            //alert(status);
+        }
+    });
+}
+
+*/
 
 function workingDaysBetweenDates() {
 

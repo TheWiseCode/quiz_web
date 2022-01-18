@@ -2,71 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/photo/Logo.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/photo/Logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/sq_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/sq_config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Api.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/User2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/libraries/dompdf/www/fonts.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/libraries/dompdf/www/fonts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-17.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-17.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Account_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Account_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-18.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-18.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/account_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/account_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/add_assignment.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/add_assignment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/add_class.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/add_class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/add_question_into_quiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/add_question_into_quiz.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/assignment_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/assignment_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/career_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/career_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/category_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/category_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/change_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/change_group.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/custom_fields_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/custom_fields_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/custom_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/custom_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/edit_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/edit_assignment.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_assignment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/edit_class.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/edit_question_4.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_question_4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/edit_studymaterial.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_studymaterial.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/edit_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/edit_user_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_user_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/forgot_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/forgot_password.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/get_appointment.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/get_appointment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/group_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/group_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/installation.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/installation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/level_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/level_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/new_question_1.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_question_1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/new_question_4.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_question_4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/new_question_5.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_question_5.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/new_social_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_social_group.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/new_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/new_user2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_user2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/open_quiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/open_quiz.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pre_remove_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pre_remove_account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pre_remove_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pre_remove_category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pre_remove_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pre_remove_group.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pre_remove_level.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pre_remove_level.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/question_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/question_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/quiz_attempt_Advance.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/quiz_attempt_Advance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/quiz_attempt_Default.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/quiz_attempt_Default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/quiz_attempt_Practice.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/quiz_attempt_Practice.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/quiz_attempt_android.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/quiz_attempt_android.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/quiz_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/quiz_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/result_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/result_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/select_gateway.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/select_gateway.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/studymaterial_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/studymaterial_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user_list2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user_list2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/view_assignment.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_assignment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/view_inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/view_result2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_result2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/view_social_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_social_group.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/basic.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/basic.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +94,7 @@
       <workItem from="1642445592744" duration="4837000" />
       <workItem from="1642452998009" duration="31000" />
       <workItem from="1642455097588" duration="13958000" />
-      <workItem from="1642482172585" duration="7422000" />
+      <workItem from="1642482172585" duration="9730000" />
     </task>
     <servers />
   </component>
@@ -309,11 +255,6 @@
           <url>file://$PROJECT_DIR$/application/models/Quiz_model.php</url>
           <line>745</line>
           <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/controllers/User.php</url>
-          <line>612</line>
-          <option name="timeStamp" value="92" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

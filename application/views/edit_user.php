@@ -1,7 +1,7 @@
 <div class="container">
 
 
-    <h3><?php echo $title; ?></h3>
+    <h3 class="font-weight-bold"><?php echo $title; ?></h3>
 
 
     <div class="row">
@@ -25,13 +25,13 @@
 
 
                         <div class="form-group">
-                            <label><?php echo $this->lang->line('ci'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('ci'); ?></label>
                             <input type="text" name="ci" class="form-control" value="<?php echo $result['ci']; ?>"
                                    autofocus>
                         </div>
 
                         <div class="form-group">
-                            <label><?php echo "Seleccionar Expedido"; ?></label>
+                            <label class="font-weight-bold"><?php echo "Seleccionar Expedido"; ?></label>
                             <select class="form-control" name="exp" id="exp" placeholder="<?php echo "Expedido"; ?>">
 
                                 <option <?php if ($result['exp'] == 'BE') {
@@ -76,19 +76,19 @@
 
 
                         <div class="form-group">
-                            <label><?php echo $this->lang->line('first_name'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('first_name'); ?></label>
                             <input type="text" name="first_name" class="form-control"
                                    value="<?php echo $result['first_name']; ?>"
                                    placeholder="<?php echo $this->lang->line('first_name'); ?>" autofocus>
                         </div>
                         <div class="form-group">
-                            <label><?php echo $this->lang->line('last_name'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('last_name'); ?></label>
                             <input type="text" name="last_name" class="form-control"
                                    value="<?php echo $result['last_name']; ?>"
                                    placeholder="<?php echo $this->lang->line('last_name'); ?>" autofocus>
                         </div>
                         <div class="form-group">
-                            <label><?php echo $this->lang->line('civil_status_select'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('civil_status_select'); ?></label>
                             <select class="form-control" name="civil_status" id="civil_status"
                                     placeholder="<?php echo $this->lang->line('civil_status'); ?>">
 
@@ -113,7 +113,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label><?php echo $this->lang->line('gender_select'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('gender_select'); ?></label>
                             <select class="form-control" name="gender" id="gender"
                                     placeholder="<?php echo $this->lang->line('gender'); ?>">
 
@@ -130,20 +130,20 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label><?php echo $this->lang->line('address'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('address'); ?></label>
                             <input type="text" name="address" class="form-control"
                                    value="<?php echo $result['address']; ?>"
                                    placeholder="<?php echo $this->lang->line('address'); ?>" autofocus>
                         </div>
                         <div class="form-group">
-                            <label><?php echo $this->lang->line('address'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('address'); ?></label>
                             <input type="text" name="nationality" class="form-control"
                                    value="<?php echo $result['nationality']; ?>"
                                    placeholder="<?php echo $this->lang->line('nationality'); ?>" autofocus>
                         </div>
 
                         <div class="form-group">
-                            <label><?php echo "Codigo de postulante"; ?></label>
+                            <label class="font-weight-bold"><?php echo "Codigo de postulante"; ?></label>
                             <input type="text" name="code_student" class="form-control"
                                    value="<?php echo $result['cod_student']; ?>"
                                    placeholder="<?php echo "Codigo de postulante"; ?>" autofocus>
@@ -151,7 +151,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label><?php echo $this->lang->line('select_university'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('select_university'); ?></label>
                             <select class="form-control" name="university" id="university">
                                 <?php
                                 foreach ($university_list as $key => $val) {
@@ -167,7 +167,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label><?php echo $this->lang->line('select_speciality'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('select_speciality'); ?></label>
                             <select class="form-control" name="specialties" id="specialties">
                                 <?php
                                 foreach ($speciality_list as $key => $val) {
@@ -183,7 +183,7 @@
                         </div>
 
                         <div hidden class="form-group">
-                            <label><?php echo $this->lang->line('select_second_career'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('select_second_career'); ?></label>
                             <select class="form-control" name="second_opt_univ_degree" id="second_opt_univ_degree">
                                 <?php
                                 foreach ($career_list as $key => $val) {
@@ -198,7 +198,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label><?php echo $this->lang->line('contact_no'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('contact_no'); ?></label>
                             <input type="text" name="contact_no" class="form-control"
                                    value="<?php echo $result['contact_no']; ?>"
                                    placeholder="<?php echo $this->lang->line('contact_no'); ?>" autofocus>
@@ -211,7 +211,7 @@
 			</div>*/ ?>
 
                         <div class="form-group">
-                            <label><?php echo $this->lang->line('select_group'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('select_group'); ?></label>
                             <select class="form-control" name="gid" onChange="getexpiry2();" id="gid">
                                 <?php
 
@@ -228,7 +228,7 @@
                         </div>
                         <div class="form-group">
                             <label for="inputEmail"><?php echo $this->lang->line('subscription_expired'); ?></label>
-                            <input type="text" name="subscription_expired" id="subscription_expired"
+                            <input type="text" name="subscription_expired" id="subscription_expired" disabled
                                    class="form-control" value="<?php if ($result['subscription_expired'] != '0') {
                                 echo date('Y-m-d', $result['subscription_expired']);
                             } else {
@@ -238,8 +238,8 @@
                         </div>
 
 
-                        <div class="form-group">
-                            <label><?php echo $this->lang->line('account_type'); ?></label>
+                        <div class="form-group" hidden>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('account_type'); ?></label>
                             <select disabled="disabled" class="form-control" name="su">
                                 <?php
                                 foreach ($account_type as $ak => $val) {
@@ -255,7 +255,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label><?php echo $this->lang->line('account_status'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('account_status'); ?></label>
                             <select class="form-control" name="user_status">
                                 <option value="Active" <?php if ($result['user_status'] == 'Active') {
                                     echo 'selected';

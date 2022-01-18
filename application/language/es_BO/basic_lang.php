@@ -498,4 +498,6 @@ $lang['select_university'] = "Seleccionar Universidad";
 $lang['select_specialties'] = "Seleccionar Especialidad";
 $lang['account_updated'] = "Tipo de cuenta actualizado";
 $lang['postulantes'] = "Postulantes";
-
+$lang['cod_cd'] = "Codigo CD";
+$lang['print'] = "Imprimir";
+$lang['print'] = "Imprimir";

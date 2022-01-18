@@ -197,3 +197,110 @@ ERROR - 2022-01-18 03:20:07 --> Severity: Warning --> "continue" targeting switc
 ERROR - 2022-01-18 03:23:50 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
 ERROR - 2022-01-18 03:23:50 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
 ERROR - 2022-01-18 03:23:50 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-18 07:01:20 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-18 07:01:25 --> Could not find the language line "cd"
+ERROR - 2022-01-18 07:01:51 --> Could not find the language line "cd"
+ERROR - 2022-01-18 07:02:09 --> Could not find the language line "cd"
+ERROR - 2022-01-18 07:02:48 --> Could not find the language line "cd"
+ERROR - 2022-01-18 07:02:48 --> Could not find the language line "cd"
+ERROR - 2022-01-18 07:02:53 --> Could not find the language line "cd"
+ERROR - 2022-01-18 07:03:56 --> Severity: error --> Exception: Too few arguments to function User::view_inscription(), 0 passed in C:\xampp\htdocs\savsoftquiz_v5\system\core\CodeIgniter.php on line 532 and exactly 1 expected C:\xampp\htdocs\savsoftquiz_v5\application\controllers\User.php 593
+ERROR - 2022-01-18 07:03:58 --> Could not find the language line "cd"
+ERROR - 2022-01-18 07:04:05 --> Could not find the language line "cd"
+ERROR - 2022-01-18 07:04:42 --> Could not find the language line "cd"
+ERROR - 2022-01-18 07:05:28 --> Could not find the language line "cd"
+ERROR - 2022-01-18 07:05:47 --> Could not find the language line "cd"
+ERROR - 2022-01-18 07:10:48 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 38
+ERROR - 2022-01-18 07:10:48 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 96
+ERROR - 2022-01-18 07:10:48 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 121
+ERROR - 2022-01-18 07:10:48 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 161
+ERROR - 2022-01-18 07:10:48 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-18 07:10:48 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 177
+ERROR - 2022-01-18 07:10:48 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 222
+ERROR - 2022-01-18 07:10:48 --> Severity: Compile Warning --> Unterminated comment starting line 318 C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 318
+ERROR - 2022-01-18 07:10:59 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user_admin.php 43
+ERROR - 2022-01-18 07:11:00 --> Severity: Compile Warning --> Unterminated comment starting line 141 C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user_admin.php 141
+ERROR - 2022-01-18 07:12:24 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 38
+ERROR - 2022-01-18 07:12:24 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 96
+ERROR - 2022-01-18 07:12:24 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 121
+ERROR - 2022-01-18 07:12:24 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 161
+ERROR - 2022-01-18 07:12:24 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-18 07:12:24 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 177
+ERROR - 2022-01-18 07:12:24 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 222
+ERROR - 2022-01-18 07:12:24 --> Severity: Compile Warning --> Unterminated comment starting line 318 C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 318
+ERROR - 2022-01-18 07:12:37 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 38
+ERROR - 2022-01-18 07:12:37 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 96
+ERROR - 2022-01-18 07:12:37 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 121
+ERROR - 2022-01-18 07:12:37 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 161
+ERROR - 2022-01-18 07:12:37 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-18 07:12:37 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 177
+ERROR - 2022-01-18 07:12:37 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 222
+ERROR - 2022-01-18 07:12:37 --> Severity: Compile Warning --> Unterminated comment starting line 318 C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 318
+ERROR - 2022-01-18 07:13:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 38
+ERROR - 2022-01-18 07:13:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 96
+ERROR - 2022-01-18 07:13:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 121
+ERROR - 2022-01-18 07:13:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 161
+ERROR - 2022-01-18 07:13:19 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-18 07:13:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 177
+ERROR - 2022-01-18 07:13:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 222
+ERROR - 2022-01-18 07:13:19 --> Severity: Compile Warning --> Unterminated comment starting line 318 C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 318
+ERROR - 2022-01-18 07:13:45 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 38
+ERROR - 2022-01-18 07:13:45 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 96
+ERROR - 2022-01-18 07:13:45 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 121
+ERROR - 2022-01-18 07:13:45 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 161
+ERROR - 2022-01-18 07:13:45 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-18 07:13:45 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 177
+ERROR - 2022-01-18 07:13:45 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 222
+ERROR - 2022-01-18 07:13:45 --> Severity: Compile Warning --> Unterminated comment starting line 318 C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 318
+ERROR - 2022-01-18 07:14:00 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 848
+ERROR - 2022-01-18 07:14:01 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 38
+ERROR - 2022-01-18 07:14:01 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 96
+ERROR - 2022-01-18 07:14:01 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 121
+ERROR - 2022-01-18 07:14:01 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 161
+ERROR - 2022-01-18 07:14:01 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-18 07:14:01 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 177
+ERROR - 2022-01-18 07:14:01 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 222
+ERROR - 2022-01-18 07:14:01 --> Severity: Compile Warning --> Unterminated comment starting line 318 C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 318
+ERROR - 2022-01-18 07:14:13 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 38
+ERROR - 2022-01-18 07:14:13 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 96
+ERROR - 2022-01-18 07:14:13 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 121
+ERROR - 2022-01-18 07:14:13 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 161
+ERROR - 2022-01-18 07:14:13 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-18 07:14:13 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 177
+ERROR - 2022-01-18 07:14:13 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 222
+ERROR - 2022-01-18 07:14:13 --> Severity: Compile Warning --> Unterminated comment starting line 318 C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 318
+ERROR - 2022-01-18 07:14:18 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user_admin.php 43
+ERROR - 2022-01-18 07:14:18 --> Severity: Compile Warning --> Unterminated comment starting line 141 C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user_admin.php 141
+ERROR - 2022-01-18 07:14:43 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user_admin.php 48
+ERROR - 2022-01-18 07:14:43 --> Severity: Compile Warning --> Unterminated comment starting line 181 C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user_admin.php 181
+ERROR - 2022-01-18 07:15:05 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 164
+ERROR - 2022-01-18 07:15:05 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 239
+ERROR - 2022-01-18 07:15:07 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-18 07:15:15 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 164
+ERROR - 2022-01-18 07:15:15 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 239
+ERROR - 2022-01-18 07:15:17 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-18 07:15:21 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 164
+ERROR - 2022-01-18 07:15:21 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 239
+ERROR - 2022-01-18 07:15:22 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-18 07:17:02 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 161
+ERROR - 2022-01-18 07:17:02 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 236
+ERROR - 2022-01-18 07:17:04 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-18 07:17:15 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 151
+ERROR - 2022-01-18 07:17:15 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 226
+ERROR - 2022-01-18 07:17:39 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 151
+ERROR - 2022-01-18 07:17:39 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 226
+ERROR - 2022-01-18 07:17:48 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 151
+ERROR - 2022-01-18 07:17:48 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 226
+ERROR - 2022-01-18 07:18:50 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 151
+ERROR - 2022-01-18 07:18:50 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 226
+ERROR - 2022-01-18 07:19:07 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 151
+ERROR - 2022-01-18 07:19:07 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 226
+ERROR - 2022-01-18 07:19:24 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 151
+ERROR - 2022-01-18 07:19:24 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 226
+ERROR - 2022-01-18 07:20:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 151
+ERROR - 2022-01-18 07:20:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 226
+ERROR - 2022-01-18 07:20:17 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 151
+ERROR - 2022-01-18 07:20:17 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 226
+ERROR - 2022-01-18 07:20:29 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-18 07:20:29 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-18 07:20:29 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103

@@ -1,35 +1,9 @@
 <div class="container">
     <h3 class="font-weight-bold"><?php echo $title; ?></h3>
     <div class="row">
-        <form enctype="multipart/form-data" method="post" action="<?php echo site_url('user/insert_user/'); ?>">
+        <form enctype="multipart/form-data" id="form_new" method="post"
+              action="<?php echo site_url('user/insert_user/'); ?>">
 
-            <div class="picture-container">
-                <div class="picture">
-                    <img src="<?php echo base_url() . 'photo/users/photo.jpeg' ?>" class="picture-src"
-                         id="wizardPicturePreview" title="">
-                    <input type="file" id="wizard-picture" name="wizard-picture" class="font-weight-bold">
-                </div>
-            </div>
-            <div class="font-weight-bold">
-                <div class="fingerprint">
-                    <label for="huella">Leer Huella</label><br>
-                    <a href="#" id="huella" onclick="launchBiometricReader()">
-                        <img src="<?php echo base_url() . 'images/huella.png' ?>" class="picture-src"
-                             style="width: 80px; height: 120px;" title="Leer Huella">
-                    </a>
-                </div>
-                <script>
-                    function launchBiometricReader() {
-                        let code = document.getElementsByName("code_student")[0].value;
-                        let uid = '<?php echo $uid?>';
-                        if (code === undefined || code == '') {
-                            alert('Registre el codigo de postulante');
-                        } else {
-                            window.open('testus:' + code + ',' + uid);
-                        }
-                    }
-                </script>
-            </div>
             <div class="col-md-8">
                 <br>
 
@@ -42,11 +16,54 @@
                             echo $this->session->flashdata('message');
                         }
                         ?>
-
-                        <div class="form-group">
-                            <label for="inputEmail" class="font-weight-bold"><?php echo "CI"; ?></label>
-                            <input type="text" name="ci" class="form-control" placeholder="<?php echo "CI"; ?>"
-                                   autofocus>
+                        <div class="row">
+                            <div class="col col-md-8">
+                                <div class="form-group">
+                                    <label for="inputEmail"
+                                           class="font-weight-bold"><?php echo $this->lang->line('cod_cd'); ?></label>
+                                    <input type="text" name="code_student" class="form-control"
+                                           placeholder="<?php echo $this->lang->line('cod_cd'); ?>" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail" class="font-weight-bold"><?php echo "CI"; ?></label>
+                                    <input type="text" name="ci" class="form-control" placeholder="<?php echo "CI"; ?>"
+                                           autofocus>
+                                </div>
+                            </div>
+                            <div class="col col-md-2">
+                                <br><br>
+                                <div class="picture-container">
+                                    <div aling="left;" class="picture">
+                                        <img src="<?php echo base_url() . 'photo/users/photo.jpeg' ?>" align="left"
+                                             class="picture-src"
+                                             id="wizardPicturePreview" title="">
+                                        <input type="file" id="wizard-picture" name="wizard-picture"
+                                               class="font-weight-bold">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-md-2">
+                                <div class="font-weight-bold">
+                                    <div class="fingerprint">
+                                        <label for="huella">Leer Huella</label><br>
+                                        <a href="#" id="huella" onclick="launchBiometricReader()">
+                                            <img src="<?php echo base_url() . 'images/huella.png' ?>" class="picture-src"
+                                                 style="width: 80px; height: 120px;" title="Leer Huella">
+                                        </a>
+                                    </div>
+                                    <script>
+                                        function launchBiometricReader() {
+                                            let code = document.getElementsByName("code_student")[0].value;
+                                            let uid = '<?php echo $uid?>';
+                                            if (code === undefined || code == '') {
+                                                alert('Registre el codigo de postulante');
+                                            } else {
+                                                window.open('testus:' + code + ',' + uid);
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold"><?php echo "Seleccionar Expedicion"; ?></label>
@@ -78,7 +95,7 @@
                                    placeholder="<?php echo $this->lang->line('last_name'); ?>" autofocus>
                         </div>
                         <div class="form-group">
-                            <label><?php echo $this->lang->line('civil_status_select'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('civil_status_select'); ?></label>
                             <select class="form-control" name="civil_status" id="civil_status"
                                     placeholder="<?php echo $this->lang->line('civil_status'); ?>">
 
@@ -91,7 +108,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label><?php echo $this->lang->line('gender_select'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('gender_select'); ?></label>
                             <select class="form-control" name="gender" id="gender"
                                     placeholder="<?php echo $this->lang->line('gender'); ?>">
 
@@ -112,13 +129,6 @@
                                    class="font-weight-bold"><?php echo $this->lang->line('nationality'); ?></label>
                             <input type="text" name="nationality" class="form-control"
                                    placeholder="<?php echo $this->lang->line('nationality'); ?>" autofocus>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail"
-                                   class="font-weight-bold"><?php echo "Codigo de postulante"; ?></label>
-                            <input type="text" name="code_student" class="form-control"
-                                   placeholder="<?php echo "Codigo de postulante"; ?>" autofocus>
-
                         </div>
                         <div hidden class="form-group">
                             <label class="font-weight-bold"><?php echo $this->lang->line('select_first_career'); ?></label>
@@ -221,8 +231,18 @@
                             <input type="password" id="inputPassword" name="repeat_password" class="form-control"
                                    placeholder="<?php echo $this->lang->line('repeat_password'); ?>" required>
                         </div>
+                        <?php /*<div class="form-group">
+                        <label class="font-weight-bold"><?php echo  $this->lang->line('cd');?></label>
+                            <input type="text" name="id_p" id="id_p" class="form-control"
+                                   placeholder="el id" autofocus>
+                        </div>*/ ?>
+
+
                         <button class="btn btn-primary"
-                                type="submit"><?php echo $this->lang->line('submit'); ?></button>
+                                id="boton" type="submit"><?php echo $this->lang->line('submit'); ?></button>
+                        <button class="btn btn-secondary"
+                                id="imprimir" disabled="false"
+                                type="submit"><?php echo $this->lang->line('print'); ?> </button>
 
                     </div>
                 </div>
@@ -257,4 +277,29 @@
             reader.readAsDataURL(input.files[0]);
         }
     }
+</script>
+<script>
+    /*$("#form_new").submit(function(e) {
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+    var form = $(this);
+    var actionUrl = form.attr('action');
+    $.ajax({
+        type: "POST",
+        url: actionUrl,
+        data: form.serialize(), // serializes the form's elements.
+        success: function(data)
+        {
+            if(data != "")
+            {
+                var print = document.getElementById('id_p');
+	            print.value = data;
+                var print = document.getElementById('imprimir');
+	            print.disabled = true;
+            }
+
+        }
+    });
+});*/
+
+
 </script>

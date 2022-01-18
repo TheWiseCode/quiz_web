@@ -138,7 +138,7 @@ class User extends CI_Controller
             //*** ocurrio un error
             //$data['uploadError'] = $this->upload->display_errors();
             //echo $this->upload->display_errors();
-            $photo = "";
+            $photo = "photo/users/photo.jpeg";
             return;
         }
 
