@@ -619,7 +619,7 @@ class User extends CI_Controller
 
 
         } catch (Exception $e) {
-            //echo 'Error'  . $e->getMessage();
+            echo 'Error'  . $e->getMessage();
         }
 
 

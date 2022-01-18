@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
     <style>
         table {
             font-family: arial, sans-serif;
@@ -11,8 +10,7 @@
 
 
     </style>
-</head>
-<body>
+</head><body>
 
 <table FRAME="vsides" RULES="none">
     <tr>
@@ -39,7 +37,7 @@
 
     <tr>
         <th style="text-align: left;">
-            <img src="<?php echo base_url() . '/photo/users/logoc.jpeg' ?>" align="left" width="150" height="150">
+            <img src="<?php echo base_url() . '/photo/logo.jpeg' ?>" align="left" width="150" height="150">
         </th>
         <th></th>
         <th></th>
@@ -217,5 +215,4 @@
     </tr>
 </table>
 
-</body>
-</html>
+</body></html>
