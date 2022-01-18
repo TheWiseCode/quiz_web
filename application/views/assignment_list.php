@@ -5,14 +5,14 @@
 		?>  
  
    
- <h3><?php echo $title;?></h3>
+ <h3 class="font-weight-bold"><?php echo $title;?></h3>
     <div class="row">
  
   <div class="col-lg-6">
     <form method="post" action="<?php echo site_url('assignment/index/');?>">
 	<div class="input-group">
     <input type="text" class="form-control" name="search" placeholder="<?php echo $this->lang->line('search');?>...">
-      <span class="input-group-btn">
+      <span class="input-group-append">
         <button class="btn btn-default" type="submit"><?php echo $this->lang->line('search');?></button>
       </span>
 	 
@@ -37,7 +37,7 @@
 			 
 		?>	
 		
- <a href="<?php echo site_url('assignment/add_new');?>" class="btn btn-success"><?php echo $this->lang->line('add_new');?></a><br><br>
+ <a href="<?php echo site_url('assignment/add_new');?>" class="btn btn-success"><?php echo $this->lang->line('add_new1');?></a><br><br>
  <?php 
  }
  ?>

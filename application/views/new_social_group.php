@@ -1,4 +1,4 @@
-  <h3><?php echo $title;?></h3>
+  <h3 class="font-weight-bold"><?php echo $title;?></h3>
     <?php if($this->session->flashdata('message')){
        
        echo $this->session->flashdata('message'); 
@@ -11,7 +11,7 @@
 <form method="post" action="<?php echo site_url('social_group/add_new');?>" >
 <br><br>
 <div class="form-group">
-        <label><?php echo $this->lang->line('group_name');?></label>
+        <label class="font-weight-bold"><?php echo $this->lang->line('group_name');?></label>
         <input type="text" name="sg_name" class="form-control"  value="" required >
 </div>
 

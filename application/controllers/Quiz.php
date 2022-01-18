@@ -90,7 +90,7 @@ class Quiz extends CI_Controller
             exit($this->lang->line('permission_denied'));
         }
 
-        $data['title'] = $this->lang->line('add_new') . ' ' . $this->lang->line('quiz');
+        $data['title'] = $this->lang->line('add_new_quiz');
         // fetching group list
         $data['group_list'] = $this->user_model->group_list();
         $data['user_list'] = $this->user_model->user_list_all();
@@ -120,7 +120,7 @@ class Quiz extends CI_Controller
         }
 
 
-        $data['title'] = $this->lang->line('edit') . ' ' . $this->lang->line('quiz');
+        $data['title'] = $this->lang->line('edit_quiz');
         // fetching group list
         $data['group_list'] = $this->user_model->group_list();
         $data['user_list'] = $this->user_model->user_list_all();
@@ -144,17 +144,15 @@ class Quiz extends CI_Controller
 
     function no_q_available($cid, $lid)
     {
-        $val = "<select name='noq[]'>";
+        $val = "<div style='width:80px;'>";
+        $val .= "<select name='noq[]' class='form-control'>'";
         $query = $this->db->query(" select * from savsoft_qbank where cid='$cid' and lid='$lid' ");
         $nor = $query->num_rows();
         for ($i = 0; $i <= $nor; $i++) {
             $val .= "<option value='" . $i . "' >" . $i . "</option>";
-
-
         }
-        $val .= "</select>";
+        $val .= "</select></div>";
         echo $val;
-
     }
 
 
@@ -350,7 +348,6 @@ class Quiz extends CI_Controller
         // redirect if not loggedin
         if (!$this->session->userdata('logged_in')) {
             redirect('login');
-
         }
         $logged_in = $this->session->userdata('logged_in');
         if ($logged_in['base_url'] != base_url()) {
@@ -546,8 +543,8 @@ class Quiz extends CI_Controller
             // validate assigned group
             $gids = explode(',', $gid);
             $valid_gid = false;
-            foreach ($gids as $item){
-                if(in_array($item, explode(',', $data['quiz']['gids']))){
+            foreach ($gids as $item) {
+                if (in_array($item, explode(',', $data['quiz']['gids']))) {
                     $valid_gid = true;
                     break;
                 }
@@ -555,8 +552,8 @@ class Quiz extends CI_Controller
             if (!$valid_gid) {
                 $uids = explode(',', $uid);
                 $valid_uid = false;
-                foreach ($uids as $item){
-                    if(in_array($item, explode(',', $data['quiz']['uids']))){
+                foreach ($uids as $item) {
+                    if (in_array($item, explode(',', $data['quiz']['uids']))) {
                         $valid_uid = true;
                         break;
                     }
@@ -710,16 +707,12 @@ class Quiz extends CI_Controller
 
 
         echo $this->quiz_model->insert_answer();
-
-
     }
 
     function set_ind_time()
     {
         // update questions time spent
         $this->quiz_model->set_ind_time();
-
-
     }
 
 

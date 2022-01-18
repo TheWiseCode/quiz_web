@@ -8,8 +8,8 @@
     <div class="row">
         <br>
         <div class="card panel-default">
-            <div class="card-heading" style="padding:10px;">
-                <h3><?php echo $title . ' : ' . $result['title']; ?></h3>
+            <div class="card-header" style="padding:10px;">
+                <h3 class="font-weight-bold"><?php echo $title . ' : ' . $result['title']; ?></h3>
             </div>
             <div class="card-body" style="padding:10px;">
                 <?php echo $result['study_description']; ?>
@@ -30,7 +30,7 @@
                         </video>
                     <?php } else { ?>
                         <a href="<?php echo base_url('upload/' . $result['attachment']); ?>" target="study_material">
-                            <?php echo $this->lang->line('download'); ?> <?php echo $this->lang->line('attachment'); ?></a>
+                            <?php echo $this->lang->line('download'); ?><?php echo $this->lang->line('attachment'); ?></a>
 
                     <?php } ?>
                     <?php
@@ -38,10 +38,10 @@
                 ?>
             </div>
             <div class="card-footer" style="padding:10px;">
-                <?php echo $this->lang->line('category'); ?>: <?php echo $result['category_name']; ?>
+                <span class="font-weight-bold"><?php echo $this->lang->line('category'); ?></span>: <?php echo $result['category_name']; ?>
             </div>
             <div class="card-footer" style="padding:10px;">
-                <?php echo $this->lang->line('group_name'); ?>: <br>
+                <span class="font-weight-bold"><?php echo $this->lang->line('group_name'); ?></span>: <br>
                 <?php
                 $gidz = explode(',', $result['gids']);
                 foreach ($groups as $group) { ?>
@@ -54,7 +54,7 @@
                 <?php } ?>
             </div>
         </div>
-        <a href="<?php echo site_url('study_material/'); ?>"><?php echo $this->lang->line('back'); ?></a>
+        <a href="<?php echo site_url('study_material/'); ?>"
+           class="btn btn-primary"><?php echo $this->lang->line('back'); ?></a>
     </div>
-</div>
 </div>

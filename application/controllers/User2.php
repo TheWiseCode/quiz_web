@@ -37,7 +37,8 @@ class User2 extends CI_Controller
         if ($logged_in['su'] != '1') {
             $uid = $logged_in['uid'];
         }
-
+        $user_p = explode(',', $logged_in['users']);
+        $photo_uid = $uid;
         $data['uid'] = $uid;
         $data['title'] = $this->lang->line('profile');
 
@@ -46,7 +47,7 @@ class User2 extends CI_Controller
         $query2 = $this->db->query(" select * from savsoft_result where uid='$uid' and result_status='pass' ");
         $query3 = $this->db->query(" select * from savsoft_result where uid='$uid' and result_status='fail' ");
         if ($query1->num_rows() == 0) {
-            $data['lastattempt'] = "Not attempted any quiz";
+            $data['lastattempt'] = $this->lang->line('not_attempted');
         } else {
             $data['lastattempt'] = date('Y-m-d h:i:s', $res1[0]['start_time']);
         }
@@ -131,6 +132,7 @@ class User2 extends CI_Controller
         $data['categories'] = $category;
         $data['category_recent'] = $category_recent;
         // fetching user
+
         $data['result'] = $this->user_model->get_user($uid);
         $this->load->model("payment_model");
         $data['payment_history'] = $this->payment_model->get_payment_history($uid);
@@ -139,6 +141,51 @@ class User2 extends CI_Controller
         $this->load->view('header', $data);
         $this->load->view('profile', $data);
         $this->load->view('footer', $data);
+
+        $data_photo = $this->cargar_archivo($uid);
+
+        //if($this->user_model->submit_photo($data['uid']))
+    }
+
+    function cargar_archivo($uid)
+    {
+
+        $name = time();
+        $mi_imagen = 'upload';
+        $config['upload_path'] = "photo/users";
+        $config['file_name'] = $name . "";
+        $config['allowed_types'] = "gif|jpg|jpeg|png";
+        $config['max_size'] = "50000";
+        $config['max_width'] = "2000";
+        $config['max_height'] = "2000";
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload($mi_imagen)) {
+            //*** ocurrio un error
+            //$data['uploadError'] = $this->upload->display_errors();
+            //echo $this->upload->display_errors();
+            $photo = "";
+            return;
+        }
+
+        $data['uploadSuccess'] = $this->upload->data();
+        //$photo = $data['uploadSuccess']['full_path'];
+        $photo = 'photo/users/' . $data['uploadSuccess']['orig_name'];
+
+
+        if (!$this->user_model->submit_photo($uid, $photo)) {
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                $this->lang->line('error_to_update_data') .
+                ' </div>'
+            );
+            redirect('user2/view_user/' . $uid);
+        }
+        return $photo;
+
+
     }
 
 

@@ -3,14 +3,14 @@
     $logged_in = $this->session->userdata('logged_in');
     ?>
 
-    <h3><?php echo $title; ?></h3>
+    <h3 class="font-weight-bold"><?php echo $title; ?></h3>
     <div class="row">
         <div class="col-lg-6">
             <form method="post" action="<?php echo site_url('study_material/index/'); ?>">
                 <div class="input-group">
                     <input type="text" class="form-control" name="search"
                            placeholder="<?php echo $this->lang->line('search'); ?>...">
-                    <span class="input-group-btn">
+                    <span class="input-group-append">
         <button class="btn btn-default" type="submit"><?php echo $this->lang->line('search'); ?></button>
       </span>
                 </div><!-- /input-group -->
@@ -30,7 +30,7 @@
             if (in_array('Add', $acp)) {
                 ?>
                 <a href="<?php echo site_url('study_material/add_new'); ?>"
-                   class="btn btn-success"><?php echo $this->lang->line('add_new'); ?></a><br><br>
+                   class="btn btn-success"><?php echo $this->lang->line('add_new1'); ?></a><br><br>
                 <?php
             }
             ?>
@@ -65,21 +65,24 @@
                             $acp = explode(',', $logged_in['study_material']);
                             if (in_array('Edit', $acp)) {
                                 ?>
-                                <a href="<?php echo site_url('study_material/edit_studymaterial/' . $val['stid']); ?>"><?php echo $this->lang->line('edit'); ?></a>
+                                <a href="<?php echo site_url('study_material/edit_studymaterial/' . $val['stid']); ?>">
+                                    <i class="fas fa-edit"  style="color:#3472f7;"></i></a>
                             <?php } ?>
                             <?php
                             $acp = explode(',', $logged_in['study_material']);
                             if (in_array('View', $acp)) {
                                 ?>
 
-                                <a href="<?php echo site_url('study_material/view_studymaterial/' . $val['stid']); ?>"><?php echo $this->lang->line('view'); ?></a>
+                                <a href="<?php echo site_url('study_material/view_studymaterial/' . $val['stid']); ?>">
+                                    <i class="fas fa-eye"  style="color:#3472f7;"></i></a>
                             <?php } ?>
                             <?php
                             $acp = explode(',', $logged_in['study_material']);
                             if (in_array('Remove', $acp)) {
                                 ?>
 
-                                <a href="<?php echo site_url('study_material/remove_studymaterial/' . $val['stid']); ?>"><?php echo $this->lang->line('remove'); ?></a>
+                                <a href="<?php echo site_url('study_material/remove_studymaterial/' . $val['stid']); ?>">
+                                    <i class="fas fa-trash"  style="color:#3472f7;"></i></a>
                             <?php } ?>
                         </td>
 

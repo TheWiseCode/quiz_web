@@ -1,7 +1,7 @@
- 
-function remove_entry(redir_cont){
+
+function remove_entry(redir_cont, msg = 'Desea remover este registro?') {
 	
-	if(confirm("Do you really want to remove entry?")){
+	if(confirm(msg)){
 		window.location=base_url+"index.php/"+redir_cont;
 	}
 	

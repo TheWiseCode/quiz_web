@@ -436,7 +436,7 @@ if($result['camera_req']=='1'){
 	</div>
 	
 <div class="col-lg-12 noprint" style="margin-top:50px;"> 
-<button class="btn btn-default" style="margin-right:20px;width:141px;	float:left;"> <?php echo $this->lang->line('rank').': '.$rank;?> </button> 
+<button class="btn btn-primary" style="margin-right:20px;width:141px;	float:left;"> <?php echo $this->lang->line('rank').': '.$rank;?> </button>
 <div class="td_line" style="float:left;width:700px;height:70px;">
 <div <?php if($rank=='1'){?>class="circle_ur s_title" data-toggle="tooltip"  title="Your Rank"<?php }else{ ?>class="circle_result"<?php } ?>>1</div>
 <div <?php if($rank=='2'){?>class="circle_ur s_title" data-toggle="tooltip"  title="Your Rank"<?php }else{ ?>class="circle_result"<?php } ?>>2</div>
@@ -469,7 +469,7 @@ if($result['camera_req']=='1'){
  
  
 <div class="col-lg-12 noprint" style="margin-top:50px;">
-<button class="btn btn-default" style="margin-right:20px;width:141px;	float:left;"> <?php echo $this->lang->line('score_obtained').': '.$result['score_obtained'];?> </button> 
+<button class="btn btn-primary" style="margin-right:20px;width:141px;	float:left;"> <?php echo $this->lang->line('score_obtained').': '.$result['score_obtained'];?> </button>
 <div class="td_line" style="float:left;width:700px;height:70px;">
 <div <?php if($rank=='1'){?>class="circle_ur s_title" data-toggle="tooltip"  title="Your Score"<?php }else{ ?>class="circle_result"<?php } ?>><?php echo $toppers[0]['score_obtained'];?></div>
 <div <?php if($rank=='2'){?>class="circle_ur s_title" data-toggle="tooltip"  title="Your Score"<?php }else{ ?>class="circle_result"<?php } ?>><?php echo $toppers[1]['score_obtained'];?></div>
@@ -501,7 +501,7 @@ if($result['camera_req']=='1'){
  
  
  <div class="col-lg-12 noprint" style="margin-top:50px;margin-bottom:50px;">
-<button class="btn btn-default" style="margin-right:20px;width:141px;	float:left;"> <?php echo $this->lang->line('time').': '.secintomin($result['total_time']).' Min.';?>   </button> 
+<button class="btn btn-primary" style="margin-right:20px;width:141px;	float:left;"> <?php echo $this->lang->line('time').': '.secintomin($result['total_time']).' Min.';?>   </button>
 <div class="td_line" style="float:left;width:700px;height:70px;">
 <div <?php if($rank=='1'){?>class="circle_ur s_title" data-toggle="tooltip"  title="Your Time"<?php }else{ ?>class="circle_result"<?php } ?> style="font-size:12px;padding-top:10px;"><?php echo secintomin($toppers[0]['total_time']);?></div>
 <div <?php if($rank=='2'){?>class="circle_ur s_title" data-toggle="tooltip"   title="Your Time"<?php }else{ ?>class="circle_result"<?php } ?> style="font-size:12px;padding-top:10px;"><?php echo secintomin($toppers[1]['total_time']);?></div>

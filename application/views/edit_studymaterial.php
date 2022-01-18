@@ -1,7 +1,7 @@
  <div class="container">
 
    
- <h3><?php echo $title;?></h3>
+ <h3 class="font-weight-bold"><?php echo $title;?></h3>
    
  
 
@@ -57,7 +57,7 @@
 		 
 
  
-	<button class="btn btn-default" type="submit"><?php echo $this->lang->line('submit');?></button>
+	<button class="btn btn-primary" type="submit"><?php echo $this->lang->line('submit');?></button>
  
 		</div>
 </div>

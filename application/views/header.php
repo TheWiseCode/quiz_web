@@ -37,6 +37,75 @@
         .sidebar {
             width: 16rem !important;
         }
+
+
+        /* h1 {
+            font-size: 20px;
+            text-align: center;
+            margin: 20px 0 20px;
+        }
+        h1 small {
+            display: block;
+            font-size: 15px;
+            padding-top: 8px;
+            color: gray;
+        } */
+        .picture-container {
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .picture {
+            width: 106px;
+            height: 106px;
+            background-color: #999999;
+            border: 4px solid #CCCCCC;
+            color: #FFFFFF;
+            border-radius: 0%;
+            margin: 0px auto;
+            overflow: hidden;
+            transition: all 0.2s;
+            -webkit-transition: all 0.2s;
+        }
+
+        .picture:hover {
+            border-color: #2ca8ff;
+        }
+
+        .content.ct-wizard-green .picture:hover {
+            border-color: #05ae0e;
+        }
+
+        .content.ct-wizard-blue .picture:hover {
+            border-color: #3472f7;
+        }
+
+        .content.ct-wizard-orange .picture:hover {
+            border-color: #ff9500;
+        }
+
+        .content.ct-wizard-red .picture:hover {
+            border-color: #ff3b30;
+        }
+
+        .picture input[type="file"] {
+            cursor: pointer;
+            display: block;
+            height: 100%;
+            left: 0;
+            opacity: 0 !important;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .picture-src {
+            width: 100%;
+
+        }
+
+
     </style>
     <script src="<?php echo base_url(); ?>vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -88,298 +157,346 @@ $hres = $hquery->result_Array();
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-        <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://savsoftquiz.com">
 
-            <div class="sidebar-brand-text mx-3"><?php if ($hres[0]['setting_value'] == "") { ?>Savsoft Quiz
-                    <sup>5.0</sup><?php } else {
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+            <div class="sidebar-brand-text mx-3"><?php if ($hres[0]['setting_value'] == "") { ?>
+                    UAGRM Examenes
+                <?php } else {
                     echo $hres[0]['setting_value'];
                 } ?> </div>
-
-
         </a>
-        <center><span style="color:#ffffff;"><?php echo $hres[1]['setting_value']; ?> </span></center>
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
-        <?php
-        if (in_array('All', explode(',', $logged_in['setting']))) {
-            ?>
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="<?php echo site_url('dashboard'); ?>">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span><?php echo $this->lang->line('dashboard'); ?></span></a>
-            </li>
-        <?php } ?>
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-
-        <!-- Heading
-        <div class="sidebar-heading">
-          Interface
-        </div>
-  -->
-
-
-        <?php
-        if (in_array('List_all', explode(',', $logged_in['users']))) {
-            ?>
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                   aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-users"></i>
-                    <span><?php echo $this->lang->line('users'); ?></span>
-                </a>
-
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <?php
-                        if (in_array('Add', explode(',', $logged_in['users']))) {
-                            ?>
-                            <a class="collapse-item"
-                               href="<?php echo site_url('user/new_user'); ?>"><?php echo $this->lang->line('add_new'); ?></a>
-                        <?php } ?>
-                        <?php
-                        if (in_array('List', explode(',', $logged_in['users'])) || in_array('List_all', explode(',', $logged_in['users']))) {
-                            ?>
-                            <a class="collapse-item"
-                               href="<?php echo site_url('user'); ?>"><?php echo $this->lang->line('user_list'); ?></a>
-                        <?php } ?>
-                        <?php
-                        if (in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
-                            <a hidden class="collapse-item"
-                               href="<?php echo site_url('appointment/myappointment/'); ?>"><?php echo $this->lang->line('myappointment'); ?></a>
-                        <?php } ?>
-                    </div>
-                </div>
-            </li>
+        <div style="text-align: center;"><span style="color:#ffffff;"><img style="width: 50%;"
+                                                                           src="<?php echo base_url() . 'photo/logo1.png' ?>"
+                                                                           class="picture-src"
+                                                                           id="" title=""/> </span>
+            <div style="text-align: center;"><span
+                        style="color:#ffffff;"><?php echo $hres[1]['setting_value']; ?> </span>
+            </div>
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
             <?php
-        }
-        ?>
+            if (in_array('All', explode(',', $logged_in['setting']))) {
+                ?>
+                <!-- Nav Item - Dashboard -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="<?php echo site_url('dashboard'); ?>">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span><?php echo $this->lang->line('dashboard'); ?></span></a>
+                </li>
+            <?php } ?>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
 
+            <!-- Heading
+            <div class="sidebar-heading">
+              Interface
+            </div>
+      -->
 
-        <?php
-        if (in_array('List', explode(',', $logged_in['questions'])) || in_array('List_all', explode(',', $logged_in['questions']))) {
-            ?>
-
-            <!-- Nav Item -  Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                   aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-university"></i>
-                    <span><?php echo $this->lang->line('qbank'); ?></span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                     data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <?php
-                        if (in_array('Add', explode(',', $logged_in['questions']))) {
-                            ?>
-                            <a class="collapse-item"
-                               href="<?php echo site_url('qbank/pre_new_question'); ?>"><?php echo $this->lang->line('add_new'); ?></a>
-                            <?php
-                        }
-
-                        if (in_array('List', explode(',', $logged_in['questions'])) || in_array('List_all', explode(',', $logged_in['questions']))) {
-                            ?>
-                            <a class="collapse-item"
-                               href="<?php echo site_url('qbank'); ?>"><?php echo $this->lang->line('question_list'); ?></a>
-                            <?php
-                        }
-                        ?>
-                    </div>
-                </div>
-            </li>
-
-        <?php } ?>
-
-
-
-
-
-
-        <?php
-        if (in_array('List', explode(',', $logged_in['quiz'])) || in_array('List_all', explode(',', $logged_in['quiz']))) {
-            ?>
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseQuiz"
-                   aria-expanded="true" aria-controls="collapseQuiz">
-                    <i class="fas fa-fw fa-chalkboard-teacher"></i>
-                    <span><?php echo $this->lang->line('quiz'); ?> </span>
-                </a>
-                <div id="collapseQuiz" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <?php
-                        if (in_array('Add', explode(',', $logged_in['quiz']))) {
-                            ?>
-                            <a class="collapse-item"
-                               href="<?php echo site_url('quiz/add_new'); ?>"><?php echo $this->lang->line('add_new'); ?></a>
-                            <?php
-                        }
-                        if (in_array('List', explode(',', $logged_in['quiz'])) || in_array('List_all', explode(',', $logged_in['quiz']))) {
-                            ?>
-                            <a class="collapse-item"
-                               href="<?php echo site_url('quiz'); ?>"><?php echo $this->lang->line('quiz_list'); ?></a>
-                            <?php
-                        }
-                        ?>
-
-                    </div>
-                </div>
-            </li>
-            <?php
-        }
-        ?>
-        <?php
-        if (in_array('List', explode(',', $logged_in['results'])) || in_array('List_all', explode(',', $logged_in['results']))) {
-            ?>
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseResult"
-                   aria-expanded="true" aria-controls="collapseResult">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span><?php echo $this->lang->line('result'); ?></a></span>
-                </a>
-                <div id="collapseResult" class="collapse" aria-labelledby="headingPages"
-                     data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-
-                        <a class="collapse-item"
-                           href="<?php echo site_url('result'); ?>"><?php echo $this->lang->line('result_list'); ?></a>
-
-                    </div>
-                </div>
-            </li>
-            <?php
-        }
-        ?>
-
-        <?php
-        $acp = explode(',', $logged_in['study_material']);
-        if (in_array('List', $acp)) {
-            ?>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStudy"
-                   aria-expanded="true" aria-controls="collapseStudy">
-                    <i class="fas fa-fw fa-book"></i>
-                    <span><?php echo $this->lang->line('study_material'); ?></span>
-                </a>
-                <div id="collapseStudy" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-
-                        <a class="collapse-item"
-                           href="<?php echo site_url('study_material'); ?>"><?php echo $this->lang->line('study_material'); ?></a>
-                    </div>
-                </div>
-            </li>
 
             <?php
-        }
-        ?>
+            if (in_array('List_all', explode(',', $logged_in['users']))) {
+                ?>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers"
+                       aria-expanded="true" aria-controls="collapseUsers">
+                        <i class="fas fa-fw fa-users"></i>
+                        <span><?php echo $this->lang->line('users'); ?></span>
+                    </a>
 
-        <?php
-        if (in_array('All', explode(',', $logged_in['setting']))) {
-            ?>
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSetting"
-                   aria-expanded="true" aria-controls="collapseSetting">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span><?php echo $this->lang->line('setting'); ?></span>
-                </a>
-                <div id="collapseSetting" class="collapse" aria-labelledby="headingPages"
-                     data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-
-                        <a class="collapse-item"
-                           href="<?php echo site_url('setting'); ?>"><?php echo $this->lang->line('setting'); ?></a>
-                        <a class="collapse-item"
-                           href="<?php echo site_url('notification'); ?>"><?php echo $this->lang->line('notification'); ?></a>
-                        <a class="collapse-item"
-                           href="<?php echo site_url('user/group_list'); ?>"><?php echo $this->lang->line('group_list'); ?></a>
-                        <a class="collapse-item"
-                           href="<?php echo site_url('qbank/category_list'); ?>"><?php echo $this->lang->line('category_list'); ?></a>
-                        <a class="collapse-item"
-                           href="<?php echo site_url('qbank/level_list'); ?>"><?php echo $this->lang->line('level_list'); ?></a>
-                        <a class="collapse-item"
-                           href="<?php echo site_url('account'); ?>"><?php echo $this->lang->line('account_type'); ?></a></a>
-                        <a class="collapse-item"
-                           href="<?php echo site_url('user/custom_fields'); ?>"><?php echo $this->lang->line('custom_forms'); ?></a>
-                        <div hidden>
-                            <a class="collapse-item"
-                               href="<?php echo site_url('payment_gateway'); ?>"><?php echo $this->lang->line('payment_history'); ?></a>
-                            <a class="collapse-item"
-                               href="<?php echo site_url('payment_gateway'); ?>"><?php echo $this->lang->line('advertisment'); ?></a>
+                    <div id="collapseUsers" class="collapse" aria-labelledby="headingTwo"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <?php
+                            if (in_array('Add', explode(',', $logged_in['users']))) {
+                                ?>
+                                <a class="collapse-item"
+                                   href="<?php echo site_url('user/new_user2'); ?>"><?php echo $this->lang->line('add_new_'); ?></a>
+                            <?php } ?>
+                            <?php
+                            if (in_array('List', explode(',', $logged_in['users'])) || in_array('List_all', explode(',', $logged_in['users']))) {
+                                ?>
+                                <a class="collapse-item"
+                                   href="<?php echo site_url('user/index2'); ?>"><?php echo $this->lang->line('user_list'); ?></a>
+                            <?php } ?>
+                            <?php
+                            if (in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
+                                <a hidden class="collapse-item"
+                                   href="<?php echo site_url('appointment/myappointment/'); ?>"><?php echo $this->lang->line('myappointment'); ?></a>
+                            <?php } ?>
                         </div>
                     </div>
-                </div>
-            </li>
-            <?php
-        }
-        ?>
-        <?php
-        if (!in_array('List_all', explode(',', $logged_in['quiz']))) {
+                </li>
+                <?php
+            }
             ?>
-            <a href="<?php echo site_url('user/switch_group'); ?>" class="btn btn-danger"
-               style="border-radius:0px;"><?php echo $this->lang->line('change_group'); ?></a>
             <?php
-        }
-        ?>
+            if (in_array('List_all', explode(',', $logged_in['postulantes']))) {
+                ?>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                       aria-expanded="true" aria-controls="collapseTwo">
+                        <i class="fas fa-fw fa-user-graduate"></i>
+                        <span><?php echo $this->lang->line('users_students'); ?></span>
+                    </a>
 
-        <?php
-        if (in_array('All', explode(',', $logged_in['setting'])) && false) {
-            ?>
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupport"
-                   aria-expanded="true" aria-controls="collapseStudy">
-                    <i class="fas fa-fw fa-question-circle"></i>
-                    <span>Support</span>
-                </a>
-                <div id="collapseSupport" class="collapse" aria-labelledby="headingPages"
-                     data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-
-                        <a class="collapse-item" href="https://savsoftquiz.com/support.php">Support</a>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <?php
+                            if (in_array('Add', explode(',', $logged_in['postulantes']))) {
+                                ?>
+                                <a class="collapse-item"
+                                   href="<?php echo site_url('user/new_user'); ?>"><?php echo $this->lang->line('add_new_'); ?></a>
+                            <?php } ?>
+                            <?php
+                            if (in_array('List', explode(',', $logged_in['postulantes'])) || in_array('List_all', explode(',', $logged_in['postulantes']))) {
+                                ?>
+                                <a class="collapse-item"
+                                   href="<?php echo site_url('user'); ?>"><?php echo $this->lang->line('user_list_students'); ?></a>
+                            <?php } ?>
+                            <?php
+                            if (in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
+                                <a hidden class="collapse-item"
+                                   href="<?php echo site_url('appointment/myappointment/'); ?>"><?php echo $this->lang->line('myappointment'); ?></a>
+                            <?php } ?>
+                        </div>
                     </div>
-                </div>
-            </li>
-
-            <?php
-        }
-        ?>
-        <?php
-        if (in_array('All', explode(',', $logged_in['setting'])) && false) {
+                </li>
+                <?php
+            }
             ?>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLanding"
-                   aria-expanded="true" aria-controls="collapseStudy">
-                    <i class="fas fa-fw fa-puzzle-piece"></i>
-                    <span>Landing Page</span>
-                </a>
-                <div id="collapseLanding" class="collapse" aria-labelledby="headingPages"
-                     data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
+            <?php
+            if (in_array('List', explode(',', $logged_in['questions'])) || in_array('List_all', explode(',', $logged_in['questions']))) {
+                ?>
 
-                        <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Menu</a>
+                <!-- Nav Item -  Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                       aria-expanded="true" aria-controls="collapseUtilities">
+                        <i class="fas fa-fw fa-university"></i>
+                        <span><?php echo $this->lang->line('qbank'); ?></span>
+                    </a>
+                    <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <?php
+                            if (in_array('Add', explode(',', $logged_in['questions']))) {
+                                ?>
+                                <a class="collapse-item"
+                                   href="<?php echo site_url('qbank/pre_new_question'); ?>"><?php echo $this->lang->line('add_new1'); ?></a>
+                                <?php
+                            }
 
-                        <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Pages/Post</a>
-                        <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Slider</a>
-                        <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Design</a>
+                            if (in_array('List', explode(',', $logged_in['questions'])) || in_array('List_all', explode(',', $logged_in['questions']))) {
+                                ?>
+                                <a class="collapse-item"
+                                   href="<?php echo site_url('qbank'); ?>"><?php echo $this->lang->line('question_list'); ?></a>
+                                <?php
+                            }
+                            ?>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
+
+            <?php } ?>
+
+
+
+
 
 
             <?php
-        }
-        ?>
+            if (in_array('List', explode(',', $logged_in['quiz'])) || in_array('List_all', explode(',', $logged_in['quiz']))) {
+                ?>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseQuiz"
+                       aria-expanded="true" aria-controls="collapseQuiz">
+                        <i class="fas fa-fw fa-chalkboard-teacher"></i>
+                        <span><?php echo $this->lang->line('quiz'); ?> </span>
+                    </a>
+                    <div id="collapseQuiz" class="collapse" aria-labelledby="headingPages"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <?php
+                            if (in_array('Add', explode(',', $logged_in['quiz']))) {
+                                ?>
+                                <a class="collapse-item"
+                                   href="<?php echo site_url('quiz/add_new'); ?>"><?php echo $this->lang->line('add_new1'); ?></a>
+                                <?php
+                            }
+                            if (in_array('List', explode(',', $logged_in['quiz'])) || in_array('List_all', explode(',', $logged_in['quiz']))) {
+                                ?>
+                                <a class="collapse-item"
+                                   href="<?php echo site_url('quiz'); ?>"><?php echo $this->lang->line('quiz_list'); ?></a>
+                                <?php
+                            }
+                            ?>
+
+                        </div>
+                    </div>
+                </li>
+                <?php
+            }
+            ?>
+            <?php
+            if (in_array('List', explode(',', $logged_in['results'])) || in_array('List_all', explode(',', $logged_in['results']))) {
+                ?>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseResult"
+                       aria-expanded="true" aria-controls="collapseResult">
+                        <i class="fas fa-fw fa-folder"></i>
+                        <span><?php echo $this->lang->line('result'); ?></a></span>
+                    </a>
+                    <div id="collapseResult" class="collapse" aria-labelledby="headingPages"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+
+                            <a class="collapse-item"
+                               href="<?php echo site_url('result'); ?>"><?php echo $this->lang->line('result_list'); ?></a>
+
+                        </div>
+                    </div>
+                </li>
+                <?php
+            }
+            ?>
+
+            <?php
+            $acp = explode(',', $logged_in['study_material']);
+            if (in_array('List', $acp)) {
+                ?>
+
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStudy"
+                       aria-expanded="true" aria-controls="collapseStudy">
+                        <i class="fas fa-fw fa-book"></i>
+                        <span><?php echo $this->lang->line('study_material'); ?></span>
+                    </a>
+                    <div id="collapseStudy" class="collapse" aria-labelledby="headingPages"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+
+                            <a class="collapse-item"
+                               href="<?php echo site_url('study_material'); ?>"><?php echo $this->lang->line('study_material'); ?></a>
+                        </div>
+                    </div>
+                </li>
+
+                <?php
+            }
+            ?>
+
+            <?php
+            if (in_array('All', explode(',', $logged_in['setting']))) {
+                ?>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSetting"
+                       aria-expanded="true" aria-controls="collapseSetting">
+                        <i class="fas fa-fw fa-cog"></i>
+                        <span><?php echo $this->lang->line('setting'); ?></span>
+                    </a>
+                    <div id="collapseSetting" class="collapse" aria-labelledby="headingPages"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+
+                            <a class="collapse-item"
+                               href="<?php echo site_url('setting'); ?>"><?php echo $this->lang->line('setting'); ?></a>
+                            <a class="collapse-item"
+                               href="<?php echo site_url('notification'); ?>"><?php echo $this->lang->line('notification'); ?></a>
+                            <a class="collapse-item"
+                               href="<?php echo site_url('user/group_list'); ?>"><?php echo $this->lang->line('group_list'); ?></a>
+                            <a class="collapse-item"
+                               href="<?php echo site_url('qbank/category_list'); ?>"><?php echo $this->lang->line('category_list'); ?></a>
+                            <a class="collapse-item"
+                               href="<?php echo site_url('qbank/level_list'); ?>"><?php echo $this->lang->line('level_list'); ?></a>
+                            <a class="collapse-item"
+                               href="<?php echo site_url('user/career_list'); ?>"><?php echo $this->lang->line('career_list'); ?></a>
+                            <a class="collapse-item"
+                               href="<?php echo site_url('user/view_inscription'); ?>"><?php echo $this->lang->line('view'); ?></a>
+
+                            <a class="collapse-item"
+                               href="<?php echo site_url('account'); ?>"><?php echo $this->lang->line('account_type'); ?></a></a>
+                            <a class="collapse-item"
+                               href="<?php echo site_url('user/custom_fields'); ?>"><?php echo $this->lang->line('custom_forms'); ?></a>
+                            <div hidden>
+                                <a class="collapse-item"
+                                   href="<?php echo site_url('payment_gateway'); ?>"><?php echo $this->lang->line('payment_history'); ?></a>
+                                <a class="collapse-item"
+                                   href="<?php echo site_url('payment_gateway'); ?>"><?php echo $this->lang->line('advertisment'); ?></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <?php
+            }
+            ?>
+            <?php
+            if (!in_array('List_all', explode(',', $logged_in['quiz']))) {
+                ?>
+                <a hidden href="<?php echo site_url('user/switch_group'); ?>" class="btn btn-danger"
+                   style="border-radius:0px;"><?php echo $this->lang->line('change_group'); ?></a>
+                <?php
+            }
+            ?>
+
+            <?php
+            if (in_array('All', explode(',', $logged_in['setting'])) && false) {
+                ?>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupport"
+                       aria-expanded="true" aria-controls="collapseStudy">
+                        <i class="fas fa-fw fa-question-circle"></i>
+                        <span>Support</span>
+                    </a>
+                    <div id="collapseSupport" class="collapse" aria-labelledby="headingPages"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+
+                            <a class="collapse-item" href="https://savsoftquiz.com/support.php">Support</a>
+                        </div>
+                    </div>
+                </li>
+
+                <?php
+            }
+            ?>
+            <?php
+            if (in_array('All', explode(',', $logged_in['setting'])) && false) {
+                ?>
+
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLanding"
+                       aria-expanded="true" aria-controls="collapseStudy">
+                        <i class="fas fa-fw fa-puzzle-piece"></i>
+                        <span>Landing Page</span>
+                    </a>
+                    <div id="collapseLanding" class="collapse" aria-labelledby="headingPages"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+
+                            <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Menu</a>
+
+                            <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Pages/Post</a>
+                            <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Slider</a>
+                            <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Design</a>
+                        </div>
+                    </div>
+                </li>
+
+
+                <?php
+            }
+            ?>
 
     </ul>
     <!-- End of Sidebar -->
@@ -498,7 +615,8 @@ $hres = $hquery->result_Array();
 
                             <?php
                             if (in_array('List', explode(',', $logged_in['appointment'])) && !in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
-                                <a class="dropdown-item" href="<?php echo site_url('appointment/myappointment/'); ?>"><i
+                                <a hidden class="dropdown-item"
+                                   href="<?php echo site_url('appointment/myappointment/'); ?>"><i
                                             class="fas fa-mobile fa-sm fa-fw mr-2 text-gray-400"></i><?php echo $this->lang->line('myappointment'); ?>
                                 </a>
                             <?php } ?>

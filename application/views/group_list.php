@@ -1,5 +1,5 @@
 <div class="container">
-    <h3><?php echo $title; ?></h3>
+    <h3 class="font-weight-bold"><?php echo $title; ?></h3>
     <div class="row">
 
         <div class="col-md-12">
@@ -11,12 +11,15 @@
             ?>
             <div id="message"></div>
 
-            <a href="<?php echo site_url('user/add_new_group'); ?>" class="btn btn-success"><?php echo $this->lang->line('add_new'); ?></a>
-
+            <a href="<?php echo site_url('user/add_new_group'); ?>"
+               class="btn btn-success"><?php echo $this->lang->line('add_new1'); ?></a>
+            <br><br>
             <table class="table table-bordered">
                 <tr>
                     <th><?php echo $this->lang->line('group_name'); ?></th>
                     <th><?php echo $this->lang->line('description'); ?></th>
+                    <th><?php echo $this->lang->line('date_init'); ?></th>
+                    <th><?php echo $this->lang->line('date_end'); ?></th>
                     <th><?php echo $this->lang->line('valid_for_days'); ?></th>
                     <th><?php echo $this->lang->line('action'); ?> </th>
                 </tr>
@@ -38,12 +41,20 @@
                         <td>
                             <?php echo $val['description']; ?>
                         </td>
+                        <td>
+                            <?php echo $val['date_init']; ?>
+                        </td>
+                        <td>
+                            <?php echo $val['date_end']; ?>
+                        </td>
                         <td><?php echo $val['valid_for_days']; ?></td>
                         <td>
-                            <a href="<?php echo site_url('user/edit_group/' . $val['gid']); ?>"><img
-                                        src="<?php echo base_url('images/edit.png'); ?>"></a>
-                            <a href="<?php echo site_url('user/pre_remove_group/' . $val['gid']); ?>"><img
-                                        src="<?php echo base_url('images/cross.png'); ?>"></a>
+                            <a href="<?php echo site_url('user/edit_group/' . $val['gid']); ?>">
+                                <i class="fas fa-edit"  style="color:#3472f7;"></i>
+                            </a>
+                            <a href="<?php echo site_url('user/pre_remove_group/' . $val['gid']); ?>">
+                                <i class="fas fa-trash"  style="color:#3472f7;"></i>
+                            </a>
 
                         </td>
                     </tr>

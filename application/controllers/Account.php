@@ -32,7 +32,7 @@ class Account extends CI_Controller
         }
         $data['limit'] = $limit;
         $data['title'] = $this->lang->line('account_list');
-        $data['result'] = $this->Account_model->account_list($limit);
+        $data['result'] = $this->Account_model->account_list_all($limit);
         $this->load->view('header', $data);
         $this->load->view('account_list', $data);
         $this->load->view('footer', $data);

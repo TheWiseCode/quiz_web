@@ -30,7 +30,7 @@ class Login extends CI_Controller {
 			if($logged_in['su']=='1'){
 				redirect('dashboard');
 			}else{
-				redirect('quiz');	
+				redirect('dashboard');	
 			}
 			
 		}

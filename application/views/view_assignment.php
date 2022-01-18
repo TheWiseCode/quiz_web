@@ -16,7 +16,7 @@
 <br> 
  <div class="panel panel-default">
  <div class="panel-heading">
- <h3><?php echo $title.' : '.$result['assignment_title']; ?></h3>
+ <h3 class="font-weight-bold"><?php echo $title.' : '.$result['assignment_title']; ?></h3>
  </div>
 		<div class="panel-body"> 
 	
@@ -146,7 +146,7 @@ $acp=explode(',',$logged_in['assignment']);
 					<input type="file" required  name="userfile"    > 
 			</div>
 			
-			<button class="btn btn-default" type="submit"><?php echo $this->lang->line('submit');?></button>
+			<button class="btn btn-primary" type="submit"><?php echo $this->lang->line('submit');?></button>
  </form>
  </div>
  

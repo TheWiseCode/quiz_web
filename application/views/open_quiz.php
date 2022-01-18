@@ -55,12 +55,12 @@ if(count($open_quiz)==0){
 <?php
 if(($limit-($this->config->item('number_of_rows')))>=0){ $back=$limit-($this->config->item('number_of_rows')); }else{ $back='0'; } ?>
 
-<a href="<?php echo site_url('quiz/open_quiz/'.$back);?>"  class="btn btn-default"><?php echo $this->lang->line('back');?></a>
+<a href="<?php echo site_url('quiz/open_quiz/'.$back);?>"  class="btn btn-primary"><?php echo $this->lang->line('back');?></a>
 &nbsp;&nbsp;
 <?php
  $next=$limit+($this->config->item('number_of_rows'));  ?>
 
-<a href="<?php echo site_url('quiz/open_quiz/'.$next);?>"  class="btn btn-default"><?php echo $this->lang->line('next');?></a>
+<a href="<?php echo site_url('quiz/open_quiz/'.$next);?>"  class="btn btn-primary"><?php echo $this->lang->line('next');?></a>
 &nbsp;&nbsp;
 <a href="<?php echo base_url();?>"   ><?php echo $this->lang->line('login');?></a>
 

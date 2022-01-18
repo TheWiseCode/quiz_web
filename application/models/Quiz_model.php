@@ -612,14 +612,10 @@ class Quiz_model extends CI_Model
         } else {
             return '0';
         }
-
-
     }
 
     function quiz_result($rid)
     {
-
-
         $query = $this->db->query("select * from savsoft_result join savsoft_quiz on savsoft_result.quid=savsoft_quiz.quid where savsoft_result.rid='$rid' ");
         return $query->row_array();
 
@@ -627,11 +623,8 @@ class Quiz_model extends CI_Model
 
     function saved_answers($rid)
     {
-
-
         $query = $this->db->query("select * from savsoft_answers  where savsoft_answers.rid='$rid' ");
         return $query->result_array();
-
     }
 
 
@@ -647,7 +640,6 @@ class Quiz_model extends CI_Model
         $incorrect_score = explode(',', $quiz['incorrect_score']);
         $manual_valuation = 0;
         foreach ($score_ind as $mk => $score) {
-
             if ($score == 1) {
                 if (isset($correct_score[$mk])) {
                     $marks += $correct_score[$mk];
@@ -656,19 +648,15 @@ class Quiz_model extends CI_Model
                 }
             }
             if ($score == 2) {
-
                 if (isset($correct_score[$mk])) {
                     $marks += $incorrect_score[$mk];
                 } else {
                     $marks += $incorrect_score[0];
                 }
-
             }
             if ($score == 3) {
-
                 $manual_valuation = 1;
             }
-
         }
         $percentage_obtained = ($marks / (array_sum($correct_score))) * 100;
         if ($percentage_obtained >= $quiz['pass_percentage']) {

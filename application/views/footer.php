@@ -12,7 +12,7 @@ if ($this->uri->segment(3) != 'ph') {
     </div>
 
 
-    <center><?php
+    <div style="text-align: center;"><?php
         if ($this->uri->segment(2) != 'attempt' && $this->uri->segment(1) != 'install') {
             $this->db->where("add_status", "Active");
             $this->db->where("position", "Bottom");
@@ -29,7 +29,7 @@ if ($this->uri->segment(3) != 'ph') {
         }
 
 
-        ?></center>
+        ?></div>
 
 
     <?php
@@ -84,10 +84,6 @@ if ($this->uri->segment(3) != 'ph') {
         <?php
     }
     ?>
-
-    <div class="container" style="text-align:right;">
-        Powered by <a href="https://savsoftquiz.com">Savsoft Quiz</a>
-    </div>
     </div>
 
 

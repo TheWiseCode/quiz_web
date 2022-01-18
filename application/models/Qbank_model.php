@@ -1,4 +1,5 @@
 <?php
+
 class Qbank_model extends CI_Model
 {
     function question_list($limit, $cid = '0', $lid = '0')
@@ -49,6 +50,7 @@ class Qbank_model extends CI_Model
         $query = $this->db->get('savsoft_qbank');
         return $query->row_array();
     }
+
     function get_option($qid)
     {
         $this->db->where('qid', $qid);
@@ -95,9 +97,7 @@ class Qbank_model extends CI_Model
             'paragraph' => $this->input->post('paragraph'),
             'question' => $this->input->post('question'),
             'description' => $this->input->post('description'),
-            'question_type' => $this->lang->line(
-                'multiple_choice_single_answer'
-            ),
+            'question_type' => ('multiple_choice_single_answer'),
             'cid' => $this->input->post('cid'),
             'lid' => $this->input->post('lid'),
         ];
@@ -161,9 +161,7 @@ class Qbank_model extends CI_Model
             'paragraph' => $this->input->post('paragraph'),
             'question' => $this->input->post('question'),
             'description' => $this->input->post('description'),
-            'question_type' => $this->lang->line(
-                'multiple_choice_multiple_answer'
-            ),
+            'question_type' => ('multiple_choice_multiple_answer'),
             'cid' => $this->input->post('cid'),
             'lid' => $this->input->post('lid'),
         ];
@@ -199,7 +197,7 @@ class Qbank_model extends CI_Model
             'paragraph' => $this->input->post('paragraph'),
             'question' => $this->input->post('question'),
             'description' => $this->input->post('description'),
-            'question_type' => $this->lang->line('match_the_column'),
+            'question_type' => ('match_the_column'),
             'cid' => $this->input->post('cid'),
             'lid' => $this->input->post('lid'),
         ];
@@ -231,7 +229,7 @@ class Qbank_model extends CI_Model
             'paragraph' => $this->input->post('paragraph'),
             'question' => $this->input->post('question'),
             'description' => $this->input->post('description'),
-            'question_type' => $this->lang->line('short_answer'),
+            'question_type' => ('short_answer'),
             'cid' => $this->input->post('cid'),
             'lid' => $this->input->post('lid'),
         ];
@@ -262,7 +260,7 @@ class Qbank_model extends CI_Model
             'paragraph' => $this->input->post('paragraph'),
             'question' => $this->input->post('question'),
             'description' => $this->input->post('description'),
-            'question_type' => $this->lang->line('long_answer'),
+            'question_type' => ('long_answer'),
             'cid' => $this->input->post('cid'),
             'lid' => $this->input->post('lid'),
         ];
@@ -284,9 +282,7 @@ class Qbank_model extends CI_Model
             'paragraph' => $this->input->post('paragraph'),
             'question' => $this->input->post('question'),
             'description' => $this->input->post('description'),
-            'question_type' => $this->lang->line(
-                'multiple_choice_single_answer'
-            ),
+            'question_type' => ('multiple_choice_single_answer'),
             'cid' => $this->input->post('cid'),
             'lid' => $this->input->post('lid'),
         ];
@@ -343,9 +339,7 @@ class Qbank_model extends CI_Model
             'paragraph' => $this->input->post('paragraph'),
             'question' => $this->input->post('question'),
             'description' => $this->input->post('description'),
-            'question_type' => $this->lang->line(
-                'multiple_choice_multiple_answer'
-            ),
+            'question_type' => ('multiple_choice_multiple_answer'),
             'cid' => $this->input->post('cid'),
             'lid' => $this->input->post('lid'),
         ];
@@ -376,7 +370,7 @@ class Qbank_model extends CI_Model
             'paragraph' => $this->input->post('paragraph'),
             'question' => $this->input->post('question'),
             'description' => $this->input->post('description'),
-            'question_type' => $this->lang->line('match_the_column'),
+            'question_type' => ('match_the_column'),
             'cid' => $this->input->post('cid'),
             'lid' => $this->input->post('lid'),
         ];
@@ -404,7 +398,7 @@ class Qbank_model extends CI_Model
             'paragraph' => $this->input->post('paragraph'),
             'question' => $this->input->post('question'),
             'description' => $this->input->post('description'),
-            'question_type' => $this->lang->line('short_answer'),
+            'question_type' => ('short_answer'),
             'cid' => $this->input->post('cid'),
             'lid' => $this->input->post('lid'),
         ];
@@ -431,7 +425,7 @@ class Qbank_model extends CI_Model
             'paragraph' => $this->input->post('paragraph'),
             'question' => $this->input->post('question'),
             'description' => $this->input->post('description'),
-            'question_type' => $this->lang->line('long_answer'),
+            'question_type' => ('long_answer'),
             'cid' => $this->input->post('cid'),
             'lid' => $this->input->post('lid'),
         ];
@@ -568,23 +562,19 @@ class Qbank_model extends CI_Model
                 $ques_type = $singlequestion['0'];
                 if (trim($ques_type) != '') {
                     if ($ques_type == '0') {
-                        $question_type = $this->lang->line(
-                            'multiple_choice_single_answer'
-                        );
+                        $question_type = ('multiple_choice_single_answer');
                     }
                     if ($ques_type == '1') {
-                        $question_type = $this->lang->line(
-                            'multiple_choice_multiple_answer'
-                        );
+                        $question_type = ('multiple_choice_multiple_answer');
                     }
                     if ($ques_type == '2') {
-                        $question_type = $this->lang->line('match_the_column');
+                        $question_type = ('match_the_column');
                     }
                     if ($ques_type == '3') {
-                        $question_type = $this->lang->line('short_answer');
+                        $question_type = ('short_answer');
                     }
                     if ($ques_type == '4') {
-                        $question_type = $this->lang->line('long_answer');
+                        $question_type = ('long_answer');
                     }
 
                     $insert_data = [

@@ -3,8 +3,6 @@
     $logged_in = $this->session->userdata('logged_in');
     ?>
 
-
-
     <?php
     if ($logged_in['su'] == '1') {
         ?>
@@ -13,37 +11,57 @@
             <div class="col-lg-12">
                 <form method="post" action="<?php echo site_url('result/generate_report/'); ?>">
                     <div class=" ">
-                        <div><h3><?php echo $this->lang->line('generate_report'); ?> </h3></div>
-                        <br>
-                        <select name="quid">
-                            <option value="0"><?php echo $this->lang->line('select_quiz'); ?></option>
-                            <?php
-                            foreach ($quiz_list as $qk => $quiz) {
-                                ?>
-                                <option value="<?php echo $quiz['quid']; ?>"><?php echo $quiz['quiz_name']; ?></option>
-                                <?php
-                            }
-                            ?>
-                        </select>
+                        <div><h3 class="font-weight-bold"><?php echo $this->lang->line('generate_report'); ?> </h3>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col col-md 6">
+                                <label for="quid"
+                                       class="font-weight-bold"><?php echo $this->lang->line('select_quiz'); ?></label>
+                                <select name="quid" class="form-control">
+                                    <option value="0"><?php echo $this->lang->line('all'); ?></option>
+                                    <?php
+                                    foreach ($quiz_list as $qk => $quiz) {
+                                        ?>
+                                        <option value="<?php echo $quiz['quid']; ?>"><?php echo $quiz['quiz_name']; ?></option>
+                                        <?php
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="col col-md 6">
+                                <label for="gid"
+                                       class="font-weight-bold"><?php echo $this->lang->line('select_group'); ?></label>
+                                <select name="gid" class="form-control">
+                                    <option value="0"><?php echo $this->lang->line('all'); ?></option>
+                                    <?php
+                                    foreach ($group_list as $gk => $group) {
+                                        ?>
+                                        <option value="<?php echo $group['gid']; ?>"><?php echo $group['group_name']; ?></option>
+                                        <?php
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
 
-                        <select name="gid">
-                            <option value="0"><?php echo $this->lang->line('select_group'); ?></option>
-                            <?php
-                            foreach ($group_list as $gk => $group) {
-                                ?>
-                                <option value="<?php echo $group['gid']; ?>"><?php echo $group['group_name']; ?></option>
-                                <?php
-                            }
-                            ?>
-                        </select>
-                        <input type="text" name="date1" value=""
-                               placeholder="<?php echo $this->lang->line('date_from'); ?>">
-
-                        <input type="text" name="date2" value=""
-                               placeholder="<?php echo $this->lang->line('date_to'); ?>">
-
-                        <button class="btn btn-info"
-                                type="submit"><?php echo $this->lang->line('generate_report'); ?></button>
+                        <div class="row mb-2">
+                            <div class="col col-md-6">
+                                <label for="date1" class="font-weight-bold"><?php echo "Fecha de inicio"; ?></label>
+                                <input type="date" name="date1" value="" class="form-control"
+                                       placeholder="<?php echo $this->lang->line('date_from'); ?>">
+                            </div>
+                            <div class="col col-md-6">
+                                <label for="date2" class="font-weight-bold"><?php echo "Fecha de fin"; ?></label>
+                                <input type="date" name="date2" value="" class="form-control"
+                                       placeholder="<?php echo $this->lang->line('date_to'); ?>">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-md-3">
+                                <button class="btn btn-info form-control"
+                                        type="submit"><?php echo $this->lang->line('generate_report'); ?></button>
+                            </div>
+                        </div>
                     </div><!-- /input-group -->
                 </form>
             </div><!-- /.col-lg-6 -->
@@ -54,20 +72,17 @@
     ?>
 
     <hr>
-    <h3><?php echo $title; ?></h3>
+    <h3 class="font-weight-bold"><?php echo $title; ?></h3>
 
     <div class="row">
-
         <div class="col-lg-6">
             <form method="post" action="<?php echo site_url('result/index/'); ?>">
                 <div class="input-group">
                     <input type="text" class="form-control" name="search"
                            placeholder="<?php echo $this->lang->line('search'); ?>...">
-                    <span class="input-group-btn">
+                    <span class="input-group-append">
         <button class="btn btn-default" type="submit"><?php echo $this->lang->line('search'); ?></button>
       </span>
-
-
                 </div><!-- /input-group -->
             </form>
         </div><!-- /.col-lg-6 -->
@@ -75,9 +90,7 @@
 
 
     <div class="row">
-
         <div class="col-md-12">
-            <br>
             <?php
             if ($this->session->flashdata('message')) {
                 echo $this->session->flashdata('message');
@@ -91,12 +104,12 @@
             }
             ?>
             <table class="table table-bordered">
-                <tr>
+                <tr style="background: #3472f7; color: white;">
                     <th><?php echo $this->lang->line('result_id'); ?></th>
                     <th><?php echo $this->lang->line('first_name') . ' '; ?><?php echo $this->lang->line('last_name'); ?></th>
                     <th><?php echo $this->lang->line('quiz_name'); ?></th>
                     <th><?php echo $this->lang->line('status'); ?>
-                        <select onChange="sort_result('<?php echo $limit; ?>',this.value);">
+                        <select onChange="sort_result('<?php echo $limit; ?>',this.value);" class="">
                             <option value="0"><?php echo $this->lang->line('all'); ?></option>
                             <option value="<?php echo('pass'); ?>" <?php if ($status == ('pass')) {
                                 echo 'selected';
@@ -132,13 +145,15 @@
                         <td><?php echo $this->lang->line($val['result_status']); ?></td>
                         <td><?php echo $val['percentage_obtained']; ?>%</td>
                         <td>
-                            <a href="<?php echo site_url('result/view_result/' . $val['rid']); ?>"
-                               class="btn btn-success"><?php echo $this->lang->line('view'); ?> </a>
+                            <a href="<?php echo site_url('result/view_result/' . $val['rid']); ?>">
+                                <i class="fas fa-eye"  style="color:#3472f7;"></i></a>
                             <?php
                             if ($logged_in['su'] == '1') {
                                 ?>
-                                <a href="javascript:remove_entry('result/remove_result/<?php echo $val['rid']; ?>');"><img
-                                            src="<?php echo base_url('images/cross.png'); ?>"></a>
+                                <a href="javascript:remove_entry('result/remove_result/<?php echo $val['rid']; ?>',
+                                '<?php echo $this->lang->line('warning_remove') ?>');">
+                                    <i class="fas fa-trash" style="color:#3472f7;"></i>
+                                </a>
                                 <?php
                             }
                             ?>
@@ -176,7 +191,7 @@
     if ($logged_in['su'] == '1') {
         ?>
         <a href="<?php echo site_url('result/remove_result/0/1'); ?>"
-           class="btn btn-primary"><?php echo $this->lang->line('cancel'); ?><?php echo $this->lang->line('open'); ?></a>
+           class="btn btn-primary"><?php echo $this->lang->line('cancel_opened'); ?></a>
         <?php
     }
     ?>

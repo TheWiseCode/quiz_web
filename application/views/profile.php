@@ -1,17 +1,19 @@
 <hr>
 <div class="container">
-    <div class="row">
-        <div class="col-sm-10"><h1><?php echo $result['first_name'] . ' ' . $result['last_name']; ?></h1></div>
-        <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image"
-                                                                       class="img-circle img-responsive"
-                                                                       src="http://www.gravatar.com/avatar/<?php echo md5($result['email']); ?>?s=100"></a>
-        </div>
-    </div>
+
     <div class="row">
         <div class="col-sm-3"><!--left col-->
-
+            <div class="d-flex justify-content-center">
+                <div class="">
+                    <h1 class="font-weight-bold"><?php echo $result['first_name'] . ' ' . $result['last_name']; ?></h1>
+                    <a href="/users" class="pull-right">
+                        <img title="profile image" style="width: 150px; height: 150px;"
+                             class="img-circle img-responsive" src="<?php echo base_url(); ?>/photo/users/photo.jpeg"
+                             <?php echo md5($result['email']); ?>?s=100"></a>
+                </div>
+            </div>
             <ul class="list-group">
-                <li class="list-group-item text-muted"><?php echo $this->lang->line('profile'); ?></li>
+                <li class="list-group-item text-muted font-weight-bold"><?php echo $this->lang->line('profile'); ?></li>
                 <li class="list-group-item text-right"><span
                             class="pull-left"><strong><?php echo $this->lang->line('joined'); ?></strong></span> <?php echo $result['registered_date']; ?>
                 </li>
@@ -27,15 +29,15 @@
 
             </ul>
 
-            <div class="card shadow  py-2">
-                <div class="card-heading" style="padding:5px;"><?php echo $this->lang->line('contact'); ?></div>
+            <div class="card py-2">
+                <div class="card-header font-weight-bold"><?php echo $this->lang->line('contact'); ?></div>
                 <div class="card-body"><i class="fa fa-envelope fa-1x"></i> <?php echo $result['email']; ?> </div>
                 <div class="card-body"><i class="fa fa-phone fa-1x"></i> <?php echo $result['contact_no']; ?> </div>
             </div>
 
 
             <ul class="list-group">
-                <li class="list-group-item text-muted"><?php echo $this->lang->line('activity'); ?> <i
+                <li class="list-group-item text-muted font-weight-bold"><?php echo $this->lang->line('activity'); ?> <i
                             class="fa fa-dashboard fa-1x"></i></li>
                 <li class="list-group-item text-right"><span
                             class="pull-left"><strong><?php echo $this->lang->line('quiz_attempted'); ?></strong></span> <?php echo $attempted; ?>
@@ -49,17 +51,25 @@
                 <li class="list-group-item text-right"><span
                             class="pull-left"><strong><?php echo $this->lang->line('last_attempt'); ?></strong></span> <?php echo $lastattempt; ?>
                 </li>
+                <!--<li class="list-group-item text-muted"><?php /*echo $this->lang->line('photo'); */?> <i
+                            class="fa fa-dashboard fa-1x"></i></li>-->
+
+                <!--<li class="list-group-item text-right">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <input type="file" name="upload">
+                        <input type="submit" value="Submit">
+                    </form>
+                </li>-->
             </ul>
 
 
         </div><!--/col-3-->
         <div class="col-sm-9">
-            <h3> <?php echo $this->lang->line('category_prof'); ?> </h3>
+            <h3 class="font-weight-bold"> <?php echo $this->lang->line('category_prof'); ?> </h3>
             <div class="table-responsive">
                 <table class="table table-striped">
 
                     <tbody>
-
 
                     <tr>
                         <th>
@@ -120,7 +130,7 @@
             </div>
 
 
-            <h3><?php echo $this->lang->line('questions_incorect'); ?></h3>
+            <h3 class="font-weight-bold"><?php echo $this->lang->line('questions_incorect'); ?></h3>
 
             <div class="table-responsive">
                 <table class="table table-striped">
