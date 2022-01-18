@@ -177,3 +177,109 @@ ERROR - 2022-01-15 10:02:19 --> Severity: Warning --> Invalid argument supplied 
 ERROR - 2022-01-15 10:02:19 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 225
 ERROR - 2022-01-15 10:02:20 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 150
 ERROR - 2022-01-15 10:02:20 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\profile.php 225
+ERROR - 2022-01-15 14:44:07 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:44:07 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:44:17 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:44:17 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:45:08 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:45:08 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:45:18 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:45:18 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:45:32 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:45:32 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:45:42 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:45:42 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:45:55 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:45:55 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:46:03 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 14:46:03 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-15 10:46:56 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 161
+ERROR - 2022-01-15 10:47:13 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 200
+ERROR - 2022-01-15 10:47:13 --> Severity: Warning --> array_sum() expects parameter 1 to be array, null given C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 242
+ERROR - 2022-01-15 10:48:52 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 10:52:26 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 200
+ERROR - 2022-01-15 10:52:26 --> Severity: Warning --> array_sum() expects parameter 1 to be array, null given C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 242
+ERROR - 2022-01-15 10:53:02 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 200
+ERROR - 2022-01-15 10:53:14 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 200
+ERROR - 2022-01-15 10:53:52 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 161
+ERROR - 2022-01-15 10:54:04 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 200
+ERROR - 2022-01-15 10:54:11 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 200
+ERROR - 2022-01-15 10:54:42 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 161
+ERROR - 2022-01-15 10:54:54 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 200
+ERROR - 2022-01-15 10:55:01 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 200
+ERROR - 2022-01-15 10:55:07 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 200
+ERROR - 2022-01-15 10:57:13 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 161
+ERROR - 2022-01-15 10:57:23 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 200
+ERROR - 2022-01-15 10:57:30 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 200
+ERROR - 2022-01-15 10:57:39 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 200
+ERROR - 2022-01-15 10:57:46 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 200
+ERROR - 2022-01-15 11:02:24 --> Severity: Warning --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() C:\xampp\htdocs\savsoftquiz_v5\system\libraries\Email.php 1896
+ERROR - 2022-01-15 11:02:24 --> Could not find the language line "hello"
+ERROR - 2022-01-15 11:02:24 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 341
+ERROR - 2022-01-15 11:02:45 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where qid='380'' at line 1 - Invalid query: update savsoft_qbank set    where qid='380'  
+ERROR - 2022-01-15 11:02:47 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where qid='376'' at line 1 - Invalid query: update savsoft_qbank set    where qid='376'  
+ERROR - 2022-01-15 11:02:51 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where qid='546'' at line 1 - Invalid query: update savsoft_qbank set    where qid='546'  
+ERROR - 2022-01-15 11:02:53 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where qid='458'' at line 1 - Invalid query: update savsoft_qbank set    where qid='458'  
+ERROR - 2022-01-15 11:02:57 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where qid='462'' at line 1 - Invalid query: update savsoft_qbank set    where qid='462'  
+ERROR - 2022-01-15 11:03:01 --> Could not find the language line "hello"
+ERROR - 2022-01-15 11:03:01 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 341
+ERROR - 2022-01-15 11:27:54 --> Severity: Warning --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() C:\xampp\htdocs\savsoftquiz_v5\system\libraries\Email.php 1896
+ERROR - 2022-01-15 11:27:54 --> Could not find the language line "hello"
+ERROR - 2022-01-15 11:27:54 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 341
+ERROR - 2022-01-15 11:28:08 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where qid='458'' at line 1 - Invalid query: update savsoft_qbank set    where qid='458'  
+ERROR - 2022-01-15 11:28:22 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where qid='675'' at line 1 - Invalid query: update savsoft_qbank set    where qid='675'  
+ERROR - 2022-01-15 11:28:25 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where qid='668'' at line 1 - Invalid query: update savsoft_qbank set    where qid='668'  
+ERROR - 2022-01-15 11:28:27 --> Could not find the language line "hello"
+ERROR - 2022-01-15 11:28:27 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 341
+ERROR - 2022-01-15 11:30:05 --> Could not find the language line "hello"
+ERROR - 2022-01-15 11:30:05 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 341
+ERROR - 2022-01-15 11:31:01 --> Could not find the language line "hello"
+ERROR - 2022-01-15 11:31:01 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 341
+ERROR - 2022-01-15 11:31:22 --> Severity: Warning --> implode(): Invalid arguments passed C:\xampp\htdocs\savsoftquiz_v5\application\models\Quiz_model.php 200
+ERROR - 2022-01-15 11:31:28 --> Could not find the language line "hello"
+ERROR - 2022-01-15 11:31:28 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 341
+ERROR - 2022-01-15 11:32:27 --> Severity: Warning --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() C:\xampp\htdocs\savsoftquiz_v5\system\libraries\Email.php 1896
+ERROR - 2022-01-15 11:32:27 --> Could not find the language line "hello"
+ERROR - 2022-01-15 11:32:27 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 341
+ERROR - 2022-01-15 11:33:41 --> Could not find the language line "hello"
+ERROR - 2022-01-15 11:33:41 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\view_result.php 341
+ERROR - 2022-01-15 11:34:09 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 11:45:18 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 13:59:10 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 13:59:26 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 219
+ERROR - 2022-01-15 14:01:00 --> Severity: error --> Exception: Failed to instantiate .Net object [CreateInstance] [0x80070002] El sistema no puede encontrar el archivo especificado.
+ C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 2
+ERROR - 2022-01-15 14:01:13 --> Severity: error --> Exception: Failed to instantiate .Net object [CreateInstance] [0x80070002] El sistema no puede encontrar el archivo especificado.
+ C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 2
+ERROR - 2022-01-15 14:01:22 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:02:52 --> Severity: error --> Exception: Failed to instantiate .Net object [CreateInstance] [0x80070002] El sistema no puede encontrar el archivo especificado.
+ C:\xampp\htdocs\savsoftquiz_v5\application\controllers\Dashboard.php 9
+ERROR - 2022-01-15 14:05:29 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:06:49 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:09:31 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:10:23 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:14:28 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:14:37 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:16:16 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:16:27 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:18:27 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:20:50 --> Severity: error --> Exception: Class 'DOTNET' not found C:\xampp\htdocs\savsoftquiz_v5\application\controllers\Dashboard.php 10
+ERROR - 2022-01-15 14:20:54 --> Severity: error --> Exception: Class 'DOTNET' not found C:\xampp\htdocs\savsoftquiz_v5\application\controllers\Dashboard.php 10
+ERROR - 2022-01-15 14:20:55 --> Severity: error --> Exception: Class 'DOTNET' not found C:\xampp\htdocs\savsoftquiz_v5\application\controllers\Dashboard.php 10
+ERROR - 2022-01-15 14:20:58 --> Severity: error --> Exception: Class 'DOTNET' not found C:\xampp\htdocs\savsoftquiz_v5\application\controllers\Dashboard.php 10
+ERROR - 2022-01-15 14:21:00 --> Severity: error --> Exception: Class 'DOTNET' not found C:\xampp\htdocs\savsoftquiz_v5\application\controllers\Dashboard.php 10
+ERROR - 2022-01-15 14:21:21 --> Severity: error --> Exception: Class 'DOTNET' not found C:\xampp\htdocs\savsoftquiz_v5\application\controllers\Dashboard.php 10
+ERROR - 2022-01-15 14:21:22 --> Severity: error --> Exception: Class 'DOTNET' not found C:\xampp\htdocs\savsoftquiz_v5\application\controllers\Dashboard.php 10
+ERROR - 2022-01-15 14:22:03 --> Severity: error --> Exception: Class 'DOTNET' not found C:\xampp\htdocs\savsoftquiz_v5\application\controllers\Dashboard.php 10
+ERROR - 2022-01-15 14:22:10 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:22:29 --> Severity: error --> Exception: Class 'DOTNET' not found C:\xampp\htdocs\savsoftquiz_v5\application\controllers\Dashboard.php 10
+ERROR - 2022-01-15 14:22:54 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:23:09 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:23:30 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:28:54 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:29:24 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:32:12 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:32:41 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:33:04 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 14:33:32 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216
+ERROR - 2022-01-15 15:06:37 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 216

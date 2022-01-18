@@ -93,13 +93,14 @@ $hres = $hquery->result_Array();
 
             <div class="sidebar-brand-text mx-3"><?php if ($hres[0]['setting_value'] == "") { ?>
                     UAGRM Examenes
-                    <?php } else {
+                <?php } else {
                     echo $hres[0]['setting_value'];
                 } ?> </div>
 
 
         </a>
-        <div style="text-align: center;"><span style="color:#ffffff;"><?php echo $hres[1]['setting_value']; ?> </span></div>
+        <div style="text-align: center;"><span style="color:#ffffff;"><?php echo $hres[1]['setting_value']; ?> </span>
+        </div>
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
         <?php
@@ -308,7 +309,7 @@ $hres = $hquery->result_Array();
                            href="<?php echo site_url('qbank/level_list'); ?>"><?php echo $this->lang->line('level_list'); ?></a>
                         <a class="collapse-item"
                            href="<?php echo site_url('user/career_list'); ?>"><?php echo $this->lang->line('career_list'); ?></a>
-                    
+
                         <a class="collapse-item"
                            href="<?php echo site_url('account'); ?>"><?php echo $this->lang->line('account_type'); ?></a></a>
                         <a class="collapse-item"

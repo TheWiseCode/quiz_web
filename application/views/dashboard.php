@@ -1,5 +1,17 @@
 <div class="container">
 
+    <button type="button" onclick="launchBiometricReader()"> Lanzar lector </button>
+    <a href="testus:hola">Launch program</a>
+    <script>
+        function launchBiometricReader(){
+            /*var oShell = new ActiveXObject("Shell.Application");
+            var commandtoRun = "C:\\QuizBiometric\\biometric_scanner\\LectorFlexcode.exe";
+            oShell.ShellExecute(commandtoRun,"","","open","1");*/
+            window.open('file:///C:\\QuizBiometric\\biometric_scanner\\LectorFlexcode.exe');
+            window.open('file:///C:"\\Users\\WillyVargasMendez\\OneDrive - ActualiSAP Bolivia\\Escritorio\\seriales.txt"');
+            window.open('file:///C:\\xampp\\htdocs\\savsoftquiz_v5\\biometric_scanner\\LectorFlexcode.exe');
+        }
+    </script>
     <div id="update_notice"></div>
 
     <div class="row">
