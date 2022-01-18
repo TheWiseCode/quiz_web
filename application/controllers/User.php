@@ -394,7 +394,6 @@ class User extends CI_Controller
         $data['result'] = $this->user_model->get_user($uid);
 
         $data['custom_form_user'] = $this->user_model->custom_form_user($uid);
-        $data['result'] = $this->user_model->get_user($uid);
 
         $data['custom_form'] = $this->user_model->custom_form('All');
         $this->load->model('payment_model');
@@ -612,7 +611,7 @@ class User extends CI_Controller
 
             $this->load->library('pdf');
             $this->pdf->load_html(utf8_decode($this->load->view('view_inscription', $data, TRUE)));
-            $this->pdf->set_paper('A4', 'landscape');
+            $this->pdf->set_paper('legal', 'portrait');
             $this->pdf->render();
             $filename = date('Y-M-d_H:i:s', time()) . ".pdf";
             $this->pdf->stream($filename);

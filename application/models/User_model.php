@@ -1000,7 +1000,12 @@ class User_model extends CI_Model
 
     function get_user($uid)
     {
-
+        //TODO: obtener users
+        if($uid != 2){
+            $this->db->where('savsoft_users.uid', $uid);
+            $query = $this->db->get('savsoft_users');
+            return $query->row_array();
+        }
         $this->db->where('savsoft_users.uid', $uid);
         $this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');
         $query = $this->db->get('savsoft_users');

@@ -5,22 +5,16 @@
             font-family: arial, sans-serif;
             border-collapse: collapse;
             width: 100%;
-
         }
-
-
     </style>
 </head><body>
 
 <table FRAME="vsides" RULES="none">
     <tr>
-
         <td colspan="4" style="text-align: center;"><b>Ficha de inscripción<b></td>
-
-
     </tr>
     <tr>
-        <td colspan="4" style="text-align: center; font-size:30px ; text-align: center;"><b>CRIDAIIC<b></td>
+        <td colspan="4" style="text-align: center; font-size:20px ; text-align: center;"><b>CRIDAI<b></td>
     </tr>
 
     </tr>
@@ -37,12 +31,12 @@
 
     <tr>
         <th style="text-align: left;">
-            <img src="<?php echo base_url() . '/photo/logo.jpeg' ?>" align="left" width="150" height="150">
+            <img src="<?php echo base_url() . '/photo/logo.jpeg' ?>" align="left" width="140" height="140">
         </th>
         <th></th>
         <th></th>
         <th style="text-align: right;">
-            <img src="<?php echo base_url() . $result['photo'] ?>" align="right" width="150" height="150">
+            <img src="<?php echo base_url() . $result['photo'] ?>" align="right" width="140" height="140">
         </th>
     </tr>
 
@@ -129,19 +123,20 @@
     </tr>
 </table>
 
-<TABLE FRAME="border" RULES="none" style="border-collapse: collapse ; width: 50%; high:30% ; ">
+<TABLE FRAME="border" RULES="none" style="border-collapse: collapse ; width: 45%; ">
     <tr>
-        <td style="background-color:#333;color: #fff; text-align: center;">COMITÉ REGIONAL DE INTEGRACION DOCENTE<br>
+        <td style="background-color:#333;color: #fff; text-align: center;left;font-size:10px ;">COMITÉ REGIONAL DE
+            INTEGRACION DOCENTE<br>
             ASISTENCIAL INVESTIGACIÓN E INTERACCIÓN COMUNITARIA
         </td>
     </tr>
     <tr>
         <td>
-            <table border="0" style="width: 100%">
+            <table border="0" style="width: 100%; height: 4.5cm;">
                 <tr>
-                    <td style="text-align: left;font-size:15px ;">
+                    <td style="text-align: left;font-size:12px ;">
                         Nombre: <?php echo ' ' . $result['first_name'] . ' ' . $result['last_name']; ?>
-                        <br>
+                        <br><br>
                         Especialidad:
 
                         <?php
@@ -156,7 +151,7 @@
                             <?php
                         }
                         ?>
-                        <br>
+                        <br><br>
                         Departamento:
 
 
@@ -187,15 +182,22 @@
                         <?php if ($result['exp'] == 'OR') {
                             echo '  ' . "Potosi";
                         } ?>
-                        <br>
+                        <br><br>
                         Codigo CD:
 
                         <?php echo ' ' . $result['cod_student'] ?>
+                        <br><br>
 
 
+                        <img src="<?php echo base_url() . '/photo/logo.jpeg' ?>" align="left" width="40" height="40">
                     </td>
-                    <td style="text-align: right;"><img src="<?php echo base_url() . $result['photo'] ?>" align="left"
-                                                        width="150" height="150"></td>
+                    <td style="text-align: right;font-size:15px ;"><img
+                                src="<?php echo base_url() . $result['photo'] ?>" align="left"
+                                width="100" height="100">
+                        <br><br>
+                        CI: <?php echo $result['ci'] . '           ' ?>
+                    </td>
+
                 </tr>
             </table>
         </td>
@@ -210,9 +212,8 @@
             </table>
         </td>
     </tr>
-    <tr>
-        <td style="text-align: right;font-size:20px ;"> CI: <?php echo $result['ci'] ?></td>
-    </tr>
+
+
 </table>
 
 </body></html>
