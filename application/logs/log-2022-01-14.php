@@ -713,3 +713,155 @@ ERROR - 2022-01-14 19:37:16 --> Severity: Warning --> Invalid argument supplied 
 ERROR - 2022-01-14 19:37:20 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
 ERROR - 2022-01-14 19:37:20 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
 ERROR - 2022-01-14 19:37:52 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-14 19:41:55 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-14 19:42:56 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-14 19:43:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:43:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:48:07 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:48:07 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:48:20 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:48:20 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:48:36 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:48:36 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:54:19 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:54:19 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:54:27 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:54:27 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:54:45 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:54:45 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:54:46 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:54:46 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:54:50 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:54:50 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:56:45 --> Severity: error --> Exception: syntax error, unexpected '.', expecting end of file C:\xampp\htdocs\quiz_web\application\views\profile.php 7
+ERROR - 2022-01-14 19:56:47 --> Severity: error --> Exception: syntax error, unexpected '.', expecting end of file C:\xampp\htdocs\quiz_web\application\views\profile.php 7
+ERROR - 2022-01-14 19:56:54 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:56:54 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:56:59 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:56:59 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:57:13 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:57:13 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:57:15 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:57:15 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:57:37 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:57:37 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:58:10 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:58:10 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:58:13 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:58:13 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:58:26 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:58:26 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:58:29 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:58:29 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:58:34 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:58:34 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:58:51 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 217
+ERROR - 2022-01-14 19:59:00 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:59:00 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:59:29 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:59:29 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:59:30 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:59:30 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 19:59:49 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 19:59:49 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:01:23 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:01:23 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:01:26 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:01:26 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:04:27 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:04:27 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:04:45 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:04:45 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:04:52 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:04:52 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:07:32 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:07:33 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:07:41 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:07:41 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:07:42 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:07:44 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:07:51 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:07:51 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:08:20 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:08:38 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:09:08 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:09:17 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:09:17 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:09:17 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 217
+ERROR - 2022-01-14 20:09:44 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:09:44 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:10:37 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:10:48 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:10:50 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:11:00 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:11:23 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:11:45 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:12:31 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:12:32 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:12:57 --> Severity: error --> Exception: syntax error, unexpected '=', expecting ']' C:\xampp\htdocs\quiz_web\application\models\User_model.php 838
+ERROR - 2022-01-14 20:13:27 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:13:27 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:14:19 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:14:19 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:14:22 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:14:22 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:14:25 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:14:25 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:14:55 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:14:55 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:14:55 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 217
+ERROR - 2022-01-14 20:14:58 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:14:58 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:15:37 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:15:37 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 20:15:43 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 20:15:43 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 21:05:05 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-14 21:06:11 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-14 21:11:53 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-14 21:12:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 21:12:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 21:13:09 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-14 23:19:06 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 217
+ERROR - 2022-01-14 23:19:12 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-14 23:30:09 --> Severity: Compile Warning --> Unterminated comment starting line 125 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 125
+ERROR - 2022-01-14 23:31:31 --> Severity: error --> Exception: syntax error, unexpected '<', expecting end of file C:\xampp\htdocs\quiz_web\application\views\edit_user.php 31
+ERROR - 2022-01-14 23:31:55 --> Severity: Compile Warning --> Unterminated comment starting line 125 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 125
+ERROR - 2022-01-14 23:32:13 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-14 23:32:37 --> Severity: Compile Warning --> Unterminated comment starting line 125 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 125
+ERROR - 2022-01-14 23:32:55 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-14 23:34:09 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-14 23:34:18 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 23:34:18 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 23:34:21 --> Severity: Compile Warning --> Unterminated comment starting line 129 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 129
+ERROR - 2022-01-14 23:34:30 --> Could not find the language line "repeat_password"
+ERROR - 2022-01-14 23:34:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 152
+ERROR - 2022-01-14 23:34:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\profile.php 227
+ERROR - 2022-01-14 23:34:44 --> Severity: Compile Warning --> Unterminated comment starting line 129 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 129
+ERROR - 2022-01-14 23:36:18 --> Severity: Compile Warning --> Unterminated comment starting line 129 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 129
+ERROR - 2022-01-14 23:37:07 --> Severity: Compile Warning --> Unterminated comment starting line 129 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 129
+ERROR - 2022-01-14 23:37:53 --> Severity: Compile Warning --> Unterminated comment starting line 129 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 129
+ERROR - 2022-01-14 23:38:19 --> Severity: Compile Warning --> Unterminated comment starting line 129 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 129
+ERROR - 2022-01-14 23:38:32 --> Severity: Compile Warning --> Unterminated comment starting line 129 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 129
+ERROR - 2022-01-14 23:38:58 --> Severity: Compile Warning --> Unterminated comment starting line 129 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 129
+ERROR - 2022-01-14 23:40:02 --> Severity: Compile Warning --> Unterminated comment starting line 146 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 146
+ERROR - 2022-01-14 23:41:02 --> Severity: Compile Warning --> Unterminated comment starting line 146 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 146
+ERROR - 2022-01-14 23:41:50 --> Severity: Compile Warning --> Unterminated comment starting line 147 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 147
+ERROR - 2022-01-14 23:41:53 --> Severity: Compile Warning --> Unterminated comment starting line 147 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 147
+ERROR - 2022-01-14 23:42:34 --> Severity: Compile Warning --> Unterminated comment starting line 147 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 147
+ERROR - 2022-01-14 23:43:19 --> Severity: Compile Warning --> Unterminated comment starting line 147 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 147
+ERROR - 2022-01-14 23:43:21 --> Severity: Compile Warning --> Unterminated comment starting line 147 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 147
+ERROR - 2022-01-14 23:43:35 --> Severity: Compile Warning --> Unterminated comment starting line 147 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 147
+ERROR - 2022-01-14 23:45:19 --> Severity: Compile Warning --> Unterminated comment starting line 147 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 147
+ERROR - 2022-01-14 23:45:50 --> Severity: Compile Warning --> Unterminated comment starting line 147 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 147
+ERROR - 2022-01-14 23:47:20 --> Severity: Compile Warning --> Unterminated comment starting line 147 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 147
+ERROR - 2022-01-14 23:50:52 --> Severity: Compile Warning --> Unterminated comment starting line 150 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 150
+ERROR - 2022-01-14 23:50:54 --> Severity: Compile Warning --> Unterminated comment starting line 150 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 150
+ERROR - 2022-01-14 23:51:14 --> Severity: Compile Warning --> Unterminated comment starting line 150 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 150
+ERROR - 2022-01-14 23:52:18 --> Severity: Compile Warning --> Unterminated comment starting line 150 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 150
+ERROR - 2022-01-14 23:52:19 --> Severity: Compile Warning --> Unterminated comment starting line 150 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 150
+ERROR - 2022-01-14 23:52:44 --> Severity: Compile Warning --> Unterminated comment starting line 150 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 150
+ERROR - 2022-01-14 23:52:45 --> Severity: Compile Warning --> Unterminated comment starting line 150 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 150
+ERROR - 2022-01-14 23:53:12 --> Severity: Compile Warning --> Unterminated comment starting line 150 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 150
+ERROR - 2022-01-14 23:53:13 --> Severity: Compile Warning --> Unterminated comment starting line 150 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 150
+ERROR - 2022-01-14 23:56:34 --> Severity: Compile Warning --> Unterminated comment starting line 148 C:\xampp\htdocs\quiz_web\application\views\edit_user.php 148

@@ -37,7 +37,7 @@
                     <th><?php echo 'Nombre '; ?><?php echo 'Completo'; ?></th>
                     <th><?php echo 'Telefono'; ?> </th>
                     <th><?php echo 'Codigo de Estudiante'; ?> </th>
-                    <th><?php echo $this->lang->line('first_career'); ?> </th>
+                    <th><?php echo $this->lang->line('specialty'); ?> </th>
                     <th><?php echo $this->lang->line('action'); ?> </th>
                 </tr>
                 <?php
@@ -55,7 +55,24 @@
                         <td><?php echo $val['first_name'] . ' '; ?><?php echo $val['last_name']; ?></td>
                         <td><?php echo $val['contact_no']; ?></td>
                         <td><?php echo $val['cod_student']; ?> </td>
-                        <td><?php echo $val['first_opt_univ_degree']; ?></td>
+                        
+                        <td>
+                        <?php
+                                foreach ($speciality_list as $key => $vals) {
+                                    ?>
+
+                                    <?php
+                                    if($vals['id'] == $val['id_speciality']) 
+                                    {
+                                        echo $vals['name'];
+                                    }
+                                    ?>
+                                    <?php
+                                }
+                                ?>
+                        
+                        </td>
+
                         <td>
                             <a href="<?php echo site_url(
                                 'user2/view_user/' . $val['uid']
@@ -67,6 +84,12 @@
                             <a href="javascript:remove_entry('user/remove_user/<?php echo $val['uid']; ?>',
                             '<?php echo $this->lang->line('warning_remove') ?>');"><img
                                         src="<?php echo base_url('images/cross.png'); ?>"></a>
+                            <a href="<?php echo site_url(
+                                'user/view_inscription/' . $val['uid']
+                                ); ?>"><img
+                                        src="<?php echo base_url('images/down.png'); ?>"></a>
+
+                                        
 
                         </td>
                     </tr>

@@ -32,18 +32,23 @@
                             <textarea name="description"
                                       class="form-control">   <?php echo $group['description']; ?></textarea>
                         </div>
-
                         <div class="form-group">
-                            <label for="inputEmail"
-                                   class="font-weight-bold"><?php echo $this->lang->line('price'); ?></label>
-                            <input type="text" required name="price" class="form-control"
-                                   value="<?php echo $group['price']; ?>">
+                            <label for="inputEmail"><?php echo "Fecha Inicio"; ?></label>
+                            <input type="date" name="subscription_expired_init" id="subscription_expired_init"
+                                   class="form-control"
+                                   value="<?php echo $group['date_init']; ?>">
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail"
-                                   class="font-weight-bold"><?php echo $this->lang->line('valid_for_days'); ?></label>
-                            <input type="text" required name="valid_for_days" class="form-control"
-                                   value="<?php echo $group['valid_for_days']; ?>">
+                            <label for="inputEmail"><?php echo "Fecha Finalizacion"; ?></label>
+                            <input type="date" name="subscription_expired_end" id="subscription_expired_end"
+                                   onChange="workingDaysBetweenDates();" class="form-control"
+                                   value="<?php echo $group['date_end']; ?>">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail"><?php echo $this->lang->line('valid_for_days'); ?></label>
+                            <input type="text" required name="valid_for_days" class="form-control" value=0
+                                   id="valid_for_days">
                         </div>
 
 
@@ -59,4 +64,8 @@
     </div>
 
 
+
 </div>
+<script>
+    workingDaysBetweenDates();
+</script>

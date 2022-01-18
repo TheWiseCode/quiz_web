@@ -40,6 +40,9 @@ public function load_view($view, $data = array())
 {
 $html = $this->ci()->load->view($view, $data, TRUE);
 
-$this->load_html($html);
+
+$this->load_html(utf8_decode($html));
+
+$this->set_paper('A4','landscape');
 }
 }

@@ -2,16 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/biometric_scanner/LectorFlexcode.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/biometric_scanner/LectorFlexcode.exe.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/biometric_scanner/LectorFlexcode.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/biometric_scanner/MySql.Data.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/logs/log-2022-01-16.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/edit_user_admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/new_user2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/user_list2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/view_inscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642204467.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642204490.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642204614.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642204619.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642204633.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642204635.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642204657.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642204690.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642204693.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642204706.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642204709.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642204714.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642204886.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642205067.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642205085.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642205271.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642205659.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642205662.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642205665.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642433774.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo/users/1642433795.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes10.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes11.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes12.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes13.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes14.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xls/ejemplo_lista_de_estudiantes15.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Notification.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Notification.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/User2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/libraries/Pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/libraries/Pdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-14.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-14.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-15.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-15.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-17.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-17.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/add_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/add_group.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/edit_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/edit_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/new_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/user_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/basic.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/basic.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +75,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="PhpDebugGeneral" xdebug_debug_port="9003" listening_started="true">
+  <component name="PhpDebugGeneral" xdebug_debug_port="9003">
     <xdebug_debug_ports port="9003" />
   </component>
   <component name="PhpServers">
@@ -89,7 +130,7 @@
       <workItem from="1642436933814" duration="85000" />
       <workItem from="1642445592744" duration="4837000" />
       <workItem from="1642452998009" duration="31000" />
-      <workItem from="1642455097588" duration="4509000" />
+      <workItem from="1642455097588" duration="6184000" />
     </task>
     <servers />
   </component>

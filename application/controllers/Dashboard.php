@@ -6,22 +6,6 @@ class Dashboard extends CI_Controller
 
     function __construct()
     {
-        try {
-            //shell_exec('C:\QuizBiometric\biometric_scanner\LectorFlexcode.exe');
-            $obj = new COM('C:\xampp\htdocs\savsoftquiz_v5\dll\lib2.dll.Impresora');
-            $dotnet = new DOTNET("lib1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=17caf17ea9c892fa", "lib1.Impresora");
-            //$dotnet->Main("ggw");
-        }catch (Exception $e){
-            $e = $e;
-            echo 'error: ' . $e->getMessage(), "\n";
-        }
-
-        try    {
-            $dll = new COM('lib1.Impresora'); //without extension '.dll' for theNameOfDllFile
-            $dll->Function();
-        } catch(Exception $e){
-            echo 'error: ' . $e->getMessage(), "\n";}
-
         parent::__construct();
         $this->load->database();
         $this->load->helper('url');

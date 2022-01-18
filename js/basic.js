@@ -83,6 +83,39 @@ function getexpiry() {
         }
     });
 }
+function getexpiry2(){
+	
+	var gid=document.getElementById('gid').value;
+	var formData = {gid:gid};
+	$.ajax({
+		 type: "POST",
+		 data : formData,
+			url: base_url + "index.php/user/get_expiry2/"+gid,
+		success: function(data){
+			
+		$("#subscription_expired").val(data);
+			
+			},
+		error: function(xhr,status,strErr){
+			//alert(status);
+			}	
+		});
+}
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+            $('#imagePreview').hide();
+            $('#imagePreview').fadeIn(650);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$("#imageUpload").change(function() {
+    readURL(this);
+});
+
 
 function workingDaysBetweenDates() {
 
