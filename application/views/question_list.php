@@ -145,11 +145,12 @@
                                 $qn = 5;
                             }
                             ?>
-                            <a href="<?php echo site_url('qbank/edit_question_' . $qn . '/' . $val['qid']); ?>"><img
-                                        src="<?php echo base_url('images/edit.png'); ?>"></a>
+                            <a href="<?php echo site_url('qbank/edit_question_' . $qn . '/' . $val['qid']); ?>">
+                                <i class="fas fa-edit" style="color:#3472f7;"></i>
+                            </a>
                             <a href="javascript:remove_entry('qbank/remove_question/<?php echo $val['qid']; ?>',
-                                '<?php echo $this->lang->line('warning_remove') ?>');"><img
-                                        src="<?php echo base_url('images/cross.png'); ?>"></a>
+                                '<?php echo $this->lang->line('warning_remove') ?>');">
+                                <i class="fas fa-trash"  style="color:#3472f7;"></i></a>
 
                         </td>
                     </tr>
@@ -313,7 +314,7 @@
                 </table>
             </div>
 
-            <input type="submit" value="Import" style="margin-top:5px;" class="btn btn-default">
+            <input type="submit" value="Import" style="margin-top:5px;" class="btn btn-primary">
 
             <a href="<?php echo base_url(); ?>sample/sample.docx"
                target="new"><?php echo $this->lang->line('click_here'); ?>

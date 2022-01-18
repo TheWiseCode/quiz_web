@@ -31,12 +31,12 @@
             } ?>
 
             <table class="table table-bordered">
-                <tr>
+                <tr style="background: #3472f7; color: white;">
                     <th>#</th>
                     <th><?php echo $this->lang->line('email'); ?></th>
                     <th><?php echo 'Nombre '; ?><?php echo 'Completo'; ?></th>
                     <th><?php echo 'Telefono'; ?> </th>
-                    <th><?php echo 'Codigo de Estudiante'; ?> </th>
+                    <th><?php echo 'Codigo de postulante'; ?> </th>
                     <th><?php echo $this->lang->line('specialty'); ?> </th>
                     <th><?php echo $this->lang->line('action'); ?> </th>
                 </tr>
@@ -77,17 +77,16 @@
                             <a href="<?php echo site_url(
                                 'user2/view_user/' . $val['uid']
                             ); ?>"><i class="fa fa-eye" title="View Profile"></i></a>
-
                             <a href="<?php echo site_url(
                                 'user/edit_user/' . $val['uid']
-                            ); ?>"><img src="<?php echo base_url('images/edit.png'); ?>"></a>
+                            ); ?>"><i class="fa fa-edit"  style="color:#3472f7;"></i></a>
                             <a href="javascript:remove_entry('user/remove_user/<?php echo $val['uid']; ?>',
-                            '<?php echo $this->lang->line('warning_remove') ?>');"><img
-                                        src="<?php echo base_url('images/cross.png'); ?>"></a>
+                            '<?php echo $this->lang->line('warning_remove') ?>');">
+                                <i class="fa fa-trash" style="color:#3472f7;"></i>
+                            </a>
                             <a href="<?php echo site_url(
                                 'user/view_inscription/' . $val['uid']
-                                ); ?>"><img
-                                        src="<?php echo base_url('images/down.png'); ?>"></a>
+                                ); ?>"><i class="fa fa-download"  style="color:#3472f7;"></i></a>
 
                                         
 

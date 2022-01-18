@@ -57,7 +57,7 @@ echo "<span style='float:right;'>".$this->config->item('base_currency_prefix').'
 }
 }else{
 	?>
-<button type="button" class="btn btn-default"><i class="fa fa-check-circle"></i>	<?php echo $this->lang->line('subscribed');?></button>
+<button type="button" class="btn btn-primary"><i class="fa fa-check-circle"></i>	<?php echo $this->lang->line('subscribed');?></button>
 	<?php 
 }
 ?>

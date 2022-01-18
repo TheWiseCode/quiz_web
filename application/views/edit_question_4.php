@@ -92,7 +92,7 @@
                             <input type="text" name="option[]" class="form-control"
                                    value="<?php echo $options[0]['q_option']; ?>">
                         </div>
-                        <button class="btn btn-default"
+                        <button class="btn btn-primary"
                                 type="submit"><?php echo $this->lang->line('submit'); ?></button>
                     </div>
                 </div>

@@ -104,7 +104,7 @@
 	?>			 
 
  
-	<button class="btn btn-default" type="submit"><?php echo $this->lang->line('submit');?></button>
+	<button class="btn btn-primary" type="submit"><?php echo $this->lang->line('submit');?></button>
  &nbsp;&nbsp;&nbsp;&nbsp; <a href="<?php echo site_url('login');?>"><?php echo $this->lang->line('login');?></a>
 		</div>
 </div>

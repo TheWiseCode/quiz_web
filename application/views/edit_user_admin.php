@@ -122,7 +122,7 @@
                    <input type="password" id="repeat_password" name="repeat_password"   value=""  class="form-control" placeholder="<?php echo $this->lang->line('repeat_password');?>"   >
             </div>
 
-   <button class="btn btn-default" type="submit"><?php echo $this->lang->line('submit');?></button>
+   <button class="btn btn-primary" type="submit"><?php echo $this->lang->line('submit');?></button>
 
        </div>
 </div>

@@ -12,7 +12,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" name="search"
                            placeholder="<?php echo $this->lang->line('search'); ?>...">
-                    <span class="input-group-btn">
+                    <span class="input-group-append">
         <button class="btn btn-default" type="submit"><?php echo $this->lang->line('search'); ?></button>
       </span>
 
@@ -64,7 +64,7 @@
                         }
                         ?>
                     </select>
-                    <button class="btn btn-default" type="submit"><?php echo $this->lang->line('filter'); ?></button>
+                    <button class="btn btn-primary" type="submit"><?php echo $this->lang->line('filter'); ?></button>
                 </form>
             </div>
 

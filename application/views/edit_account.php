@@ -75,6 +75,49 @@
 
                         </div>
                         <div class="form-group">
+                            <label class="font-weight-bold"><?php echo $this->lang->line('postulantes'); ?></label>&ensp;<br>
+
+                            <label>
+                                <input type="checkbox" value="Add"
+                                       name="postulantes[]" <?php if (in_array('Add', explode(',', $result['postulantes']))) {
+                                    echo 'checked';
+                                } ?> ><?php echo $this->lang->line('add'); ?>
+                            </label>&ensp;
+                            &ensp;
+                            <label>
+                                <input type="checkbox" value="Edit"
+                                       name="postulantes[]" <?php if (in_array('Edit', explode(',', $result['postulantes']))) {
+                                    echo 'checked';
+                                } ?>><?php echo $this->lang->line('edit'); ?>
+                            </label>&ensp;
+                            <label>
+                                <input type="checkbox" value="View"
+                                       name="postulantes[]" <?php if (in_array('View', explode(',', $result['postulantes']))) {
+                                    echo 'checked';
+                                } ?> ><?php echo $this->lang->line('view'); ?>
+
+                            </label>&ensp;
+                            <label>
+                                <input type="checkbox" value="List"
+                                       name="postulantes[]" <?php if (in_array('List', explode(',', $result['postulantes']))) {
+                                    echo 'checked';
+                                } ?> ><?php echo $this->lang->line('list'); ?>
+                            </label>&ensp;
+                            <label>
+                                <input type="checkbox" value="List_all"
+                                       name="postulantes[]" <?php if (in_array('List_all', explode(',', $result['postulantes']))) {
+                                    echo 'checked';
+                                } ?> ><?php echo $this->lang->line('list_all'); ?>
+                            </label>&ensp;
+                            <label>
+                                <input type="checkbox" value="Remove"
+                                       name="postulantes[]" <?php if (in_array('Remove', explode(',', $result['postulantes']))) {
+                                    echo 'checked';
+                                } ?>><?php echo $this->lang->line('remove'); ?>
+                            </label>&ensp;
+
+                        </div>
+                        <div class="form-group">
                             <label class="font-weight-bold"><?php echo $this->lang->line('quiz'); ?></label>&ensp;<br>
                             <label>
                                 <input type="checkbox" value="Attempt"

@@ -34,8 +34,9 @@
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
                     <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block  " style="background:url('https://savsoftquiz.com/sponserBanner.jpg');background-position: center;
-    background-size: cover;"></div>
+                        <div class="col-lg-6 d-none d-lg-block  " style="background:url('http://localhost:8080/savsoftquiz_v5/photo/logo.png');
+    background-position: center; background-size: 50%; background-repeat: no-repeat;"></div>
+
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
@@ -46,7 +47,7 @@
                                     <h1 class="h4 text-gray-900 mb-4">
                                         <?php if ($hres[0]['setting_value'] == "") { ?>
                                             UAGRM Examenes
-                                            <?php } else {
+                                        <?php } else {
                                             echo $hres[0]['setting_value'];
                                         } ?>
 
@@ -84,7 +85,7 @@
 
                                 </form>
 
-                                <div class="text-center">
+                                <div class="text-center" hidden>
                                     <a class="small"
                                        href="<?php echo site_url('login/forgot'); ?>"><?php echo $this->lang->line('forgot_password'); ?> </a>
                                     <?php
@@ -99,15 +100,12 @@
 
                                 </div>
 
-
-                                <hr>
-
-                                <div class="text-center">
+                                <div class="text-center" hidden>
                                     <a class="btn btn-danger btn-user btn-block"
                                        href="<?php echo site_url('login/pre_registration'); ?>"><?php echo $this->lang->line('register_new_account'); ?></a>
 
                                     <p hidden style="margin-top:40px;""><a class="small" href="https://savsoftquiz.com"
-                                                                    style="float:right;">Powered by Savsoft Quiz
+                                                                           style="float:right;">Powered by Savsoft Quiz
                                         v5.0</a></p>
 
                                 </div>

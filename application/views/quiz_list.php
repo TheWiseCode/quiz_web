@@ -99,7 +99,7 @@
             ?>
 
             <table class="table table-bordered">
-                <tr>
+                <tr style="background: #3472f7; color: white;">
                     <th>#</th>
                     <th><?php echo $this->lang->line('quiz_name'); ?></th>
                     <th><?php echo $this->lang->line('noq'); ?></th>
@@ -140,7 +140,7 @@
                                 if ($val['start_date'] > time()) { ?>
 
                                     <a href="#"
-                                       class="btn btn-default"><?php echo $this->lang->line('upcoming'); ?> </a>
+                                       class="btn btn-primary"><?php echo $this->lang->line('upcoming'); ?> </a>
 
                                     <?php
                                 }
@@ -160,11 +160,12 @@
                             if (in_array('List_all', $acp)) {
                                 ?>
 
-                                <a href="<?php echo site_url('quiz/edit_quiz/' . $val['quid']); ?>"><img
-                                            src="<?php echo base_url('images/edit.png'); ?>"></a>
+                                <a href="<?php echo site_url('quiz/edit_quiz/' . $val['quid']); ?>">
+                                    <i class="fas fa-edit"  style="color:#3472f7;"></i></a>
                                 <a href="javascript:remove_entry('quiz/remove_quiz/<?php echo $val['quid']; ?>',
-                                    '<?php echo $this->lang->line('warning_remove') ?>');"><img
-                                            src="<?php echo base_url('images/cross.png'); ?>"></a>
+                                    '<?php echo $this->lang->line('warning_remove') ?>');">
+                                    <i class="fas fa-trash"  style="color:#3472f7;"></i>
+                                </a>
                                 <?php
                             }
                             ?>

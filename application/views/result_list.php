@@ -104,7 +104,7 @@
             }
             ?>
             <table class="table table-bordered">
-                <tr>
+                <tr style="background: #3472f7; color: white;">
                     <th><?php echo $this->lang->line('result_id'); ?></th>
                     <th><?php echo $this->lang->line('first_name') . ' '; ?><?php echo $this->lang->line('last_name'); ?></th>
                     <th><?php echo $this->lang->line('quiz_name'); ?></th>
@@ -145,14 +145,15 @@
                         <td><?php echo $this->lang->line($val['result_status']); ?></td>
                         <td><?php echo $val['percentage_obtained']; ?>%</td>
                         <td>
-                            <a href="<?php echo site_url('result/view_result/' . $val['rid']); ?>"
-                               class="btn btn-success"><?php echo $this->lang->line('view'); ?> </a>
+                            <a href="<?php echo site_url('result/view_result/' . $val['rid']); ?>">
+                                <i class="fas fa-eye"  style="color:#3472f7;"></i></a>
                             <?php
                             if ($logged_in['su'] == '1') {
                                 ?>
                                 <a href="javascript:remove_entry('result/remove_result/<?php echo $val['rid']; ?>',
-                                '<?php echo $this->lang->line('warning_remove') ?>');"><img
-                                            src="<?php echo base_url('images/cross.png'); ?>"></a>
+                                '<?php echo $this->lang->line('warning_remove') ?>');">
+                                    <i class="fas fa-trash" style="color:#3472f7;"></i>
+                                </a>
                                 <?php
                             }
                             ?>

@@ -12,7 +12,7 @@
     <form method="post" action="<?php echo site_url('assignment/index/');?>">
 	<div class="input-group">
     <input type="text" class="form-control" name="search" placeholder="<?php echo $this->lang->line('search');?>...">
-      <span class="input-group-btn">
+      <span class="input-group-append">
         <button class="btn btn-default" type="submit"><?php echo $this->lang->line('search');?></button>
       </span>
 	 

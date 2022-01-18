@@ -1,7 +1,7 @@
 <div class="container">
 
 
-    <h3><?php echo $title; ?></h3>
+    <h3 class="font-weight-bold"><?php echo $title; ?></h3>
     <div class="row">
 
         <div class="col-lg-6">
@@ -10,7 +10,7 @@
                     <input type="text" class="form-control" name="search" placeholder="<?php echo $this->lang->line(
                         'search'
                     ); ?>...">
-                    <span class="input-group-btn">
+                    <span class="input-group-append">
         <button class="btn btn-default" type="submit"><?php echo $this->lang->line(
                 'search'
             ); ?></button>
@@ -32,12 +32,12 @@
             } ?>
 
             <table class="table table-bordered">
-                <tr>
+                <tr style="background: #3472f7; color: white;">
                     <th>#</th>
                     <th><?php echo $this->lang->line('email'); ?></th>
                     <th><?php echo 'Nombre '; ?><?php echo 'Completo'; ?></th>
                     <th><?php echo 'Telefono'; ?> </th>
-                
+
                     <th><?php echo $this->lang->line('account_type'); ?> </th>
                     <th><?php echo $this->lang->line('action'); ?> </th>
                 </tr>
@@ -55,25 +55,26 @@
                         <td><?php echo $val['email'] . ' ' . $val['wp_user']; ?></td>
                         <td><?php echo $val['first_name'] . ' '; ?><?php echo $val['last_name']; ?></td>
                         <td><?php echo $val['contact_no']; ?></td>
-                        
+
                         <td><?php foreach ($list_account_type as $key => $val_su) {
-                            if($val_su['account_id'] == $val['su'] )
-                            {
-                                echo $val_su['account_name'];
-                            }
-                         }   ?> </td>
+                                if ($val_su['account_id'] == $val['su']) {
+                                    echo $val_su['account_name'];
+                                }
+                            } ?> </td>
 
                         <td>
 
                             <?php /*<a href="<?php echo site_url(
                                 'user2/view_user/' . $val['uid']
-                            ); ?>"><i class="fa fa-eye" title="View Profile"></i></a>*/?>
+                            ); ?>"><i class="fa fa-eye" title="View Profile"></i></a>*/ ?>
 
                             <a href="<?php echo site_url(
                                 'user/edit_user_admin/' . $val['uid']
-                            ); ?>"><img src="<?php echo base_url('images/edit.png'); ?>"></a>
-                            <a href="javascript:remove_entry('user/remove_user_admin/<?php echo $val['uid']; ?>');"><img
-                                        src="<?php echo base_url('images/cross.png'); ?>"></a>
+                            ); ?>"><i class="fas fa-edit"  style="color:#3472f7;"></i></a>
+                            &ensp;
+                            <a href="javascript:remove_entry('user/remove_user_admin/<?php echo $val['uid']; ?>');">
+                                <i class="fas fa-trash"  style="color:#3472f7;"></i>
+                            </a>
 
                         </td>
                     </tr>
@@ -130,7 +131,7 @@
                 <input type="hidden" name="size" value="3500000">
                 <input type="file" name="xlsfile" style="width:150px;float:left;margin-left:10px;">
                 <div style="clear:both;margin-bottom:15px;"></div>
-                <input type="submit" value="Import" style="margin-top:5px;" class="btn btn-default">
+                <input type="submit" value="Import" style="margin-top:5px;" class="btn btn-primary">
 
                 <a href="<?php echo base_url(); ?>sample/ejemplo lista de estudiantes.xls"
                    target="new"><?php echo $this->lang->line('click_here'); ?></a> <?php echo $this->lang->line('upload_excel_info'); ?>
@@ -140,4 +141,4 @@
         </div>
 
 
-    </div>*/?>
+    </div>*/ ?>

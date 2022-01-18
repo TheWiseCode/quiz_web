@@ -23,12 +23,12 @@
                         <td><?php echo $val['account_name']; ?></td>
                         <td>
                             <a href="<?php echo site_url('Account/edit_account/' . $val['account_id']); ?>">
-                                <img src="<?php echo base_url('images/edit.png'); ?>"></a>
+                                <i class="fas fa-edit"  style="color:#3472f7;"></i></a>
                             <?php
-                            if ($val['account_id'] != 1 && $val['account_id'] != 2) {
+                            if ($val['account_id'] < 1 | $val['account_id'] > 3) {
                                 ?>
                                 <a href="<?php echo site_url('Account/pre_remove_account/' . $val['account_id']); ?>"><img
-                                            src="<?php echo base_url('images/cross.png'); ?>"></a>
+                                    <i class="fas fa-trash"  style="color:#3472f7;"></i></a>
                             <?php } ?>
 
                         </td>

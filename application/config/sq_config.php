@@ -1,7 +1,7 @@
 <?php
 $sq_base_url = 'http://localhost:8080/savsoftquiz_v5/';
 $sq_hostname = 'localhost';
-$sq_dbname = 'quiz';
+$sq_dbname = 'quiz1';
 $sq_dbusername = 'root';
 $sq_dbpassword = '';
 ?>

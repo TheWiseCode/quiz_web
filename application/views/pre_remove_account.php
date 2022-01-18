@@ -40,7 +40,7 @@
 
  
 <button class="btn btn-danger" type="submit"><?php echo $this->lang->line('submit');?></button>
-<a href="<?php echo site_url('account');?>" class="btn btn-default"  ><?php echo $this->lang->line('cancel');?></a>
+<a href="<?php echo site_url('account');?>" class="btn btn-primary"  ><?php echo $this->lang->line('cancel');?></a>
  
 </td>
 </tr>

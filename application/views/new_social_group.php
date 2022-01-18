@@ -11,7 +11,7 @@
 <form method="post" action="<?php echo site_url('social_group/add_new');?>" >
 <br><br>
 <div class="form-group">
-        <label><?php echo $this->lang->line('group_name');?></label>
+        <label class="font-weight-bold"><?php echo $this->lang->line('group_name');?></label>
         <input type="text" name="sg_name" class="form-control"  value="" required >
 </div>
 

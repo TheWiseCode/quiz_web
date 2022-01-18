@@ -134,7 +134,7 @@ function checkFileName(form) {
   var ok = true;
 
   if (!form.elements.family.value) {
-    alert("The font name is required");
+    alert("El nombre de la fuente es obligatorio");
     form.elements.family.focus();
     return false;
   }

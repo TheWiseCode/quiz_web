@@ -49,10 +49,12 @@
                         </td>
                         <td><?php echo $val['valid_for_days']; ?></td>
                         <td>
-                            <a href="<?php echo site_url('user/edit_group/' . $val['gid']); ?>"><img
-                                        src="<?php echo base_url('images/edit.png'); ?>"></a>
-                            <a href="<?php echo site_url('user/pre_remove_group/' . $val['gid']); ?>"><img
-                                        src="<?php echo base_url('images/cross.png'); ?>"></a>
+                            <a href="<?php echo site_url('user/edit_group/' . $val['gid']); ?>">
+                                <i class="fas fa-edit"  style="color:#3472f7;"></i>
+                            </a>
+                            <a href="<?php echo site_url('user/pre_remove_group/' . $val['gid']); ?>">
+                                <i class="fas fa-trash"  style="color:#3472f7;"></i>
+                            </a>
 
                         </td>
                     </tr>

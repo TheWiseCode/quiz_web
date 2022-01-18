@@ -350,12 +350,12 @@ class User_model extends CI_Model
         $logged_in = $this->session->userdata('logged_in');
         if ($logged_in['uid'] != '1') {
             $uid = $logged_in['uid'];
-            $this->db->where('savsoft_users.inserted_by', $uid);
+            //$this->db->where('savsoft_users.inserted_by', $uid);
         }
 
         $this->db->limit($this->config->item('number_of_rows'), $limit);
         $this->db->order_by('savsoft_users.uid', 'desc');
-        $this->db->where('savsoft_users.su !=', 1);
+        $this->db->where('savsoft_users.su =', 2);
         $this->db->where('savsoft_users.user_status =', 'Active');
         
 
@@ -379,12 +379,12 @@ class User_model extends CI_Model
         if ($logged_in['uid'] != '1') {
             $uid = $logged_in['uid'];
             $this->db->where('savsoft_users.inserted_by', $uid);
-            $this->db->where('savsoft_users.su', $uid);
+            //$this->db->where('savsoft_users.su', $uid);
         }
 
         $this->db->limit($this->config->item('number_of_rows'), $limit);
         $this->db->order_by('savsoft_users.uid', 'desc');
-        $this->db->where('savsoft_users.su !=', 2);
+        $this->db->where('savsoft_users.su <>', 2);
         $this->db->where('savsoft_users.user_status =', 'Active');
         //$this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');
         //$this->db->join('account_type', 'savsoft_users.su=account_type.account_id');
@@ -397,7 +397,7 @@ class User_model extends CI_Model
         $logged_in = $this->session->userdata('logged_in');
         if ($logged_in['uid'] != '1') {
             $uid = $logged_in['uid'];
-            $this->db->where('savsoft_users.inserted_by', $uid);
+            //$this->db->where('savsoft_users.inserted_by', $uid);
         }
 
         $this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');

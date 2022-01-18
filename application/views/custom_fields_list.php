@@ -69,10 +69,11 @@
                     <td><?php echo $val['field_title']; ?></td>
                     <td>
                         <a href="<?php echo site_url('user/edit_custom/' . $val['field_id']); ?>">
-                            <img src="<?php echo base_url('images/edit.png'); ?>"></a>
+                            <i class="fas fa-edit"  style="color:#3472f7;"></i></a>
 
-                        <a href="<?php echo site_url('user/remove_custom/' . $val['field_id']); ?>"><img
-                                    src="<?php echo base_url('images/cross.png'); ?>"></a>
+                        <a href="<?php echo site_url('user/remove_custom/' . $val['field_id']); ?>">
+                            <i class="fas fa-trash"  style="color:#3472f7;"></i>
+                        </a>
                     </td>
                 </tr>
             <?php } ?>

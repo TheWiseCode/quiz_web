@@ -38,8 +38,9 @@
                             <?php echo $val['code_career']; ?>
                         </td>
                         <td>
-                            <a href="<?php echo site_url('user/edit_career/' . $val['id']); ?>"><img
-                                        src="<?php echo base_url('images/edit.png'); ?>"></a>
+                            <a href="<?php echo site_url('user/edit_career/' . $val['id']); ?>">
+                                <i class="fas fa-edit"  style="color:#3472f7;"></i>
+                            </a>
                             
                         </td>
                     </tr>

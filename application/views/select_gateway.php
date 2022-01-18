@@ -160,7 +160,7 @@ echo $this->lang->line('paytoattempt')." '".$quiz['quiz_name']."'";
 <input type="hidden" name="return" value="<?php echo site_url('payment_gateway_2/success');?>">
 <input type="hidden" name="cancel_return" value="<?php echo site_url('payment_gateway_2/cancel');?>">
 <input type="hidden" name="amount" value="<?php echo $pricek*$this->config->item('paypal_conversion');?>">
-<input  class="btn btn-default" value="<?php echo $this->lang->line('paynow');?>"  type="submit"  name="submit" alt="">
+<input  class="btn btn-primary" value="<?php echo $this->lang->line('paynow');?>"  type="submit"  name="submit" alt="">
 </form>
 
  
@@ -197,7 +197,7 @@ echo $this->lang->line('paytoattempt')." '".$quiz['quiz_name']."'";
   <input type='hidden' name='custom' value="<?php echo $user['uid'].'-'.str_replace(',',':',$gids).'-'.$quid;?>" />
   <input type='hidden' name='li_0_name' value="<?php echo $this->lang->line('quiz_subscription');?>" />
   <input type='hidden' name='li_0_price' value="<?php echo $pricek*$this->config->item('checkout_conversion');?>" />
-  <input name='submit' type='submit' class="btn btn-default" value="<?php echo $this->lang->line('paynow');?>" />
+  <input name='submit' type='submit' class="btn btn-primary" value="<?php echo $this->lang->line('paynow');?>" />
 </form>
 
   
@@ -255,7 +255,7 @@ $hash = hash('sha512', $hash_string);
 		  <input type="hidden"   name="service_provider" value="payu_paisa" size="64" />
 <input  type="hidden"  name="udf1" value="<?php echo $user['uid'].'-'.str_replace(',',':',$gids).'-'.$quid;?>">
  
- <input type="submit" value="<?php echo $this->lang->line('paynow');?>" class="btn btn-default" >
+ <input type="submit" value="<?php echo $this->lang->line('paynow');?>" class="btn btn-primary" >
 </form>
 
   
@@ -314,7 +314,7 @@ $checkSum = getChecksumFromArray($paramList,PAYTM_MERCHANT_KEY);
 			<input type="hidden" name="CALLBACK_URL" value="<?php echo site_url('payment_gateway_2/success/paytm'); ?>">
 			</tbody>
 		</table>
-		<input type="submit" value="<?php echo $this->lang->line('paynow');?>" class="btn btn-default" > 
+		<input type="submit" value="<?php echo $this->lang->line('paynow');?>" class="btn btn-primary" >
 	</form>
  
  <?php 

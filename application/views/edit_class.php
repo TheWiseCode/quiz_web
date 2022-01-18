@@ -38,7 +38,7 @@ if($resultstatus){ echo "<div class='alert alert-success'>".$resultstatus."</div
 													 
 									     <div class="form-group">
                                             
- <input type="submit" value="Submit"  name="submit_class"   class="btn btn-default"> 
+ <input type="submit" value="Submit"  name="submit_class"   class="btn btn-primary">
                                          </div>
 						
 										 

@@ -181,7 +181,7 @@
                         <?php
                         if ($para == 1) {
                             ?>
-                            <button class="btn btn-default" type="button"
+                            <button class="btn btn-primary" type="button"
                                     onClick="javascript:parags();"><?php echo $this->lang->line('submit&add'); ?></button>
                         <?php } ?>
 

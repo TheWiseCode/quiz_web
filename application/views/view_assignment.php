@@ -146,7 +146,7 @@ $acp=explode(',',$logged_in['assignment']);
 					<input type="file" required  name="userfile"    > 
 			</div>
 			
-			<button class="btn btn-default" type="submit"><?php echo $this->lang->line('submit');?></button>
+			<button class="btn btn-primary" type="submit"><?php echo $this->lang->line('submit');?></button>
  </form>
  </div>
  

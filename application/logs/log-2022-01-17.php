@@ -689,3 +689,17 @@ ERROR - 2022-01-17 21:19:33 --> Severity: Warning --> Division by zero C:\xampp\
 ERROR - 2022-01-17 21:20:00 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 226
 ERROR - 2022-01-17 21:20:15 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 222
 ERROR - 2022-01-17 21:28:13 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 222
+ERROR - 2022-01-17 21:31:05 --> Query error: Table 'quiz.university' doesn't exist - Invalid query: SELECT *
+FROM `university`
+ERROR - 2022-01-17 21:31:05 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 296
+ERROR - 2022-01-17 21:34:02 --> Query error: Table 'quiz.university' doesn't exist - Invalid query: SELECT *
+FROM `university`
+ERROR - 2022-01-17 21:34:03 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 296
+ERROR - 2022-01-17 21:34:11 --> Query error: Table 'quiz.specialties' doesn't exist - Invalid query: SELECT *
+FROM `specialties`
+ERROR - 2022-01-17 21:34:11 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 300
+ERROR - 2022-01-17 21:49:55 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-17 21:56:15 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-17 22:17:16 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-17 22:37:06 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-17 23:30:16 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215

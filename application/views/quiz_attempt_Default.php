@@ -27,7 +27,7 @@
 
     function Tick() {
         if (TotalSeconds <= 0) {
-            alert("Time's up!")
+            alert("¡Se acabó el tiempo!")
             return;
         }
         TotalSeconds -= 1;
@@ -56,7 +56,7 @@
     setTimeout(submitform, '<?php echo $seconds * 1000;?>');
 
     function submitform() {
-        alert('Time Over');
+        alert('Se acabó el tiempo');
         window.location = "<?php echo site_url('quiz/submit_quiz/');?>";
     }
 

@@ -1,11 +1,4 @@
 <div class="container">
-
-    <button type="button" onclick="launchBiometricReader()"> Lanzar lector </button>
-    <script>
-        function launchBiometricReader(){
-            window.open('testus:hola');
-        }
-    </script>
     <div id="update_notice"></div>
 
     <div class="row">

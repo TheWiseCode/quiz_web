@@ -65,21 +65,24 @@
                             $acp = explode(',', $logged_in['study_material']);
                             if (in_array('Edit', $acp)) {
                                 ?>
-                                <a href="<?php echo site_url('study_material/edit_studymaterial/' . $val['stid']); ?>"><?php echo $this->lang->line('edit'); ?></a>
+                                <a href="<?php echo site_url('study_material/edit_studymaterial/' . $val['stid']); ?>">
+                                    <i class="fas fa-edit"  style="color:#3472f7;"></i></a>
                             <?php } ?>
                             <?php
                             $acp = explode(',', $logged_in['study_material']);
                             if (in_array('View', $acp)) {
                                 ?>
 
-                                <a href="<?php echo site_url('study_material/view_studymaterial/' . $val['stid']); ?>"><?php echo $this->lang->line('view'); ?></a>
+                                <a href="<?php echo site_url('study_material/view_studymaterial/' . $val['stid']); ?>">
+                                    <i class="fas fa-eye"  style="color:#3472f7;"></i></a>
                             <?php } ?>
                             <?php
                             $acp = explode(',', $logged_in['study_material']);
                             if (in_array('Remove', $acp)) {
                                 ?>
 
-                                <a href="<?php echo site_url('study_material/remove_studymaterial/' . $val['stid']); ?>"><?php echo $this->lang->line('remove'); ?></a>
+                                <a href="<?php echo site_url('study_material/remove_studymaterial/' . $val['stid']); ?>">
+                                    <i class="fas fa-trash"  style="color:#3472f7;"></i></a>
                             <?php } ?>
                         </td>
 

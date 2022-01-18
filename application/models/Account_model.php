@@ -9,6 +9,7 @@ class Account_model extends CI_Model
 
         // $this->db->limit($this->config->item('number_of_rows'),$limit);
         //$this->db->order_by('account_id','desc');
+        $this->db->where('account_id <>', 2);
         $query = $this->db->get('account_type');
         return $query->result_array();
 
@@ -38,7 +39,9 @@ class Account_model extends CI_Model
         if ($this->input->post('questions')) {
             $userdata['questions'] = implode(',', $this->input->post('questions'));
         }
-
+        if ($this->input->post('postulantes')) {
+            $userdata['postulantes'] = implode(',', $this->input->post('postulantes'));
+        }
         $this->db->insert('account_type', $userdata);
         //print_r($this->db->last_query()); exit;
 
@@ -91,6 +94,11 @@ class Account_model extends CI_Model
             $userdata['appointment'] = implode(',', $this->input->post('appointment'));
         } else {
             $userdata['appointment'] = "";
+        }
+        if ($this->input->post('postulantes')) {
+            $userdata['postulantes'] = implode(',', $this->input->post('postulantes'));
+        } else {
+            $userdata['postulantes'] = "";
         }
         $this->db->where('account_id', $account_id);
         $this->db->update('account_type', $userdata);

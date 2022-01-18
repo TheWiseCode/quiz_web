@@ -114,7 +114,7 @@ $lang['add_new1'] = "Agregar nueva";
 $lang['add_new2'] = "Agregar nuevo";
 $lang['edit'] = "Editar";
 $lang['search'] = "Buscar";
-$lang['submit'] = "Enviar";
+$lang['submit'] = "Guardar";
 $lang['share_on'] = "Compartir resultado en la red Social";
 $lang['list'] = "Lista";
 $lang['result'] = "Resultado ";
@@ -496,4 +496,6 @@ $lang['gender_select'] = "Seleccionar Género";
 $lang['address'] = "Dirección";
 $lang['select_university'] = "Seleccionar Universidad";
 $lang['select_specialties'] = "Seleccionar Especialidad";
+$lang['account_updated'] = "Tipo de cuenta actualizado";
+$lang['postulantes'] = "Postulantes";
 
