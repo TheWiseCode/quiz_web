@@ -6,9 +6,10 @@
                                                                        class="img-circle img-responsive"
                                                                        src="<?php echo base_url() . $result['photo']; ?>?s=100" width="100" height="100"></a>
                                                                        <style type = "text/css"> </style>
+                                                                       
 
-                                                       
-
+                                                     
+              
 
 
         </div>
@@ -63,6 +64,7 @@
 
         </div><!--/col-3-->
         <div class="col-sm-9">
+            
             <h3> <?php echo $this->lang->line('category_prof'); ?> </h3>
             <div class="table-responsive">
                 <table class="table table-striped">

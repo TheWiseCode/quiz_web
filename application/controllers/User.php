@@ -37,7 +37,8 @@ class User extends CI_Controller
         $data['result'] = $this->user_model->user_list($limit);
         $data['career_list'] = $this->user_model->get_career_all();
         $data['group_list'] = $this->user_model->get_group_all($limit);
-        
+        $data['speciality_list'] = $this->user_model->get_specialties_all();
+        $data['university_list'] = $this->user_model->get_university_all();
        	
         	
             
@@ -108,6 +109,54 @@ class User extends CI_Controller
         $this->load->view('new_user2', $data);
         $this->load->view('footer', $data);
     }
+    function cargar_archivo() {
+        
+        $p = $_FILES['wizard-picture'];
+        
+        $name = time();
+        $mi_imagen = 'wizard-picture';
+        
+        $config['upload_path'] = "photo/users";
+        $config['file_name'] = $name . "";
+        $config['allowed_types'] = "gif|jpg|jpeg|png";
+        $config['max_size'] = "50000";
+        $config['max_width'] = "2000";
+        $config['max_height'] = "2000";
+        
+       
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+        
+        if (!$this->upload->do_upload($mi_imagen)) {
+            //*** ocurrio un error
+            //$data['uploadError'] = $this->upload->display_errors();
+            //echo $this->upload->display_errors();
+            $photo = "";
+            return;
+        }
+
+        $data['uploadSuccess'] = $this->upload->data();
+        //$photo = $data['uploadSuccess']['full_path'];
+        $photo = 'photo/users/' . $data['uploadSuccess']['orig_name'];
+
+        	
+            
+        /*if(!$this->user_model->submit_photo($uid,$photo))
+            {
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                        $this->lang->line('error_to_update_data') .
+                        ' </div>'
+                );
+                redirect('user2/view_user/' . $uid);
+            }*/
+	
+        return $photo;
+        
+
+    }
+
 
     public function insert_user()
     {
@@ -137,6 +186,11 @@ class User extends CI_Controller
                 redirect('user/new_user/');
             }
         }
+
+        
+        
+        $data_photo = $this->cargar_archivo();
+        
         $this->form_validation->set_rules('password', 'Password', 'required');
         $this->form_validation->set_rules('repeat_password', 'Password', 'required');
         if ($this->form_validation->run() == false) {
@@ -148,7 +202,7 @@ class User extends CI_Controller
             );
             redirect('user/new_user/');
         } else {
-            if ($this->user_model->insert_user()) {
+            if ($this->user_model->insert_user($data_photo)) {
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-success'>" .
@@ -339,6 +393,7 @@ class User extends CI_Controller
         
         $data['custom_form_user'] = $this->user_model->custom_form_user($uid);
         $data['result'] = $this->user_model->get_user($uid);
+        
         $data['custom_form'] = $this->user_model->custom_form('All');
         $this->load->model('payment_model');
         $data['payment_history'] = $this->payment_model->get_payment_history(
@@ -347,8 +402,10 @@ class User extends CI_Controller
         // fetching group list
         $data['career_list'] = $this->user_model->get_career_all();
         $data['group_list'] = $this->user_model->group_list();
-        
+        $data['university_list']= $this->user_model->get_university_all();
+        $data['speciality_list']= $this->user_model->get_specialties_all();
         $data['account_type'] = $this->account_model->account_list(0);
+       	
         $this->load->view('header', $data);
         if ($logged_in['su'] == '1') {
             $this->load->view('edit_user', $data);
@@ -529,6 +586,52 @@ class User extends CI_Controller
         $this->load->view('header', $data);
         $this->load->view('career_list', $data);
         $this->load->view('footer', $data);
+    }
+    public function view_inscription($uid){
+        //$uid = 22;
+        // fetching group list
+        //$data['career_list'] = $this->user_model->career_list();
+        //$data['title'] = $this->lang->line('career_list');
+        //$this->load->view('header', $data);
+        try{
+        $data['result'] = $this->user_model->get_user($uid);
+        
+        $data['career_list'] = $this->user_model->get_career_all();
+        $data['group_list'] = $this->user_model->get_group_all($limit);
+        $data['speciality_list'] = $this->user_model->get_specialties_all();
+       	
+        $data['university_list'] = $this->user_model->get_university_all();
+       
+        	
+
+
+        
+        //$view = $this->load->view('view_inscription', $data2, TRUE);
+        
+        
+        $this->load->library('pdf');
+        $this->pdf->load_html(utf8_decode($this->load->view('view_inscription', $data,TRUE)));
+        $this->pdf->set_paper('A4','landscape');
+        $this->pdf->render();
+        $filename = date('Y-M-d_H:i:s', time()) . ".pdf";
+        $this->pdf->stream($filename);
+        
+
+
+        }catch(Exception $e){
+            //echo 'Error'  . $e->getMessage();
+        }
+        
+        
+
+
+
+        //$this->pdf->render();
+        //$filename = date('Y-M-d_H:i:s', time()) . ".pdf";
+        //$this->pdf->stream($filename);
+
+
+        //$this->load->view('footer', $data);
     }
 
     public function add_new_group()

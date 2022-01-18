@@ -494,10 +494,10 @@ class User_model extends CI_Model
         }
     }
 
-    function insert_user()
+    function insert_user($data_photo)
     {
         $logged_in = $this->session->userdata('logged_in');
-        $id_first = $this->input->post('first_opt_univ_degree');
+        /*$id_first = $this->input->post('first_opt_univ_degree');
         $id_second = $this->input->post('second_opt_univ_degree');
 
         $this->db->where('id', $id_first);
@@ -506,7 +506,7 @@ class User_model extends CI_Model
 
         $this->db->where('id', $id_second);
         $query = $this->db->get('university_careers');
-        $name_second_career = $query->row_array();
+        $name_second_career = $query->row_array();*/
 
         $userdata = [
             'email' => $this->input->post('email'),
@@ -516,15 +516,21 @@ class User_model extends CI_Model
             'first_name' => $this->input->post('first_name'),
             'last_name' => $this->input->post('last_name'),
             'cod_student' => $this->input->post('code_student'),
-            'first_opt_univ_degree' => $name_first_career['name'],
-            'second_opt_univ_degree' => $name_second_career['name'],
+            //'first_opt_univ_degree' => $name_first_career['name'],
+            //'second_opt_univ_degree' => $name_second_career['name'],
             'contact_no' => $this->input->post('contact_no'),
             'gid' => $this->input->post('gid'),
             'subscription_expired' => strtotime(
                 $this->input->post('subscription_expired')
             ),
             'su' => 2,
-            'photo' => 'photo/users/photo.jpeg',
+            'photo' => $data_photo,
+            'civil_status' => $this->input->post('civil_status'),
+            'sexo' => $this->input->post('gender'),
+            'address' => $this->input->post('address'),
+            'nationality' => $this->input->post('nationality'),
+            'id_university'=> $this->input->post('university'),
+            'id_speciality' => $this->input->post('specialties'),
         ];
         	
             
@@ -771,7 +777,7 @@ class User_model extends CI_Model
     function update_user($uid)
     {
         $logged_in = $this->session->userdata('logged_in');
-        $id_first = $this->input->post('first_opt_univ_degree');
+        /*$id_first = $this->input->post('first_opt_univ_degree');
         $id_second = $this->input->post('second_opt_univ_degree');
 
         $this->db->where('id', $id_first);
@@ -780,7 +786,7 @@ class User_model extends CI_Model
 
         $this->db->where('id', $id_second);
         $query = $this->db->get('university_careers');
-        $name_second_career = $query->row_array();
+        $name_second_career = $query->row_array();*/
 
         $userdata = [
             'first_name' => $this->input->post('first_name'),
@@ -789,11 +795,17 @@ class User_model extends CI_Model
             'ci' => $this->input->post('ci'),
             'exp' =>  $this->input->post('exp'),
             'cod_student' => $this->input->post('code_student'),
-            'first_opt_univ_degree' =>  $name_first_career['name'],
-            'second_opt_univ_degree' =>  $name_second_career['name'],
+            //'first_opt_univ_degree' =>  $name_first_career['name'],
+            //'second_opt_univ_degree' =>  $name_second_career['name'],
             'contact_no' => $this->input->post('contact_no'),
             'gid' => $this->input->post('gid'),
             'subscription_expired' => $this->input->post('subscription_expired'),
+            'civil_status' => $this->input->post('civil_status'),
+            'sexo' => $this->input->post('gender'),
+            'address' => $this->input->post('address'),
+            'nationality' => $this->input->post('nationality'),
+            'id_university'=> $this->input->post('university'),
+            'id_speciality' => $this->input->post('specialties'),
             
         ];
         if ($logged_in['su'] == '1') {

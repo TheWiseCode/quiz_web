@@ -59,6 +59,37 @@
 					<label ><?php echo $this->lang->line('last_name');?></label> 
 					<input type="text"   name="last_name"  class="form-control"  value="<?php echo $result['last_name'];?>"  placeholder="<?php echo $this->lang->line('last_name');?>"   autofocus>
 			</div>
+			<div class="form-group">
+                            <label><?php echo $this->lang->line('civil_status_select'); ?></label>
+                            <select class="form-control" name="civil_status" id="civil_status"  placeholder="<?php echo $this->lang->line('civil_status'); ?>">
+
+                                <option <?php if ($result['civil_status']=='Soltero(a)'){ echo selected ;} ?> value="Soltero(a)">Soltero(a)</option>
+                                <option <?php if ($result['civil_status']=='Casado(a)'){ echo selected ;} ?> value="Casado(a)">Casado(a)</option>
+                                <option <?php if ($result['civil_status']=='Viduo(a)'){ echo selected ;} ?> value="Viduo(a)">Viduo(a)</option>
+                                <option <?php if ($result['civil_status']=='Divorciado(a)'){ echo selected ;} ?> value="Divorciado(a)">Divorciado(a)</option>
+                            
+                          
+                            </select>
+                        </div>
+                        <div  class="form-group">
+                            <label><?php echo $this->lang->line('gender_select'); ?></label>
+                            <select class="form-control" name="gender" id="gender"  placeholder="<?php echo $this->lang->line('gender'); ?>">
+
+                                <option  <?php if ($result['sexo']=='Femenino'){ echo selected ;} ?> value="Femenino">Femenino</option>
+                                <option  <?php if ($result['sexo']=='Masculino'){ echo selected ;} ?> value="Masculino">Masculino</option>
+                             
+                            
+                          
+                            </select>
+                        </div>
+						<div class="form-group">	 
+				<label   ><?php echo $this->lang->line('address');?></label>  
+					<input type="text"  name="address"  class="form-control"  value="<?php echo $result['address'];?>"  placeholder="<?php echo $this->lang->line('address');?>"   autofocus>
+			</div>
+			<div class="form-group">	 
+				<label   ><?php echo $this->lang->line('address');?></label>  
+					<input type="text"  name="nationality"  class="form-control"  value="<?php echo $result['nationality'];?>"  placeholder="<?php echo $this->lang->line('nationality');?>"   autofocus>
+			</div>
 
 			<div class="form-group">
                             <label ><?php echo "Codigo de estudiante"; ?></label>
@@ -67,21 +98,35 @@
 
                         </div>
 
-			<div class="form-group">
-                            <label><?php echo $this->lang->line('select_first_career'); ?></label>
-                            <select class="form-control" name="first_opt_univ_degree" id="first_opt_univ_degree">
+			<div  class="form-group">
+                            <label><?php echo $this->lang->line('select_university'); ?></label>
+                            <select class="form-control" name="university" id="university">
                                 <?php
-                                foreach ($career_list as $key => $val) {
+                                foreach ($university_list as $key => $val) {
                                     ?>
 
-                                    <option <?php if ($result['first_opt_univ_degree']=== $val['name']){ echo selected;} ?> value="<?php echo $val['id']; ?>"><?php echo $val['name']; ?></option>
+                                    <option <?php if ($result['id_university']=== $val['id']){ echo selected;} ?> value="<?php echo $val['id']; ?>"><?php echo $val['name']; ?></option>
                                     <?php
                                 }
                                 ?>
                             </select>
                         </div>
 
-                        <div class="form-group">
+			<div class="form-group">
+                            <label><?php echo $this->lang->line('select_speciality'); ?></label>
+                            <select class="form-control" name="specialties" id="specialties">
+                                <?php
+                                foreach ($speciality_list as $key => $val) {
+                                    ?>
+
+                                    <option <?php if ($result['id_speciality']=== $val['id']){ echo selected;} ?> value="<?php echo $val['id']; ?>"><?php echo $val['name']; ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+
+                        <div hidden class="form-group">
                             <label><?php echo $this->lang->line('select_second_career'); ?></label>
                             <select class="form-control" name="second_opt_univ_degree" id="second_opt_univ_degree">
                                 <?php

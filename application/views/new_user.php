@@ -1,12 +1,22 @@
 <div class="container">
     <h3><?php echo $title; ?></h3>
     <div class="row">
-        <form method="post" action="<?php echo site_url('user/insert_user/'); ?>">
+        <form enctype="multipart/form-data" method="post" action="<?php echo site_url('user/insert_user/'); ?>">
+        
+        <div class="picture-container">
+        <div class="picture">
+            <img src="<?php echo base_url().'photo/users/photo.jpeg' ?>" class="picture-src" id="wizardPicturePreview" title="">
+            <input type="file" id="wizard-picture" name="wizard-picture" class="">
+        </div>
 
+    </div>
             <div class="col-md-8">
                 <br>
+                
                 <div class="login-panel panel panel-default">
+                    
                     <div class="panel-body">
+                        
                         <?php
                         if ($this->session->flashdata('message')) {
                             echo $this->session->flashdata('message');
@@ -47,7 +57,7 @@
                             <input type="text" name="last_name" class="form-control"
                                    placeholder="<?php echo $this->lang->line('last_name'); ?>" autofocus>
                         </div>
-                        <div hidden class="form-group">
+                        <div class="form-group">
                             <label><?php echo $this->lang->line('civil_status_select'); ?></label>
                             <select class="form-control" name="civil_status" id="civil_status"  placeholder="<?php echo $this->lang->line('civil_status'); ?>">
 
@@ -59,7 +69,7 @@
                           
                             </select>
                         </div>
-                        <div hidden class="form-group">
+                        <div  class="form-group">
                             <label><?php echo $this->lang->line('gender_select'); ?></label>
                             <select class="form-control" name="gender" id="gender"  placeholder="<?php echo $this->lang->line('gender'); ?>">
 
@@ -70,13 +80,13 @@
                           
                             </select>
                         </div>
-                        <div hidden class="form-group">
+                        <div  class="form-group">
                             <label for="inputEmail"
                                    class="sr-only"><?php echo $this->lang->line('address'); ?></label>
                             <input type="text" name="address" class="form-control"
                                    placeholder="<?php echo $this->lang->line('address'); ?>" autofocus>
                         </div>
-                        <div hidden class="form-group">
+                        <div  class="form-group">
                             <label for="inputEmail"
                                    class="sr-only"><?php echo $this->lang->line('nationality'); ?></label>
                             <input type="text" name="nationality" class="form-control"
@@ -88,7 +98,7 @@
                                    placeholder="<?php echo "Codigo de estudiante"; ?>" autofocus>
 
                         </div>
-                        <div class="form-group">
+                        <div hidden class="form-group">
                             <label><?php echo $this->lang->line('select_first_career'); ?></label>
                             <select class="form-control" name="first_opt_univ_degree" id="first_opt_univ_degree">
                                 <?php
@@ -102,7 +112,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div hidden class="form-group">
                             <label><?php echo $this->lang->line('select_second_career'); ?></label>
                             <select class="form-control" name="second_opt_univ_degree" id="second_opt_univ_degree">
                                 <?php
@@ -117,7 +127,7 @@
                         </div>
                       
 
-                        <div hidden class="form-group">
+                        <div  class="form-group">
                             <link  type="text/css" href="select2/select2.min.css">
                             <script src="select2/select2.min.js"></script>
                             <label><?php echo $this->lang->line('select_university'); ?></label>
@@ -132,7 +142,7 @@
                                 ?>
                             </select>
                         </div>
-                        <div hidden class="form-group">
+                        <div  class="form-group">
                             <label><?php echo $this->lang->line('select_specialties'); ?></label>
                             <select class="form-control" name="specialties" id="specialties">
                                 <?php
@@ -210,7 +220,20 @@
 
 </script>
 <script>
-        $(document).ready(function(){
-            $('#university').select2();
-        });
+     $(document).ready(function(){
+// Prepare the preview for profile picture
+    $("#wizard-picture").change(function(){
+        readURL(this);
+    });
+});
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
 </script>

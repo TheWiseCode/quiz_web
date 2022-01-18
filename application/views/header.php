@@ -37,6 +37,70 @@
         .sidebar {
             width: 16rem !important;
         }
+
+
+
+       
+            /* h1 {
+                font-size: 20px;
+                text-align: center;
+                margin: 20px 0 20px;
+            }
+            h1 small {
+                display: block;
+                font-size: 15px;
+                padding-top: 8px;
+                color: gray;
+            } */
+            .picture-container{
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+.picture{
+    width: 106px;
+    height: 106px;
+    background-color: #999999;
+    border: 4px solid #CCCCCC;
+    color: #FFFFFF;
+    border-radius: 0%;
+    margin: 0px auto;
+    overflow: hidden;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+.picture:hover{
+    border-color: #2ca8ff;
+}
+.content.ct-wizard-green .picture:hover{
+    border-color: #05ae0e;
+}
+.content.ct-wizard-blue .picture:hover{
+    border-color: #3472f7;
+}
+.content.ct-wizard-orange .picture:hover{
+    border-color: #ff9500;
+}
+.content.ct-wizard-red .picture:hover{
+    border-color: #ff3b30;
+}
+.picture input[type="file"] {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0 !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.picture-src{
+    width: 100%;
+    
+}
+
+      
     </style>
     <script src="<?php echo base_url(); ?>vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -343,6 +407,8 @@ $hres = $hquery->result_Array();
                            href="<?php echo site_url('qbank/level_list'); ?>"><?php echo $this->lang->line('level_list'); ?></a>
                         <a class="collapse-item"
                            href="<?php echo site_url('user/career_list'); ?>"><?php echo $this->lang->line('career_list'); ?></a>
+                           <a class="collapse-item"
+                           href="<?php echo site_url('user/view_inscription'); ?>"><?php echo $this->lang->line('view'); ?></a>
                     
                         <a class="collapse-item"
                            href="<?php echo site_url('account'); ?>"><?php echo $this->lang->line('account_type'); ?></a></a>
