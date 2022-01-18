@@ -169,7 +169,7 @@ $hres = $hquery->result_Array();
         <div style="text-align: center;"><span style="color:#ffffff;"><img style="width: 50%;"
                                                                            src="<?php echo base_url() . 'photo/logo1.png' ?>"
                                                                            class="picture-src"
-                                                                           id="wizardPicturePreview" title=""/> </span>
+                                                                           id="" title=""/> </span>
             <div style="text-align: center;"><span
                         style="color:#ffffff;"><?php echo $hres[1]['setting_value']; ?> </span>
             </div>

@@ -47,7 +47,8 @@
                                     <div class="fingerprint">
                                         <label for="huella">Leer Huella</label><br>
                                         <a href="#" id="huella" onclick="launchBiometricReader()">
-                                            <img src="<?php echo base_url() . 'images/huella.png' ?>" class="picture-src"
+                                            <img src="<?php echo base_url() . 'images/huella.png' ?>"
+                                                 class="picture-src"
                                                  style="width: 80px; height: 120px;" title="Leer Huella">
                                         </a>
                                     </div>
@@ -271,7 +272,7 @@
         if (input.files && input.files[0]) {
             var reader = new FileReader();
 
-            reader.onload - = function (e) {
+            reader.onload = function (e) {
                 $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
             }
             reader.readAsDataURL(input.files[0]);

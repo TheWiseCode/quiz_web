@@ -3,16 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-18.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-18.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/edit_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/edit_user_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_user_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/new_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/view_inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/basic.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/basic.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +28,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="PhpDebugGeneral" xdebug_debug_port="9003">
+  <component name="PhpDebugGeneral" xdebug_debug_port="9003" listening_started="true">
     <xdebug_debug_ports port="9003" />
   </component>
   <component name="PhpServers">
@@ -94,7 +87,7 @@
       <workItem from="1642445592744" duration="4837000" />
       <workItem from="1642452998009" duration="31000" />
       <workItem from="1642455097588" duration="13958000" />
-      <workItem from="1642482172585" duration="9730000" />
+      <workItem from="1642482172585" duration="10338000" />
     </task>
     <servers />
   </component>
