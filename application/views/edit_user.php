@@ -102,17 +102,17 @@
                                    placeholder="<?php echo $this->lang->line('address'); ?>" autofocus>
                         </div>
                         <div class="form-group">
-                            <label class="font-weight-bold"><?php echo $this->lang->line('address'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('nationality'); ?></label>
                             <input type="text" name="nationality" class="form-control"
                                    value="<?php echo $result['nationality']; ?>"
                                    placeholder="<?php echo $this->lang->line('nationality'); ?>" autofocus>
                         </div>
 
                         <div class="form-group">
-                            <label class="font-weight-bold"><?php echo "Codigo de postulante"; ?></label>
+                            <label class="font-weight-bold"><?php echo "Codigo cd"; ?></label>
                             <input type="text" name="code_student" class="form-control"
                                    value="<?php echo $result['cod_student']; ?>"
-                                   placeholder="<?php echo "Codigo de postulante"; ?>" autofocus>
+                                   placeholder="<?php echo "Codigo de cd"; ?>" autofocus>
 
                         </div>
 
@@ -122,7 +122,6 @@
                                 <?php
                                 foreach ($university_list as $key => $val) {
                                     ?>
-
                                     <option <?php if ($result['id_university'] === $val['id']) {
                                         echo selected;
                                     } ?> value="<?php echo $val['id']; ?>"><?php echo $val['name']; ?></option>
@@ -133,7 +132,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="font-weight-bold"><?php echo $this->lang->line('select_speciality'); ?></label>
+                            <label class="font-weight-bold"><?php echo $this->lang->line('select_specialties'); ?></label>
                             <select class="form-control" name="specialties" id="specialties">
                                 <?php
                                 foreach ($speciality_list as $key => $val) {
@@ -220,7 +219,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" hidden>
                             <label class="font-weight-bold"><?php echo $this->lang->line('account_status'); ?></label>
                             <select class="form-control" name="user_status">
                                 <option value="Active" <?php if ($result['user_status'] == 'Active') {
@@ -247,18 +246,18 @@
                         ?>
                         <div class="form-group">
                             <label for="inputEmail"
-                                   class="sr-only"><?php echo $this->lang->line('email_address'); ?></label>
+                                   class="font-weight-bold"><?php echo $this->lang->line('email_address'); ?></label>
                             <input type="email" id="inputEmail" name="email" value="<?php echo $result['email']; ?>"
                                    class="form-control" placeholder="<?php echo $this->lang->line('email_address'); ?>"
                                    required autofocus>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" hidden>
                             <label for="inputPassword"
                                    class="sr-only"><?php echo $this->lang->line('password'); ?></label>
                             <input type="password" id="inputPassword" name="password" value="" class="form-control"
                                    placeholder="<?php echo $this->lang->line('password'); ?>">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" hidden>
                             <label for="inputPassword"
                                    class="sr-only"><?php echo $this->lang->line('repeat_password'); ?></label>
                             <input type="password" id="repeat_password" name="repeat_password" value=""

@@ -177,7 +177,6 @@
                                 <?php
                                 foreach ($specialties_list as $key => $val) {
                                     ?>
-
                                     <option value="<?php echo $val['id']; ?>"><?php echo $val['name']; ?></option>
                                     <?php
                                 }
