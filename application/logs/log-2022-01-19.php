@@ -1029,3 +1029,63 @@ ERROR - 2022-01-19 02:09:10 --> Severity: Warning --> Invalid argument supplied 
 ERROR - 2022-01-19 02:09:10 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user_admin.php 33
 ERROR - 2022-01-19 02:09:23 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user_admin.php 33
 ERROR - 2022-01-19 02:09:35 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user_admin.php 33
+ERROR - 2022-01-19 15:29:31 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:29:40 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 15:29:43 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:29:47 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 15:29:49 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:30:19 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 15:30:22 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:30:25 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 15:30:28 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:30:30 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 15:30:40 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:31:13 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 15:31:15 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:31:17 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 15:31:22 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:31:27 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 15:31:29 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:31:32 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 15:31:38 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:31:43 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 15:31:48 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:32:44 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 15:32:46 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:32:50 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 15:32:52 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:33:00 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 15:33:01 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:33:04 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 15:33:06 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:33:07 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 15:33:11 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 16:04:16 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 16:04:35 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 16:04:36 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 16:25:59 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 16:26:01 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 16:26:03 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 16:26:05 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 16:26:07 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 16:26:09 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 16:26:46 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 16:26:48 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 16:26:51 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 16:26:54 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 16:26:59 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 16:27:00 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 16:27:03 --> Severity: Compile Error --> Cannot redeclare Account_model::account_list_all() C:\xampp\htdocs\quiz_web\application\models\Account_model.php 29
+ERROR - 2022-01-19 16:27:09 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 215
+ERROR - 2022-01-19 16:27:53 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1 - Invalid query: select * from savsoft_group where gid in () 
+ERROR - 2022-01-19 16:27:53 --> Severity: error --> Exception: Call to a member function result_array() on boolean C:\xampp\htdocs\quiz_web\application\controllers\Login.php 157
+ERROR - 2022-01-19 16:28:52 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1 - Invalid query: select * from savsoft_group where gid in () 
+ERROR - 2022-01-19 16:28:52 --> Severity: error --> Exception: Call to a member function result_array() on boolean C:\xampp\htdocs\quiz_web\application\controllers\Login.php 157
+ERROR - 2022-01-19 16:29:27 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1 - Invalid query: select * from savsoft_group where gid in () 
+ERROR - 2022-01-19 16:29:27 --> Severity: error --> Exception: Call to a member function result_array() on boolean C:\xampp\htdocs\quiz_web\application\controllers\Login.php 157
+ERROR - 2022-01-19 16:31:55 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1 - Invalid query: select * from savsoft_group where gid in () 
+ERROR - 2022-01-19 16:31:55 --> Severity: error --> Exception: Call to a member function result_array() on boolean C:\xampp\htdocs\quiz_web\application\controllers\Login.php 157
+ERROR - 2022-01-19 16:32:04 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1 - Invalid query: select * from savsoft_group where gid in () 
+ERROR - 2022-01-19 16:32:04 --> Severity: error --> Exception: Call to a member function result_array() on boolean C:\xampp\htdocs\quiz_web\application\controllers\Login.php 157
+ERROR - 2022-01-19 16:38:26 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1 - Invalid query: select * from savsoft_group where gid in () 
+ERROR - 2022-01-19 16:38:26 --> Severity: error --> Exception: Call to a member function result_array() on boolean C:\xampp\htdocs\quiz_web\application\controllers\Login.php 157

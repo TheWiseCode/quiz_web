@@ -153,7 +153,7 @@ class Login extends CI_Controller {
 			$uid=$user['uid'];
 			 $sl="select * from savsoft_group where gid in ($gids) ";
 			$rq=$this->db->query($sl);
-			 
+			
 			$gr=$rq->result_array();
 			 
 			$price=0;
