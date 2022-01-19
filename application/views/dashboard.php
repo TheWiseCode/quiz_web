@@ -142,7 +142,7 @@
                             <th class="text-xs-right"><?php echo $this->lang->line('full_name'); ?></th>
                             <th class="text-xs-right"><?php echo $this->lang->line('group_name'); ?></th>
                             <th class="text-xs-right"><?php echo $this->lang->line('contact_no'); ?></th>
-                            <th></th>
+
                         </tr>
                         </thead>
                         <tbody>
@@ -165,7 +165,6 @@
                                 <td class="text-xs-right"><?php echo $val['first_name']; ?><?php echo $val['last_name']; ?></td>
                                 <td class="text-xs-right"><?php echo $val['group_name']; ?></td>
                                 <td class="text-xs-right"><?php echo $val['contact_no']; ?></td>
-
 
                             </tr>
 

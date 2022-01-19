@@ -2,35 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/view_carnet.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/sq_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/sq_config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Setting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-18.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-18.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Account_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Account_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/account_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/account_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/add_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/add_group.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/career_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/career_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/category_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/category_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/edit_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-19.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-19.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/edit_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/edit_user_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_user_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/group_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/group_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/level_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/level_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/new_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/new_user2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_user2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/notification_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/notification_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/studymaterial_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/studymaterial_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/view_inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/basic.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/basic.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +33,7 @@
   </component>
   <component name="PhpServers">
     <servers>
-      <server host="localhost" id="074df649-cc2d-4047-8440-52d428549400" name="local" port="8080" />
+      <server host="localhost" id="074df649-cc2d-4047-8440-52d428549400" name="cridai" port="8080" />
     </servers>
   </component>
   <component name="PhpWebServerValidation" path_to_validation_script="C:\xampp\htdocs" selected_validation_type="LOCAL" web_path_to_validation_script="http://localhost:8080/" />
@@ -88,10 +63,17 @@
       <recent name="C:\xampp\htdocs\savsoftquiz_v5\dll" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="web" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="local" start_url="http://localhost:8080/savsoftquiz_v5">
+  <component name="RunManager" selected="PHP Web Page.web">
+    <configuration name="cridai" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="cridai" start_url="http://192.168.0.180:8080">
       <method v="2" />
     </configuration>
+    <configuration name="web" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="cridai" start_url="http://localhost:8080/savsoftquiz_v5">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="PHP Web Page.web" />
+      <item itemvalue="PHP Web Page.cridai" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -113,7 +95,7 @@
       <workItem from="1642445592744" duration="4837000" />
       <workItem from="1642452998009" duration="31000" />
       <workItem from="1642455097588" duration="13958000" />
-      <workItem from="1642482172585" duration="39869000" />
+      <workItem from="1642482172585" duration="57337000" />
     </task>
     <servers />
   </component>
@@ -274,6 +256,26 @@
           <url>file://$PROJECT_DIR$/application/models/Quiz_model.php</url>
           <line>745</line>
           <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/User.php</url>
+          <line>167</line>
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/User.php</url>
+          <line>467</line>
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/User.php</url>
+          <line>518</line>
+          <option name="timeStamp" value="155" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/User.php</url>
+          <line>375</line>
+          <option name="timeStamp" value="157" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

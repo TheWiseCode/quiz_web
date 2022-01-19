@@ -361,9 +361,9 @@ class User_model extends CI_Model
         $this->db->order_by('savsoft_users.uid', 'desc');
         $this->db->where('savsoft_users.su =', 2);
         $this->db->where('savsoft_users.user_status =', 'Active');
-        $this->db->where('savsoft_users.inserted_by =', $uid);
+        //$this->db->where('savsoft_users.inserted_by =', $uid);
 
-        $this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');
+        //$this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');
         $this->db->join('account_type', 'savsoft_users.su=account_type.account_id');
         $query = $this->db->get('savsoft_users');
         return $query->result_array();
@@ -517,6 +517,17 @@ class User_model extends CI_Model
         } else {
             $id_uni = $this->input->post('university');
         }
+        if ($this->input->post('other_spe') == 'on') {
+            $name_uni = $this->input->post('another_spe');
+            $data_uni = ['name' => $name_uni];
+            if ($this->db->insert('specialties', $data_uni)) {
+                $id_spe = $this->db->insert_id();
+            } else {
+                return "";
+            }
+        } else {
+            $id_spe = $this->input->post('specialties');
+        }
         $userdata = [
             'email' => $this->input->post('email'),
             'password' => md5($this->input->post('ci')),
@@ -539,7 +550,7 @@ class User_model extends CI_Model
             'address' => $this->input->post('address'),
             'nationality' => $this->input->post('nationality'),
             'id_university' => $id_uni,
-            'id_speciality' => $this->input->post('specialties'),
+            'id_speciality' => $id_spe,
         ];
 
 
@@ -822,7 +833,7 @@ class User_model extends CI_Model
         if ($this->input->post('user_status')) {
             $userdata['user_status'] = $this->input->post('user_status');
         }
-        $this->db->where('uid', $uid);;
+        $this->db->where('uid', $uid);
         if ($this->db->update('savsoft_users', $userdata)) {
 
             $this->db->where('uid', $uid);
@@ -982,7 +993,6 @@ class User_model extends CI_Model
 
     function get_user($uid)
     {
-        //TODO: obtener users
         if ($uid != 2) {
             $this->db->where('savsoft_users.uid', $uid);
             $query = $this->db->get('savsoft_users');
