@@ -92,24 +92,16 @@
                             <select class="form-control" name="civil_status" id="civil_status"
                                     placeholder="<?php echo $this->lang->line('civil_status'); ?>">
 
-                                <option <?php if ($result['civil_status'] == 'Soltero(a)') {
-                                    echo selected;
-                                } ?> value="Soltero(a)">Soltero(a)
-                                </option>
-                                <option <?php if ($result['civil_status'] == 'Casado(a)') {
-                                    echo selected;
-                                } ?> value="Casado(a)">Casado(a)
-                                </option>
-                                <option <?php if ($result['civil_status'] == 'Viduo(a)') {
-                                    echo selected;
-                                } ?> value="Viduo(a)">Viduo(a)
-                                </option>
-                                <option <?php if ($result['civil_status'] == 'Divorciado(a)') {
-                                    echo selected;
-                                } ?> value="Divorciado(a)">Divorciado(a)
-                                </option>
-
-
+                                <?php
+                                $status = $this->lang->line('status_civil');
+                                for ($i = 0; $i < count($status); $i++) {
+                                    echo "<option value='$status[$i]'";
+                                    if ($status[$i] == $result['civil_status']) {
+                                        echo selected;
+                                    }
+                                    echo ">$status[$i]</option>";
+                                }
+                                ?>
                             </select>
                         </div>
                         <div class="form-group">
@@ -117,15 +109,16 @@
                             <select class="form-control" name="gender" id="gender"
                                     placeholder="<?php echo $this->lang->line('gender'); ?>">
 
-                                <option <?php if ($result['sexo'] == 'Femenino') {
-                                    echo selected;
-                                } ?> value="Femenino">Femenino
-                                </option>
-                                <option <?php if ($result['sexo'] == 'Masculino') {
-                                    echo selected;
-                                } ?> value="Masculino">Masculino
-                                </option>
-
+                                <?php
+                                $gender = $this->lang->line('gender');
+                                foreach ($gender as $it) {
+                                    echo "<option value='$it'";
+                                    if ($result['sexo'] == $it) {
+                                        echo selected;
+                                    }
+                                    echo ">$it</option>";
+                                }
+                                ?>
 
                             </select>
                         </div>
@@ -226,7 +219,7 @@
                                 ?>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" hidden>
                             <label for="inputEmail"><?php echo $this->lang->line('subscription_expired'); ?></label>
                             <input type="text" name="subscription_expired" id="subscription_expired" disabled
                                    class="form-control" value="<?php if ($result['subscription_expired'] != '0') {
@@ -315,50 +308,3 @@
     </script>
 
 
-<?php /*<div class="row">
-<div class="col-md-8">
-<h3> <?php echo $this->lang->line('payment_history');?></h3>
-<table class="table table-bordered">
-<tr>
- <th><?php echo $this->lang->line('payment_gateway');?></th>
-<th><?php echo $this->lang->line('paid_date');?> </th>
-<th><?php echo $this->lang->line('amount');?></th>
-<th><?php echo $this->lang->line('transaction_id');?> </th>
-<th><?php echo $this->lang->line('status');?> </th>
-</tr>
-<?php 
-if(count($payment_history)==0){
-	?>
-<tr>
- <td colspan="5"><?php echo $this->lang->line('no_record_found');?></td>
-</tr>	
-	
-	
-	<?php
-}
-foreach($payment_history as $key => $val){
-?>
-<tr>
- <td><?php echo $val['payment_gateway'];?></td>
- <td><?php echo date('Y-m-d H:i:s',$val['paid_date']);?></td>
- <td><?php echo $val['amount'];?></td>
- <td><?php echo $val['transaction_id'];?></td>
- <td><?php echo $val['payment_status'];?></td>
- 
-</tr>
-
-<?php 
-}
-?>
-</table>
-
-</div>
-
-</div>
-
-
- 
-
-
-
-</div>-->

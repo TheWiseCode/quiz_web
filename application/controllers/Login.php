@@ -296,122 +296,119 @@ class Login extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('email', 'Email', 'required|is_unique[savsoft_users.email]');
         $this->form_validation->set_rules('password', 'Password', 'required');
-          if ($this->form_validation->run() == FALSE)
-                {
-                     $this->session->set_flashdata('message', "<div class='alert alert-danger'>".validation_errors()." </div>");
-					redirect('login/registration/');
+        if ($this->form_validation->run() == FALSE) {
+            $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . validation_errors() . " </div>");
+            redirect('login/registration/');
+        } else {
+            if ($this->user_model->insert_user_2()) {
+                if ($this->config->item('verify_email')) {
+                    $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('account_registered_email_sent') . " </div>");
+                } else {
+                    $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('account_registered') . " </div>");
                 }
-                else
-                {
-					if($this->user_model->insert_user_2()){
-                        if($this->config->item('verify_email')){
-						$this->session->set_flashdata('message', "<div class='alert alert-success'>".$this->lang->line('account_registered_email_sent')." </div>");
-						}else{
-							$this->session->set_flashdata('message', "<div class='alert alert-success'>".$this->lang->line('account_registered')." </div>");
-						}
-						}else{
-						    $this->session->set_flashdata('message', "<div class='alert alert-danger'>".$this->lang->line('error_to_add_data')." </div>");
-						
-					}
-					redirect('login/registration/');
-                }       
+            } else {
+                $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . $this->lang->line('error_to_add_data') . " </div>");
 
-	}
-	
-	
-	
-	
-	function verify_result($rid){
-		$this->load->helper('url');
-		$this->load->model("result_model");
-		
-			$data['result']=$this->result_model->get_result($rid);
-	if($data['result']['gen_certificate']=='0'){
-		exit();
-	}
-	
-	
-	$certificate_text=$data['result']['certificate_text'];
-	$certificate_text=str_replace('{email}',$data['result']['email'],$certificate_text);
-	$certificate_text=str_replace('{first_name}',$data['result']['first_name'],$certificate_text);
-	$certificate_text=str_replace('{last_name}',$data['result']['last_name'],$certificate_text);
-	$certificate_text=str_replace('{percentage_obtained}',$data['result']['percentage_obtained'],$certificate_text);
-	$certificate_text=str_replace('{score_obtained}',$data['result']['score_obtained'],$certificate_text);
-	$certificate_text=str_replace('{quiz_name}',$data['result']['quiz_name'],$certificate_text);
-	$certificate_text=str_replace('{status}',$data['result']['result_status'],$certificate_text);
-	$certificate_text=str_replace('{result_id}',$data['result']['rid'],$certificate_text);
-	$certificate_text=str_replace('{generated_date}',date('Y-m-d',$data['result']['end_time']),$certificate_text);
-	
-	$data['certificate_text']=$certificate_text;
-	  $this->load->view('view_certificate_2',$data);
-	 
-
-	}
-	
-	
-	
-	function authentication ($user, $pass){
-                  global $wp, $wp_rewrite, $wp_the_query, $wp_query;
-
-                  if(empty($user) || empty($pass)){
-                    return false;
-                  }else{
-                    require_once($this->config->item('wp-path'));
-                    $status = false;
-                    $auth = wp_authenticate($user, $pass );
-                    if( is_wp_error($auth) ) {      
-                      $status = false;
-                    } else {
-                    
-                    // if username already exist in savsoft_users
-                    $this->db->where('wp_user',$user);
-                    $query=$this->db->get('savsoft_users');
-                    if($query->num_rows()==0){
-                    $userdata=array(
-                    'password'=>md5($pass),
-                    'wp_user'=>$user,
-                    'su'=>0,
-                    'gid'=>$this->config->item('default_group')                  
-                    
-                    );
-                    $this->db->insert('savsoft_users',$userdata);
-                    
-                    }
-                    
-                    
-                      $status = true;
-                    }
-                    return $status;
-                  } 
+            }
+            redirect('login/registration/');
         }
-        
-        
-        public function commercial(){
+
+    }
+
+
+    function verify_result($rid)
+    {
         $this->load->helper('url');
-		
-       $data['title']=$this->lang->line('files_missing');
-		   $this->load->view('header',$data);
-			$this->load->view('files_missing',$data);
-		  $this->load->view('footer',$data);
+        $this->load->model("result_model");
+
+        $data['result'] = $this->result_model->get_result($rid);
+        if ($data['result']['gen_certificate'] == '0') {
+            exit();
         }
 
 
+        $certificate_text = $data['result']['certificate_text'];
+        $certificate_text = str_replace('{email}', $data['result']['email'], $certificate_text);
+        $certificate_text = str_replace('{first_name}', $data['result']['first_name'], $certificate_text);
+        $certificate_text = str_replace('{last_name}', $data['result']['last_name'], $certificate_text);
+        $certificate_text = str_replace('{percentage_obtained}', $data['result']['percentage_obtained'], $certificate_text);
+        $certificate_text = str_replace('{score_obtained}', $data['result']['score_obtained'], $certificate_text);
+        $certificate_text = str_replace('{quiz_name}', $data['result']['quiz_name'], $certificate_text);
+        $certificate_text = str_replace('{status}', $data['result']['result_status'], $certificate_text);
+        $certificate_text = str_replace('{result_id}', $data['result']['rid'], $certificate_text);
+        $certificate_text = str_replace('{generated_date}', date('Y-m-d', $data['result']['end_time']), $certificate_text);
 
-		 // super admin code login controller 
-	public function superadminlogin(){
-	$this->load->helper('url');
-			$logged_in=$this->session->userdata('logged_in_super_admin');
-			if($logged_in['su']!='3'){
-				exit('permission denied');
-				
-			}
-			
-		$user=$this->user_model->admin_login();
-		$user['base_url']=base_url();
-		 $user['super']=3;
-		$this->session->set_userdata('logged_in', $user);
-		redirect('dashboard');
-	}
-	
-	
+        $data['certificate_text'] = $certificate_text;
+        $this->load->view('view_certificate_2', $data);
+
+
+    }
+
+
+    function authentication($user, $pass)
+    {
+        global $wp, $wp_rewrite, $wp_the_query, $wp_query;
+
+        if (empty($user) || empty($pass)) {
+            return false;
+        } else {
+            require_once($this->config->item('wp-path'));
+            $status = false;
+            $auth = wp_authenticate($user, $pass);
+            if (is_wp_error($auth)) {
+                $status = false;
+            } else {
+
+                // if username already exist in savsoft_users
+                $this->db->where('wp_user', $user);
+                $query = $this->db->get('savsoft_users');
+                if ($query->num_rows() == 0) {
+                    $userdata = array(
+                        'password' => md5($pass),
+                        'wp_user' => $user,
+                        'su' => 0,
+                        'gid' => $this->config->item('default_group')
+
+                    );
+                    $this->db->insert('savsoft_users', $userdata);
+
+                }
+
+
+                $status = true;
+            }
+            return $status;
+        }
+    }
+
+
+    public function commercial()
+    {
+        $this->load->helper('url');
+
+        $data['title'] = $this->lang->line('files_missing');
+        $this->load->view('header', $data);
+        $this->load->view('files_missing', $data);
+        $this->load->view('footer', $data);
+    }
+
+
+    // super admin code login controller
+    public function superadminlogin()
+    {
+        $this->load->helper('url');
+        $logged_in = $this->session->userdata('logged_in_super_admin');
+        if ($logged_in['su'] != '3') {
+            exit('permission denied');
+
+        }
+
+        $user = $this->user_model->admin_login();
+        $user['base_url'] = base_url();
+        $user['super'] = 3;
+        $this->session->set_userdata('logged_in', $user);
+        redirect('dashboard');
+    }
+
+
 }

@@ -33,16 +33,14 @@
             }
             $acp = explode(',', $logged_in['setting']);
             if (in_array('All', $acp)) {
-
                 ?>
-
                 <a href="<?php echo site_url('notification/add_new'); ?>"
                    class="btn btn-success"><?php echo $this->lang->line('add_new1'); ?></a><br><br>
                 <?php
             }
             ?>
             <table class="table table-bordered">
-                <tr>
+                <tr style="background: #3472f7; color: white;">
                     <th>#</th>
                     <th><?php echo $this->lang->line('title'); ?></th>
                     <th><?php echo $this->lang->line('message'); ?> </th>

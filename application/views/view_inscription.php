@@ -5,22 +5,20 @@
             font-family: arial, sans-serif;
             border-collapse: collapse;
             width: 100%;
-
         }
-
-
     </style>
 </head><body>
 
 <table FRAME="vsides" RULES="none">
     <tr>
-
         <td colspan="4" style="text-align: center;"><b>Ficha de inscripción<b></td>
-
-
     </tr>
     <tr>
+<<<<<<< HEAD
         <td colspan="4" style="text-align: center; font-size:20px ; text-align: center;"><b>CRIDAIIC<b></td>
+=======
+        <td colspan="4" style="text-align: center; font-size:20px ; text-align: center;"><b>CRIDAI<b></td>
+>>>>>>> 8003b6463f4bf4dbb67f1de847aee6d1d2cbc469
     </tr>
 
     </tr>
@@ -31,8 +29,8 @@
 
     </tr>
     <tr>
-        <td colspan="4" style="text-align: center; font-size:15px ; text-align: center;"><b>ASISTENCIAL INVESTIGACIÓN E
-                INTERACCIÓN COMUNITARIA<b></td>
+        <td colspan="4" style="text-align: center; font-size:15px ; text-align: center;"><b>ASISTENCIAL E
+                INVESTIGACIÓN<b></td>
     </tr>
 
     <tr>

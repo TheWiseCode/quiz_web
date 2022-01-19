@@ -155,10 +155,11 @@ function send_form() {
 
 function workingDaysBetweenDates() {
 
-    //
     subscription_expired_init = document.getElementById('subscription_expired_init');
     subscription_expired_end = document.getElementById('subscription_expired_end');
-
+    if(subscription_expired_end.value === undefined || subscription_expired_init.value == undefined){
+        return;
+    }
     var startDate = parseDate(subscription_expired_init.value);
     var endDate = parseDate(subscription_expired_end.value);
 

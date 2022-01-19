@@ -417,11 +417,8 @@ $hres = $hquery->result_Array();
                                href="<?php echo site_url('qbank/category_list'); ?>"><?php echo $this->lang->line('category_list'); ?></a>
                             <a class="collapse-item"
                                href="<?php echo site_url('qbank/level_list'); ?>"><?php echo $this->lang->line('level_list'); ?></a>
-                            <a class="collapse-item"
+                            <a class="collapse-item" hidden
                                href="<?php echo site_url('user/career_list'); ?>"><?php echo $this->lang->line('career_list'); ?></a>
-                            <a class="collapse-item"
-                               href="<?php echo site_url('user/view_inscription'); ?>"><?php echo $this->lang->line('view'); ?></a>
-
                             <a class="collapse-item"
                                href="<?php echo site_url('account'); ?>"><?php echo $this->lang->line('account_type'); ?></a></a>
                             <a class="collapse-item"
@@ -608,7 +605,7 @@ $hres = $hquery->result_Array();
 
 
                             <a class="dropdown-item"
-                               href="<?php echo site_url('user/edit_user/' . $logged_in['uid']); ?>">
+                               href="<?php echo site_url('user/edit_user_decide/' . $logged_in['uid']); ?>">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 <?php echo $this->lang->line('myaccount'); ?>
                             </a>

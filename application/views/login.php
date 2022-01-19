@@ -34,8 +34,9 @@
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
                     <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block  " style="background:url('http://localhost:8080/savsoftquiz_v5/photo/logo.png');
-    background-position: center; background-size: 50%; background-repeat: no-repeat;"></div>
+                        <div class="col-lg-6 d-none d-lg-block  "
+                             style="background:url('<?php echo base_url(); ?>/photo/logo.png');
+                                     background-position: center; background-size: 50%; background-repeat: no-repeat;"></div>
 
                         <div class="col-lg-6">
                             <div class="p-5">

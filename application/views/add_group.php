@@ -30,7 +30,7 @@
                         <div class="form-group">
                             <label for="inputEmail" class="font-weight-bold"><?php echo "Fecha Inicio"; ?></label>
                             <input type="date" name="subscription_expired_init" id="subscription_expired_init"
-                                   class="form-control"
+                                   class="form-control" onchange="workingDaysBetweenDates();"
                                    placeholder="<?php echo $this->lang->line('subscription_expired'); ?>" autofocus>
                         </div>
                         <div class="form-group">
@@ -40,14 +40,20 @@
                                    placeholder="<?php echo $this->lang->line('subscription_expired'); ?>" autofocus>
                         </div>
 
+<<<<<<< HEAD
                         <div  class="form-group">
                             <label  for="inputEmail"><?php echo $this->lang->line('valid_for_days'); ?></label>
+=======
+                        <div class="form-group" hidden>
+                            <label for="inputEmail"><?php echo $this->lang->line('valid_for_days'); ?></label>
+>>>>>>> 8003b6463f4bf4dbb67f1de847aee6d1d2cbc469
                             <input readonly type="text" required name="valid_for_days" class="form-control" value=0
                                    id="valid_for_days">
                         </div>
 
 
-                        <button class="btn btn-primary" type="submit"><?php echo $this->lang->line('submit'); ?></button>
+                        <button class="btn btn-primary"
+                                type="submit"><?php echo $this->lang->line('submit'); ?></button>
 
                     </div>
                 </div>

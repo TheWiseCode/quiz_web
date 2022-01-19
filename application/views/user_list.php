@@ -55,41 +55,40 @@
                         <td><?php echo $val['first_name'] . ' '; ?><?php echo $val['last_name']; ?></td>
                         <td><?php echo $val['contact_no']; ?></td>
                         <td><?php echo $val['cod_student']; ?> </td>
-                        
-                        <td>
-                        <?php
-                                foreach ($speciality_list as $key => $vals) {
-                                    ?>
 
-                                    <?php
-                                    if($vals['id'] == $val['id_speciality']) 
-                                    {
-                                        echo $vals['name'];
-                                    }
-                                    ?>
-                                    <?php
+                        <td>
+                            <?php
+                            foreach ($speciality_list as $key => $vals) {
+                                ?>
+
+                                <?php
+                                if ($vals['id'] == $val['id_speciality']) {
+                                    echo $vals['name'];
                                 }
                                 ?>
-                        
+                                <?php
+                            }
+                            ?>
+
                         </td>
 
                         <td>
-                            <a href="<?php echo site_url(
+                            <a hidden href="<?php echo site_url(
                                 'user2/view_user/' . $val['uid']
                             ); ?>"><i class="fa fa-eye" title="View Profile"></i></a>
                             <a href="<?php echo site_url(
                                 'user/edit_user/' . $val['uid']
-                            ); ?>"><i class="fa fa-edit"  style="color:#3472f7;"></i></a>
+                            ); ?>"><i class="fa fa-edit" style="color:#3472f7;"></i></a>
                             <a href="javascript:remove_entry('user/remove_user/<?php echo $val['uid']; ?>',
                             '<?php echo $this->lang->line('warning_remove') ?>');">
                                 <i class="fa fa-trash" style="color:#3472f7;"></i>
                             </a>
-                            <a href="<?php echo site_url(
+                            <a title="Descargar Ficha Inscripcion" href="<?php echo site_url(
                                 'user/view_inscription/' . $val['uid']
-                                ); ?>"><i class="fa fa-download"  style="color:#3472f7;"></i></a>
-
-                                        
-
+                            ); ?>"><i class="fa fa-download" style="color:rgb(40,206,61);"></i></a>
+                            <a title="Descargar Carnet Inscripcion" href="<?php echo site_url(
+                                'user/view_carnet/' . $val['uid']
+                            ); ?>"><i class="fa fa-id-card" style="color:#f73434;"></i></a>
                         </td>
                     </tr>
 
@@ -117,7 +116,7 @@
         'user/index/' . $next
     ); ?>" class="btn btn-primary"><?php echo $this->lang->line('next'); ?></a>
 
-    <div class="card mt-3">
+    <div class="card mt-3" hidden>
         <div class="card-header font-weight-bold"><?php echo $this->lang->line('import_users'); ?></div>
 
         <div class="card-body">
@@ -145,7 +144,8 @@
                 </div>
                 <div class="row">
                     <div class="col col-md-3">
-                        <input type="submit" value="<?php echo $this->lang->line('import')?>" class="btn btn-secondary form-control">
+                        <input type="submit" value="<?php echo $this->lang->line('import') ?>"
+                               class="btn btn-secondary form-control">
                     </div>
                     <div class="col col-md-9">
                         <div class="form-control">
