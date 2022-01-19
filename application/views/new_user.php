@@ -183,6 +183,18 @@
                                 }
                                 ?>
                             </select>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="other_spe" name="other_spe"
+                                       onchange="changeOtherSpe()">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Otra
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group" id="div_another_spe" style="display: none;">
+                            <label class="font-weight-bold">Nueva Especialidad</label>
+                            <input type="text" name="another_spe" class="form-control" id="another_spe"
+                                   placeholder="Nueva Especialidad" autofocus>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail"
@@ -291,6 +303,19 @@
             document.getElementById('university').removeAttribute('disabled');
             document.getElementById('another_uni').setAttribute('disabled', 'disabled');
             document.getElementById('div_another_uni').style.display = 'none';
+        }
+    }
+
+    function changeOtherSpe() {
+        let other_uni = document.getElementById('other_spe');
+        if (other_uni.checked) {
+            document.getElementById('specialties').setAttribute('disabled', 'disabled');
+            document.getElementById('another_spe').removeAttribute('disabled');
+            document.getElementById('div_another_spe').style.display = 'block';
+        } else {
+            document.getElementById('specialties').removeAttribute('disabled');
+            document.getElementById('another_spe').setAttribute('disabled', 'disabled');
+            document.getElementById('div_another_spe').style.display = 'none';
         }
     }
 </script>

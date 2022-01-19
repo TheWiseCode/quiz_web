@@ -1029,3 +1029,1080 @@ ERROR - 2022-01-19 02:09:10 --> Severity: Warning --> Invalid argument supplied 
 ERROR - 2022-01-19 02:09:10 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user_admin.php 33
 ERROR - 2022-01-19 02:09:23 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user_admin.php 33
 ERROR - 2022-01-19 02:09:35 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user_admin.php 33
+ERROR - 2022-01-19 06:02:52 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-19 06:04:37 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-19 06:05:52 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 150
+ERROR - 2022-01-19 06:05:52 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 159
+ERROR - 2022-01-19 06:05:52 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 189
+ERROR - 2022-01-19 06:05:52 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-19 06:05:52 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 289
+ERROR - 2022-01-19 06:05:52 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 313
+ERROR - 2022-01-19 06:06:17 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 568
+ERROR - 2022-01-19 06:06:22 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-19 06:06:22 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-19 06:06:22 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:23 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:29 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 06:06:58 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 150
+ERROR - 2022-01-19 06:06:58 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 159
+ERROR - 2022-01-19 06:06:58 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 189
+ERROR - 2022-01-19 06:06:58 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-19 06:06:58 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 289
+ERROR - 2022-01-19 06:06:58 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 313
+ERROR - 2022-01-19 06:07:23 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 568
+ERROR - 2022-01-19 06:07:43 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user_admin.php 33
+ERROR - 2022-01-19 06:08:04 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 150
+ERROR - 2022-01-19 06:08:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 159
+ERROR - 2022-01-19 06:08:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 189
+ERROR - 2022-01-19 06:08:04 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-19 06:08:04 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 289
+ERROR - 2022-01-19 06:08:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 313
+ERROR - 2022-01-19 06:08:30 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 568
+ERROR - 2022-01-19 06:08:49 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 150
+ERROR - 2022-01-19 06:08:49 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 159
+ERROR - 2022-01-19 06:08:49 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 189
+ERROR - 2022-01-19 06:08:49 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-19 06:08:49 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 289
+ERROR - 2022-01-19 06:08:49 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 313
+ERROR - 2022-01-19 06:09:12 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 568
+ERROR - 2022-01-19 08:16:50 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-19 08:17:25 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-19 08:17:30 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 215
+ERROR - 2022-01-19 08:17:55 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 214
+ERROR - 2022-01-19 08:33:44 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 150
+ERROR - 2022-01-19 08:33:44 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 159
+ERROR - 2022-01-19 08:33:44 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 188
+ERROR - 2022-01-19 08:33:44 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 214
+ERROR - 2022-01-19 08:33:44 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 288
+ERROR - 2022-01-19 08:33:44 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 312
+ERROR - 2022-01-19 08:34:12 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 568
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:18 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 08:34:30 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:13 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:28:49 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 568
+ERROR - 2022-01-19 09:29:20 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 568
+ERROR - 2022-01-19 09:29:25 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-19 09:29:25 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-19 09:29:25 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:26 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:29:34 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:32:36 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 150
+ERROR - 2022-01-19 09:32:36 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 159
+ERROR - 2022-01-19 09:32:36 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 188
+ERROR - 2022-01-19 09:32:36 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 214
+ERROR - 2022-01-19 09:32:36 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 288
+ERROR - 2022-01-19 09:32:36 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 312
+ERROR - 2022-01-19 09:38:19 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 568
+ERROR - 2022-01-19 09:39:37 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 568
+ERROR - 2022-01-19 09:41:31 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 568
+ERROR - 2022-01-19 09:42:39 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 568
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:43 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:42:44 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:44:37 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 568
+ERROR - 2022-01-19 09:45:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 568
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:45:07 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:06 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 568
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 09:46:11 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 10:02:01 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 579
+ERROR - 2022-01-19 11:39:58 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 42
+ERROR - 2022-01-19 11:39:58 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 73
+ERROR - 2022-01-19 11:39:58 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 90
+ERROR - 2022-01-19 11:39:58 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 127
+ERROR - 2022-01-19 11:39:58 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:39:58 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 143
+ERROR - 2022-01-19 11:39:58 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 188
+ERROR - 2022-01-19 11:40:05 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 841
+ERROR - 2022-01-19 11:40:05 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 42
+ERROR - 2022-01-19 11:40:05 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 73
+ERROR - 2022-01-19 11:40:05 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 90
+ERROR - 2022-01-19 11:40:05 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 127
+ERROR - 2022-01-19 11:40:05 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:40:05 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 143
+ERROR - 2022-01-19 11:40:05 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 188
+ERROR - 2022-01-19 11:40:14 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 42
+ERROR - 2022-01-19 11:40:14 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 73
+ERROR - 2022-01-19 11:40:14 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 90
+ERROR - 2022-01-19 11:40:14 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 127
+ERROR - 2022-01-19 11:40:14 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:40:14 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 143
+ERROR - 2022-01-19 11:40:14 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 188
+ERROR - 2022-01-19 11:40:18 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 42
+ERROR - 2022-01-19 11:40:18 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 73
+ERROR - 2022-01-19 11:40:18 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 90
+ERROR - 2022-01-19 11:40:18 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 127
+ERROR - 2022-01-19 11:40:18 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:40:18 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 143
+ERROR - 2022-01-19 11:40:18 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 188
+ERROR - 2022-01-19 11:40:22 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 841
+ERROR - 2022-01-19 11:40:22 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 42
+ERROR - 2022-01-19 11:40:22 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 73
+ERROR - 2022-01-19 11:40:22 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 90
+ERROR - 2022-01-19 11:40:22 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 127
+ERROR - 2022-01-19 11:40:22 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:40:22 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 143
+ERROR - 2022-01-19 11:40:22 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 188
+ERROR - 2022-01-19 11:40:36 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 150
+ERROR - 2022-01-19 11:40:36 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 159
+ERROR - 2022-01-19 11:40:36 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 188
+ERROR - 2022-01-19 11:40:36 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 214
+ERROR - 2022-01-19 11:40:36 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 288
+ERROR - 2022-01-19 11:40:36 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 312
+ERROR - 2022-01-19 11:40:40 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 42
+ERROR - 2022-01-19 11:40:40 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 73
+ERROR - 2022-01-19 11:40:40 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 90
+ERROR - 2022-01-19 11:40:40 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 127
+ERROR - 2022-01-19 11:40:40 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:40:40 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 143
+ERROR - 2022-01-19 11:40:40 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 188
+ERROR - 2022-01-19 11:41:19 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 841
+ERROR - 2022-01-19 11:41:37 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 42
+ERROR - 2022-01-19 11:41:37 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 73
+ERROR - 2022-01-19 11:41:37 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 90
+ERROR - 2022-01-19 11:41:37 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 127
+ERROR - 2022-01-19 11:41:37 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:41:37 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 143
+ERROR - 2022-01-19 11:41:37 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 188
+ERROR - 2022-01-19 11:41:40 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 42
+ERROR - 2022-01-19 11:41:40 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 73
+ERROR - 2022-01-19 11:41:40 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 90
+ERROR - 2022-01-19 11:41:40 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 127
+ERROR - 2022-01-19 11:41:40 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:41:40 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 143
+ERROR - 2022-01-19 11:41:40 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 188
+ERROR - 2022-01-19 11:41:47 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 42
+ERROR - 2022-01-19 11:41:47 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 73
+ERROR - 2022-01-19 11:41:47 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 90
+ERROR - 2022-01-19 11:41:47 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 127
+ERROR - 2022-01-19 11:41:47 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:41:47 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 143
+ERROR - 2022-01-19 11:41:47 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 188
+ERROR - 2022-01-19 11:43:56 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 841
+ERROR - 2022-01-19 11:43:56 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 42
+ERROR - 2022-01-19 11:43:56 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 73
+ERROR - 2022-01-19 11:43:56 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 90
+ERROR - 2022-01-19 11:43:56 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 127
+ERROR - 2022-01-19 11:43:56 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:43:56 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 143
+ERROR - 2022-01-19 11:43:56 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 188
+ERROR - 2022-01-19 11:49:09 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 11:49:09 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 11:49:09 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 11:49:09 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 11:49:09 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:49:09 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 11:49:09 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 11:49:09 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 11:49:09 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 11:49:09 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 11:49:09 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 11:49:09 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:49:09 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 11:49:09 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 11:49:12 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 11:49:12 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 11:49:12 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 11:49:12 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 11:49:12 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:49:12 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 11:49:12 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 11:49:21 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 11:49:21 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 11:49:21 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 11:49:21 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 11:49:21 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:49:21 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 11:49:21 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 11:49:35 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 11:49:35 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 11:49:35 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 11:49:35 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 11:49:35 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:49:35 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 11:49:35 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 11:54:55 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 11:54:55 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 11:54:55 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 11:54:55 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 11:54:55 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:54:55 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 11:54:55 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 11:55:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 11:55:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 11:55:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 11:55:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 11:55:19 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:55:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 11:55:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 11:57:02 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 11:57:02 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 11:57:02 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 11:57:02 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 11:57:02 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:57:02 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 11:57:02 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 11:57:38 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 841
+ERROR - 2022-01-19 11:57:39 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 11:57:39 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 11:57:39 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 11:57:39 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 11:57:39 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 11:57:39 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 11:57:39 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 13:29:57 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 150
+ERROR - 2022-01-19 13:29:57 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 159
+ERROR - 2022-01-19 13:29:57 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 188
+ERROR - 2022-01-19 13:29:57 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 214
+ERROR - 2022-01-19 13:29:57 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 288
+ERROR - 2022-01-19 13:29:57 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 312
+ERROR - 2022-01-19 13:32:03 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 579
+ERROR - 2022-01-19 13:32:15 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-19 13:32:15 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-19 13:32:15 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 13:32:17 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:04:03 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 150
+ERROR - 2022-01-19 14:04:03 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 159
+ERROR - 2022-01-19 14:04:03 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 188
+ERROR - 2022-01-19 14:04:03 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 214
+ERROR - 2022-01-19 14:04:03 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 288
+ERROR - 2022-01-19 14:04:03 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 312
+ERROR - 2022-01-19 14:07:48 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 579
+ERROR - 2022-01-19 14:40:28 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 150
+ERROR - 2022-01-19 14:40:28 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 159
+ERROR - 2022-01-19 14:40:28 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 188
+ERROR - 2022-01-19 14:40:28 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 214
+ERROR - 2022-01-19 14:40:28 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 288
+ERROR - 2022-01-19 14:40:28 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 312
+ERROR - 2022-01-19 14:43:56 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 14:43:56 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 14:43:56 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 14:43:56 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 14:43:56 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 14:43:56 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 14:43:56 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 14:44:13 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 841
+ERROR - 2022-01-19 14:44:13 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 14:44:13 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 14:44:13 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 14:44:13 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 14:44:13 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 14:44:13 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 14:44:13 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 14:44:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 14:44:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 14:44:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 14:44:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 14:44:16 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 14:44:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 14:44:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 14:44:20 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 14:44:20 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 14:44:20 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 14:44:20 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 14:44:20 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 14:44:20 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 14:44:20 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 14:44:23 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 14:44:23 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 14:44:23 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 14:44:23 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 14:44:23 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 14:44:23 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 14:44:23 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 14:45:12 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 150
+ERROR - 2022-01-19 14:45:12 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 159
+ERROR - 2022-01-19 14:45:12 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 188
+ERROR - 2022-01-19 14:45:12 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 214
+ERROR - 2022-01-19 14:45:12 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 288
+ERROR - 2022-01-19 14:45:12 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 312
+ERROR - 2022-01-19 14:45:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 14:45:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 14:45:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 14:45:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 14:45:16 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 14:45:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 14:45:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 14:46:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 14:46:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 14:46:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 14:46:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 14:46:19 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 14:46:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 14:46:19 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 14:46:38 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 14:46:38 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 14:46:38 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 14:46:38 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 14:46:38 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 14:46:38 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 14:46:38 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 14:47:00 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 841
+ERROR - 2022-01-19 14:47:02 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 14:47:02 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 14:47:02 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 14:47:02 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 14:47:02 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 14:47:02 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 14:47:02 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 14:47:05 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 14:47:05 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 14:47:05 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 14:47:05 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 14:47:05 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 14:47:05 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 14:47:05 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 14:47:16 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\models\User_model.php 841
+ERROR - 2022-01-19 14:47:17 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 43
+ERROR - 2022-01-19 14:47:17 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 74
+ERROR - 2022-01-19 14:47:17 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 91
+ERROR - 2022-01-19 14:47:17 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 128
+ERROR - 2022-01-19 14:47:17 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 14:47:17 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 144
+ERROR - 2022-01-19 14:47:17 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 189
+ERROR - 2022-01-19 14:49:51 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 42
+ERROR - 2022-01-19 14:49:51 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 73
+ERROR - 2022-01-19 14:49:51 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 90
+ERROR - 2022-01-19 14:49:51 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 127
+ERROR - 2022-01-19 14:49:51 --> Could not find the language line "select_speciality"
+ERROR - 2022-01-19 14:49:51 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 143
+ERROR - 2022-01-19 14:49:51 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 188
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-19 14:51:48 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\savsoftquiz_v5\application\libraries\dompdf\include\style.cls.php 1280

@@ -90,7 +90,6 @@ class User extends CI_Controller
         $data['account_type'] = $this->account_model->account_list(0);
         $data['university_list'] = $this->user_model->get_university_all();
         $data['specialties_list'] = $this->user_model->get_specialties_all();
-        $data['uid'] = $logged_in['uid'];
         $this->load->view('header', $data);
         $this->load->view('new_user', $data);
         $this->load->view('footer', $data);
@@ -125,10 +124,10 @@ class User extends CI_Controller
 
         $config['upload_path'] = "photo/users";
         $config['file_name'] = $name . "";
-        $config['allowed_types'] = "gif|jpg|jpeg|png";
+        $config['allowed_types'] = "*";
         $config['max_size'] = "50000";
-        $config['max_width'] = "2000";
-        $config['max_height'] = "2000";
+        $config['max_width'] = "20000";
+        $config['max_height'] = "20000";
 
 
         $this->load->library('upload', $config);
@@ -162,6 +161,7 @@ class User extends CI_Controller
 
 
     }
+
 
     public function insert_user()
     {
@@ -467,8 +467,8 @@ class User extends CI_Controller
     {
         $logged_in = $this->session->userdata('logged_in');
 
-        if ($logged_in['su'] != '1') {
-            $uid = $logged_in['uid'];
+        if ($logged_in['su'] != '2') {
+            //$uid = $logged_in['uid'];
         }
         if ($this->input->post('password')) {
 
@@ -518,8 +518,8 @@ class User extends CI_Controller
     {
         $logged_in = $this->session->userdata('logged_in');
 
-        if ($logged_in['su'] != '1') {
-            $uid = $logged_in['uid'];
+        if ($logged_in['su'] != '2') {
+            //$uid = $logged_in['uid'];
         }
         if ($this->input->post('password')) {
 
