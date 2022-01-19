@@ -25,8 +25,8 @@
 
     </tr>
     <tr>
-        <td colspan="4" style="text-align: center; font-size:15px ; text-align: center;"><b>ASISTENCIAL INVESTIGACIÓN E
-                INTERACCIÓN COMUNITARIA<b></td>
+        <td colspan="4" style="text-align: center; font-size:15px ; text-align: center;"><b>ASISTENCIAL E
+                INVESTIGACIÓN<b></td>
     </tr>
 
     <tr>
@@ -122,98 +122,4 @@
         <td></td>
     </tr>
 </table>
-
-<TABLE FRAME="border" RULES="none" style="border-collapse: collapse ; width: 45%; ">
-    <tr>
-        <td style="background-color:#333;color: #fff; text-align: center;left;font-size:10px ;">COMITÉ REGIONAL DE
-            INTEGRACION DOCENTE<br>
-            ASISTENCIAL INVESTIGACIÓN E INTERACCIÓN COMUNITARIA
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <table border="0" style="width: 100%; height: 4.5cm;">
-                <tr>
-                    <td style="text-align: left;font-size:12px ;">
-                        Nombre: <?php echo ' ' . $result['first_name'] . ' ' . $result['last_name']; ?>
-                        <br><br>
-                        Especialidad:
-
-                        <?php
-                        foreach ($speciality_list as $key => $vals) {
-                            ?>
-
-                            <?php
-                            if ($vals['id'] == $result['id_speciality']) {
-                                echo '  ' . $vals['name'];
-                            }
-                            ?>
-                            <?php
-                        }
-                        ?>
-                        <br><br>
-                        Departamento:
-
-
-                        <?php if ($result['exp'] == 'BE') {
-                            echo '  ' . "Beni";
-                        } ?>
-                        <?php if ($result['exp'] == 'PD') {
-                            echo '  ' . "Pando";
-                        } ?>
-                        <?php if ($result['exp'] == 'SC') {
-                            echo '  ' . "Santa Cruz";
-                        } ?>
-                        <?php if ($result['exp'] == 'CBB') {
-                            echo '  ' . "Cochabamba";
-                        } ?>
-                        <?php if ($result['exp'] == 'CH') {
-                            echo '  ' . "Chuquisaca";
-                        } ?>
-                        <?php if ($result['exp'] == 'TJ') {
-                            echo '  ' . "Tarija";
-                        } ?>
-                        <?php if ($result['exp'] == 'LP') {
-                            echo '  ' . "La Paz";
-                        } ?>
-                        <?php if ($result['exp'] == 'OR') {
-                            echo '  ' . "Oruro";
-                        } ?>
-                        <?php if ($result['exp'] == 'OR') {
-                            echo '  ' . "Potosi";
-                        } ?>
-                        <br><br>
-                        Codigo CD:
-
-                        <?php echo ' ' . $result['cod_student'] ?>
-                        <br><br>
-
-
-                        <img src="<?php echo base_url() . '/photo/logo.jpeg' ?>" align="left" width="40" height="40">
-                    </td>
-                    <td style="text-align: right;font-size:15px ;"><img
-                                src="<?php echo base_url() . $result['photo'] ?>" align="left"
-                                width="100" height="100">
-                        <br><br>
-                        CI: <?php echo $result['ci'] . '           ' ?>
-                    </td>
-
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <table border="0" style="width: 100%">
-                <tr>
-                    <td style="text-align: left;"></td>
-                    <td style="text-align: left;"></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-
-
-</table>
-
 </body></html>

@@ -9,9 +9,9 @@
            class="btn btn-success"><?php echo $this->lang->line('add_new1'); ?></a><br><br>
 
         <div style="text-align: center;">
-            <table class="table table-hover table-bordered">
+            <table class="table table-bordered">
                 <thead>
-                <tr>
+                <tr style="background: #3472f7; color: white;">
                     <th><?php echo $this->lang->line('name'); ?></th>
                     <th><?php echo $this->lang->line('action'); ?></th>
                 </tr>
@@ -23,7 +23,7 @@
                         <td><?php echo $val['account_name']; ?></td>
                         <td>
                             <a href="<?php echo site_url('Account/edit_account/' . $val['account_id']); ?>">
-                                <i class="fas fa-edit"  style="color:#3472f7;"></i></a>
+                                <i class="fas fa-edit" style="color:#3472f7;"></i></a>
                             <?php
                             if ($val['account_id'] < 1 | $val['account_id'] > 3) {
                                 ?>

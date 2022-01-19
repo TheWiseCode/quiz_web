@@ -163,7 +163,6 @@ class User extends CI_Controller
 
     }
 
-
     public function insert_user()
     {
         $logged_in = $this->session->userdata('logged_in');
@@ -177,7 +176,7 @@ class User extends CI_Controller
             'Email',
             'required|is_unique[savsoft_users.email]'
         );
-        if ($this->input->post('password')) {
+        if ($this->input->post('password') && 0) {
 
             if ($_POST['password'] != $_POST['repeat_password']) {
 
@@ -190,12 +189,9 @@ class User extends CI_Controller
                 redirect('user/new_user/');
             }
         }
-
-
         $data_photo = $this->cargar_archivo();
-
-        $this->form_validation->set_rules('password', 'Password', 'required');
-        $this->form_validation->set_rules('repeat_password', 'Password', 'required');
+        //$this->form_validation->set_rules('password', 'Password', 'required');
+        //$this->form_validation->set_rules('repeat_password', 'Password', 'required');
         if ($this->form_validation->run() == false) {
             $this->session->set_flashdata(
                 'message',
@@ -375,10 +371,20 @@ class User extends CI_Controller
         $this->load->view('footer', $data);
     }
 
+    public function edit_user_decide($uid)
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        if ($logged_in['su'] == '2') {
+            $this->edit_user($uid);
+        } else {
+            $this->edit_user_admin($uid);
+        }
+    }
+
     public function edit_user($uid)
     {
         $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['postulantes']);
+        $user_p = explode(',', $logged_in['users']);
 
         if (!in_array('Edit', $user_p)) {
             if (in_array('Myaccount', $user_p)) {
@@ -408,7 +414,7 @@ class User extends CI_Controller
         $data['account_type'] = $this->account_model->account_list(0);
 
         $this->load->view('header', $data);
-        if ($logged_in['su'] == '1') {
+        if ($logged_in['su'] != '2') {
             $this->load->view('edit_user', $data);
         } else {
             $this->load->view('myaccount', $data);
@@ -449,7 +455,7 @@ class User extends CI_Controller
 
         $data['account_type'] = $this->account_model->account_list(0);
         $this->load->view('header', $data);
-        if ($logged_in['su'] == '1') {
+        if ($logged_in['su'] != '2') {
             $this->load->view('edit_user_admin', $data);
         } else {
             $this->load->view('myaccount', $data);
@@ -517,7 +523,7 @@ class User extends CI_Controller
         }
         if ($this->input->post('password')) {
 
-            if ($_POST['inputPassword'] != $_POST['repeat_password']) {
+            if ($_POST['password'] != $_POST['repeat_password']) {
 
                 $this->session->set_flashdata(
                     'message',
@@ -591,43 +597,41 @@ class User extends CI_Controller
 
     public function view_inscription($uid)
     {
-        //$uid = 22;
-        // fetching group list
-        //$data['career_list'] = $this->user_model->career_list();
-        //$data['title'] = $this->lang->line('career_list');
-        //$this->load->view('header', $data);
         try {
             $data['result'] = $this->user_model->get_user($uid);
-
             $data['career_list'] = $this->user_model->get_career_all();
             $data['group_list'] = $this->user_model->get_group_all($limit);
             $data['speciality_list'] = $this->user_model->get_specialties_all();
-
             $data['university_list'] = $this->user_model->get_university_all();
-
-
-            //$view = $this->load->view('view_inscription', $data2, TRUE);
-
-
+            //$this->load->view('view_inscription', $data);
             $this->load->library('pdf');
             $this->pdf->load_html(utf8_decode($this->load->view('view_inscription', $data, TRUE)));
             $this->pdf->set_paper('legal', 'portrait');
             $this->pdf->render();
-            $filename = date('Y-M-d_H:i:s', time()) . ".pdf";
+            $filename = date('Y-M-d_H:i:s', time()) . "_ficha.pdf";
             $this->pdf->stream($filename);
-
-
         } catch (Exception $e) {
-            echo 'Error'  . $e->getMessage();
+            echo 'Error' . $e->getMessage();
         }
+    }
 
-
-        //$this->pdf->render();
-        //$filename = date('Y-M-d_H:i:s', time()) . ".pdf";
-        //$this->pdf->stream($filename);
-
-
-        //$this->load->view('footer', $data);
+    public function view_carnet($uid)
+    {
+        try {
+            $data['result'] = $this->user_model->get_user($uid);
+            $data['career_list'] = $this->user_model->get_career_all();
+            $data['group_list'] = $this->user_model->get_group_all($limit);
+            $data['speciality_list'] = $this->user_model->get_specialties_all();
+            $data['university_list'] = $this->user_model->get_university_all();
+            $this->load->library('pdf');
+            $this->pdf->load_html(utf8_decode($this->load->view('view_carnet', $data, TRUE)));
+            $this->pdf->set_paper('legal', 'portrait');
+            $this->pdf->render();
+            $filename = date('Y-M-d_H:i:s', time()) . "_carnet.pdf";
+            $this->pdf->stream($filename);
+        } catch (Exception $e) {
+            echo 'Error' . $e->getMessage();
+        }
     }
 
     public function add_new_group()

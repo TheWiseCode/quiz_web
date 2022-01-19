@@ -70,7 +70,7 @@
 
                         <div class="form-group">
                             <label for="inputEmail" class="font-weight-bold">
-                            <?php echo $this->lang->line('email_address'); ?></label>
+                                <?php echo $this->lang->line('email_address'); ?></label>
                             <input type="email" id="inputEmail" name="email" class="form-control"
                                    placeholder="<?php echo $this->lang->line('email_address'); ?>" required autofocus>
                         </div>

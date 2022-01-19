@@ -15,12 +15,12 @@
                class="btn btn-success"><?php echo $this->lang->line('add_new1'); ?></a>
             <br><br>
             <table class="table table-bordered">
-                <tr>
+                <tr style="background: #3472f7; color: white;">
                     <th><?php echo $this->lang->line('group_name'); ?></th>
                     <th><?php echo $this->lang->line('description'); ?></th>
                     <th><?php echo $this->lang->line('date_init'); ?></th>
                     <th><?php echo $this->lang->line('date_end'); ?></th>
-                    <th><?php echo $this->lang->line('valid_for_days'); ?></th>
+                    <th hidden><?php echo $this->lang->line('valid_for_days'); ?></th>
                     <th><?php echo $this->lang->line('action'); ?> </th>
                 </tr>
                 <?php
@@ -47,7 +47,7 @@
                         <td>
                             <?php echo $val['date_end']; ?>
                         </td>
-                        <td><?php echo $val['valid_for_days']; ?></td>
+                        <td hidden><?php echo $val['valid_for_days']; ?></td>
                         <td>
                             <a href="<?php echo site_url('user/edit_group/' . $val['gid']); ?>">
                                 <i class="fas fa-edit"  style="color:#3472f7;"></i>

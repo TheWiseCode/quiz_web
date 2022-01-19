@@ -35,7 +35,7 @@
             }
             ?>
             <table class="table table-bordered">
-                <tr>
+                <tr style="background: #3472f7; color: white;">
                     <th>#</th>
                     <th><?php echo $this->lang->line('title'); ?></th>
                     <th><?php echo $this->lang->line('description'); ?> </th>
@@ -66,7 +66,7 @@
                             if (in_array('Edit', $acp)) {
                                 ?>
                                 <a href="<?php echo site_url('study_material/edit_studymaterial/' . $val['stid']); ?>">
-                                    <i class="fas fa-edit"  style="color:#3472f7;"></i></a>
+                                    <i class="fas fa-edit" style="color:#3472f7;"></i></a>
                             <?php } ?>
                             <?php
                             $acp = explode(',', $logged_in['study_material']);
@@ -74,7 +74,7 @@
                                 ?>
 
                                 <a href="<?php echo site_url('study_material/view_studymaterial/' . $val['stid']); ?>">
-                                    <i class="fas fa-eye"  style="color:#3472f7;"></i></a>
+                                    <i class="fas fa-eye" style="color:#3472f7;"></i></a>
                             <?php } ?>
                             <?php
                             $acp = explode(',', $logged_in['study_material']);
@@ -82,7 +82,7 @@
                                 ?>
 
                                 <a href="<?php echo site_url('study_material/remove_studymaterial/' . $val['stid']); ?>">
-                                    <i class="fas fa-trash"  style="color:#3472f7;"></i></a>
+                                    <i class="fas fa-trash" style="color:#3472f7;"></i></a>
                             <?php } ?>
                         </td>
 

@@ -3,6 +3,17 @@
 class Account_model extends CI_Model
 {
 
+    function account_list_all($limit)
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $this->db->limit($this->config->item('number_of_rows'),$limit);
+        $this->db->order_by('account_id','desc');
+        $query = $this->db->get('account_type');
+        return $query->result_array();
+
+
+    }
+
     function account_list($limit)
     {
         $logged_in = $this->session->userdata('logged_in');
@@ -22,7 +33,7 @@ class Account_model extends CI_Model
         //print_r($_POST); die;
         $userdata = array(
             'account_name' => $this->input->post('name'),
-                        
+
             'setting' => $this->input->post('setting'));
         if ($this->input->post('users')) {
             $userdata['users'] = implode(',', $this->input->post('users'));
@@ -48,14 +59,12 @@ class Account_model extends CI_Model
 
     }
 
-
     function get_edit_account($account_id)
     {
         $this->db->where('account_id', $account_id);
         $query = $this->db->get('account_type');
         return $query->row_array();
     }
-
 
     function update_account($account_id)
     {
@@ -103,7 +112,6 @@ class Account_model extends CI_Model
         $this->db->where('account_id', $account_id);
         $this->db->update('account_type', $userdata);
     }
-
 
     function remove_account($account_id)
     {
