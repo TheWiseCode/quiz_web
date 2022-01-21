@@ -229,7 +229,7 @@ $hres = $hquery->result_Array();
             }
             ?>
             <?php
-            if (in_array('List_all', explode(',', $logged_in['postulantes']))) {
+            if (in_array('List_all', explode(',', $logged_in['applicants']))) {
                 ?>
                 <!-- Nav Item - Pages Collapse Menu -->
                 <li class="nav-item">
@@ -242,13 +242,13 @@ $hres = $hquery->result_Array();
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <?php
-                            if (in_array('Add', explode(',', $logged_in['postulantes']))) {
+                            if (in_array('Add', explode(',', $logged_in['applicants']))) {
                                 ?>
                                 <a class="collapse-item"
                                    href="<?php echo site_url('user/new_user'); ?>"><?php echo $this->lang->line('add_new_'); ?></a>
                             <?php } ?>
                             <?php
-                            if (in_array('List', explode(',', $logged_in['postulantes'])) || in_array('List_all', explode(',', $logged_in['postulantes']))) {
+                            if (in_array('List', explode(',', $logged_in['applicants'])) || in_array('List_all', explode(',', $logged_in['applicants']))) {
                                 ?>
                                 <a class="collapse-item"
                                    href="<?php echo site_url('user'); ?>"><?php echo $this->lang->line('user_list_students'); ?></a>

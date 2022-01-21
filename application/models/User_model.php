@@ -290,20 +290,6 @@ class User_model extends CI_Model
         return $query->result_array();
     }
 
-    function get_university_all()
-    {
-        $this->db->order_by('name');
-        $query = $this->db->get('university');
-        return $query->result_array();
-    }
-
-    function get_specialties_all()
-    {
-        $this->db->order_by('name');
-        $query = $this->db->get('specialties');
-        return $query->result_array();
-    }
-
     function get_account_type()
     {
         $query = $this->db->get('account_type');
@@ -532,28 +518,6 @@ class User_model extends CI_Model
         if ($data_photo == "") {
             $data_photo = "images/profile.jpeg";
         }
-        if ($this->input->post('other_uni') == 'on') {
-            $name_uni = $this->input->post('another_uni');
-            $data_uni = ['name' => strtoupper(trim($name_uni))];
-            if ($this->db->insert('university', $data_uni)) {
-                $id_uni = $this->db->insert_id();
-            } else {
-                return "";
-            }
-        } else {
-            $id_uni = $this->input->post('university');
-        }
-        if ($this->input->post('other_spe') == 'on') {
-            $name_spe = $this->input->post('another_spe');
-            $data_spe = ['name' => strtoupper(trim($name_spe))];
-            if ($this->db->insert('specialties', $data_spe)) {
-                $id_spe = $this->db->insert_id();
-            } else {
-                return "";
-            }
-        } else {
-            $id_spe = $this->input->post('specialties');
-        }
         $userdata = [
             'email' => $this->input->post('email'),
             'password' => md5($this->input->post('ci')),
@@ -562,32 +526,25 @@ class User_model extends CI_Model
             'first_name' => $this->input->post('first_name'),
             'last_name' => $this->input->post('last_name'),
             'cod_student' => $this->input->post('code_student'),
-            //'first_opt_univ_degree' => $name_first_career['name'],
-            //'second_opt_univ_degree' => $name_second_career['name'],
+            'first_opt_univ_degree' => $this->input->post('first_career'),
+            'second_opt_univ_degree' => $this->input->post('second_career'),
             'contact_no' => $this->input->post('contact_no'),
             'gid' => $this->input->post('gid'),
-            'subscription_expired' => strtotime($this->input->post('subscription_expired')),
+            'subscription_expired' => null,
             'su' => 2,
             'photo' => $data_photo,
             'civil_status' => $this->input->post('civil_status'),
             'sexo' => $this->input->post('gender'),
             'address' => $this->input->post('address'),
-            'nationality' => $this->input->post('nationality'),
-            'id_university' => $id_uni,
-            'id_speciality' => $id_spe,
+            'nationality' => $this->input->post('nationality')
         ];
-
-
         if ($logged_in['uid'] != '1') {
             $userdata['inserted_by'] = $logged_in['uid'];
         }
         if ($this->db->insert('savsoft_users', $userdata)) {
             $uid = $this->db->insert_id();
-
-
             if ($logged_in['uid'] == '1') {
                 $su = $this->input->post('su');
-
                 $seq = $this->db->query(
                     "select * from account_type where account_id='$su' "
                 );
@@ -599,7 +556,6 @@ class User_model extends CI_Model
                     );
                 }
             }
-
             foreach ($_POST['custom'] as $ck => $cv) {
                 if ($cv != '') {
                     $savsoft_users_custom = [
@@ -624,8 +580,6 @@ class User_model extends CI_Model
     function insert_user_user()
     {
         $logged_in = $this->session->userdata('logged_in');
-
-
         $userdata = [
             'email' => $this->input->post('email'),
             'password' => md5($this->input->post('password')),
@@ -1097,7 +1051,6 @@ class User_model extends CI_Model
                 $second_opt = $singleuser['6'];
                 $email = $singleuser['7'];
                 $phone = $singleuser['8'];
-
 
                 $insert_data = [
                     'cod_student' => $cod_student,

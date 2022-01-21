@@ -37,7 +37,6 @@
                     <th><?php echo 'Nombre '; ?><?php echo 'Completo'; ?></th>
                     <th><?php echo 'Telefono'; ?> </th>
                     <th><?php echo 'Codigo de postulante'; ?> </th>
-                    <th><?php echo $this->lang->line('specialty'); ?> </th>
                     <th><?php echo $this->lang->line('action'); ?> </th>
                 </tr>
                 <?php
@@ -55,23 +54,6 @@
                         <td><?php echo $val['first_name'] . ' '; ?><?php echo $val['last_name']; ?></td>
                         <td><?php echo $val['contact_no']; ?></td>
                         <td><?php echo $val['cod_student']; ?> </td>
-
-                        <td>
-                            <?php
-                            foreach ($speciality_list as $key => $vals) {
-                                ?>
-
-                                <?php
-                                if ($vals['id'] == $val['id_speciality']) {
-                                    echo $vals['name'];
-                                }
-                                ?>
-                                <?php
-                            }
-                            ?>
-
-                        </td>
-
                         <td>
                             <a hidden href="<?php echo site_url(
                                 'user2/view_user/' . $val['uid']
@@ -83,12 +65,12 @@
                             '<?php echo $this->lang->line('warning_remove') ?>');">
                                 <i class="fa fa-trash" style="color:#3472f7;"></i>
                             </a>
-                            <a title="Descargar Ficha Inscripcion" href="<?php echo site_url(
+                            <!--<a title="Descargar Ficha Inscripcion" href="<?php /*echo site_url(
                                 'user/view_inscription/' . $val['uid']
-                            ); ?>"><i class="fa fa-download" style="color:rgb(40,206,61);"></i></a>
-                            <a title="Descargar Carnet Inscripcion" href="<?php echo site_url(
+                            ); */?>"><i class="fa fa-download" style="color:rgb(40,206,61);"></i></a>
+                            <a title="Descargar Carnet Inscripcion" href="<?php /*echo site_url(
                                 'user/view_carnet/' . $val['uid']
-                            ); ?>"><i class="fa fa-id-card" style="color:#f73434;"></i></a>
+                            ); */?>"><i class="fa fa-id-card" style="color:#f73434;"></i></a>-->
                         </td>
                     </tr>
 
@@ -116,7 +98,7 @@
         'user/index/' . $next
     ); ?>" class="btn btn-primary"><?php echo $this->lang->line('next'); ?></a>
 
-    <div class="card mt-3" hidden>
+    <div class="card mt-3">
         <div class="card-header font-weight-bold"><?php echo $this->lang->line('import_users'); ?></div>
 
         <div class="card-body">

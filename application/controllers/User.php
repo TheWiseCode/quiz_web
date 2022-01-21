@@ -37,22 +37,16 @@ class User extends CI_Controller
     public function index($limit = '0')
     {
         $logged_in = $this->session->userdata('logged_in');
-
-        $user_p = explode(',', $logged_in['postulantes']);
+        $user_p = explode(',', $logged_in['applicants']);
         if (!in_array('List_all', $user_p)) {
             exit($this->lang->line('permission_denied'));
         }
-
         $data['limit'] = $limit;
         $data['title'] = $this->lang->line('user_list_students');
         // fetching user list
         $data['result'] = $this->user_model->user_list($limit);
         $data['career_list'] = $this->user_model->get_career_all();
         $data['group_list'] = $this->user_model->get_group_all($limit);
-        $data['speciality_list'] = $this->user_model->get_specialties_all();
-        $data['university_list'] = $this->user_model->get_university_all();
-
-
         $this->load->view('header', $data);
         $this->load->view('user_list', $data);
         $this->load->view('footer', $data);
@@ -61,26 +55,21 @@ class User extends CI_Controller
     public function index2($limit = '0')
     {
         $logged_in = $this->session->userdata('logged_in');
-
         $user_p = explode(',', $logged_in['users']);
         if (!in_array('List_all', $user_p)) {
             exit($this->lang->line('permission_denied'));
         }
-
         $user_p = explode(',', $logged_in['users']);
         if (!in_array('List_all', $user_p)) {
             exit($this->lang->line('permission_denied'));
         }
-
         $data['limit'] = $limit;
         $data['title'] = $this->lang->line('userlist');
         // fetching user list
         $data['result'] = $this->user_model->user_list_only_user($limit);
         $data['list_account_type'] = $this->user_model->get_account_type();
-
         //$data['career_list'] = $this->user_model->get_career_all();
         ///$data['group_list'] = $this->user_model->get_group_all($limit);
-
         $this->load->view('header', $data);
         $this->load->view('user_list2', $data);
         $this->load->view('footer', $data);
@@ -89,11 +78,11 @@ class User extends CI_Controller
     public function new_user()
     {
         try {
-            if($this->session->flashdata('data_temp') != null){
+            if ($this->session->flashdata('data_temp') != null) {
                 $data = $this->session->flashdata('data_temp');
             }
             $logged_in = $this->session->userdata('logged_in');
-            $user_p = explode(',', $logged_in['postulantes']);
+            $user_p = explode(',', $logged_in['applicants']);
             if (!in_array('Add', $user_p)) {
                 exit($this->lang->line('permission_denied'));
             }
@@ -101,8 +90,13 @@ class User extends CI_Controller
             $data['group_list'] = $this->user_model->group_list();
             $data['career_list'] = $this->user_model->get_career_all();
             $data['account_type'] = $this->account_model->account_list(0);
-            $data['university_list'] = $this->user_model->get_university_all();
-            $data['specialties_list'] = $this->user_model->get_specialties_all();
+            $data['nationalities'] = [];
+            array_push($data['nationalities'], 'BOLIVIANO(A)');
+            $nat = $this->lang->line('nationalities');
+            usort($nat, function ($it1, $it2) {
+                return $it1 > $it2;
+            });
+            foreach($nat as $n) array_push($data['nationalities'], $n);
             $this->load->view('header', $data);
             $this->load->view('new_user', $data);
             $this->load->view('footer', $data);
@@ -188,11 +182,12 @@ class User extends CI_Controller
         return $photo;
     }
 
-    function error_display(){
-        foreach ($_POST as $key => $value){
+    function error_display()
+    {
+        foreach ($_POST as $key => $value) {
             $data[$key] = $value;
         }
-        foreach ($_FILES as $key => $value){
+        foreach ($_FILES as $key => $value) {
             $data[$key] = $value;
         }
         $this->session->set_flashdata('data_temp', $data);
@@ -202,7 +197,7 @@ class User extends CI_Controller
     public function insert_user()
     {
         $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['postulantes']);
+        $user_p = explode(',', $logged_in['applicants']);
         if (!in_array('Add', $user_p)) {
             exit($this->lang->line('permission_denied'));
         }
@@ -210,7 +205,7 @@ class User extends CI_Controller
         if ($this->input->post('other_uni') == 'on') {
             $name_uni = strtoupper(trim($this->input->post('another_uni')));
             $valid = $this->user_model->valid_university($name_uni);
-            if(!$valid){
+            if (!$valid) {
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-danger'>" .
@@ -223,7 +218,7 @@ class User extends CI_Controller
         if ($this->input->post('other_spe') == 'on') {
             $name_spe = strtoupper(trim($this->input->post('another_spe')));
             $valid = $this->user_model->valid_specialty($name_spe);
-            if(!$valid){
+            if (!$valid) {
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-danger'>" .
@@ -291,9 +286,7 @@ class User extends CI_Controller
             'required|is_unique[savsoft_users.email]'
         );
         if ($this->input->post('password')) {
-
             if ($_POST['password'] != $_POST['repeat_password']) {
-
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-danger'>" .
@@ -336,7 +329,7 @@ class User extends CI_Controller
     public function remove_user($uid)
     {
         $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['postulantes']);
+        $user_p = explode(',', $logged_in['applicants']);
         if (!in_array('Remove', $user_p)) {
             exit($this->lang->line('permission_denied'));
         }
@@ -471,8 +464,6 @@ class User extends CI_Controller
         // fetching group list
         $data['career_list'] = $this->user_model->get_career_all();
         $data['group_list'] = $this->user_model->group_list();
-        $data['university_list'] = $this->user_model->get_university_all();
-        $data['speciality_list'] = $this->user_model->get_specialties_all();
         $data['account_type'] = $this->account_model->account_list(0);
 
         $this->load->view('header', $data);
@@ -663,8 +654,6 @@ class User extends CI_Controller
             $data['result'] = $this->user_model->get_user($uid);
             $data['career_list'] = $this->user_model->get_career_all();
             $data['group_list'] = $this->user_model->get_group_all($limit);
-            $data['speciality_list'] = $this->user_model->get_specialties_all();
-            $data['university_list'] = $this->user_model->get_university_all();
             //$this->load->view('view_inscription', $data);
             $this->load->library('pdf');
             $this->pdf->load_html(utf8_decode($this->load->view('view_inscription', $data, TRUE)));
@@ -683,8 +672,6 @@ class User extends CI_Controller
             $data['result'] = $this->user_model->get_user($uid);
             $data['career_list'] = $this->user_model->get_career_all();
             $data['group_list'] = $this->user_model->get_group_all($limit);
-            $data['speciality_list'] = $this->user_model->get_specialties_all();
-            $data['university_list'] = $this->user_model->get_university_all();
             $this->load->library('pdf');
             $this->pdf->load_html(utf8_decode($this->load->view('view_carnet', $data, TRUE)));
             $this->pdf->set_paper('legal', 'portrait');

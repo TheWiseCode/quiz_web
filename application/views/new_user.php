@@ -15,7 +15,7 @@
                         }
                         ?>
                         <div class="row">
-                            <div class="col col-md-7">
+                            <div class="col col-md-9">
                                 <div class="form-group">
                                     <label for="code_student"
                                            class="font-weight-bold"><?php echo $this->lang->line('cod_cd'); ?></label>
@@ -50,9 +50,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col col-md-5">
+                            <div class="col col-md-3">
                                 <label for="biometric_data"
-                                       class="font-weight-bold"><?php echo $this->lang->line('biometric_data') ?></label>
+                                       class="font-weight-bold">Fotografica</label>
                                 <div class="row rounded" id="biometric_data">
                                     <div class="col col-md-6">
                                         <div class="picture-container" id="profile">
@@ -64,24 +64,9 @@
                                                      onclick="openLoaderProfile()">
                                                 <input type="file" id="wizard_picture" name="wizard_picture"
                                                        accept="image/*" hidden>
-                                                <input type="text" id="foto_valid" class="sr-only" value=""
+                                                <!--<input type="text" id="foto_valid" class="sr-only" value=""
                                                        oninvalid="this.setCustomValidity('Registre la foto del postulante')"
-                                                       required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col col-md-6">
-                                        <div class="font-weight-bold">
-                                            <div class="fingerprint">
-                                                <a href="#" id="huella" onclick="launchBiometricReader()">
-                                                    <img src="<?php echo base_url() . 'images/huella.png' ?>"
-                                                         class="img-fluid border border-dark rounded rounded-1"
-                                                         title="Huella"
-                                                         style="width: 120px; height: 120px;">
-                                                </a>
-                                                <input type="text" id="huella_valid" class="sr-only" value=""
-                                                       oninvalid="this.setCustomValidity('Registre la huella del postulante')"
-                                                       required>
+                                                       required>-->
                                             </div>
                                         </div>
                                     </div>
@@ -148,15 +133,20 @@
                         <div class="form-group">
                             <label for="nationality"
                                    class="font-weight-bold"><?php echo $this->lang->line('nationality'); ?></label>
-                            <input type="text" name="nationality" class="form-control"
-                                   value="<?php if ($nationality != null) echo $nationality ?>"
-                                   placeholder="<?php echo $this->lang->line('nationality'); ?>" autofocus required
-                                   tabindex="9">
+                            <select class="form-control" name="nationality" id="nationality" tabindex="9" required>
+                                <?php
+                                foreach ($nationalities as $val) {
+                                    ?>
+                                    <option value="<?php echo $val; ?>"><?php echo $val; ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
                         </div>
-                        <div hidden class="form-group">
+                        <div class="form-group">
                             <label class="font-weight-bold"
                                    for="first_opt_univ_degree"><?php echo $this->lang->line('select_first_career'); ?></label>
-                            <select class="form-control" name="first_opt_univ_degree" id="first_opt_univ_degree">
+                            <select class="form-control" name="first_career" id="first_opt_univ_degree">
                                 <?php
                                 foreach ($career_list as $key => $val) {
                                     ?>
@@ -166,10 +156,10 @@
                                 ?>
                             </select>
                         </div>
-                        <div hidden class="form-group">
+                        <div class="form-group">
                             <label class="font-weight-bold"
                                    for="second_opt_univ_degree"><?php echo $this->lang->line('select_second_career'); ?></label>
-                            <select class="form-control" name="second_opt_univ_degree" id="second_opt_univ_degree">
+                            <select class="form-control" name="second_career" id="second_opt_univ_degree">
                                 <?php
                                 foreach ($career_list as $key => $val) {
                                     ?>
@@ -178,61 +168,6 @@
                                 }
                                 ?>
                             </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="font-weight-bold"
-                                   for="university"><?php echo $this->lang->line('select_university'); ?></label>
-                            <select class="form-control" name="university" id="university" tabindex="10">
-                                <?php
-                                foreach ($university_list as $key => $val) {
-                                    $id = $val['id'];
-                                    $name = $val['name'];
-                                    echo "<option value='$id' ";
-                                    if ($university != null && $university == $id)
-                                        echo selected;
-                                    echo ">$name</option>";
-                                }
-                                ?>
-                            </select>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="other_uni" name="other_uni"
-                                       onchange="changeOtherUni()">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    <?php echo $this->lang->line('other') ?>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group" id="div_another_uni" style="display: none;">
-                            <label class="font-weight-bold">Nueva Universidad</label>
-                            <input type="text" name="another_uni" class="form-control" id="another_uni"
-                                   placeholder="Nueva Universidad" autofocus>
-                        </div>
-                        <div class="form-group">
-                            <label class="font-weight-bold"><?php echo $this->lang->line('select_specialties'); ?></label>
-                            <select class="form-control" name="specialties" id="specialties" tabindex="11">
-                                <?php
-                                foreach ($specialties_list as $key => $val) {
-                                    $id = $val['id'];
-                                    $name = $val['name'];
-                                    echo "<option value='$id' ";
-                                    if ($specialties != null && $specialties == $id)
-                                        echo selected;
-                                    echo ">$name</option>";
-                                }
-                                ?>
-                            </select>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="other_spe" name="other_spe"
-                                       onchange="changeOtherSpe()">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    <?php echo $this->lang->line('other') ?>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group" id="div_another_spe" style="display: none;">
-                            <label class="font-weight-bold">Nueva Especialidad</label>
-                            <input type="text" name="another_spe" class="form-control" id="another_spe"
-                                   placeholder="Nueva Especialidad" autofocus>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail"
@@ -253,12 +188,6 @@
                                 }
                                 ?>
                             </select>
-                        </div>
-                        <div class="form-group" hidden>
-                            <label for="inputEmail font-weight-bold"><?php echo $this->lang->line('subscription_expired'); ?></label>
-                            <input type="date" name="subscription_expired" id="subscription_expired"
-                                   class="form-control" disabled
-                                   placeholder="<?php echo $this->lang->line('subscription_expired'); ?>" autofocus>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail"
@@ -310,43 +239,6 @@
                 $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
             }
             reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    function launchBiometricReader() {
-        let code = document.getElementsByName("code_student")[0].value;
-        let uid = '<?php echo $uid?>';
-        if (code === undefined || code === '') {
-            alert('Registre el codigo de postulante');
-        } else {
-            $('#huella_valid').val('1');
-            window.open('testus:' + code + ',' + uid);
-        }
-    }
-
-    function changeOtherUni() {
-        let other_uni = document.getElementById('other_uni');
-        if (other_uni.checked) {
-            document.getElementById('university').setAttribute('disabled', 'disabled');
-            document.getElementById('another_uni').removeAttribute('disabled');
-            document.getElementById('div_another_uni').style.display = 'block';
-        } else {
-            document.getElementById('university').removeAttribute('disabled');
-            document.getElementById('another_uni').setAttribute('disabled', 'disabled');
-            document.getElementById('div_another_uni').style.display = 'none';
-        }
-    }
-
-    function changeOtherSpe() {
-        let other_uni = document.getElementById('other_spe');
-        if (other_uni.checked) {
-            document.getElementById('specialties').setAttribute('disabled', 'disabled');
-            document.getElementById('another_spe').removeAttribute('disabled');
-            document.getElementById('div_another_spe').style.display = 'block';
-        } else {
-            document.getElementById('specialties').removeAttribute('disabled');
-            document.getElementById('another_spe').setAttribute('disabled', 'disabled');
-            document.getElementById('div_another_spe').style.display = 'none';
         }
     }
 
