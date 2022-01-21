@@ -73,13 +73,8 @@
 
     <div class="row" style="margin-top:20px;">
         <div class="col-lg-12">
-
-
             <div class="row">
-
-
                 <div class="col-md-6">
-
                     <div class="card border-left-success shadow  py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
@@ -97,12 +92,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="col-md-6">
-
-
                     <div class="card border-left-danger shadow  py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
@@ -121,13 +113,10 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
 
 
             <!-- recent users -->
-
             <div class="card  shadow  py-2" style="margin-top:20px;">
                 <div class="card-header" style="padding:5px;">
                     <h6 class="m-0 font-weight-bold text-primary">
@@ -142,7 +131,6 @@
                             <th class="text-xs-right"><?php echo $this->lang->line('full_name'); ?></th>
                             <th class="text-xs-right"><?php echo $this->lang->line('group_name'); ?></th>
                             <th class="text-xs-right"><?php echo $this->lang->line('contact_no'); ?></th>
-
                         </tr>
                         </thead>
                         <tbody>
@@ -152,8 +140,6 @@
                             <tr>
                                 <td colspan="3"><?php echo $this->lang->line('no_record_found'); ?></td>
                             </tr>
-
-
                             <?php
                         }
                         foreach ($result as $key => $val) {
@@ -165,9 +151,7 @@
                                 <td class="text-xs-right"><?php echo $val['first_name']; ?><?php echo $val['last_name']; ?></td>
                                 <td class="text-xs-right"><?php echo $val['group_name']; ?></td>
                                 <td class="text-xs-right"><?php echo $val['contact_no']; ?></td>
-
                             </tr>
-
                             <?php
                         }
                         ?>

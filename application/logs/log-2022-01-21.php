@@ -244,3 +244,24 @@ ERROR - 2022-01-21 03:08:20 --> Severity: Warning --> Use of undefined constant 
 ERROR - 2022-01-21 03:08:20 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\FCJPSRRII\application\views\new_user.php 188
 ERROR - 2022-01-21 03:08:20 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\FCJPSRRII\application\views\new_user.php 215
 ERROR - 2022-01-21 07:14:03 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 214
+ERROR - 2022-01-21 14:17:21 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 214
+ERROR - 2022-01-21 14:21:10 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 214
+ERROR - 2022-01-21 14:24:10 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 214
+ERROR - 2022-01-21 14:24:10 --> Severity: error --> Exception: syntax error, unexpected '/' C:\xampp\htdocs\quiz\FCJPSRRII\application\models\User_model.php 339
+ERROR - 2022-01-21 14:24:14 --> Severity: error --> Exception: syntax error, unexpected '/' C:\xampp\htdocs\quiz\FCJPSRRII\application\models\User_model.php 339
+ERROR - 2022-01-21 14:24:17 --> Severity: error --> Exception: syntax error, unexpected '/' C:\xampp\htdocs\quiz\FCJPSRRII\application\models\User_model.php 339
+ERROR - 2022-01-21 14:25:09 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 214
+ERROR - 2022-01-21 14:25:36 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 214
+ERROR - 2022-01-21 14:27:07 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 214
+ERROR - 2022-01-21 14:30:48 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 198
+ERROR - 2022-01-21 14:31:57 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 198
+ERROR - 2022-01-21 14:32:28 --> Severity: error --> Exception: Call to undefined method User_model::where() C:\xampp\htdocs\quiz\FCJPSRRII\application\models\User_model.php 339
+ERROR - 2022-01-21 14:32:37 --> Query error: Unknown column 'status' in 'where clause' - Invalid query: SELECT *
+FROM `savsoft_users`
+WHERE `status` = 'Active'
+ERROR - 2022-01-21 14:32:37 --> Severity: error --> Exception: Call to a member function num_rows() on bool C:\xampp\htdocs\quiz\FCJPSRRII\application\models\User_model.php 341
+ERROR - 2022-01-21 14:33:08 --> Query error: Unknown column 'users_status' in 'where clause' - Invalid query: SELECT *
+FROM `savsoft_users`
+WHERE `users_status` = 'Active'
+ERROR - 2022-01-21 14:33:08 --> Severity: error --> Exception: Call to a member function num_rows() on bool C:\xampp\htdocs\quiz\FCJPSRRII\application\models\User_model.php 341
+ERROR - 2022-01-21 14:33:25 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 198

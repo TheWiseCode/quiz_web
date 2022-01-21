@@ -365,7 +365,7 @@ class User_model extends CI_Model
         $this->db->where('savsoft_users.user_status =', 'Active');
         //$this->db->where('savsoft_users.inserted_by =', $uid);
 
-        //$this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');
+        $this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');
         //$this->db->join('account_type', 'savsoft_users.su=account_type.account_id');
         $query = $this->db->get('savsoft_users');
         if (!$query) {
