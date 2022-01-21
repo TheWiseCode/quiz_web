@@ -340,3 +340,25 @@ ERROR - 2022-01-21 15:58:25 --> Severity: Warning --> Invalid argument supplied 
 ERROR - 2022-01-21 16:01:25 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\models\User_model.php 559
 ERROR - 2022-01-21 16:02:41 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 198
 ERROR - 2022-01-21 16:03:35 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 198
+ERROR - 2022-01-21 16:17:05 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 197
+ERROR - 2022-01-21 16:17:07 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 197
+ERROR - 2022-01-21 16:18:20 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 197
+ERROR - 2022-01-21 16:19:48 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 197
+ERROR - 2022-01-21 16:19:59 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 197
+ERROR - 2022-01-21 16:20:54 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 197
+ERROR - 2022-01-21 16:23:00 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:24:10 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:26:16 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:26:33 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:26:56 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:27:13 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:27:59 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:28:55 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:30:41 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:33:01 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:34:21 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:36:37 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 193
+ERROR - 2022-01-21 16:42:23 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 193
+ERROR - 2022-01-21 16:55:45 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 193
+ERROR - 2022-01-21 17:02:10 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\FCJPSRRII\application\views\edit_user_admin.php 33
+ERROR - 2022-01-21 17:02:24 --> Severity: error --> Exception: syntax error, unexpected '}', expecting end of file C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 40

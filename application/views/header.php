@@ -10,6 +10,8 @@
 
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url(); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet"
+          type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet">
     <!-- custom css -->
@@ -109,6 +111,8 @@
     </style>
     <script src="<?php echo base_url(); ?>vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo base_url(); ?>vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?php echo base_url(); ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="<?php echo base_url(); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -121,9 +125,7 @@
 
 
     <script>
-
         var base_url = "<?php echo base_url();?>";
-
     </script>
 
 
@@ -631,8 +633,7 @@ $hres = $hquery->result_Array();
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-
-                <center><?php
+                <div style="text-align: center;"><?php
                     if ($this->uri->segment(3) != 'ph'){
                     if ($this->uri->segment(2) != 'attempt' && $this->uri->segment(1) != 'install') {
                         $this->db->where("add_status", "Active");
@@ -646,34 +647,17 @@ $hres = $hquery->result_Array();
                                                                    target="new_add"><img
                                         src="<?php echo base_url('upload/' . $ad['banner']); ?>" class="img-responsive">
                                 </a> <?php
-
                             }
                         }
-
                     }
-
-                    ?></center>
-
+                    ?></div>
                 <?php if ($this->session->flashdata('message_header')) {
-
                     echo $this->session->flashdata('message_header');
                 } ?>
-
-
                 <?php
-
                 }
                 ?>
-
-
-
                 <?php
                 }
                 }
                 ?>
-		
-		 
-		
-  
-   
- 
