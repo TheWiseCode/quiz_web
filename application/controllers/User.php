@@ -22,6 +22,18 @@ class User extends CI_Controller
         }
     }
 
+    public function register_image()
+    {
+        $data_photo = $this->load_image();
+    }
+
+    public function load()
+    {
+        $this->load->view('header', $data);
+        $this->load->view('load_image', $data);
+        $this->load->view('footer', $data);
+    }
+
     public function index($limit = '0')
     {
         $logged_in = $this->session->userdata('logged_in');
@@ -114,25 +126,52 @@ class User extends CI_Controller
         $this->load->view('footer', $data);
     }
 
-    function cargar_archivo()
+    function load_image()
     {
-
-        $p = $_FILES['wizard-picture'];
-
-        $name = time();
-        $mi_imagen = 'wizard-picture';
-
+        $cd = $this->input->post('code_student');
+        if ($cd == null) {
+            echo "Falta codigo";
+            return;
+        }
+        $p = $_FILES['picture-picture'];
+        $name = date('dmY_His',time());
+        $mi_imagen = 'picture';
         $config['upload_path'] = "photo/users";
-        $config['file_name'] = $name . "";
+        $config['file_name'] = $cd . '_' . $name . "";
         $config['allowed_types'] = "*";
         $config['max_size'] = "50000";
         $config['max_width'] = "20000";
         $config['max_height'] = "20000";
-
-
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
+        if (!$this->upload->do_upload($mi_imagen)) {
+            $photo = "photo/users/photo.jpeg";
+            return;
+        }
+        $data['uploadSuccess'] = $this->upload->data();
+        $photo = 'photo/users/' . $data['uploadSuccess']['orig_name'];
+        return $photo;
+    }
 
+    function cargar_archivo()
+    {
+        $cd = $this->input->post('code_student');
+        if ($cd == null) {
+            $cd = '';
+        } else {
+            $cd .= '_';
+        }
+        $p = $_FILES['wizard-picture'];
+        $name = time();
+        $mi_imagen = 'wizard-picture';
+        $config['upload_path'] = "photo/users";
+        $config['file_name'] = $cd . $name . "";
+        $config['allowed_types'] = "*";
+        $config['max_size'] = "50000";
+        $config['max_width'] = "20000";
+        $config['max_height'] = "20000";
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
         if (!$this->upload->do_upload($mi_imagen)) {
             //*** ocurrio un error
             //$data['uploadError'] = $this->upload->display_errors();
@@ -140,12 +179,9 @@ class User extends CI_Controller
             $photo = "photo/users/photo.jpeg";
             return;
         }
-
         $data['uploadSuccess'] = $this->upload->data();
         //$photo = $data['uploadSuccess']['full_path'];
         $photo = 'photo/users/' . $data['uploadSuccess']['orig_name'];
-
-
         /*if(!$this->user_model->submit_photo($uid,$photo))
             {
                 $this->session->set_flashdata(
@@ -156,12 +192,11 @@ class User extends CI_Controller
                 );
                 redirect('user2/view_user/' . $uid);
             }*/
-
         return $photo;
-
-
+        /*        $path = "E:\work\CM\myppt.ppt";
+                $extension = pathinfo($path, PATHINFO_EXTENSION);
+                echo("The extension is $extension.");*/
     }
-
 
     public function insert_user()
     {
@@ -177,7 +212,6 @@ class User extends CI_Controller
             'required|is_unique[savsoft_users.email]'
         );
         if ($this->input->post('password') && 0) {
-
             if ($_POST['password'] != $_POST['repeat_password']) {
 
                 $this->session->set_flashdata(

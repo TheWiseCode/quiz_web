@@ -347,14 +347,14 @@ class User_model extends CI_Model
             $this->db->or_where('savsoft_users.email', $search);
             $this->db->or_where('savsoft_users.first_name', $search);
             $this->db->or_where('savsoft_users.last_name', $search);
-            $this->db->or_where('savsoft_users.phone', $search);
-            $this->db->or_where('savsoft_users.cod_students', $search);
+            $this->db->or_where('savsoft_users.contact_no', $search);
+            $this->db->or_where('savsoft_users.cod_student', $search);
 
         }
         $logged_in = $this->session->userdata('logged_in');
         if ($logged_in['uid'] != '1') {
             $uid = $logged_in['uid'];
-            //$this->db->where('savsoft_users.inserted_by', $uid);
+            $this->db->where('savsoft_users.inserted_by', $uid);
         }
 
         $this->db->limit($this->config->item('number_of_rows'), $limit);
@@ -364,8 +364,11 @@ class User_model extends CI_Model
         //$this->db->where('savsoft_users.inserted_by =', $uid);
 
         //$this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');
-        $this->db->join('account_type', 'savsoft_users.su=account_type.account_id');
+        //$this->db->join('account_type', 'savsoft_users.su=account_type.account_id');
         $query = $this->db->get('savsoft_users');
+        if(!$query){
+            return array();
+        }
         return $query->result_array();
     }
 
@@ -377,8 +380,8 @@ class User_model extends CI_Model
             $this->db->or_where('savsoft_users.email', $search);
             $this->db->or_where('savsoft_users.first_name', $search);
             $this->db->or_where('savsoft_users.last_name', $search);
-            $this->db->or_where('savsoft_users.phone', $search);
-            $this->db->or_where('savsoft_users.cod_students', $search);
+            $this->db->or_where('savsoft_users.contact_no', $search);
+            $this->db->or_where('savsoft_users.cod_student', $search);
         }
         $logged_in = $this->session->userdata('logged_in');
         if ($logged_in['uid'] != '1') {
@@ -402,14 +405,11 @@ class User_model extends CI_Model
         $logged_in = $this->session->userdata('logged_in');
         if ($logged_in['uid'] != '1') {
             $uid = $logged_in['uid'];
-            //$this->db->where('savsoft_users.inserted_by', $uid);
+            $this->db->where('savsoft_users.inserted_by', $uid);
         }
 
-        $this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');
-        $this->db->join(
-            'account_type',
-            'savsoft_users.su=account_type.account_id'
-        );
+        //$this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');
+        //$this->db->join('account_type','savsoft_users.su=account_type.account_id');
         $query = $this->db->get('savsoft_users');
         return $query->result_array();
     }
