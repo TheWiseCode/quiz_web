@@ -10,7 +10,7 @@
     <div class="col col-md-2">
         <div class="picture-container">
             <div aling="left;" class="picture">
-                <img src="<?php echo base_url() . 'photo/users/photo.jpeg' ?>" align="left"
+                <img src="<?php echo base_url() . 'images/profile.jpeg' ?>" align="left"
                      class="picture-src"
                      id="picturePreview" title="">
                 <input type="file" id="picture" name="picture"

@@ -8,8 +8,8 @@
                     <h1 class="font-weight-bold"><?php echo $result['first_name'] . ' ' . $result['last_name']; ?></h1>
                     <a href="/users" class="pull-right">
                         <img title="profile image" style="width: 150px; height: 150px;"
-                             class="img-circle img-responsive" src="<?php echo base_url(); ?>/photo/users/photo.jpeg"
-                             <?php echo md5($result['email']); ?>?s=100"></a>
+                             class="img-circle img-responsive" src="<?php echo base_url(); ?>/images/profile.jpg"
+                             <?php echo md5($result['email']); ?>?=100"></a>
                 </div>
             </div>
             <ul class="list-group">

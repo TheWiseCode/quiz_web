@@ -88,23 +88,30 @@ class User extends CI_Controller
 
     public function new_user()
     {
-        $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['postulantes']);
-        if (!in_array('Add', $user_p)) {
-            exit($this->lang->line('permission_denied'));
+        try {
+            if($this->session->flashdata('data_temp') != null){
+                $data = $this->session->flashdata('data_temp');
+            }
+            $logged_in = $this->session->userdata('logged_in');
+            $user_p = explode(',', $logged_in['postulantes']);
+            if (!in_array('Add', $user_p)) {
+                exit($this->lang->line('permission_denied'));
+            }
+            $data['title'] = $this->lang->line('add_new_') . ' ' . $this->lang->line('users_student');
+            $data['group_list'] = $this->user_model->group_list();
+            $data['career_list'] = $this->user_model->get_career_all();
+            $data['account_type'] = $this->account_model->account_list(0);
+            $data['university_list'] = $this->user_model->get_university_all();
+            $data['specialties_list'] = $this->user_model->get_specialties_all();
+            $this->load->view('header', $data);
+            $this->load->view('new_user', $data);
+            $this->load->view('footer', $data);
+        } catch (Exception $e) {
+            $data['error'] = $e->getTrace();
+            $this->load->view('header', $data);
+            $this->load->view('new_user', $data);
+            $this->load->view('footer', $data);
         }
-
-        $data['title'] =
-            $this->lang->line('add_new_') . ' ' . $this->lang->line('users_student');
-        // fetching group list
-        $data['group_list'] = $this->user_model->group_list();
-        $data['career_list'] = $this->user_model->get_career_all();
-        $data['account_type'] = $this->account_model->account_list(0);
-        $data['university_list'] = $this->user_model->get_university_all();
-        $data['specialties_list'] = $this->user_model->get_specialties_all();
-        $this->load->view('header', $data);
-        $this->load->view('new_user', $data);
-        $this->load->view('footer', $data);
     }
 
     public function new_user2()
@@ -134,7 +141,7 @@ class User extends CI_Controller
             return;
         }
         $p = $_FILES['picture-picture'];
-        $name = date('dmY_His',time());
+        $name = date('dmY_His', time());
         $mi_imagen = 'picture';
         $config['upload_path'] = "photo/users";
         $config['file_name'] = $cd . '_' . $name . "";
@@ -161,9 +168,9 @@ class User extends CI_Controller
         } else {
             $cd .= '_';
         }
-        $p = $_FILES['wizard-picture'];
+        $p = $_FILES['wizard_picture'];
         $name = time();
-        $mi_imagen = 'wizard-picture';
+        $mi_imagen = 'wizard_picture';
         $config['upload_path'] = "photo/users";
         $config['file_name'] = $cd . $name . "";
         $config['allowed_types'] = "*";
@@ -173,29 +180,23 @@ class User extends CI_Controller
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
         if (!$this->upload->do_upload($mi_imagen)) {
-            //*** ocurrio un error
-            //$data['uploadError'] = $this->upload->display_errors();
-            //echo $this->upload->display_errors();
-            $photo = "photo/users/photo.jpeg";
+            $photo = "images/profile.jpeg";
             return;
         }
         $data['uploadSuccess'] = $this->upload->data();
-        //$photo = $data['uploadSuccess']['full_path'];
         $photo = 'photo/users/' . $data['uploadSuccess']['orig_name'];
-        /*if(!$this->user_model->submit_photo($uid,$photo))
-            {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                        $this->lang->line('error_to_update_data') .
-                        ' </div>'
-                );
-                redirect('user2/view_user/' . $uid);
-            }*/
         return $photo;
-        /*        $path = "E:\work\CM\myppt.ppt";
-                $extension = pathinfo($path, PATHINFO_EXTENSION);
-                echo("The extension is $extension.");*/
+    }
+
+    function error_display(){
+        foreach ($_POST as $key => $value){
+            $data[$key] = $value;
+        }
+        foreach ($_FILES as $key => $value){
+            $data[$key] = $value;
+        }
+        $this->session->set_flashdata('data_temp', $data);
+        redirect('user/new_user/');
     }
 
     public function insert_user()
@@ -206,26 +207,46 @@ class User extends CI_Controller
             exit($this->lang->line('permission_denied'));
         }
         $this->load->library('form_validation');
-        $this->form_validation->set_rules(
-            'email',
-            'Email',
-            'required|is_unique[savsoft_users.email]'
-        );
+        if ($this->input->post('other_uni') == 'on') {
+            $name_uni = strtoupper(trim($this->input->post('another_uni')));
+            $valid = $this->user_model->valid_university($name_uni);
+            if(!$valid){
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                    'Universidad ya registrada' .
+                    ' </div>'
+                );
+                $this->error_display();
+            }
+        }
+        if ($this->input->post('other_spe') == 'on') {
+            $name_spe = strtoupper(trim($this->input->post('another_spe')));
+            $valid = $this->user_model->valid_specialty($name_spe);
+            if(!$valid){
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                    'Especialidad ya registrada' .
+                    ' </div>'
+                );
+                $this->error_display();
+            }
+        }
+        $this->form_validation->set_rules('ci', 'CI', 'required|is_unique[savsoft_users.ci]');
+        $this->form_validation->set_rules('code_student', 'Codigo CD', 'required|is_unique[savsoft_users.cod_student]');
+        $this->form_validation->set_rules('email', 'Email', 'required|is_unique[savsoft_users.email]');
         if ($this->input->post('password') && 0) {
             if ($_POST['password'] != $_POST['repeat_password']) {
-
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-danger'>" .
                     'Las contraseñas no coinciden' .
                     ' </div>'
                 );
-                redirect('user/new_user/');
+                $this->error_display();
             }
         }
-        $data_photo = $this->cargar_archivo();
-        //$this->form_validation->set_rules('password', 'Password', 'required');
-        //$this->form_validation->set_rules('repeat_password', 'Password', 'required');
         if ($this->form_validation->run() == false) {
             $this->session->set_flashdata(
                 'message',
@@ -233,8 +254,9 @@ class User extends CI_Controller
                 validation_errors() .
                 ' </div>'
             );
-            redirect('user/new_user/');
+            $this->error_display();
         } else {
+            $data_photo = $this->cargar_archivo();
             if ($this->user_model->insert_user($data_photo)) {
                 $this->session->set_flashdata(
                     'message',
@@ -242,6 +264,7 @@ class User extends CI_Controller
                     $this->lang->line('data_added_successfully') .
                     ' </div>'
                 );
+                redirect('user/new_user/');
             } else {
                 $this->session->set_flashdata(
                     'message',
@@ -249,8 +272,8 @@ class User extends CI_Controller
                     $this->lang->line('error_to_add_data') .
                     ' </div>'
                 );
+                $this->error_display();
             }
-            redirect('user/new_user/');
         }
     }
 
@@ -403,6 +426,11 @@ class User extends CI_Controller
         $this->load->view('custom_form', $data);
 
         $this->load->view('footer', $data);
+    }
+
+    public function profile()
+    {
+        echo "gg";
     }
 
     public function edit_user_decide($uid)

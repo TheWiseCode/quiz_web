@@ -1,7 +1,7 @@
 <?php
-$sq_base_url = 'http://localhost:8080/savsoftquiz_v5/';
+$sq_base_url = 'http://localhost:8080/quiz/FCJPSRRII/';
 $sq_hostname = 'localhost';
-$sq_dbname = 'cridai_backup';
+$sq_dbname = 'quiz_FCJPSRRII';
 $sq_dbusername = 'root';
 $sq_dbpassword = '';
 ?>

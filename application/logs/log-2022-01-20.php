@@ -154,3 +154,30 @@ ERROR - 2022-01-20 06:50:17 --> Severity: Warning --> Invalid argument supplied 
 ERROR - 2022-01-20 06:50:27 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\savsoftquiz_v5\application\views\user_list.php 44
 ERROR - 2022-01-20 06:50:27 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\user_list.php 51
 ERROR - 2022-01-20 06:50:27 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\savsoftquiz_v5\application\views\user_list.php 137
+ERROR - 2022-01-20 20:54:18 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v5\application\views\dashboard.php 214
+ERROR - 2022-01-20 22:06:07 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\config\config.php 524
+ERROR - 2022-01-20 22:06:08 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\config\config.php 524
+ERROR - 2022-01-20 22:06:09 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\config\config.php 524
+ERROR - 2022-01-20 22:06:09 --> Query error: Table 'quiz_fcjpsrrii.savsoft_quiz' doesn't exist - Invalid query: SELECT *
+FROM `savsoft_quiz`
+ORDER BY `quid` DESC
+ LIMIT 5
+ERROR - 2022-01-20 22:06:09 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\xampp\htdocs\quiz\FCJPSRRII\application\models\Quiz_model.php 114
+ERROR - 2022-01-20 22:18:01 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 214
+ERROR - 2022-01-20 22:18:31 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 214
+ERROR - 2022-01-20 22:19:08 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 214
+ERROR - 2022-01-20 22:19:20 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\FCJPSRRII\application\views\edit_user_admin.php 33
+ERROR - 2022-01-20 22:20:08 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\FCJPSRRII\application\views\edit_user_admin.php 33
+ERROR - 2022-01-20 22:20:11 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\FCJPSRRII\application\views\edit_user_admin.php 33
+ERROR - 2022-01-20 22:20:13 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\FCJPSRRII\application\views\edit_user_admin.php 33
+ERROR - 2022-01-20 22:23:43 --> Severity: error --> Exception: syntax error, unexpected end of file C:\xampp\htdocs\quiz\FCJPSRRII\application\language\es_BO\basic_lang.php 508
+ERROR - 2022-01-20 22:24:44 --> Severity: error --> Exception: syntax error, unexpected end of file C:\xampp\htdocs\quiz\FCJPSRRII\application\language\es_BO\basic_lang.php 508
+ERROR - 2022-01-20 22:25:09 --> Severity: error --> Exception: syntax error, unexpected end of file C:\xampp\htdocs\quiz\FCJPSRRII\application\language\es_BO\basic_lang.php 508
+ERROR - 2022-01-20 22:25:39 --> Severity: error --> Exception: syntax error, unexpected end of file C:\xampp\htdocs\quiz\FCJPSRRII\application\language\es_BO\basic_lang.php 508
+ERROR - 2022-01-20 22:26:45 --> Severity: error --> Exception: syntax error, unexpected end of file C:\xampp\htdocs\quiz\FCJPSRRII\application\language\es_BO\basic_lang.php 508
+ERROR - 2022-01-20 22:27:59 --> Severity: error --> Exception: syntax error, unexpected end of file C:\xampp\htdocs\quiz\FCJPSRRII\application\language\es_BO\basic_lang.php 508
+ERROR - 2022-01-20 22:28:26 --> Severity: error --> Exception: syntax error, unexpected end of file C:\xampp\htdocs\quiz\FCJPSRRII\application\language\es_BO\basic_lang.php 508
+ERROR - 2022-01-20 22:28:35 --> Severity: error --> Exception: syntax error, unexpected end of file C:\xampp\htdocs\quiz\FCJPSRRII\application\language\es_BO\basic_lang.php 508
+ERROR - 2022-01-20 22:29:05 --> Severity: error --> Exception: syntax error, unexpected end of file C:\xampp\htdocs\quiz\FCJPSRRII\application\language\es_BO\basic_lang.php 508
+ERROR - 2022-01-20 23:58:05 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 214
+ERROR - 2022-01-20 23:59:52 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 214

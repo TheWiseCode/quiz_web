@@ -140,11 +140,7 @@
 
 
 </head>
-
-
 <body id="page-top">
-
-
 <?php
 if ($this->session->userdata('logged_in')){
 if (($this->uri->segment(1) . '/' . $this->uri->segment(2)) != 'quiz/attempt'){
@@ -167,11 +163,11 @@ $hres = $hquery->result_Array();
                 } ?> </div>
         </a>
         <div style="text-align: center;"><span style="color:#ffffff;"><img style="width: 50%;"
-                                                                           src="<?php echo base_url() . 'photo/logo1.png' ?>"
+                                                                           src="<?php echo base_url() . 'photo/default/Logo_sf.png' ?>"
                                                                            class="picture-src"
                                                                            id="" title=""/> </span>
-            <div style="text-align: center;"><span
-                        style="color:#ffffff;"><?php echo $hres[1]['setting_value']; ?> </span>
+            <div style="text-align: center;" hidden>
+                <span style="color:#ffffff;"><?php echo $hres[1]['setting_value']; ?> </span>
             </div>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -605,7 +601,7 @@ $hres = $hquery->result_Array();
 
 
                             <a class="dropdown-item"
-                               href="<?php echo site_url('user/edit_user_decide/' . $logged_in['uid']); ?>">
+                               href="<?php echo site_url('user/profile/' . $logged_in['uid']); ?>">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 <?php echo $this->lang->line('myaccount'); ?>
                             </a>

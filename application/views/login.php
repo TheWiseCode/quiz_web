@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo $this->lang->line('savsoft_quiz'); ?></title>
+    <?php
+    $hquery = $this->db->query(" select * from savsoftquiz_setting where setting_name='App_title'");
+    $hres = $hquery->result_Array();
+    ?>
+    <title>
+        <?php if ($hres[0]['setting_value'] == "") { ?>
+            echo "Titulo";
+        <?php } else {
+            echo $hres[0]['setting_value'];
+        } ?>
+    </title>
 
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -35,7 +43,7 @@
                     <!-- Nested Row within Card Body -->
                     <div class="row">
                         <div class="col-lg-6 d-none d-lg-block  "
-                             style="background:url('<?php echo base_url(); ?>/photo/logo.png');
+                             style="background:url('<?php echo base_url(); ?>/photo/default/logo_sf.png');
                                      background-position: center; background-size: 50%; background-repeat: no-repeat;"></div>
 
                         <div class="col-lg-6">
@@ -80,7 +88,7 @@
                                     <div class="form-group">
 
                                     </div>
-                                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                                    <button type="submit" class="btn btn-primary btn-user btn-block font-weight-bold">
                                         <?php echo $this->lang->line('login'); ?>
                                     </button>
 

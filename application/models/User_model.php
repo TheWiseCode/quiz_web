@@ -292,12 +292,14 @@ class User_model extends CI_Model
 
     function get_university_all()
     {
+        $this->db->order_by('name');
         $query = $this->db->get('university');
         return $query->result_array();
     }
 
     function get_specialties_all()
     {
+        $this->db->order_by('name');
         $query = $this->db->get('specialties');
         return $query->result_array();
     }
@@ -366,7 +368,7 @@ class User_model extends CI_Model
         //$this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');
         //$this->db->join('account_type', 'savsoft_users.su=account_type.account_id');
         $query = $this->db->get('savsoft_users');
-        if(!$query){
+        if (!$query) {
             return array();
         }
         return $query->result_array();
@@ -500,15 +502,39 @@ class User_model extends CI_Model
         }
     }
 
+    function valid_university($name)
+    {
+        try {
+            $query = $this->db->query(
+                "select name from university where upper(trim(name))='$name' "
+            );
+            $result = $query->row_array();
+            return !($result != null && count($result) > 0);
+        } catch (Exception $exception) {
+        }
+    }
+
+    function valid_specialty($name)
+    {
+        try {
+            $query = $this->db->query(
+                "select name from specialties where upper(trim(name))='$name' "
+            );
+            $result = $query->row_array();
+            return !($result != null && count($result) > 0);
+        } catch (Exception $exception) {
+        }
+    }
+
     function insert_user($data_photo)
     {
         $logged_in = $this->session->userdata('logged_in');
         if ($data_photo == "") {
-            $data_photo = "photo/users/photo.jpeg";
+            $data_photo = "images/profile.jpeg";
         }
         if ($this->input->post('other_uni') == 'on') {
             $name_uni = $this->input->post('another_uni');
-            $data_uni = ['name' => $name_uni];
+            $data_uni = ['name' => strtoupper(trim($name_uni))];
             if ($this->db->insert('university', $data_uni)) {
                 $id_uni = $this->db->insert_id();
             } else {
@@ -518,9 +544,9 @@ class User_model extends CI_Model
             $id_uni = $this->input->post('university');
         }
         if ($this->input->post('other_spe') == 'on') {
-            $name_uni = $this->input->post('another_spe');
-            $data_uni = ['name' => $name_uni];
-            if ($this->db->insert('specialties', $data_uni)) {
+            $name_spe = $this->input->post('another_spe');
+            $data_spe = ['name' => strtoupper(trim($name_spe))];
+            if ($this->db->insert('specialties', $data_spe)) {
                 $id_spe = $this->db->insert_id();
             } else {
                 return "";
@@ -540,9 +566,7 @@ class User_model extends CI_Model
             //'second_opt_univ_degree' => $name_second_career['name'],
             'contact_no' => $this->input->post('contact_no'),
             'gid' => $this->input->post('gid'),
-            'subscription_expired' => strtotime(
-                $this->input->post('subscription_expired')
-            ),
+            'subscription_expired' => strtotime($this->input->post('subscription_expired')),
             'su' => 2,
             'photo' => $data_photo,
             'civil_status' => $this->input->post('civil_status'),
@@ -611,7 +635,7 @@ class User_model extends CI_Model
             'last_name' => $this->input->post('last_name'),
             'contact_no' => $this->input->post('contact_no'),
             'su' => $this->input->post('su'),
-            'photo' => 'photo/users/photo.jpeg',
+            'photo' => 'images/profile.jpeg',
         ];
 
 

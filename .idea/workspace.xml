@@ -2,88 +2,153 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/application/views/errors.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/config/sq_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/sq_config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-19.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-19.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/language/es_BO/form_validation_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/es_BO/form_validation_lang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-20.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-20.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/biometric_scanner/LectorFlexcode.exe" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/load_image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/biometric_scanner/LectorFlexcode.exe.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/biometric_scanner/LectorFlexcode.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/biometric_scanner/MySql.Data.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/1461499745.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/1461500254.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642199034.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642199196.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642199275.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642199279.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642199342.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642199370.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642199447.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642199453.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642199461.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642199534.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642199550.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642200396.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642200407.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642200476.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642200479.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642200490.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642200495.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642200561.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642200597.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642200628.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642200629.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642200640.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642200673.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642200683.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642200722.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201065.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201121.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201163.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201232.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201242.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201251.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201261.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/16422012611.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201262.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201271.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201360.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201489.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201523.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201545.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201628.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201710.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201742.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201754.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201933.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642201935.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642204467.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642204490.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642204614.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642204619.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642204633.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642204635.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642204657.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642204690.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642204693.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642204706.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642204709.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642204714.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642204886.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642205067.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642205085.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642205271.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642205659.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642205662.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642205665.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642433774.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642433795.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642599681.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642599759.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642599966.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/1642613495.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/photo.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/load_image.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/load_image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/new_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/huella.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/huella.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/Logo.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/Logo1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642615459.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642615650.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642615732.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642615919.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642616027.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642616040.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642616347.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642616392.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642616442.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642616775.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642616832.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642616904.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642617154.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642617207.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642617281.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642617839.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642617871.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642617896.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642618396.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642618486.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642618584.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642618863.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642618871.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642618893.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642619267.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642619300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642619302.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642619309.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642619602.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642619656.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642619728.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642619834.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642620009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642620035.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642620295.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642620384.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642620492.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642620706.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642620709.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642620940.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642621042.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642621093.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642621194.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642621392.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642621496.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642621535.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642621695.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642622016.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642622035.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642622066.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642622208.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642622314.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642622331.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642622608.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642622615.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642622730.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642622928.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642623038.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642623213.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642623224.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642623269.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642623514.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642623593.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642623695.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642623753.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642623795.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642623926.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642624146.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642624268.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642624291.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642624446.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642624566.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642624655.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642624739.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642624850.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642625063.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642625188.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642625236.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642625391.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642625407.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642625526.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642626100.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642626122.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642626260.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642626550.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642626563.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/1642626564.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2006.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2007.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2013.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2014.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2016.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2017.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2018.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2026.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2030.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2034.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2045.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2051.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2053.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2055.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2057.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2060.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2061.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2062.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2063.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2065.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2074.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2076.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2102.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2108.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2111.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2112.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2113.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2115.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2116.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2117.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2118.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2120.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2122.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2124.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2129.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2210.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/2214.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/foto1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/foto2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/foto3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/foto4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/foto5.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,12 +171,13 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="PhpDebugGeneral" xdebug_debug_port="9003" listening_started="true">
+  <component name="PhpDebugGeneral" xdebug_debug_port="9003">
     <xdebug_debug_ports port="9003" />
   </component>
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="074df649-cc2d-4047-8440-52d428549400" name="cridai" port="8080" />
+      <server host="localhost" id="e29fafd3-6486-42fe-acbe-bffc45919fb9" name="localhost" port="8080" />
     </servers>
   </component>
   <component name="PhpWebServerValidation" path_to_validation_script="C:\xampp\htdocs" selected_validation_type="LOCAL" web_path_to_validation_script="http://localhost:8080/" />
@@ -125,6 +191,7 @@
     <property name="Constants" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowDebug.ShowToolbar" value="false" />
     <property name="ToolWindowFind.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/application/models" />
@@ -140,16 +207,24 @@
       <recent name="C:\xampp\htdocs\savsoftquiz_v5\photo" />
       <recent name="C:\xampp\htdocs\savsoftquiz_v5\biometric_scanner" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\quiz\FCJPSRRII\images" />
+      <recent name="C:\xampp\htdocs\quiz\FCJPSRRII\photo\default" />
+    </key>
   </component>
-  <component name="RunManager" selected="PHP Web Page.web">
+  <component name="RunManager" selected="PHP Web Page.local">
     <configuration name="cridai" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="cridai" start_url="http://192.168.0.180:8080">
       <method v="2" />
     </configuration>
-    <configuration name="web" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="cridai" start_url="http://localhost:8080/savsoftquiz_v5">
+    <configuration name="local" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="localhost" start_url="http://localhost:8080/quiz/FCJPSRRII/">
+      <method v="2" />
+    </configuration>
+    <configuration name="web" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="cridai" start_url="http://localhost:8080/quiz/FCJPSRRII/">
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="PHP Web Page.web" />
+      <item itemvalue="PHP Web Page.local" />
       <item itemvalue="PHP Web Page.cridai" />
     </list>
   </component>
@@ -174,6 +249,7 @@
       <workItem from="1642452998009" duration="31000" />
       <workItem from="1642455097588" duration="13958000" />
       <workItem from="1642482172585" duration="69597000" />
+      <workItem from="1642730671391" duration="23494000" />
     </task>
     <servers />
   </component>
@@ -337,24 +413,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/User.php</url>
-          <line>501</line>
-          <option name="timeStamp" value="154" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/controllers/User.php</url>
-          <line>552</line>
+          <line>580</line>
           <option name="timeStamp" value="155" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/controllers/User.php</url>
-          <line>409</line>
-          <option name="timeStamp" value="157" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PhpWebAppRunConfigurationType">
         <watch expression="$GLOBALS" />
+        <watch expression="$this-&gt;session-&gt;userdata" />
       </configuration>
     </watches-manager>
   </component>
