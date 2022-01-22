@@ -362,3 +362,4 @@ ERROR - 2022-01-21 16:42:23 --> Severity: Warning --> Division by zero C:\xampp\
 ERROR - 2022-01-21 16:55:45 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 193
 ERROR - 2022-01-21 17:02:10 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\FCJPSRRII\application\views\edit_user_admin.php 33
 ERROR - 2022-01-21 17:02:24 --> Severity: error --> Exception: syntax error, unexpected '}', expecting end of file C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 40
+ERROR - 2022-01-21 21:00:36 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 193

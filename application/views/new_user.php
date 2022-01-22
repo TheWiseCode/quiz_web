@@ -1,5 +1,11 @@
-<link type="text/css" href="select2/select2.min.css">
-<script src="select2/select2.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<style>
+    /*select.form-control {
+        padding: 6px 12px 6px 12px !important;
+        height: 18.4px !important;
+    }*/
+</style>
 <div class="container">
     <h3 class="font-weight-bold"><?php echo $title; ?></h3>
     <div class="row">
@@ -36,7 +42,7 @@
                                             ?>" tabindex="2"
                                                    placeholder="<?php echo $this->lang->line('ci'); ?>"
                                                    autofocus required>
-                                            <select class="form-control select2" name="exp" id="exp" tabindex="3">
+                                            <select class="form-control" name="exp" id="exp" tabindex="3">
                                                 <?php
                                                 $expedidos = $this->lang->line('expedidos');
                                                 $names = $this->lang->line('name_expedidos');
@@ -94,7 +100,8 @@
                         <div class="form-group">
                             <label class="font-weight-bold"
                                    for="civil_status"><?php echo $this->lang->line('civil_status_select'); ?></label>
-                            <select class="form-control select2" name="civil_status" id="civil_status" tabindex="6">
+                            <select class="form-control" name="civil_status" id="civil_status" tabindex="6"
+                            style="height: 100%;">
                                 <?php
                                 $status = $this->lang->line('status_civil');
                                 for ($i = 0; $i < count($status); $i++) {
@@ -226,9 +233,7 @@
         $("#wizard_picture").change(function () {
             readURL(this);
         });
-        /*$('.select2').select2({
-            placeholder: 'Seleccione una opcion';
-        });*/
+        $('.select2').select2();
     });
 
 
