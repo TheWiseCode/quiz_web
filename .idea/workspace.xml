@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/sq_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/sq_config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-21.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-21.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/dashboard.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +27,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="PhpDebugGeneral" xdebug_debug_port="9003" listening_started="true">
+  <component name="PhpDebugGeneral" xdebug_debug_port="9003">
     <xdebug_debug_ports port="9003" />
   </component>
   <component name="PhpServers">
@@ -108,6 +107,7 @@
       <workItem from="1642482172585" duration="69597000" />
       <workItem from="1642730671391" duration="24168000" />
       <workItem from="1642789122258" duration="1201000" />
+      <workItem from="1642820071820" duration="3011000" />
     </task>
     <servers />
   </component>

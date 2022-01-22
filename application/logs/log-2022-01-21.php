@@ -265,3 +265,26 @@ FROM `savsoft_users`
 WHERE `users_status` = 'Active'
 ERROR - 2022-01-21 14:33:08 --> Severity: error --> Exception: Call to a member function num_rows() on bool C:\xampp\htdocs\quiz\FCJPSRRII\application\models\User_model.php 341
 ERROR - 2022-01-21 14:33:25 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 198
+ERROR - 2022-01-21 22:54:03 --> Severity: Warning --> mysqli::__construct(): (HY000/1049): Unknown database 'quiz_fcjpsrrii' C:\xampp\htdocs\quiz\cridai\application\config\config.php 515
+ERROR - 2022-01-21 22:54:37 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\cridai\application\config\config.php 524
+ERROR - 2022-01-21 22:54:57 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\cridai\application\config\config.php 524
+ERROR - 2022-01-21 22:54:57 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\cridai\application\config\config.php 524
+ERROR - 2022-01-21 22:54:57 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\cridai\application\config\config.php 524
+ERROR - 2022-01-21 22:54:57 --> Query error: Table 'quiz_cridai.savsoft_quiz' doesn't exist - Invalid query: SELECT *
+FROM `savsoft_quiz`
+ORDER BY `quid` DESC
+ LIMIT 5
+ERROR - 2022-01-21 22:54:57 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\xampp\htdocs\quiz\cridai\application\models\Quiz_model.php 114
+ERROR - 2022-01-21 22:56:29 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\cridai\application\config\config.php 524
+ERROR - 2022-01-21 22:56:29 --> Query error: Table 'quiz_cridai.savsoft_quiz' doesn't exist - Invalid query: SELECT *
+FROM `savsoft_quiz`
+ORDER BY `quid` DESC
+ LIMIT 5
+ERROR - 2022-01-21 22:56:30 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\xampp\htdocs\quiz\cridai\application\models\Quiz_model.php 114
+ERROR - 2022-01-21 22:56:34 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\cridai\application\config\config.php 524
+ERROR - 2022-01-21 22:56:34 --> Query error: Table 'quiz_cridai.savsoft_quiz' doesn't exist - Invalid query: SELECT *
+FROM `savsoft_quiz`
+ORDER BY `quid` DESC
+ LIMIT 5
+ERROR - 2022-01-21 22:56:35 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\xampp\htdocs\quiz\cridai\application\models\Quiz_model.php 114
+ERROR - 2022-01-21 23:00:24 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 198
