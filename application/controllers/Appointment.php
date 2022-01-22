@@ -36,7 +36,11 @@ class Appointment extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['appointment']);
         if (!in_array('List', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
 
@@ -60,7 +64,11 @@ class Appointment extends CI_Controller
             $this->Appointment_model->change_status($appointment_id, $status);
             $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('accepted_successfully') . " </div>");
         } else {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         redirect('appointment/myappointment/');
 
@@ -84,7 +92,11 @@ class Appointment extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['appointment']);
         if (!in_array('List', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
 

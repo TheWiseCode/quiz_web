@@ -22,69 +22,42 @@ class User extends CI_Controller
         }
     }
 
-    public function register_image()
-    {
-        $data_photo = $this->load_image();
-    }
-
-    public function load()
-    {
-        $this->load->view('header', $data);
-        $this->load->view('load_image', $data);
-        $this->load->view('footer', $data);
-    }
-
     public function index($limit = '0')
     {
         $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['applicants']);
+        $user_p = explode(',', $logged_in['users']);
         if (!in_array('List_all', $user_p)) {
-            exit($this->lang->line('permission_denied'));
-        }
-        $data['limit'] = $limit;
-        $data['title'] = $this->lang->line('user_list_students');
-        // fetching user list
-        $data['result'] = $this->user_model->user_list($limit);
-        $data['career_list'] = $this->user_model->get_career_all();
-        $data['group_list'] = $this->user_model->get_group_all($limit);
-        $this->load->view('header', $data);
-        $this->load->view('user_list', $data);
-        $this->load->view('footer', $data);
-    }
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
 
-    public function index2($limit = '0')
-    {
-        $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['users']);
-        if (!in_array('List_all', $user_p)) {
-            exit($this->lang->line('permission_denied'));
-        }
-        $user_p = explode(',', $logged_in['users']);
-        if (!in_array('List_all', $user_p)) {
-            exit($this->lang->line('permission_denied'));
         }
         $data['limit'] = $limit;
         $data['title'] = $this->lang->line('userlist');
         // fetching user list
         $data['result'] = $this->user_model->user_list_only_user($limit);
         $data['list_account_type'] = $this->user_model->get_account_type();
-        //$data['career_list'] = $this->user_model->get_career_all();
-        ///$data['group_list'] = $this->user_model->get_group_all($limit);
         $this->load->view('header', $data);
-        $this->load->view('user_list2', $data);
+        $this->load->view('user_list', $data);
         $this->load->view('footer', $data);
     }
 
-    public function new_user()
+    public function create()
     {
         try {
             if ($this->session->flashdata('data_temp') != null) {
                 $data = $this->session->flashdata('data_temp');
             }
             $logged_in = $this->session->userdata('logged_in');
-            $user_p = explode(',', $logged_in['applicants']);
+            $user_p = explode(',', $logged_in['user']);
             if (!in_array('Add', $user_p)) {
-                exit($this->lang->line('permission_denied'));
+                $data['title'] = $this->lang->line('permission_denied');
+                $this->load->view('header', $data);
+                $this->load->view('errors/403', $data);
+                $this->load->view('footer', $data);
+                return;
             }
             $data['title'] = $this->lang->line('add_new_') . ' ' . $this->lang->line('users_student');
             $data['group_list'] = $this->user_model->group_list();
@@ -96,7 +69,7 @@ class User extends CI_Controller
             usort($nat, function ($it1, $it2) {
                 return $it1 > $it2;
             });
-            foreach($nat as $n) array_push($data['nationalities'], $n);
+            foreach ($nat as $n) array_push($data['nationalities'], $n);
             $this->load->view('header', $data);
             $this->load->view('new_user', $data);
             $this->load->view('footer', $data);
@@ -108,23 +81,157 @@ class User extends CI_Controller
         }
     }
 
-    public function new_user2()
+    public function insert()
     {
         $logged_in = $this->session->userdata('logged_in');
         $user_p = explode(',', $logged_in['users']);
         if (!in_array('Add', $user_p)) {
-            exit($this->lang->line('permission_denied'));
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('email', 'Email', 'required|is_unique[savsoft_users.email]');
+        if ($this->form_validation->run() == false) {
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                validation_errors() .
+                ' </div>'
+            );
+            redirect('user/create/');
+        } else {
+            $data_photo = $this->cargar_archivo();
+            if ($this->user_model->insert_user($data_photo)) {
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                    $this->lang->line('data_added_successfully') .
+                    ' </div>'
+                );
+            } else {
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                    $this->lang->line('error_to_add_data') .
+                    ' </div>'
+                );
+            }
+            redirect('user/create/');
+        }
+    }
 
-        $data['title'] =
-            $this->lang->line('add_new_') . ' ' . $this->lang->line('user');
+    public function edit($uid)
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $user_p = explode(',', $logged_in['users']);
+        if (!in_array('Edit', $user_p)) {
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
+        }
+        $data['uid'] = $uid;
+        $data['title'] = $this->lang->line('edit_user');
+        // fetching user
+        $data['result'] = $this->user_model->get_user_admin($uid);
+        $data['custom_form_user'] = $this->user_model->custom_form_user($uid);
+        //$data['result'] = $this->user_model->get_user($uid);
+        $data['custom_form'] = $this->user_model->custom_form('All');
         // fetching group list
-        //$data['group_list'] = $this->user_model->group_list();
-        //$data['career_list'] = $this->user_model->get_career_all();
+        $data['career_list'] = $this->user_model->get_career_all();
+        $data['group_list'] = $this->user_model->group_list();
         $data['account_type'] = $this->account_model->account_list(0);
         $this->load->view('header', $data);
-        $this->load->view('new_user2', $data);
+        $this->load->view('edit_user', $data);
         $this->load->view('footer', $data);
+    }
+
+    public function update($uid)
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $user_p = explode(',', $logged_in['users']);
+        if (!in_array('Edit', $user_p)) {
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
+        }
+        $rules = 0;
+        $user_data = $this->user_model->get_user($uid);
+        $this->load->library('form_validation');
+        if ($user_data['email'] != $this->input->post('email')) {
+            $rules = 1;
+            $this->form_validation->set_rules('email', 'Email', 'required|is_unique[savsoft_users.email]');
+        }
+        if ($rules && $this->form_validation->run() == false) {
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                validation_errors() .
+                ' </div>'
+            );
+            redirect('user/edit/' . $uid);
+        } else {
+            $data_photo = $this->cargar_archivo();
+            if ($this->user_model->update_user($uid, $data_photo)) {
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                    $this->lang->line('data_updated_successfully') .
+                    ' </div>'
+                );
+            } else {
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                    $this->lang->line('error_to_update_data') .
+                    ' </div>'
+                );
+            }
+            redirect('user/edit/' . $uid);
+        }
+    }
+
+    public function remove($uid)
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $user_p = explode(',', $logged_in['users']);
+        if (!in_array('Remove', $user_p)) {
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
+        }
+        if ($uid == '1') {
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
+        }
+
+        if ($this->user_model->remove_user($uid)) {
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-success'>" .
+                $this->lang->line('removed_successfully') .
+                ' </div>'
+            );
+        } else {
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                $this->lang->line('error_to_remove') .
+                ' </div>'
+            );
+        }
+        redirect('user');
     }
 
     function load_image()
@@ -156,17 +263,10 @@ class User extends CI_Controller
 
     function cargar_archivo()
     {
-        $cd = $this->input->post('code_student');
-        if ($cd == null) {
-            $cd = '';
-        } else {
-            $cd .= '_';
-        }
-        $p = $_FILES['wizard_picture'];
-        $name = time();
+        $name = date('dmY_His', time());
         $mi_imagen = 'wizard_picture';
         $config['upload_path'] = "photo/users";
-        $config['file_name'] = $cd . $name . "";
+        $config['file_name'] =  $name . "";
         $config['allowed_types'] = "*";
         $config['max_size'] = "50000";
         $config['max_width'] = "20000";
@@ -174,214 +274,23 @@ class User extends CI_Controller
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
         if (!$this->upload->do_upload($mi_imagen)) {
-            $photo = "images/profile.jpeg";
-            return;
+            return null;
         }
         $data['uploadSuccess'] = $this->upload->data();
         $photo = 'photo/users/' . $data['uploadSuccess']['orig_name'];
         return $photo;
     }
 
-    function error_display()
+    public function register_image()
     {
-        foreach ($_POST as $key => $value) {
-            $data[$key] = $value;
-        }
-        foreach ($_FILES as $key => $value) {
-            $data[$key] = $value;
-        }
-        $this->session->set_flashdata('data_temp', $data);
-        redirect('user/new_user/');
+        $this->load_image();
     }
 
-    public function insert_user()
+    public function load()
     {
-        $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['applicants']);
-        if (!in_array('Add', $user_p)) {
-            exit($this->lang->line('permission_denied'));
-        }
-        $this->load->library('form_validation');
-        if ($this->input->post('other_uni') == 'on') {
-            $name_uni = strtoupper(trim($this->input->post('another_uni')));
-            $valid = $this->user_model->valid_university($name_uni);
-            if (!$valid) {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    'Universidad ya registrada' .
-                    ' </div>'
-                );
-                $this->error_display();
-            }
-        }
-        if ($this->input->post('other_spe') == 'on') {
-            $name_spe = strtoupper(trim($this->input->post('another_spe')));
-            $valid = $this->user_model->valid_specialty($name_spe);
-            if (!$valid) {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    'Especialidad ya registrada' .
-                    ' </div>'
-                );
-                $this->error_display();
-            }
-        }
-        $this->form_validation->set_rules('ci', 'CI', 'required|is_unique[savsoft_users.ci]');
-        $this->form_validation->set_rules('code_student', 'Codigo CD', 'required|is_unique[savsoft_users.cod_student]');
-        $this->form_validation->set_rules('email', 'Email', 'required|is_unique[savsoft_users.email]');
-        if ($this->input->post('password') && 0) {
-            if ($_POST['password'] != $_POST['repeat_password']) {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    'Las contraseñas no coinciden' .
-                    ' </div>'
-                );
-                $this->error_display();
-            }
-        }
-        if ($this->form_validation->run() == false) {
-            $this->session->set_flashdata(
-                'message',
-                "<div class='alert alert-danger'>" .
-                validation_errors() .
-                ' </div>'
-            );
-            $this->error_display();
-        } else {
-            $data_photo = $this->cargar_archivo();
-            if ($this->user_model->insert_user($data_photo)) {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-success'>" .
-                    $this->lang->line('data_added_successfully') .
-                    ' </div>'
-                );
-                redirect('user/new_user/');
-            } else {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    $this->lang->line('error_to_add_data') .
-                    ' </div>'
-                );
-                $this->error_display();
-            }
-        }
-    }
-
-    public function insert_user2()
-    {
-        $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['users']);
-        if (!in_array('Add', $user_p)) {
-            exit($this->lang->line('permission_denied'));
-        }
-        $this->load->library('form_validation');
-        $this->form_validation->set_rules(
-            'email',
-            'Email',
-            'required|is_unique[savsoft_users.email]'
-        );
-        if ($this->input->post('password')) {
-            if ($_POST['password'] != $_POST['repeat_password']) {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    'Las contraseñas no coinciden' .
-                    ' </div>'
-                );
-                redirect('user/new_user2/');
-            }
-        }
-        $this->form_validation->set_rules('password', 'Password', 'required');
-        $this->form_validation->set_rules('repeat_password', 'Password', 'required');
-        if ($this->form_validation->run() == false) {
-            $this->session->set_flashdata(
-                'message',
-                "<div class='alert alert-danger'>" .
-                validation_errors() .
-                ' </div>'
-            );
-            redirect('user/new_user2/');
-        } else {
-            if ($this->user_model->insert_user_user()) {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-success'>" .
-                    $this->lang->line('data_added_successfully') .
-                    ' </div>'
-                );
-            } else {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    $this->lang->line('error_to_add_data') .
-                    ' </div>'
-                );
-            }
-            redirect('user/new_user2/');
-        }
-    }
-
-    public function remove_user($uid)
-    {
-        $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['applicants']);
-        if (!in_array('Remove', $user_p)) {
-            exit($this->lang->line('permission_denied'));
-        }
-        if ($uid == '1') {
-            exit($this->lang->line('permission_denied'));
-        }
-
-        if ($this->user_model->remove_user($uid)) {
-            $this->session->set_flashdata(
-                'message',
-                "<div class='alert alert-success'>" .
-                $this->lang->line('removed_successfully') .
-                ' </div>'
-            );
-        } else {
-            $this->session->set_flashdata(
-                'message',
-                "<div class='alert alert-danger'>" .
-                $this->lang->line('error_to_remove') .
-                ' </div>'
-            );
-        }
-        redirect('user');
-    }
-
-    public function remove_user_admin($uid)
-    {
-        $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['users']);
-        if (!in_array('Remove', $user_p)) {
-            exit($this->lang->line('permission_denied'));
-        }
-        if ($uid == '1') {
-            exit($this->lang->line('permission_denied'));
-        }
-
-        if ($this->user_model->remove_user_admin($uid)) {
-            $this->session->set_flashdata(
-                'message',
-                "<div class='alert alert-success'>" .
-                $this->lang->line('removed_successfully') .
-                ' </div>'
-            );
-        } else {
-            $this->session->set_flashdata(
-                'message',
-                "<div class='alert alert-danger'>" .
-                $this->lang->line('error_to_remove') .
-                ' </div>'
-            );
-        }
-        redirect('user/index2');
+        $this->load->view('header', $data);
+        $this->load->view('load_image', $data);
+        $this->load->view('footer', $data);
     }
 
     public function edit_user_fill_custom($uid, $rid)
@@ -421,209 +330,16 @@ class User extends CI_Controller
         $this->load->view('footer', $data);
     }
 
-    public function profile()
-    {
-        echo "gg";
-    }
-
-    public function edit_user_decide($uid)
-    {
-        $logged_in = $this->session->userdata('logged_in');
-        if ($logged_in['su'] == '2') {
-            $this->edit_user($uid);
-        } else {
-            $this->edit_user_admin($uid);
-        }
-    }
-
-    public function edit_user($uid)
-    {
-        $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['users']);
-
-        if (!in_array('Edit', $user_p)) {
-            if (in_array('Myaccount', $user_p)) {
-                $uid = $logged_in['uid'];
-            } else {
-                exit($this->lang->line('permission_denied'));
-            }
-        }
-
-        $data['uid'] = $uid;
-        $data['title'] = $this->lang->line('edit_user');
-        // fetching user
-        $data['result'] = $this->user_model->get_user($uid);
-
-        $data['custom_form_user'] = $this->user_model->custom_form_user($uid);
-
-        $data['custom_form'] = $this->user_model->custom_form('All');
-        $this->load->model('payment_model');
-        $data['payment_history'] = $this->payment_model->get_payment_history(
-            $uid
-        );
-        // fetching group list
-        $data['career_list'] = $this->user_model->get_career_all();
-        $data['group_list'] = $this->user_model->group_list();
-        $data['account_type'] = $this->account_model->account_list(0);
-
-        $this->load->view('header', $data);
-        if ($logged_in['su'] != '2') {
-            $this->load->view('edit_user', $data);
-        } else {
-            $this->load->view('myaccount', $data);
-        }
-        $this->load->view('footer', $data);
-    }
-
-    public function edit_user_admin($uid)
-    {
-        $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['users']);
-
-        if (!in_array('Edit', $user_p)) {
-            if (in_array('Myaccount', $user_p)) {
-                $uid = $logged_in['uid'];
-            } else {
-                exit($this->lang->line('permission_denied'));
-            }
-        }
-
-        $data['uid'] = $uid;
-        $data['title'] =
-            $this->lang->line('edit') . ' ' . $this->lang->line('user');
-        // fetching user
-        $data['result'] = $this->user_model->get_user_admin($uid);
-
-
-        $data['custom_form_user'] = $this->user_model->custom_form_user($uid);
-        //$data['result'] = $this->user_model->get_user($uid);
-        $data['custom_form'] = $this->user_model->custom_form('All');
-        $this->load->model('payment_model');
-        $data['payment_history'] = $this->payment_model->get_payment_history(
-            $uid
-        );
-        // fetching group list
-        //$data['career_list'] = $this->user_model->get_career_all();
-        //$data['group_list'] = $this->user_model->group_list();
-
-        $data['account_type'] = $this->account_model->account_list(0);
-        $this->load->view('header', $data);
-        if ($logged_in['su'] != '2') {
-            $this->load->view('edit_user_admin', $data);
-        } else {
-            $this->load->view('myaccount', $data);
-        }
-        $this->load->view('footer', $data);
-    }
-
-    public function update_user($uid)
-    {
-        $logged_in = $this->session->userdata('logged_in');
-
-        if ($logged_in['su'] != '2') {
-            //$uid = $logged_in['uid'];
-        }
-        if ($this->input->post('password')) {
-
-            if ($_POST['inputPassword'] != $_POST['repeat_password']) {
-
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    'Las contraseñas no coinciden' .
-                    ' </div>'
-                );
-                redirect('user/edit_user/' . $uid);
-            }
-        }
-
-        $this->load->library('form_validation');
-        $this->form_validation->set_rules('email', 'Email', 'required');
-        if ($this->form_validation->run() == false) {
-            $this->session->set_flashdata(
-                'message',
-                "<div class='alert alert-danger'>" .
-                validation_errors() .
-                ' </div>'
-            );
-            redirect('user/edit_user/' . $uid);
-        } else {
-            if ($this->user_model->update_user($uid)) {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-success'>" .
-                    $this->lang->line('data_updated_successfully') .
-                    ' </div>'
-                );
-            } else {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    $this->lang->line('error_to_update_data') .
-                    ' </div>'
-                );
-            }
-            redirect('user/edit_user/' . $uid);
-        }
-    }
-
-    public function update_user_admin($uid)
-    {
-        $logged_in = $this->session->userdata('logged_in');
-
-        if ($logged_in['su'] != '2') {
-            //$uid = $logged_in['uid'];
-        }
-        if ($this->input->post('password')) {
-
-            if ($_POST['password'] != $_POST['repeat_password']) {
-
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    'Las contraseñas no coinciden' .
-                    ' </div>'
-                );
-                redirect('user/edit_user_admin/' . $uid);
-            }
-        }
-
-        $this->load->library('form_validation');
-        $this->form_validation->set_rules('email', 'Email', 'required');
-        if ($this->form_validation->run() == false) {
-            $this->session->set_flashdata(
-                'message',
-                "<div class='alert alert-danger'>" .
-                validation_errors() .
-                ' </div>'
-            );
-            redirect('user/edit_user_admin/' . $uid);
-        } else {
-            if ($this->user_model->update_user_admin($uid)) {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-success'>" .
-                    $this->lang->line('data_updated_successfully') .
-                    ' </div>'
-                );
-            } else {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    $this->lang->line('error_to_update_data') .
-                    ' </div>'
-                );
-            }
-            redirect('user/edit_user_admin/' . $uid);
-        }
-    }
-
     public function group_list()
     {
         $logged_in = $this->session->userdata('logged_in');
         $setting_p = explode(',', $logged_in['setting']);
         if (!in_array('All', $setting_p)) {
-            exit($this->lang->line('permission_denied'));
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         // fetching group list
         $data['group_list'] = $this->user_model->group_list();
@@ -638,7 +354,11 @@ class User extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $setting_p = explode(',', $logged_in['setting']);
         if (!in_array('All', $setting_p)) {
-            exit($this->lang->line('permission_denied'));
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         // fetching group list
         $data['career_list'] = $this->user_model->career_list();
@@ -688,7 +408,11 @@ class User extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $setting_p = explode(',', $logged_in['setting']);
         if (!in_array('All', $setting_p)) {
-            exit($this->lang->line('permission_denied'));
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         if ($this->input->post('group_name')) {
@@ -721,7 +445,11 @@ class User extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $setting_p = explode(',', $logged_in['setting']);
         if (!in_array('All', $setting_p)) {
-            exit($this->lang->line('permission_denied'));
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         if ($this->input->post('career_name')) {
@@ -754,7 +482,11 @@ class User extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $setting_p = explode(',', $logged_in['setting']);
         if (!in_array('All', $setting_p)) {
-            exit($this->lang->line('permission_denied'));
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         if ($this->input->post('group_name')) {
@@ -789,7 +521,11 @@ class User extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $setting_p = explode(',', $logged_in['setting']);
         if (!in_array('All', $setting_p)) {
-            exit($this->lang->line('permission_denied'));
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         if ($this->input->post('career_name')) {
@@ -892,7 +628,11 @@ class User extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $setting_p = explode(',', $logged_in['setting']);
         if (!in_array('All', $setting_p)) {
-            exit($this->lang->line('permission_denied'));
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         if ($this->user_model->insert_group()) {
@@ -918,7 +658,11 @@ class User extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $setting_p = explode(',', $logged_in['setting']);
         if (!in_array('All', $setting_p)) {
-            exit($this->lang->line('permission_denied'));
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         if ($this->user_model->update_group($gid)) {
@@ -947,7 +691,11 @@ class User extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-            exit($this->lang->line('permission_denied'));
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         $mgid = $this->input->post('mgid');
@@ -978,7 +726,11 @@ class User extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-            exit($this->lang->line('permission_denied'));
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         $this->user_model->remove_custom($field_id);
         $this->session->set_flashdata(
@@ -996,7 +748,11 @@ class User extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-            exit($this->lang->line('permission_denied'));
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         if ($this->input->post()) {
@@ -1024,7 +780,11 @@ class User extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-            exit($this->lang->line('permission_denied'));
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         if ($this->input->post()) {
@@ -1062,7 +822,11 @@ class User extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['quiz']);
         if (!in_array('Add', $acp)) {
-            exit($this->lang->line('permission_denied'));
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         $this->load->helper('xlsimport/php-excel-reader/excel_reader2');

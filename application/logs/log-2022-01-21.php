@@ -362,3 +362,9 @@ ERROR - 2022-01-21 16:42:23 --> Severity: Warning --> Division by zero C:\xampp\
 ERROR - 2022-01-21 16:55:45 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 193
 ERROR - 2022-01-21 17:02:10 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\FCJPSRRII\application\views\edit_user_admin.php 33
 ERROR - 2022-01-21 17:02:24 --> Severity: error --> Exception: syntax error, unexpected '}', expecting end of file C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 40
+ERROR - 2022-01-21 23:01:22 --> Severity: Warning --> mysqli::__construct(): (HY000/1049): Unknown database 'quiz_fcjpsrrii' C:\xampp\htdocs\quiz\derecho\application\config\config.php 515
+ERROR - 2022-01-21 23:01:50 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\derecho\application\views\dashboard.php 193
+ERROR - 2022-01-21 23:02:39 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\derecho\application\views\dashboard.php 193
+ERROR - 2022-01-21 23:02:50 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\derecho\application\views\dashboard.php 193
+ERROR - 2022-01-21 23:17:20 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\derecho\application\views\new_user.php 95
+ERROR - 2022-01-21 23:17:20 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\derecho\application\views\new_user.php 111

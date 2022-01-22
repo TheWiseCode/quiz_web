@@ -27,7 +27,11 @@ class Duplicate_question extends CI_Controller {
 		$this->load->helper('form');
 		$logged_in=$this->session->userdata('logged_in');
 			if($logged_in['su']!='1'){
-			exit($this->lang->line('permission_denied'));
+			            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
 			}
 			
 		$data['result']=$this->duplicate_question_model->check_duplicate($limit);

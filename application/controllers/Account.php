@@ -28,7 +28,11 @@ class Account extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         $data['limit'] = $limit;
         $data['title'] = $this->lang->line('account_list');
@@ -44,7 +48,11 @@ class Account extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         $data['account_id'] = $account_id;
         $data['result'] = $this->Account_model->get_edit_account($account_id);
@@ -59,7 +67,11 @@ class Account extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         $this->Account_model->update_account($account_id);
         $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('account_updated') . " </div>");
@@ -71,7 +83,11 @@ class Account extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         $maid = $this->input->post('maid');
         $this->db->query(" update savsoft_users set su='$maid' where su='$account_id' ");
@@ -89,7 +105,11 @@ class Account extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         $data['account_id'] = $account_id;
         // fetching group list

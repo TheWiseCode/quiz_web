@@ -27,11 +27,19 @@ class UserNew extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $user_p = explode(',', $logged_in['users']);
         if (!in_array('List_all', $user_p)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         $user_p = explode(',', $logged_in['users']);
         if (!in_array('List_all', $user_p)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         $data['limit'] = $limit;
         $data['title'] = $this->lang->line('userlist');
@@ -49,7 +57,11 @@ class UserNew extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $user_p = explode(',', $logged_in['users']);
         if (!in_array('Add', $user_p)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         $data['title'] = $this->lang->line('add_new_') . ' ' . $this->lang->line('user');
         $data['account_type'] = $this->account_model->account_list(0);
@@ -63,7 +75,11 @@ class UserNew extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $user_p = explode(',', $logged_in['users']);
         if (!in_array('Add', $user_p)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         $this->load->library('form_validation');
         $this->form_validation->set_rules(
@@ -81,7 +97,7 @@ class UserNew extends CI_Controller
                     'Las contraseñas no coinciden' .
                     ' </div>'
                 );
-                redirect('user/new_user2/');
+                redirect('user/create/');
             }
         }
         $this->form_validation->set_rules('password', 'Password', 'required');
@@ -93,7 +109,7 @@ class UserNew extends CI_Controller
                 validation_errors() .
                 ' </div>'
             );
-            redirect('user/new_user2/');
+            redirect('user/create/');
         } else {
             if ($this->user_model->insert_user_user()) {
                 $this->session->set_flashdata(
@@ -110,7 +126,7 @@ class UserNew extends CI_Controller
                     ' </div>'
                 );
             }
-            redirect('user/new_user2/');
+            redirect('user/create/');
         }
     }
 
@@ -119,10 +135,18 @@ class UserNew extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $user_p = explode(',', $logged_in['users']);
         if (!in_array('Remove', $user_p)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         if ($uid == '1') {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         if ($this->user_model->remove_user_admin($uid)) {

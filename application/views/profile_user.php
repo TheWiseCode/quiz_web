@@ -1,8 +1,7 @@
 <div class="container">
     <h3 class="font-weight-bold"><?php echo $title; ?></h3>
     <div class="row">
-        <form enctype="multipart/form-data" method="post"
-              action="<?php echo site_url('user/insert/'); ?>">
+        <form method="post" action="<?php echo site_url('profile/update_user/' . $uid); ?>" enctype="multipart/form-data">
             <div class="col-md-8">
                 <div class="login-panel panel panel-default">
                     <div class="panel-body">
@@ -11,15 +10,15 @@
                             echo $this->session->flashdata('message');
                         }
                         ?>
+
                         <div class="row">
                             <div class="col col-md-9">
                                 <div class="form-group">
                                     <label for="first_name"
                                            class="font-weight-bold"><?php echo $this->lang->line('first_name'); ?></label>
-                                    <input type="text" name="first_name" class="form-control" value="<?php
-                                    if ($first_name != null)
-                                        echo $first_name;
-                                    ?>" tabindex="4"
+                                    <input type="text" name="first_name" class="form-control"
+                                           value="<?php echo $result['first_name']; ?>"
+                                           tabindex="4"
                                            placeholder="<?php echo $this->lang->line('first_name'); ?>" autofocus
                                            required>
                                 </div>
@@ -27,8 +26,7 @@
                                     <label for="last_name"
                                            class="font-weight-bold"><?php echo $this->lang->line('last_name'); ?></label>
                                     <input type="text" name="last_name" class="form-control" value="<?php
-                                    if ($last_name != null)
-                                        echo $last_name;
+                                    echo $result['last_name'];
                                     ?>" tabindex="5"
                                            placeholder="<?php echo $this->lang->line('last_name'); ?>" autofocus
                                            required>
@@ -38,7 +36,7 @@
                                 <label for="profile">&ensp;</label>
                                 <div class="form-group">
                                     <div class="picture-container float-right" id="profile">
-                                        <img src="<?php echo base_url() . 'images/profile.jpg' ?>"
+                                        <img src="<?php echo base_url($result['photo']) ?>"
                                              class="img-profile rounded rounded-1 border border-dark"
                                              style="width: 130px; height: 130px"
                                              id="wizardPicturePreview" title="Imagen de Perfil"
@@ -47,33 +45,23 @@
                                                accept="image/*" hidden>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="contact_no"
-                                   class="font-weight-bold"><?php echo $this->lang->line('contact_no'); ?></label>
-                            <input type="text" name="contact_no" class="form-control" value="<?php
-                            if ($contact_no != null) echo $contact_no;
-                            ?>" tabindex="12"
-                                   placeholder="<?php echo $this->lang->line('contact_no'); ?>" autofocus required>
+                            <label for="address"
+                                   class="font-weight-bold"><?php echo $this->lang->line('address'); ?></label>
+                            <input type="text" name="address" class="form-control" value="<?php
+                            echo $result['address'];
+                            ?>" tabindex="8"
+                                   placeholder="<?php echo $this->lang->line('address'); ?>" autofocus>
                         </div>
                         <div class="form-group">
-                            <label class="font-weight-bold"><?php echo $this->lang->line('account_type'); ?></label>
-                            <select class="form-control" name="su">
-                                <?php
-                                foreach ($account_type as $ak => $val) {
-                                    ?>
-                                    <option value="<?php echo $val['account_id']; ?>"><?php echo $val['account_name']; ?></option>
-                                    <?php
-                                }
-                                ?>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="inputEmail" class="font-weight-bold">
-                                <?php echo $this->lang->line('email_address'); ?></label>
-                            <input type="email" id="inputEmail" name="email" class="form-control"
+                            <label for="inputEmail"
+                                   class="font-weight-bold"><?php echo $this->lang->line('email_address'); ?></label>
+                            <input type="email" id="inputEmail" name="email" class="form-control" value="<?php
+                            echo $result['email'];
+                            ?>" tabindex="14"
                                    placeholder="<?php echo $this->lang->line('email_address'); ?>" required autofocus>
                         </div>
                         <div class="form-group">
@@ -94,45 +82,38 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </form>
     </div>
+    <script>
+        var image_loaded = false;
 
-
-</div>
-<script>
-    $(document).ready(function () {
-        $('input[type="text"]').keyup(function () {
-            this.value = this.value.toUpperCase();
-        });
-        $("#wizard_picture").change(function () {
-            readURL(this);
-        });
-        $('#pre_save').on('click', function (e) {
-            e.preventDefault();
-            if ($('#wizard_picture').get(0).files.length === 0 && 0) {
-                alert('<?php echo $this->lang->line('register_photo');?>');
-                return false;
-            } else {
+        $(document).ready(function () {
+            $("#wizard_picture").change(function () {
+                readURL(this);
+            });
+            $('#pre_save').on('click', function (e) {
+                e.preventDefault();
                 $('#submit').trigger("click");
-            }
+            });
         });
-    });
 
-
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+                }
+                reader.readAsDataURL(input.files[0]);
             }
-            reader.readAsDataURL(input.files[0]);
         }
-    }
 
-    function openLoaderProfile() {
-        $('#wizard_picture').click();
-    }
-</script>
+        function openLoaderProfile() {
+            $('#wizard_picture').click();
+        }
+    </script>
+
+

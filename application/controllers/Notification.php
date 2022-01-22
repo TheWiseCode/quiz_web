@@ -75,7 +75,11 @@ class Notification extends CI_Controller
 
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         $data['title'] = $this->lang->line('send_notification');
@@ -103,7 +107,11 @@ class Notification extends CI_Controller
 
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         foreach ($_POST['notification_to'] as $nk => $nval) {

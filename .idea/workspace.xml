@@ -2,12 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/application/controllers/Applicant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/applicant_list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/edit_applicant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/new_applicant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/profile_applicant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/profile_user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/sq_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/sq_config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Advertisment.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Advertisment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Appointment.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Appointment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Duplicate_question.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Duplicate_question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Notification.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Notification.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Payment_gateway.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Payment_gateway.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Qbank.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Qbank.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Quiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Quiz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Result.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Result.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Study_material.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Study_material.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/User2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-21.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-21.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Account_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Account_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/UserNew.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/UserNew.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/edit_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/edit_user_admin.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/myaccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/myaccount.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/new_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/new_user2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/user_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user_list2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user_list2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/user_list2.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,18 +84,18 @@
     <property name="ToolWindowDebug.ShowToolbar" value="false" />
     <property name="ToolWindowFind.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\quiz\derecho\application\views" />
       <recent name="C:\xampp\htdocs\savsoftquiz_v5\application\models" />
       <recent name="C:\xampp\htdocs\savsoftquiz_v5\application\views" />
       <recent name="C:\xampp\htdocs\savsoftquiz_v5\images" />
       <recent name="C:\xampp\htdocs\savsoftquiz_v5\photo" />
-      <recent name="C:\xampp\htdocs\savsoftquiz_v5\biometric_scanner" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\quiz\FCJPSRRII\images" />
@@ -75,7 +106,7 @@
     <configuration name="cridai" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="cridai" start_url="http://192.168.0.180:8080">
       <method v="2" />
     </configuration>
-    <configuration name="local" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="localhost" start_url="http://localhost:8080/quiz/FCJPSRRII/">
+    <configuration name="local" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="localhost" start_url="http://localhost:8080/quiz/derecho/">
       <method v="2" />
     </configuration>
     <configuration name="web" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="cridai" start_url="http://localhost:8080/quiz/FCJPSRRII/">
@@ -110,6 +141,7 @@
       <workItem from="1642482172585" duration="69597000" />
       <workItem from="1642730671391" duration="24168000" />
       <workItem from="1642789122258" duration="9846000" />
+      <workItem from="1642821157173" duration="21097000" />
     </task>
     <servers />
   </component>
@@ -138,7 +170,7 @@
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>747</line>
+          <line>803</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint type="php">
@@ -148,32 +180,32 @@
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>59</line>
+          <line>63</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>76</line>
+          <line>80</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>105</line>
+          <line>113</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>147</line>
+          <line>159</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>161</line>
+          <line>173</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>180</line>
+          <line>192</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint type="php">
@@ -193,72 +225,72 @@
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>787</line>
+          <line>843</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>811</line>
+          <line>871</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>721</line>
+          <line>777</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>691</line>
+          <line>747</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>620</line>
+          <line>672</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>607</line>
+          <line>659</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>459</line>
+          <line>507</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>438</line>
+          <line>482</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>413</line>
+          <line>453</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>380</line>
+          <line>416</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>287</line>
+          <line>311</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>261</line>
+          <line>281</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>216</line>
+          <line>228</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Quiz.php</url>
-          <line>198</line>
+          <line>210</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint type="php">
@@ -270,26 +302,6 @@
           <url>file://$PROJECT_DIR$/application/models/Quiz_model.php</url>
           <line>745</line>
           <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/controllers/User.php</url>
-          <line>571</line>
-          <option name="timeStamp" value="155" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/models/User_model.php</url>
-          <line>516</line>
-          <option name="timeStamp" value="160" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/controllers/User.php</url>
-          <line>198</line>
-          <option name="timeStamp" value="162" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/controllers/User.php</url>
-          <line>1061</line>
-          <option name="timeStamp" value="165" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

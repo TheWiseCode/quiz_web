@@ -95,10 +95,10 @@ class Account_model extends CI_Model
         } else {
             $userdata['appointment'] = "";
         }
-        if ($this->input->post('postulantes')) {
-            $userdata['postulantes'] = implode(',', $this->input->post('postulantes'));
+        if ($this->input->post('applicants')) {
+            $userdata['applicants'] = implode(',', $this->input->post('applicants'));
         } else {
-            $userdata['postulantes'] = "";
+            $userdata['applicants'] = "";
         }
         $this->db->where('account_id', $account_id);
         $this->db->update('account_type', $userdata);

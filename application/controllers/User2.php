@@ -150,7 +150,7 @@ class User2 extends CI_Controller
     function cargar_archivo($uid)
     {
 
-        $name = time();
+        $name = date('dmY_His', time());;
         $mi_imagen = 'upload';
         $config['upload_path'] = "photo/users";
         $config['file_name'] = $name . "";
