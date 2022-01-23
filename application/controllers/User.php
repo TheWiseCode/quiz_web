@@ -37,99 +37,33 @@ class User extends CI_Controller
     public function index($limit = '0')
     {
         $logged_in = $this->session->userdata('logged_in');
-
-        $user_p = explode(',', $logged_in['postulantes']);
+        $user_p = explode(',', $logged_in['users']);
         if (!in_array('List_all', $user_p)) {
             exit($this->lang->line('permission_denied'));
         }
-
         $data['limit'] = $limit;
-        $data['title'] = $this->lang->line('user_list_students');
-        // fetching user list
-        $data['result'] = $this->user_model->user_list($limit);
-        $data['career_list'] = $this->user_model->get_career_all();
-        $data['group_list'] = $this->user_model->get_group_all($limit);
-        $data['speciality_list'] = $this->user_model->get_specialties_all();
-        $data['university_list'] = $this->user_model->get_university_all();
-
-
+        $data['title'] = $this->lang->line('userlist');
+        $data['result'] = $this->user_model->user_list_only_user($limit);
+        $data['list_account_type'] = $this->user_model->get_account_type();
         $this->load->view('header', $data);
         $this->load->view('user_list', $data);
         $this->load->view('footer', $data);
     }
 
-    public function index2($limit = '0')
+    public function create()
     {
-        $logged_in = $this->session->userdata('logged_in');
-
-        $user_p = explode(',', $logged_in['users']);
-        if (!in_array('List_all', $user_p)) {
-            exit($this->lang->line('permission_denied'));
+        if ($this->session->flashdata('data_temp') != null) {
+            $data = $this->session->flashdata('data_temp');
         }
-
-        $user_p = explode(',', $logged_in['users']);
-        if (!in_array('List_all', $user_p)) {
-            exit($this->lang->line('permission_denied'));
-        }
-
-        $data['limit'] = $limit;
-        $data['title'] = $this->lang->line('userlist');
-        // fetching user list
-        $data['result'] = $this->user_model->user_list_only_user($limit);
-        $data['list_account_type'] = $this->user_model->get_account_type();
-
-        //$data['career_list'] = $this->user_model->get_career_all();
-        ///$data['group_list'] = $this->user_model->get_group_all($limit);
-
-        $this->load->view('header', $data);
-        $this->load->view('user_list2', $data);
-        $this->load->view('footer', $data);
-    }
-
-    public function new_user()
-    {
-        try {
-            if($this->session->flashdata('data_temp') != null){
-                $data = $this->session->flashdata('data_temp');
-            }
-            $logged_in = $this->session->userdata('logged_in');
-            $user_p = explode(',', $logged_in['postulantes']);
-            if (!in_array('Add', $user_p)) {
-                exit($this->lang->line('permission_denied'));
-            }
-            $data['title'] = $this->lang->line('add_new_') . ' ' . $this->lang->line('users_student');
-            $data['group_list'] = $this->user_model->group_list();
-            $data['career_list'] = $this->user_model->get_career_all();
-            $data['account_type'] = $this->account_model->account_list(0);
-            $data['university_list'] = $this->user_model->get_university_all();
-            $data['specialties_list'] = $this->user_model->get_specialties_all();
-            $this->load->view('header', $data);
-            $this->load->view('new_user', $data);
-            $this->load->view('footer', $data);
-        } catch (Exception $e) {
-            $data['error'] = $e->getTrace();
-            $this->load->view('header', $data);
-            $this->load->view('new_user', $data);
-            $this->load->view('footer', $data);
-        }
-    }
-
-    public function new_user2()
-    {
         $logged_in = $this->session->userdata('logged_in');
         $user_p = explode(',', $logged_in['users']);
         if (!in_array('Add', $user_p)) {
             exit($this->lang->line('permission_denied'));
         }
-
-        $data['title'] =
-            $this->lang->line('add_new_') . ' ' . $this->lang->line('user');
-        // fetching group list
-        //$data['group_list'] = $this->user_model->group_list();
-        //$data['career_list'] = $this->user_model->get_career_all();
+        $data['title'] = $this->lang->line('add_user');
         $data['account_type'] = $this->account_model->account_list(0);
         $this->load->view('header', $data);
-        $this->load->view('new_user2', $data);
+        $this->load->view('new_user', $data);
         $this->load->view('footer', $data);
     }
 
@@ -162,13 +96,8 @@ class User extends CI_Controller
 
     function cargar_archivo()
     {
-        $cd = $this->input->post('code_student');
-        if ($cd == null) {
-            $cd = '';
-        } else {
-            $cd .= '_';
-        }
-        $p = $_FILES['wizard_picture'];
+        $cd = $this->input->post('code_student') . '_';
+        //$p = $_FILES['wizard_picture'];
         $name = time();
         $mi_imagen = 'wizard_picture';
         $config['upload_path'] = "photo/users";
@@ -180,73 +109,31 @@ class User extends CI_Controller
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
         if (!$this->upload->do_upload($mi_imagen)) {
-            $photo = "images/profile.jpeg";
-            return;
+            return null;
         }
         $data['uploadSuccess'] = $this->upload->data();
         $photo = 'photo/users/' . $data['uploadSuccess']['orig_name'];
         return $photo;
     }
 
-    function error_display(){
-        foreach ($_POST as $key => $value){
-            $data[$key] = $value;
-        }
-        foreach ($_FILES as $key => $value){
+    function error_display()
+    {
+        foreach ($_POST as $key => $value) {
             $data[$key] = $value;
         }
         $this->session->set_flashdata('data_temp', $data);
-        redirect('user/new_user/');
+        redirect('user/create/');
     }
 
-    public function insert_user()
+    public function insert()
     {
         $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['postulantes']);
+        $user_p = explode(',', $logged_in['users']);
         if (!in_array('Add', $user_p)) {
             exit($this->lang->line('permission_denied'));
         }
         $this->load->library('form_validation');
-        if ($this->input->post('other_uni') == 'on') {
-            $name_uni = strtoupper(trim($this->input->post('another_uni')));
-            $valid = $this->user_model->valid_university($name_uni);
-            if(!$valid){
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    'Universidad ya registrada' .
-                    ' </div>'
-                );
-                $this->error_display();
-            }
-        }
-        if ($this->input->post('other_spe') == 'on') {
-            $name_spe = strtoupper(trim($this->input->post('another_spe')));
-            $valid = $this->user_model->valid_specialty($name_spe);
-            if(!$valid){
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    'Especialidad ya registrada' .
-                    ' </div>'
-                );
-                $this->error_display();
-            }
-        }
-        $this->form_validation->set_rules('ci', 'CI', 'required|is_unique[savsoft_users.ci]');
-        $this->form_validation->set_rules('code_student', 'Codigo CD', 'required|is_unique[savsoft_users.cod_student]');
         $this->form_validation->set_rules('email', 'Email', 'required|is_unique[savsoft_users.email]');
-        if ($this->input->post('password') && 0) {
-            if ($_POST['password'] != $_POST['repeat_password']) {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    'Las contraseñas no coinciden' .
-                    ' </div>'
-                );
-                $this->error_display();
-            }
-        }
         if ($this->form_validation->run() == false) {
             $this->session->set_flashdata(
                 'message',
@@ -264,7 +151,7 @@ class User extends CI_Controller
                     $this->lang->line('data_added_successfully') .
                     ' </div>'
                 );
-                redirect('user/new_user/');
+                redirect('user/create');
             } else {
                 $this->session->set_flashdata(
                     'message',
@@ -277,66 +164,10 @@ class User extends CI_Controller
         }
     }
 
-    public function insert_user2()
+    public function remove($uid)
     {
         $logged_in = $this->session->userdata('logged_in');
         $user_p = explode(',', $logged_in['users']);
-        if (!in_array('Add', $user_p)) {
-            exit($this->lang->line('permission_denied'));
-        }
-        $this->load->library('form_validation');
-        $this->form_validation->set_rules(
-            'email',
-            'Email',
-            'required|is_unique[savsoft_users.email]'
-        );
-        if ($this->input->post('password')) {
-
-            if ($_POST['password'] != $_POST['repeat_password']) {
-
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    'Las contraseñas no coinciden' .
-                    ' </div>'
-                );
-                redirect('user/new_user2/');
-            }
-        }
-        $this->form_validation->set_rules('password', 'Password', 'required');
-        $this->form_validation->set_rules('repeat_password', 'Password', 'required');
-        if ($this->form_validation->run() == false) {
-            $this->session->set_flashdata(
-                'message',
-                "<div class='alert alert-danger'>" .
-                validation_errors() .
-                ' </div>'
-            );
-            redirect('user/new_user2/');
-        } else {
-            if ($this->user_model->insert_user_user()) {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-success'>" .
-                    $this->lang->line('data_added_successfully') .
-                    ' </div>'
-                );
-            } else {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    $this->lang->line('error_to_add_data') .
-                    ' </div>'
-                );
-            }
-            redirect('user/new_user2/');
-        }
-    }
-
-    public function remove_user($uid)
-    {
-        $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['postulantes']);
         if (!in_array('Remove', $user_p)) {
             exit($this->lang->line('permission_denied'));
         }
@@ -360,35 +191,6 @@ class User extends CI_Controller
             );
         }
         redirect('user');
-    }
-
-    public function remove_user_admin($uid)
-    {
-        $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['users']);
-        if (!in_array('Remove', $user_p)) {
-            exit($this->lang->line('permission_denied'));
-        }
-        if ($uid == '1') {
-            exit($this->lang->line('permission_denied'));
-        }
-
-        if ($this->user_model->remove_user_admin($uid)) {
-            $this->session->set_flashdata(
-                'message',
-                "<div class='alert alert-success'>" .
-                $this->lang->line('removed_successfully') .
-                ' </div>'
-            );
-        } else {
-            $this->session->set_flashdata(
-                'message',
-                "<div class='alert alert-danger'>" .
-                $this->lang->line('error_to_remove') .
-                ' </div>'
-            );
-        }
-        redirect('user/index2');
     }
 
     public function edit_user_fill_custom($uid, $rid)
@@ -417,7 +219,7 @@ class User extends CI_Controller
         $data['rid'] = $rid;
         $data['title'] = $this->lang->line('fill_custom_msg');
         // fetching user
-        $data['result'] = $this->user_model->get_user($uid);
+        $data['result'] = $this->user_model->get_applicant($uid);
         $data['custom_form_user'] = $this->user_model->custom_form_user($uid);
 
         $data['custom_form'] = $this->user_model->custom_form('Result');
@@ -428,136 +230,55 @@ class User extends CI_Controller
         $this->load->view('footer', $data);
     }
 
-    public function profile()
-    {
-        echo "gg";
-    }
-
-    public function edit_user_decide($uid)
-    {
-        $logged_in = $this->session->userdata('logged_in');
-        if ($logged_in['su'] == '2') {
-            $this->edit_user($uid);
-        } else {
-            $this->edit_user_admin($uid);
-        }
-    }
-
-    public function edit_user($uid)
+    public function edit($uid)
     {
         $logged_in = $this->session->userdata('logged_in');
         $user_p = explode(',', $logged_in['users']);
-
         if (!in_array('Edit', $user_p)) {
-            if (in_array('Myaccount', $user_p)) {
-                $uid = $logged_in['uid'];
-            } else {
-                exit($this->lang->line('permission_denied'));
-            }
+            exit($this->lang->line('permission_denied'));
         }
-
         $data['uid'] = $uid;
         $data['title'] = $this->lang->line('edit_user');
         // fetching user
         $data['result'] = $this->user_model->get_user($uid);
-
         $data['custom_form_user'] = $this->user_model->custom_form_user($uid);
-
         $data['custom_form'] = $this->user_model->custom_form('All');
-        $this->load->model('payment_model');
-        $data['payment_history'] = $this->payment_model->get_payment_history(
-            $uid
-        );
         // fetching group list
-        $data['career_list'] = $this->user_model->get_career_all();
-        $data['group_list'] = $this->user_model->group_list();
-        $data['university_list'] = $this->user_model->get_university_all();
-        $data['speciality_list'] = $this->user_model->get_specialties_all();
         $data['account_type'] = $this->account_model->account_list(0);
-
         $this->load->view('header', $data);
-        if ($logged_in['su'] != '2') {
-            $this->load->view('edit_user', $data);
-        } else {
-            $this->load->view('myaccount', $data);
-        }
+        $this->load->view('edit_user', $data);
         $this->load->view('footer', $data);
     }
 
-    public function edit_user_admin($uid)
+    public function update($uid)
     {
         $logged_in = $this->session->userdata('logged_in');
         $user_p = explode(',', $logged_in['users']);
-
         if (!in_array('Edit', $user_p)) {
-            if (in_array('Myaccount', $user_p)) {
-                $uid = $logged_in['uid'];
-            } else {
-                exit($this->lang->line('permission_denied'));
-            }
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
-
-        $data['uid'] = $uid;
-        $data['title'] =
-            $this->lang->line('edit') . ' ' . $this->lang->line('user');
-        // fetching user
-        $data['result'] = $this->user_model->get_user_admin($uid);
-
-
-        $data['custom_form_user'] = $this->user_model->custom_form_user($uid);
-        //$data['result'] = $this->user_model->get_user($uid);
-        $data['custom_form'] = $this->user_model->custom_form('All');
-        $this->load->model('payment_model');
-        $data['payment_history'] = $this->payment_model->get_payment_history(
-            $uid
-        );
-        // fetching group list
-        //$data['career_list'] = $this->user_model->get_career_all();
-        //$data['group_list'] = $this->user_model->group_list();
-
-        $data['account_type'] = $this->account_model->account_list(0);
-        $this->load->view('header', $data);
-        if ($logged_in['su'] != '2') {
-            $this->load->view('edit_user_admin', $data);
-        } else {
-            $this->load->view('myaccount', $data);
-        }
-        $this->load->view('footer', $data);
-    }
-
-    public function update_user($uid)
-    {
-        $logged_in = $this->session->userdata('logged_in');
-
-        if ($logged_in['su'] != '2') {
-            //$uid = $logged_in['uid'];
-        }
-        if ($this->input->post('password')) {
-
-            if ($_POST['inputPassword'] != $_POST['repeat_password']) {
-
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    'Las contraseñas no coinciden' .
-                    ' </div>'
-                );
-                redirect('user/edit_user/' . $uid);
-            }
-        }
-
+        $rules = 0;
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('email', 'Email', 'required');
-        if ($this->form_validation->run() == false) {
+        $user_data = $this->user_model->get_user($uid);
+        if ($user_data['email'] != $this->input->post('email')) {
+            $rules = 1;
+            $this->form_validation->set_rules('email', 'Email', 'required|is_unique[savsoft_users.email]');
+        }
+        if ($rules && $this->form_validation->run() == false) {
             $this->session->set_flashdata(
                 'message',
                 "<div class='alert alert-danger'>" .
                 validation_errors() .
                 ' </div>'
             );
-            redirect('user/edit_user/' . $uid);
+            redirect('user/edit/' . $uid);
         } else {
-            if ($this->user_model->update_user($uid)) {
+            $data_photo = $this->cargar_archivo();
+            if ($this->user_model->update_user($uid, $data_photo)) {
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-success'>" .
@@ -572,58 +293,7 @@ class User extends CI_Controller
                     ' </div>'
                 );
             }
-            redirect('user/edit_user/' . $uid);
-        }
-    }
-
-    public function update_user_admin($uid)
-    {
-        $logged_in = $this->session->userdata('logged_in');
-
-        if ($logged_in['su'] != '2') {
-            //$uid = $logged_in['uid'];
-        }
-        if ($this->input->post('password')) {
-
-            if ($_POST['password'] != $_POST['repeat_password']) {
-
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    'Las contraseñas no coinciden' .
-                    ' </div>'
-                );
-                redirect('user/edit_user_admin/' . $uid);
-            }
-        }
-
-        $this->load->library('form_validation');
-        $this->form_validation->set_rules('email', 'Email', 'required');
-        if ($this->form_validation->run() == false) {
-            $this->session->set_flashdata(
-                'message',
-                "<div class='alert alert-danger'>" .
-                validation_errors() .
-                ' </div>'
-            );
-            redirect('user/edit_user_admin/' . $uid);
-        } else {
-            if ($this->user_model->update_user_admin($uid)) {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-success'>" .
-                    $this->lang->line('data_updated_successfully') .
-                    ' </div>'
-                );
-            } else {
-                $this->session->set_flashdata(
-                    'message',
-                    "<div class='alert alert-danger'>" .
-                    $this->lang->line('error_to_update_data') .
-                    ' </div>'
-                );
-            }
-            redirect('user/edit_user_admin/' . $uid);
+            redirect('user/edit/' . $uid);
         }
     }
 
@@ -660,17 +330,16 @@ class User extends CI_Controller
     public function view_inscription($uid)
     {
         try {
-            $data['result'] = $this->user_model->get_user($uid);
-            $data['career_list'] = $this->user_model->get_career_all();
+            $data['result'] = $this->user_model->get_applicant($uid);
             $data['group_list'] = $this->user_model->get_group_all($limit);
             $data['speciality_list'] = $this->user_model->get_specialties_all();
             $data['university_list'] = $this->user_model->get_university_all();
-            //$this->load->view('view_inscription', $data);
+            $data['digitalizador_list'] = $this->user_model->user_list_digitalizador();
             $this->load->library('pdf');
             $this->pdf->load_html(utf8_decode($this->load->view('view_inscription', $data, TRUE)));
             $this->pdf->set_paper('legal', 'portrait');
             $this->pdf->render();
-            $filename = date('Y-M-d_H:i:s', time()) . "_ficha.pdf";
+            $filename = date('Ymd_His', time()) . "_ficha.pdf";
             $this->pdf->stream($filename);
         } catch (Exception $e) {
             echo 'Error' . $e->getMessage();
@@ -680,8 +349,7 @@ class User extends CI_Controller
     public function view_carnet($uid)
     {
         try {
-            $data['result'] = $this->user_model->get_user($uid);
-            $data['career_list'] = $this->user_model->get_career_all();
+            $data['result'] = $this->user_model->get_applicant($uid);
             $data['group_list'] = $this->user_model->get_group_all($limit);
             $data['speciality_list'] = $this->user_model->get_specialties_all();
             $data['university_list'] = $this->user_model->get_university_all();
@@ -689,7 +357,7 @@ class User extends CI_Controller
             $this->pdf->load_html(utf8_decode($this->load->view('view_carnet', $data, TRUE)));
             $this->pdf->set_paper('legal', 'portrait');
             $this->pdf->render();
-            $filename = date('Y-M-d_H:i:s', time()) . "_carnet.pdf";
+            $filename = date('YMd_His', time()) . "_carnet.pdf";
             $this->pdf->stream($filename);
         } catch (Exception $e) {
             echo 'Error' . $e->getMessage();
@@ -836,7 +504,7 @@ class User extends CI_Controller
     {
         $logged_in = $this->session->userdata('logged_in');
         $uid = $logged_in['uid'];
-        $user = $this->user_model->get_user($uid);
+        $user = $this->user_model->get_applicant($uid);
         $gids = explode(',', $user['gid']);
         if (!in_array($gid, $gids)) {
             $group = $this->user_model->get_group($gid);
@@ -1178,4 +846,67 @@ class User extends CI_Controller
         );
         redirect('user');
     }
+
+    public function get_users()
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $user_p = explode(',', $logged_in['applicants']);
+        if (!in_array('List_all', $user_p)) {
+            exit($this->lang->line('permission_denied'));
+        }
+        $data['limit'] = $limit;
+        $data['title'] = $this->lang->line('user_list_students');
+        // fetching user list
+        $data['result'] = $this->user_model->obtener_query();
+        $this->load->view('header', $data);
+        $this->load->view('view_report', $data);
+        $this->load->view('footer', $data);
+    }
+
+    public function get_users_resume()
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $user_p = explode(',', $logged_in['applicants']);
+        if (!in_array('List_all', $user_p)) {
+            exit($this->lang->line('permission_denied'));
+        }
+        $data['limit'] = $limit;
+        $data['title'] = "Cantidad de inscriptos por especialidad";
+        $query = 'SELECT su.id_speciality id,e.name, COUNT(*) cantidad
+        FROM savsoft_users su 
+        inner join specialties as e on e.id=su.id_speciality
+        GROUP by su.id_speciality
+        ORDER by e.name ASC';
+        $resultados = $this->db->query($query);
+        $data['result'] = $resultados->result_array();
+        $this->load->view('header', $data);
+        $this->load->view('resume_report', $data);
+        $this->load->view('footer', $data);
+    }
+
+    public function view_post_specialty($uid)
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $user_p = explode(',', $logged_in['applicants']);
+        if (!in_array('List_all', $user_p)) {
+            exit($this->lang->line('permission_denied'));
+        }
+        $query = "SELECT specialties.name FROM specialties WHERE id = " . $uid;
+        $nameS = $this->db->query($query);
+        $dat = $nameS->row_array();
+
+        $data['title'] = "Lista de postulantes en " . $dat['name'];
+        $data['result'] = $this->user_model->user_list_only_user($limit);
+        $data['list_account_type'] = $this->user_model->get_account_type();
+        $query = 'SELECT su.uid, su.cod_student, CONCAT(su.first_name," ",su.last_name) full_name, su.registered_date fecha_r
+        FROM savsoft_users su 
+        inner join specialties as e on e.id=su.id_speciality and e.id=' . $uid . '
+        ORDER by su.first_name ASC';
+        $resultados = $this->db->query($query);
+        $data['result'] = $resultados->result_array();
+        $this->load->view('header', $data);
+        $this->load->view('list_post_specialty', $data);
+        $this->load->view('footer', $data);
+    }
+
 }

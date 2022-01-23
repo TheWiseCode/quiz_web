@@ -133,7 +133,7 @@ class User2 extends CI_Controller
         $data['category_recent'] = $category_recent;
         // fetching user
 
-        $data['result'] = $this->user_model->get_user($uid);
+        $data['result'] = $this->user_model->get_applicant($uid);
         $this->load->model("payment_model");
         $data['payment_history'] = $this->payment_model->get_payment_history($uid);
         // fetching group list
@@ -187,6 +187,4 @@ class User2 extends CI_Controller
 
 
     }
-
-
 }

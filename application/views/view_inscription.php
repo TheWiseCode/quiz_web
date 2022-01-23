@@ -28,6 +28,21 @@
         <td colspan="4" style="text-align: center; font-size:15px ; text-align: center;"><b>ASISTENCIAL E
                 INVESTIGACIÓN<b></td>
     </tr>
+    <tr>
+        <td colspan="4" style="text-align: center; font-size:15px ; text-align: center;"><b><?php
+                foreach ($group_list as $key => $vals) {
+                    ?>
+
+                    <?php
+                    if ($vals['gid'] == $result['gid']) {
+                        echo $vals['group_name'];
+                    }
+                    ?>
+                    <?php
+                }
+                ?><b></td>
+    </tr>
+
 
     <tr>
         <th style="text-align: left;">
@@ -98,8 +113,6 @@
     </tr>
 
     <tr>
-        <td><b>Domicilio:<b></td>
-        <td><?php echo $result['address'] ?></td>
         <td><b>Fecha de inscripción:<b></td>
         <td><?php echo $result['registered_date']; ?> </td>
     </tr>
@@ -120,6 +133,26 @@
         <td></td>
         <td></td>
         <td></td>
+    </tr>
+</table>
+<table>
+    <tr style="text-align: left;">
+        <td><b>Inscripto por:</b> <?php
+                    foreach ($digitalizador_list as $key => $vals) {
+                    if ($vals['uid'] == $result['inserted_by']) {
+                        echo $vals['first_name'] . ' ' . $vals['last_name'];
+                    }
+            }
+            ?></td>
+
+</table>
+
+
+<table>
+    <tr style="text-align: right;">
+
+        <td style="text-align: center; vertical-align: middle;"><br><br>__________________<br>Firma</td>
+
     </tr>
 </table>
 </body></html>

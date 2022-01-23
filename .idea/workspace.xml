@@ -2,9 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/application/controllers/Applicant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/applicant_list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/edit_applicant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/list_post_specialty.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/new_applicant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/resume_report.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/view_report.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/config/sq_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/sq_config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-21.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-21.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Payment_gateway.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Payment_gateway.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/User2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-22.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-22.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/edit_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/edit_user_admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/new_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/new_user2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/user_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/user_list2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/view_carnet.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_carnet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/view_inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_inscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/default/Logo_cf.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/photo/default/Logo_cf.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/default/Logo_sf.png" beforeDir="false" afterPath="$PROJECT_DIR$/photo/default/Logo_sf.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +50,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="PhpDebugGeneral" xdebug_debug_port="9003">
+  <component name="PhpDebugGeneral" xdebug_debug_port="9003" listening_started="true">
     <xdebug_debug_ports port="9003" />
   </component>
   <component name="PhpServers">
@@ -50,18 +73,18 @@
     <property name="ToolWindowDebug.ShowToolbar" value="false" />
     <property name="ToolWindowFind.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\quiz\cridai\images" />
       <recent name="C:\xampp\htdocs\savsoftquiz_v5\application\models" />
       <recent name="C:\xampp\htdocs\savsoftquiz_v5\application\views" />
       <recent name="C:\xampp\htdocs\savsoftquiz_v5\images" />
       <recent name="C:\xampp\htdocs\savsoftquiz_v5\photo" />
-      <recent name="C:\xampp\htdocs\savsoftquiz_v5\biometric_scanner" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\quiz\FCJPSRRII\images" />
@@ -107,7 +130,8 @@
       <workItem from="1642482172585" duration="69597000" />
       <workItem from="1642730671391" duration="24168000" />
       <workItem from="1642789122258" duration="1201000" />
-      <workItem from="1642820071820" duration="3011000" />
+      <workItem from="1642820071820" duration="16810000" />
+      <workItem from="1642945778493" duration="8675000" />
     </task>
     <servers />
   </component>
@@ -268,11 +292,6 @@
           <url>file://$PROJECT_DIR$/application/models/Quiz_model.php</url>
           <line>745</line>
           <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/controllers/User.php</url>
-          <line>580</line>
-          <option name="timeStamp" value="155" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

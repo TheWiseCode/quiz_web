@@ -37,40 +37,21 @@
                         }
                         ?>
                         <br><br>
-                        <b>Departamento:</b>
-                        <?php
-                        if ($result['exp'] == 'BE') {
-                            echo '  ' . "Beni";
-                        } else if ($result['exp'] == 'PD') {
-                            echo '  ' . "Pando";
-                        } else if ($result['exp'] == 'SC') {
-                            echo '  ' . "Santa Cruz";
-                        } else if ($result['exp'] == 'CBB') {
-                            echo '  ' . "Cochabamba";
-                        } else if ($result['exp'] == 'CH') {
-                            echo '  ' . "Chuquisaca";
-                        } else if ($result['exp'] == 'TJ') {
-                            echo '  ' . "Tarija";
-                        } else if ($result['exp'] == 'LP') {
-                            echo '  ' . "La Paz";
-                        } else if ($result['exp'] == 'OR') {
-                            echo '  ' . "Oruro";
-                        } else if ($result['exp'] == 'PT') {
-                            echo '  ' . "Potosi";
-                        } ?>
+                        <b>Departamento:</b> SANTA CRUZ
                         <br><br>
                         <b>Codigo CD:</b>
                         <?php echo ' ' . $result['cod_student'] ?>
                         <br><br>
 
 
-                        <img src="<?php echo base_url() . '/photo/logo.jpeg' ?>" align="left" width="40" height="40">
+                        <img src="<?php echo base_url('photo/default/logo_cf.jpeg') ?>" align="left" width="50"
+                             height="50">
                     </td>
                     <td style="text-align: right;font-size:15px;">
-                        <img src="<?php echo base_url() . $result['photo'] ?>" align="left"
+                        <img src="<?php echo base_url($result['photo']) ?>" align="left"
                              width="100" height="100">
                         <br><br>
-                        <b>CI:</b> <?php echo $result['ci'] ?>
+                        <b>CI:</b> <?php echo $result['ci'] . ' ' . $result['exp']; ?>
                     </td>
                 </tr>
             </table>

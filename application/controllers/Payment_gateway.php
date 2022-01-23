@@ -48,7 +48,7 @@ function subscription_expired($uid){
 		$data['uid']=$uid;
 		$data['title']=$this->lang->line('subscription_expired');
 		// fetching user info
-		$data['user']=$this->user_model->get_user($uid);
+		$data['user']=$this->user_model->get_applicant($uid);
 		$this->load->view('header',$data);
 		$this->load->view('subscription_expired',$data);
 		$this->load->view('footer',$data);

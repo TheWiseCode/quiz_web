@@ -26,7 +26,7 @@ class User_model extends CI_Model
         if ($query->num_rows() == 1) {
             $user = $query->row_array();
             if ($user['verify_code'] == '0') {
-                if ($user['user_status'] == 'Active') {
+                if ($user['user_status'] == 'active') {
                     return ['status' => '1', 'user' => $user];
                 } else {
                     return [
@@ -310,12 +310,6 @@ class User_model extends CI_Model
         return $query->result_array();
     }
 
-    function get_career_all()
-    {
-        $query = $this->db->get('university_careers');
-        return $query->result_array();
-    }
-
     function admin_login()
     {
         $this->db->where('uid', '1');
@@ -341,6 +335,25 @@ class User_model extends CI_Model
         return $query->num_rows();
     }
 
+    function fingerprint_status($cod_cd)
+    {
+        $this->db->distinct();
+        $this->db->select('status');
+        $this->db->from('postulantes_fingerprints');
+        $this->db->where('postulante_code = ', $cod_cd);
+        $query = $this->db->get();
+        return $query->num_rows() > 0 ? $query->result_array()[0] : ['status' => ''];
+    }
+
+    function update_fingerprint($cod_cd, $status)
+    {
+        $this->db->where('postulante_code', $cod_cd);
+        $userdata = [
+            'status' => $status
+        ];
+        return $this->db->update('postulantes_fingerprints', $userdata);
+    }
+
     function user_list($limit)
     {
         if ($this->input->post('search')) {
@@ -358,13 +371,10 @@ class User_model extends CI_Model
             $uid = $logged_in['uid'];
             $this->db->where('savsoft_users.inserted_by', $uid);
         }
-
-        $this->db->limit($this->config->item('number_of_rows'), $limit);
+        //$this->db->limit($this->config->item('number_of_rows'), 0);
         $this->db->order_by('savsoft_users.uid', 'desc');
         $this->db->where('savsoft_users.su =', 2);
-        $this->db->where('savsoft_users.user_status =', 'Active');
-        //$this->db->where('savsoft_users.inserted_by =', $uid);
-
+        $this->db->where('savsoft_users.user_status =', 'active');
         $this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');
         //$this->db->join('account_type', 'savsoft_users.su=account_type.account_id');
         $query = $this->db->get('savsoft_users');
@@ -395,7 +405,7 @@ class User_model extends CI_Model
         $this->db->limit($this->config->item('number_of_rows'), $limit);
         $this->db->order_by('savsoft_users.uid', 'desc');
         $this->db->where('savsoft_users.su <>', 2);
-        $this->db->where('savsoft_users.user_status =', 'Active');
+        $this->db->where('savsoft_users.user_status =', 'active');
         //$this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');
         //$this->db->join('account_type', 'savsoft_users.su=account_type.account_id');
         $query = $this->db->get('savsoft_users');
@@ -526,7 +536,7 @@ class User_model extends CI_Model
         }
     }
 
-    function insert_user($data_photo)
+    function insert_applicant($data_photo)
     {
         $logged_in = $this->session->userdata('logged_in');
         if ($data_photo == "") {
@@ -554,6 +564,7 @@ class User_model extends CI_Model
         } else {
             $id_spe = $this->input->post('specialties');
         }
+        $cod_cd = $this->input->post('code_student');
         $userdata = [
             'email' => $this->input->post('email'),
             'password' => md5($this->input->post('ci')),
@@ -561,12 +572,9 @@ class User_model extends CI_Model
             'exp' => $this->input->post('exp'),
             'first_name' => $this->input->post('first_name'),
             'last_name' => $this->input->post('last_name'),
-            'cod_student' => $this->input->post('code_student'),
-            //'first_opt_univ_degree' => $name_first_career['name'],
-            //'second_opt_univ_degree' => $name_second_career['name'],
+            'cod_student' => $cod_cd,
             'contact_no' => $this->input->post('contact_no'),
             'gid' => $this->input->post('gid'),
-            'subscription_expired' => strtotime($this->input->post('subscription_expired')),
             'su' => 2,
             'photo' => $data_photo,
             'civil_status' => $this->input->post('civil_status'),
@@ -576,30 +584,15 @@ class User_model extends CI_Model
             'id_university' => $id_uni,
             'id_speciality' => $id_spe,
         ];
-
-
         if ($logged_in['uid'] != '1') {
             $userdata['inserted_by'] = $logged_in['uid'];
         }
         if ($this->db->insert('savsoft_users', $userdata)) {
             $uid = $this->db->insert_id();
-
-
-            if ($logged_in['uid'] == '1') {
-                $su = $this->input->post('su');
-
-                $seq = $this->db->query(
-                    "select * from account_type where account_id='$su' "
-                );
-                $seqr = $seq->row_array();
-                $acp = explode(',', $seqr['users']);
-                if (in_array('List_all', $acp)) {
-                    $this->db->query(
-                        " update savsoft_users set inserted_by=uid where uid='$uid' "
-                    );
-                }
+            $res = $this->update_fingerprint($cod_cd, 'processed');
+            if (!$res) {
+                exit('gg');
             }
-
             foreach ($_POST['custom'] as $ck => $cv) {
                 if ($cv != '') {
                     $savsoft_users_custom = [
@@ -607,60 +600,38 @@ class User_model extends CI_Model
                         'uid' => $uid,
                         'field_values' => $cv,
                     ];
-
                     $this->db->insert(
                         'savsoft_users_custom',
                         $savsoft_users_custom
                     );
                 }
             }
-
             return $uid;
         } else {
             return "";
         }
     }
 
-    function insert_user_user()
+    function insert_user($data_photo)
     {
+        if (!$data_photo) {
+            $data_photo = "images/profile.jpg";
+        }
         $logged_in = $this->session->userdata('logged_in');
-
-
         $userdata = [
             'email' => $this->input->post('email'),
-            'password' => md5($this->input->post('password')),
-            'ci' => $this->input->post('ci'),
-            'exp' => $this->input->post('exp'),
+            'password' => md5($this->input->post('contact_no')),
             'first_name' => $this->input->post('first_name'),
             'last_name' => $this->input->post('last_name'),
             'contact_no' => $this->input->post('contact_no'),
             'su' => $this->input->post('su'),
-            'photo' => 'images/profile.jpeg',
+            'photo' => $data_photo,
         ];
-
-
         if ($logged_in['uid'] != '1') {
             $userdata['inserted_by'] = $logged_in['uid'];
         }
         if ($this->db->insert('savsoft_users', $userdata)) {
             $uid = $this->db->insert_id();
-
-
-            if ($logged_in['uid'] == '1') {
-                $su = $this->input->post('su');
-
-                $seq = $this->db->query(
-                    "select * from account_type where account_id='$su' "
-                );
-                $seqr = $seq->row_array();
-                $acp = explode(',', $seqr['users']);
-                if (in_array('List_all', $acp)) {
-                    $this->db->query(
-                        " update savsoft_users set inserted_by=uid where uid='$uid' "
-                    );
-                }
-            }
-
             foreach ($_POST['custom'] as $ck => $cv) {
                 if ($cv != '') {
                     $savsoft_users_custom = [
@@ -675,7 +646,6 @@ class User_model extends CI_Model
                     );
                 }
             }
-
             return true;
         } else {
             return false;
@@ -816,7 +786,7 @@ class User_model extends CI_Model
         }
     }
 
-    function update_user($uid)
+    function update_applicant($uid)
     {
         $logged_in = $this->session->userdata('logged_in');
         $userdata = [
@@ -826,8 +796,6 @@ class User_model extends CI_Model
             'ci' => $this->input->post('ci'),
             'exp' => $this->input->post('exp'),
             'cod_student' => $this->input->post('code_student'),
-            //'first_opt_univ_degree' =>  $name_first_career['name'],
-            //'second_opt_univ_degree' =>  $name_second_career['name'],
             'contact_no' => $this->input->post('contact_no'),
             'gid' => $this->input->post('gid'),
             'subscription_expired' => $this->input->post('subscription_expired'),
@@ -838,28 +806,8 @@ class User_model extends CI_Model
             'id_university' => $this->input->post('university'),
             'id_speciality' => $this->input->post('specialties'),
         ];
-        if ($logged_in['su'] == '1') {
-            $userdata['email'] = $this->input->post('email');
-            $userdata['gid'] = $this->input->post('gid');
-            if ($this->input->post('subscription_expired') != '0') {
-                $userdata['subscription_expired'] = strtotime(
-                    $this->input->post('subscription_expired')
-                );
-            } else {
-                $userdata['subscription_expired'] = '0';
-            }
-            $userdata['su'] = 2;
-        }
-
-        if ($this->input->post('password') != '') {
-            $userdata['password'] = md5($this->input->post('password'));
-        }
-        if ($this->input->post('user_status')) {
-            $userdata['user_status'] = $this->input->post('user_status');
-        }
         $this->db->where('uid', $uid);
         if ($this->db->update('savsoft_users', $userdata)) {
-
             $this->db->where('uid', $uid);
             $this->db->delete('savsoft_users_custom');
             foreach ($_POST['custom'] as $ck => $cv) {
@@ -875,48 +823,29 @@ class User_model extends CI_Model
                     );
                 }
             }
-
             return true;
         } else {
-            $this->db->where('uid', $uid);
             return false;
         }
     }
 
-    function update_user_admin($uid)
+    function update_user($uid, $data_photo)
     {
         $logged_in = $this->session->userdata('logged_in');
-
         $userdata = [
             'first_name' => $this->input->post('first_name'),
             'last_name' => $this->input->post('last_name'),
             'email' => $this->input->post('email'),
-            'ci' => $this->input->post('ci'),
-            'exp' => $this->input->post('exp'),
             'contact_no' => $this->input->post('contact_no'),
         ];
-        if ($logged_in['su'] == '1') {
-            $userdata['email'] = $this->input->post('email');
-            $userdata['gid'] = $this->input->post('gid');
-            if ($this->input->post('subscription_expired') != '0') {
-                $userdata['subscription_expired'] = strtotime(
-                    $this->input->post('subscription_expired')
-                );
-            } else {
-                $userdata['subscription_expired'] = '0';
-            }
+        if ($this->input->post('su')) {
             $userdata['su'] = $this->input->post('su');
         }
-
-        if ($this->input->post('password') != '') {
-            $userdata['password'] = md5($this->input->post('password'));
+        if ($data_photo) {
+            $userdata['photo'] = $data_photo;
         }
-        if ($this->input->post('user_status')) {
-            $userdata['user_status'] = $this->input->post('user_status');
-        }
-        $this->db->where('uid', $uid);;
+        $this->db->where('uid', $uid);
         if ($this->db->update('savsoft_users', $userdata)) {
-
             $this->db->where('uid', $uid);
             $this->db->delete('savsoft_users_custom');
             foreach ($_POST['custom'] as $ck => $cv) {
@@ -978,10 +907,23 @@ class User_model extends CI_Model
         }
     }
 
+    function remove_applicant($uid)
+    {
+        $userdata = [
+            'user_status' => 'inactive',
+        ];
+        $this->db->where('uid', $uid);
+        if ($this->db->update('savsoft_users', $userdata)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     function remove_user($uid)
     {
         $userdata = [
-            'user_status' => 'Inactive',
+            'user_status' => 'inactive',
         ];
         $this->db->where('uid', $uid);
         if ($this->db->update('savsoft_users', $userdata)) {
@@ -990,20 +932,6 @@ class User_model extends CI_Model
             return false;
         }
     }
-
-    function remove_user_admin($uid)
-    {
-        $userdata = [
-            'user_status' => 'Inactive',
-        ];
-        $this->db->where('uid', $uid);
-        if ($this->db->update('savsoft_users', $userdata)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
 
     function remove_group($gid)
     {
@@ -1015,7 +943,7 @@ class User_model extends CI_Model
         }
     }
 
-    function get_user($uid)
+    function get_applicant($uid)
     {
         if ($uid != 2) {
             $this->db->where('savsoft_users.uid', $uid);
@@ -1028,13 +956,33 @@ class User_model extends CI_Model
         return $query->row_array();
     }
 
-    function get_user_admin($uid)
+    function get_user($uid)
     {
-
         $this->db->where('savsoft_users.uid', $uid);
-        //$this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');
         $query = $this->db->get('savsoft_users');
         return $query->row_array();
+    }
+
+    function user_list_digitalizador()
+    {
+        if ($this->input->post('search')) {
+            $search = $this->input->post('search');
+            $this->db->or_where('savsoft_users.uid', $search);
+            $this->db->or_where('savsoft_users.email', $search);
+            $this->db->or_where('savsoft_users.first_name', $search);
+            $this->db->or_where('savsoft_users.last_name', $search);
+
+        }
+        $logged_in = $this->session->userdata('logged_in');
+        if ($logged_in['uid'] != '1') {
+            $uid = $logged_in['uid'];
+            $this->db->where('savsoft_users.inserted_by', $uid);
+        }
+        $this->db->order_by('savsoft_users.uid', 'desc');
+        $this->db->where('savsoft_users.su =', 4);
+        $this->db->where('savsoft_users.user_status =', 'Active');
+        $query = $this->db->get('savsoft_users');
+        return $query->result_array();
     }
 
     function insert_groups()
@@ -1149,6 +1097,20 @@ class User_model extends CI_Model
             return false;
         }
 
+
+    }
+
+    function obtener_query(){
+
+
+        $query= 'SELECT c.name specialties, a.last_name , a.first_name, a.cod_student,a.ci,a.nationality,a.contact_no, b.name university, a.email ,a.registered_date 
+        FROM savsoft_users AS a 
+        INNER JOIN university AS b ON b.id = a.id_university
+        INNER JOIN specialties AS c ON c.id = a.id_speciality ORDER BY c.name,a.last_name ASC';
+        $resultados = $this->db->query($query);
+
+
+        return $resultados->result_array();
 
     }
 }
