@@ -26,9 +26,42 @@ class User2 extends CI_Controller
 
     public function index($limit = '0')
     {
-
+        
     }
+    public function view_post_specialty($uid)
+    {
+        $logged_in = $this->session->userdata('logged_in');
 
+        // $user_p = explode(',', $logged_in['users']);
+        // if (!in_array('List_all', $user_p)) {
+        //     exit($this->lang->line('permission_denied'));
+        // }
+
+        // $user_p = explode(',', $logged_in['users']);
+        // if (!in_array('List_all', $user_p)) {
+        //     exit($this->lang->line('permission_denied'));
+        // }
+
+        //$data['limit'] = $limit;
+        $data['title'] = "Lista de estudiantes por c"
+        // fetching user list
+        $data['result'] = $this->user_model->user_list_only_user($limit);
+        $data['list_account_type'] = $this->user_model->get_account_type();
+
+        $query= 'SELECT su.uid, CONCAT(su.first_name," ",su.last_name) full_name, su.registered_date fecha_r
+        FROM savsoft_users su 
+        inner join specialties as e on e.id=su.id_speciality and e.id='.$uid.'
+        ORDER by su.first_name ASC';
+        $resultados = $this->db->query($query);
+        
+        //print_r($resultados->result_array());
+        //return $resultados->result_array();
+        $data['result'] = $resultados->result_array();
+
+        $this->load->view('header', $data);
+        $this->load->view('list_post_specialty', $data);
+        $this->load->view('footer', $data);
+    }
 
     public function view_user($uid)
     {

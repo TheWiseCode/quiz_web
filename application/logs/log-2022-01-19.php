@@ -2339,3 +2339,22 @@ ERROR - 2022-01-19 16:10:04 --> Severity: Warning --> Use of undefined constant 
 ERROR - 2022-01-19 16:10:04 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 126
 ERROR - 2022-01-19 16:10:04 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 142
 ERROR - 2022-01-19 16:10:04 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\savsoftquiz_v5\application\views\edit_user.php 187
+ERROR - 2022-01-19 22:02:14 --> Severity: Warning --> mysqli::__construct(): (HY000/1049): Unknown database 'cridai' C:\xampp\htdocs\quiz_web\application\config\config.php 515
+ERROR - 2022-01-19 22:05:46 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\dashboard.php 159
+ERROR - 2022-01-19 22:05:46 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\dashboard.php 188
+ERROR - 2022-01-19 22:05:46 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 214
+ERROR - 2022-01-19 22:05:46 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz_web\application\views\dashboard.php 312
+ERROR - 2022-01-19 23:04:05 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 214
+ERROR - 2022-01-19 23:05:45 --> Severity: error --> Exception: syntax error, unexpected '}', expecting end of file C:\xampp\htdocs\quiz_web\application\views\header.php 711
+ERROR - 2022-01-19 23:06:16 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 214
+ERROR - 2022-01-19 23:07:33 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 214
+ERROR - 2022-01-19 23:07:36 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 214
+ERROR - 2022-01-19 23:10:39 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 214
+ERROR - 2022-01-19 23:10:41 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 214
+ERROR - 2022-01-19 23:14:56 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 214
+ERROR - 2022-01-19 23:19:10 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 214
+ERROR - 2022-01-19 23:24:46 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz_web\application\views\dashboard.php 214
+ERROR - 2022-01-19 23:30:59 --> Severity: error --> Exception: Call to a member function nombre_especialidad() on unknown C:\xampp\htdocs\quiz_web\application\views\view_report.php 31
+ERROR - 2022-01-19 23:31:10 --> Severity: error --> Exception: Call to a member function nombre_especialidad() on unknown C:\xampp\htdocs\quiz_web\application\views\view_report.php 31
+ERROR - 2022-01-19 23:37:59 --> Severity: error --> Exception: Call to a member function nombre_especialidad() on unknown C:\xampp\htdocs\quiz_web\application\views\view_report.php 31
+ERROR - 2022-01-19 23:47:07 --> Severity: error --> Exception: Call to a member function nombre_especialidad() on unknown C:\xampp\htdocs\quiz_web\application\views\view_report.php 36

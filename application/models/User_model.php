@@ -368,6 +368,33 @@ class User_model extends CI_Model
         $query = $this->db->get('savsoft_users');
         return $query->result_array();
     }
+    function user_list_digitalizador()
+    {
+        if ($this->input->post('search')) {
+            $search = $this->input->post('search');
+            $this->db->or_where('savsoft_users.uid', $search);
+            $this->db->or_where('savsoft_users.email', $search);
+            $this->db->or_where('savsoft_users.first_name', $search);
+            $this->db->or_where('savsoft_users.last_name', $search);
+
+        }
+        $logged_in = $this->session->userdata('logged_in');
+        if ($logged_in['uid'] != '1') {
+            $uid = $logged_in['uid'];
+            $this->db->where('savsoft_users.inserted_by', $uid);
+        }
+
+        //$this->db->limit($this->config->item('number_of_rows'));
+        $this->db->order_by('savsoft_users.uid', 'desc');
+        $this->db->where('savsoft_users.su =', 4);
+        $this->db->where('savsoft_users.user_status =', 'Active');
+        //$this->db->where('savsoft_users.inserted_by =', $uid);
+
+        //$this->db->join('savsoft_group', 'savsoft_users.gid=savsoft_group.gid');
+        //$this->db->join('account_type', 'savsoft_users.su=account_type.account_id');
+        $query = $this->db->get('savsoft_users');
+        return $query->result_array();
+    }
 
     function user_list_only_user($limit)
     {
@@ -412,6 +439,19 @@ class User_model extends CI_Model
         );
         $query = $this->db->get('savsoft_users');
         return $query->result_array();
+    }
+    function obtener_query(){
+       
+        
+        $query= 'SELECT c.name specialties, a.last_name , a.first_name, a.cod_student,a.ci,a.nationality,a.contact_no, b.name university, a.email ,a.registered_date 
+        FROM savsoft_users AS a 
+        INNER JOIN university AS b ON b.id = a.id_university
+        INNER JOIN specialties AS c ON c.id = a.id_speciality ORDER BY c.name,a.last_name ASC';
+        $resultados = $this->db->query($query);
+        	
+            
+        return $resultados->result_array();
+        
     }
 
     function custom_fields_list()

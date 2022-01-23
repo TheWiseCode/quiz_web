@@ -504,3 +504,6 @@ $lang['status_civil'] = ['Soltero(a)', 'Casado(a)', 'Viudo(a)', 'Divorciado(a)']
 $lang['gender'] = ['Masculino', 'Femenino'];
 $lang['expedidos'] = ['SC', 'BE', 'PD', 'CB', 'CH', 'TJ', 'LP', 'OR', 'PT', 'EXT'];
 $lang['name_expedidos'] = ['SANTA CRUZ', 'BENI', 'PANDO', 'COCHABAMBA', 'CHUQUISACA', 'TARIJA', 'LA PAZ', 'ORURO', 'POTOSI', 'EXTRANJERO'];
+$lang['report'] = "Reporte de postulantes";
+$lang['query'] = "Consulta";
+$lang['report_resume'] = "Resumen de postulantes";

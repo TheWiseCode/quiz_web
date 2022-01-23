@@ -14,7 +14,9 @@
           rel="stylesheet">
     <!-- custom css -->
     <link href="<?php echo base_url('css/style.css?q=' . time()); ?>" rel="stylesheet">
-
+    <link ref="stylesheet" href="https://cdn.datatables.net/buttons/2.1.0/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url(); ?>css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -258,6 +260,18 @@ $hres = $hquery->result_Array();
                                    href="<?php echo site_url('user'); ?>"><?php echo $this->lang->line('user_list_students'); ?></a>
                             <?php } ?>
                             <?php
+                            if (in_array('List', explode(',', $logged_in['postulantes'])) || in_array('List_all', explode(',', $logged_in['postulantes']))) {
+                                ?>
+                                <a class="collapse-item"
+                                   href="<?php echo site_url('user/get_users'); ?>"><?php echo $this->lang->line('report'); ?></a>
+                            <?php } ?>
+                            <?php
+                            if (in_array('List', explode(',', $logged_in['postulantes'])) || in_array('List_all', explode(',', $logged_in['postulantes']))) {
+                                ?>
+                                <a class="collapse-item"
+                                   href="<?php echo site_url('user/get_users_resume'); ?>"><?php echo $this->lang->line('report_resume'); ?></a>
+                            <?php } ?>
+                            <?php
                             if (in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
                                 <a hidden class="collapse-item"
                                    href="<?php echo site_url('appointment/myappointment/'); ?>"><?php echo $this->lang->line('myappointment'); ?></a>
@@ -392,6 +406,7 @@ $hres = $hquery->result_Array();
                 <?php
             }
             ?>
+            
 
             <?php
             if (in_array('All', explode(',', $logged_in['setting']))) {
@@ -443,6 +458,7 @@ $hres = $hquery->result_Array();
                 <?php
             }
             ?>
+            
 
             <?php
             if (in_array('All', explode(',', $logged_in['setting'])) && false) {

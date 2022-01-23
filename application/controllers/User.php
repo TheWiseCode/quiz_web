@@ -35,8 +35,12 @@ class User extends CI_Controller
         $data['title'] = $this->lang->line('user_list_students');
         // fetching user list
         $data['result'] = $this->user_model->user_list($limit);
+        
+        	
         $data['career_list'] = $this->user_model->get_career_all();
         $data['group_list'] = $this->user_model->get_group_all($limit);
+        	
+
         $data['speciality_list'] = $this->user_model->get_specialties_all();
         $data['university_list'] = $this->user_model->get_university_all();
 
@@ -45,6 +49,113 @@ class User extends CI_Controller
         $this->load->view('user_list', $data);
         $this->load->view('footer', $data);
     }
+    
+    public function get_users()
+    {
+        $logged_in = $this->session->userdata('logged_in');
+
+        $user_p = explode(',', $logged_in['postulantes']);
+        if (!in_array('List_all', $user_p)) {
+            exit($this->lang->line('permission_denied'));
+        }
+
+        $data['limit'] = $limit;
+        $data['title'] = $this->lang->line('user_list_students');
+        // fetching user list
+        $data['result'] = $this->user_model->obtener_query();
+
+        //$data['career_list'] = $this->user_model->get_career_all();
+        //$data['group_list'] = $this->user_model->get_group_all($limit);
+        //$data['speciality_list'] = $this->user_model->get_specialties_all();
+        //$data['university_list'] = $this->user_model->get_university_all();
+
+
+        $this->load->view('header', $data);
+        
+        $this->load->view('view_report', $data);
+        $this->load->view('footer', $data);
+    }
+
+    public function get_users_resume()
+    {
+        $logged_in = $this->session->userdata('logged_in');
+
+        $user_p = explode(',', $logged_in['postulantes']);
+        if (!in_array('List_all', $user_p)) {
+            exit($this->lang->line('permission_denied'));
+        }
+
+        $data['limit'] = $limit;
+        $data['title'] = "Cantidad de inscriptos por especialidad";//$this->lang->line('user_list_students');
+        // fetching user list
+        //$data['result'] = $this->user_model->obtener_query();
+        //$data['career_list'] = $this->user_model->get_career_all();
+        //$data['group_list'] = $this->user_model->get_group_all($limit);
+        //$data['speciality_list'] = $this->user_model->get_specialties_all();
+        //$data['university_list'] = $this->user_model->get_university_all();
+        $query= 'SELECT su.id_speciality id,e.name, COUNT(*) cantidad
+        FROM savsoft_users su 
+        inner join specialties as e on e.id=su.id_speciality
+        GROUP by su.id_speciality
+        ORDER by e.name ASC';
+        $resultados = $this->db->query($query);
+        
+        //print_r($resultados->result_array());
+        //return $resultados->result_array();
+        $data['result'] = $resultados->result_array();
+        	
+	
+
+        $this->load->view('header', $data);
+        
+        $this->load->view('resume_report', $data);
+        $this->load->view('footer', $data);
+
+    }
+
+    public function view_post_specialty($uid)
+    {
+        $logged_in = $this->session->userdata('logged_in');
+
+        $user_p = explode(',', $logged_in['users']);
+        if (!in_array('List_all', $user_p)) {
+            exit($this->lang->line('permission_denied'));
+        }
+
+        $user_p = explode(',', $logged_in['users']);
+        if (!in_array('List_all', $user_p)) {
+            exit($this->lang->line('permission_denied'));
+        }
+        $query= 'SELECT specialties.name
+        FROM specialties 
+        WHERE id ='. $uid;
+        $nameS = $this->db->query($query);
+        $dat= $nameS->row_array();
+        
+        //$nemeSp= $resultados->result();
+
+        //$data['limit'] = $limit;
+        $data['title'] = "Lista de postulantes en " . $dat['name'] ;
+        // fetching user list
+        $data['result'] = $this->user_model->user_list_only_user($limit);
+        $data['list_account_type'] = $this->user_model->get_account_type();
+
+        $query= 'SELECT su.uid, su.cod_student, CONCAT(su.first_name," ",su.last_name) full_name, su.registered_date fecha_r
+        FROM savsoft_users su 
+        inner join specialties as e on e.id=su.id_speciality and e.id='.$uid.'
+        ORDER by su.first_name ASC';
+        $resultados = $this->db->query($query);
+        
+        //print_r($resultados->result_array());
+        //return $resultados->result_array();
+        $data['result'] = $resultados->result_array();
+       
+
+        $this->load->view('header', $data);
+        $this->load->view('list_post_specialty', $data);
+        $this->load->view('footer', $data);
+    }
+
 
     public function index2($limit = '0')
     {
@@ -603,6 +714,8 @@ class User extends CI_Controller
             $data['group_list'] = $this->user_model->get_group_all($limit);
             $data['speciality_list'] = $this->user_model->get_specialties_all();
             $data['university_list'] = $this->user_model->get_university_all();
+            $data['digitalizador_list']= $this->user_model->user_list_digitalizador();
+
             //$this->load->view('view_inscription', $data);
             $this->load->library('pdf');
             $this->pdf->load_html(utf8_decode($this->load->view('view_inscription', $data, TRUE)));
