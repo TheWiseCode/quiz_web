@@ -1215,7 +1215,21 @@ class User extends CI_Controller
                     echo $E->getMessage();
                 }
 
-                $this->user_model->import_users($allxlsdata);
+                $list_invalid=$this->user_model->import_users($allxlsdata);
+                
+                if(!empty($list_invalid))
+                {
+                    $message_value_empty = $this->message($list_invalid);
+
+                    $this->session->set_flashdata(
+                        'message',
+                        "<div class='alert alert-danger'>" .
+                        $message_value_empty .
+                        ' </div>'
+                    );
+                    redirect('user');
+                }
+
 
             }
         } else {
@@ -1228,5 +1242,55 @@ class User extends CI_Controller
             ' </div>'
         );
         redirect('user');
+    }
+    function message($cadena)
+    {
+        
+        $cad ="";
+        foreach($cadena as $key => $value)
+        {
+            $cad = $cad.' '."Datos incompletos en la fila ";
+            $cad = $cad . $value['index'] .': '. 'Rellene los campos vacios: ';
+            
+            foreach($value['data'] as $key1 => $data)
+            {
+                	
+                switch ($key1) {
+                    case 'email':
+                        $cad = $cad.' '. "Correo, ";
+                        break;
+                    case 'ci':
+                        $cad = $cad.' '."CI, ";
+                        break;
+                    case 'exp':
+                        $cad = $cad.' '."Expedido, ";
+                        break;
+                    case 'first_name':
+                        $cad = $cad.' '."Nombre, ";
+                        break;
+                    case 'last_name':
+                        $cad = $cad.' '."Apellidos, ";
+                        break;
+                    case 'cod_student':
+                        $cad = $cad.' '."Codigo de postulante, ";
+                        break;
+                    case 'first_opt_univ_degree':
+                        $cad = $cad.' '."Primera opción de carrera, ";
+                        break;
+                    case 'second_opt_univ_degree':
+                        $cad = $cad.' '."Segunda opción de carrera, ";
+                        break;
+                    case 'contact_no':
+                        $cad = $cad.' '."Celular, ";
+                        break;
+                    
+                }
+
+            }
+            $cad = $cad. '<br>';
+            
+        }
+        
+        return  $cad;
     }
 }

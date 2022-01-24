@@ -1098,22 +1098,28 @@ class User_model extends CI_Model
 
     function import_users($user)
     {
+        $index=0;
+        $is_vacio_value = false;
+        $list_invalid=[];
         $usercid = $this->input->post('gid');
 
 
         foreach ($user as $key => $singleuser) {
 
             if ($key != 0) {
-                $cod_student = $singleuser['0'];
-                $ci = $singleuser['1'];
-                $exp = $singleuser['2'];
-                $name = $singleuser['3'];
-                $last_name = $singleuser['4'];
-                $firts_opt = $singleuser['5'];
-                $second_opt = $singleuser['6'];
-                $email = $singleuser['7'];
-                $phone = $singleuser['8'];
 
+                $index = $index + 1;
+                	
+                $cod_student = trim($singleuser['0']);
+                $ci = trim($singleuser['1']);
+                $exp = trim($singleuser['2']);
+                $name = trim($singleuser['3']);
+                $last_name = trim($singleuser['4']);
+                $firts_opt = trim($singleuser['5']);
+                $second_opt = trim($singleuser['6']);
+                $email = trim($singleuser['7']);
+                $phone = trim($singleuser['8']);
+                
 
                 $insert_data = [
                     'cod_student' => $cod_student,
@@ -1132,17 +1138,73 @@ class User_model extends CI_Model
 
                 ];
 
-
                 foreach ($insert_data as $value) {
                     if ($value == '') {
-                        $insert_data = [];
+                        
+                        $is_vacio_value = true;
+
                     }
                 }
-                if ($insert_data != '') {
-                    $info = $this->db->insert('savsoft_users', $insert_data);
+              
+                if($is_vacio_value)
+                {
+                    $data_empty = $this->data_empty($insert_data);
+                    $date_invalid = [
+                        'index' => $index,
+                        'data' => $data_empty,
+                    ];
+                    if(!$this->is_all_empty($insert_data))
+                    {
+                        array_push($list_invalid, $date_invalid);
+                    }
+
+                }
+                if (!$is_vacio_value) {
+                    $query= 'SELECT savsoft_users.cod_student 
+                    FROM savsoft_users
+                    WHERE cod_student ='. $insert_data[cod_student];
+                    $resultados = $this->db->query($query);
+                    $date= $resultados->row_array();
+
+                    
+                    if($date == "")
+                    {
+                        $info = $this->db->insert('savsoft_users', $insert_data);
+                        $is_vacio = false;
+                    }
+                    
+
+                    
                 }
             }
         }
+        return $list_invalid;
+    }
+    function is_all_empty($cad)
+    {
+    
+        foreach ($cad as $key => $value) {
+            if($key != 'gid' && $key != 'su' && $key != 'password' && $key != 'photo')
+            {
+                if(!empty($value))
+                {
+                    return false;
+                }
+            }
+        }
+        
+        return true;
+    }
+    function data_empty($cad)
+    {
+        $cad_whit_empty=[];
+        foreach ($cad as $key => $value) {
+            if(empty($value)){
+                $cad_whit_empty += [$key => $value];
+            }
+        }
+        
+        return  $cad_whit_empty;
     }
 
     function submit_photo($uid, $data_photo)

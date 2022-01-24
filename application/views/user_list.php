@@ -116,7 +116,7 @@
         'user/index/' . $next
     ); ?>" class="btn btn-primary"><?php echo $this->lang->line('next'); ?></a>
 
-    <div class="card mt-3" hidden>
+    <div class="card mt-3">
         <div class="card-header font-weight-bold"><?php echo $this->lang->line('import_users'); ?></div>
 
         <div class="card-body">
