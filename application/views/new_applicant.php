@@ -332,7 +332,7 @@ $uid = $this->session->userdata('logged_in')['uid'];
                     if(data['status'] == 'not_found'){
                         window.open('testus:' + code + ',' + uid + ',' + '1');
                     }else{
-                        alert('Codigo cd ya registrado');
+                        alert('Ya existen huellas registradas al codigo cd: ' + code);
                     }
                 },
                 error: function (data) {
