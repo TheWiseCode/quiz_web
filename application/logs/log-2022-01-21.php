@@ -265,6 +265,7 @@ FROM `savsoft_users`
 WHERE `users_status` = 'Active'
 ERROR - 2022-01-21 14:33:08 --> Severity: error --> Exception: Call to a member function num_rows() on bool C:\xampp\htdocs\quiz\FCJPSRRII\application\models\User_model.php 341
 ERROR - 2022-01-21 14:33:25 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 198
+<<<<<<< HEAD
 ERROR - 2022-01-21 22:54:03 --> Severity: Warning --> mysqli::__construct(): (HY000/1049): Unknown database 'quiz_fcjpsrrii' C:\xampp\htdocs\quiz\cridai\application\config\config.php 515
 ERROR - 2022-01-21 22:54:37 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\cridai\application\config\config.php 524
 ERROR - 2022-01-21 22:54:57 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\cridai\application\config\config.php 524
@@ -288,3 +289,108 @@ ORDER BY `quid` DESC
  LIMIT 5
 ERROR - 2022-01-21 22:56:35 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\xampp\htdocs\quiz\cridai\application\models\Quiz_model.php 114
 ERROR - 2022-01-21 23:00:24 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 198
+=======
+ERROR - 2022-01-21 15:06:44 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 198
+ERROR - 2022-01-21 15:11:54 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\models\User_model.php 559
+ERROR - 2022-01-21 15:12:05 --> Severity: error --> Exception: Call to undefined method User_model::get_specialties_all() C:\xampp\htdocs\quiz\FCJPSRRII\application\controllers\User.php 52
+ERROR - 2022-01-21 15:13:09 --> Severity: error --> Exception: Call to undefined method User_model::get_specialties_all() C:\xampp\htdocs\quiz\FCJPSRRII\application\controllers\User.php 52
+ERROR - 2022-01-21 15:14:36 --> Severity: error --> Exception: Call to undefined method User_model::get_specialties_all() C:\xampp\htdocs\quiz\FCJPSRRII\application\controllers\User.php 52
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:14:45 --> Severity: error --> Exception: Call to undefined method User_model::get_specialties_all() C:\xampp\htdocs\quiz\FCJPSRRII\application\controllers\User.php 682
+ERROR - 2022-01-21 15:15:23 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 198
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:15:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 61
+ERROR - 2022-01-21 15:31:46 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\models\User_model.php 618
+ERROR - 2022-01-21 19:43:55 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\quiz\FCJPSRRII\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-21 19:43:58 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\quiz\FCJPSRRII\application\helpers\xlsimport\SpreadsheetReader_XLS.php 133
+ERROR - 2022-01-21 15:56:31 --> Severity: Warning --> sort() expects parameter 2 to be int, object given C:\xampp\htdocs\quiz\FCJPSRRII\application\controllers\User.php 98
+ERROR - 2022-01-21 15:58:25 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\views\new_user.php 138
+ERROR - 2022-01-21 16:01:25 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\FCJPSRRII\application\models\User_model.php 559
+ERROR - 2022-01-21 16:02:41 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 198
+ERROR - 2022-01-21 16:03:35 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 198
+ERROR - 2022-01-21 16:17:05 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 197
+ERROR - 2022-01-21 16:17:07 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 197
+ERROR - 2022-01-21 16:18:20 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 197
+ERROR - 2022-01-21 16:19:48 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 197
+ERROR - 2022-01-21 16:19:59 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 197
+ERROR - 2022-01-21 16:20:54 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 197
+ERROR - 2022-01-21 16:23:00 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:24:10 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:26:16 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:26:33 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:26:56 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:27:13 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:27:59 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:28:55 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:30:41 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:33:01 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:34:21 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 194
+ERROR - 2022-01-21 16:36:37 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 193
+ERROR - 2022-01-21 16:42:23 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 193
+ERROR - 2022-01-21 16:55:45 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\FCJPSRRII\application\views\dashboard.php 193
+ERROR - 2022-01-21 17:02:10 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\FCJPSRRII\application\views\edit_user_admin.php 33
+ERROR - 2022-01-21 17:02:24 --> Severity: error --> Exception: syntax error, unexpected '}', expecting end of file C:\xampp\htdocs\quiz\FCJPSRRII\application\views\user_list.php 40
+ERROR - 2022-01-21 23:01:22 --> Severity: Warning --> mysqli::__construct(): (HY000/1049): Unknown database 'quiz_fcjpsrrii' C:\xampp\htdocs\quiz\derecho\application\config\config.php 515
+ERROR - 2022-01-21 23:01:50 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\derecho\application\views\dashboard.php 193
+ERROR - 2022-01-21 23:02:39 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\derecho\application\views\dashboard.php 193
+ERROR - 2022-01-21 23:02:50 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\derecho\application\views\dashboard.php 193
+ERROR - 2022-01-21 23:17:20 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\derecho\application\views\new_user.php 95
+ERROR - 2022-01-21 23:17:20 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\derecho\application\views\new_user.php 111
+>>>>>>> github/prod_cridai

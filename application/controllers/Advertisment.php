@@ -30,7 +30,11 @@ class Advertisment extends CI_Controller {
 	 					$logged_in=$this->session->userdata('logged_in');
                         $acp=explode(',',$logged_in['setting']);
 			if(!in_array('All',$acp)){
-			exit($this->lang->line('permission_denied'));
+			            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
 			}
 			
 		
@@ -51,7 +55,11 @@ class Advertisment extends CI_Controller {
 					$logged_in=$this->session->userdata('logged_in');
                         $acp=explode(',',$logged_in['setting']);
 			if(!in_array('All',$acp)){
-			exit($this->lang->line('permission_denied'));
+			            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
 			}
 		$data['add_id']=$add_id;
 		
@@ -69,7 +77,11 @@ class Advertisment extends CI_Controller {
 						$logged_in=$this->session->userdata('logged_in');
                         $acp=explode(',',$logged_in['setting']);
 			if(!in_array('All',$acp)){
-			exit($this->lang->line('permission_denied'));
+			            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
 			}
 			
 	$new_file_name="";

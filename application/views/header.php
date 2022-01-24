@@ -10,6 +10,8 @@
 
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url(); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet"
+          type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet">
     <!-- custom css -->
@@ -109,6 +111,8 @@
     </style>
     <script src="<?php echo base_url(); ?>vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo base_url(); ?>vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?php echo base_url(); ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="<?php echo base_url(); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -121,9 +125,7 @@
 
 
     <script>
-
         var base_url = "<?php echo base_url();?>";
-
     </script>
 
 
@@ -152,20 +154,20 @@ $hres = $hquery->result_Array();
 <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-            <div class="sidebar-brand-text mx-3"><?php if ($hres[0]['setting_value'] == "") { ?>
-                    UAGRM Examenes
-                <?php } else {
-                    echo $hres[0]['setting_value'];
-                } ?> </div>
-        </a>
-        <div style="text-align: center;"><span style="color:#ffffff;"><img style="width: 50%;"
-                                                                           src="<?php echo base_url() . 'photo/default/Logo_sf.png' ?>"
-                                                                           class="picture-src"
-                                                                           id="" title=""/> </span>
+        <div class="sidebar-brand-text mx-3">
+            <a class="sidebar-brand d-flex align-items-start justify-content-center" href="#">
+                <div class=""><?php if ($hres[0]['setting_value'] == "") { ?>
+                        UAGRM Examenes
+                    <?php } else {
+                        echo $hres[0]['setting_value'];
+                    } ?> </div>
+            </a>
+        </div>
+        <div style="text-align: center;">
+            <span style="color:#ffffff;">
+                <img style="width: 50%;" src="<?php echo base_url('photo/default/Logo_sf.png'); ?>"
+                     class="picture-src" id="" title=""/> </span>
             <div style="text-align: center;" hidden>
                 <span style="color:#ffffff;"><?php echo $hres[1]['setting_value']; ?> </span>
             </div>
@@ -183,14 +185,6 @@ $hres = $hquery->result_Array();
             <?php } ?>
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            <!-- Heading
-            <div class="sidebar-heading">
-              Interface
-            </div>
-      -->
-
-
             <?php
             if (in_array('List_all', explode(',', $logged_in['users']))) {
                 ?>
@@ -208,18 +202,18 @@ $hres = $hquery->result_Array();
                             <?php
                             if (in_array('Add', explode(',', $logged_in['users']))) {
                                 ?>
-                                <a class="collapse-item"
-                                   href="<?php echo site_url('user/new_user2'); ?>"><?php echo $this->lang->line('add_new_'); ?></a>
+                                <a class="nav-link collapse-item"
+                                   href="<?php echo site_url('user/create'); ?>"><?php echo $this->lang->line('add_new_'); ?></a>
                             <?php } ?>
                             <?php
                             if (in_array('List', explode(',', $logged_in['users'])) || in_array('List_all', explode(',', $logged_in['users']))) {
                                 ?>
-                                <a class="collapse-item"
-                                   href="<?php echo site_url('user/index2'); ?>"><?php echo $this->lang->line('user_list'); ?></a>
+                                <a class="nav-link collapse-item"
+                                   href="<?php echo site_url('user/index'); ?>"><?php echo $this->lang->line('user_list'); ?></a>
                             <?php } ?>
                             <?php
                             if (in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
-                                <a hidden class="collapse-item"
+                                <a hidden class="nav-link collapse-item"
                                    href="<?php echo site_url('appointment/myappointment/'); ?>"><?php echo $this->lang->line('myappointment'); ?></a>
                             <?php } ?>
                         </div>
@@ -229,7 +223,7 @@ $hres = $hquery->result_Array();
             }
             ?>
             <?php
-            if (in_array('List_all', explode(',', $logged_in['postulantes']))) {
+            if (in_array('List_all', explode(',', $logged_in['applicants']))) {
                 ?>
                 <!-- Nav Item - Pages Collapse Menu -->
                 <li class="nav-item">
@@ -242,21 +236,16 @@ $hres = $hquery->result_Array();
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <?php
-                            if (in_array('Add', explode(',', $logged_in['postulantes']))) {
+                            if (in_array('Add', explode(',', $logged_in['applicants']))) {
                                 ?>
-                                <a class="collapse-item"
-                                   href="<?php echo site_url('user/new_user'); ?>"><?php echo $this->lang->line('add_new_'); ?></a>
+                                <a class="nav-link collapse-item"
+                                   href="<?php echo site_url('applicant/create'); ?>"><?php echo $this->lang->line('add_new_'); ?></a>
                             <?php } ?>
                             <?php
-                            if (in_array('List', explode(',', $logged_in['postulantes'])) || in_array('List_all', explode(',', $logged_in['postulantes']))) {
+                            if (in_array('List', explode(',', $logged_in['applicants'])) || in_array('List_all', explode(',', $logged_in['applicants']))) {
                                 ?>
-                                <a class="collapse-item"
-                                   href="<?php echo site_url('user'); ?>"><?php echo $this->lang->line('user_list_students'); ?></a>
-                            <?php } ?>
-                            <?php
-                            if (in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
-                                <a hidden class="collapse-item"
-                                   href="<?php echo site_url('appointment/myappointment/'); ?>"><?php echo $this->lang->line('myappointment'); ?></a>
+                                <a class="nav-link collapse-item"
+                                   href="<?php echo site_url('applicant'); ?>"><?php echo $this->lang->line('user_list_students'); ?></a>
                             <?php } ?>
                         </div>
                     </div>
@@ -282,14 +271,14 @@ $hres = $hquery->result_Array();
                             <?php
                             if (in_array('Add', explode(',', $logged_in['questions']))) {
                                 ?>
-                                <a class="collapse-item"
+                                <a class="nav-link collapse-item"
                                    href="<?php echo site_url('qbank/pre_new_question'); ?>"><?php echo $this->lang->line('add_new1'); ?></a>
                                 <?php
                             }
 
                             if (in_array('List', explode(',', $logged_in['questions'])) || in_array('List_all', explode(',', $logged_in['questions']))) {
                                 ?>
-                                <a class="collapse-item"
+                                <a class="nav-link nav-link collapse-item"
                                    href="<?php echo site_url('qbank'); ?>"><?php echo $this->lang->line('question_list'); ?></a>
                                 <?php
                             }
@@ -321,13 +310,13 @@ $hres = $hquery->result_Array();
                             <?php
                             if (in_array('Add', explode(',', $logged_in['quiz']))) {
                                 ?>
-                                <a class="collapse-item"
+                                <a class="nav-link collapse-item"
                                    href="<?php echo site_url('quiz/add_new'); ?>"><?php echo $this->lang->line('add_new1'); ?></a>
                                 <?php
                             }
                             if (in_array('List', explode(',', $logged_in['quiz'])) || in_array('List_all', explode(',', $logged_in['quiz']))) {
                                 ?>
-                                <a class="collapse-item"
+                                <a class="nav-link collapse-item"
                                    href="<?php echo site_url('quiz'); ?>"><?php echo $this->lang->line('quiz_list'); ?></a>
                                 <?php
                             }
@@ -353,7 +342,7 @@ $hres = $hquery->result_Array();
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
 
-                            <a class="collapse-item"
+                            <a class="nav-link collapse-item"
                                href="<?php echo site_url('result'); ?>"><?php echo $this->lang->line('result_list'); ?></a>
 
                         </div>
@@ -379,7 +368,7 @@ $hres = $hquery->result_Array();
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
 
-                            <a class="collapse-item"
+                            <a class="nav-link collapse-item"
                                href="<?php echo site_url('study_material'); ?>"><?php echo $this->lang->line('study_material'); ?></a>
                         </div>
                     </div>
@@ -403,26 +392,26 @@ $hres = $hquery->result_Array();
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
 
-                            <a class="collapse-item"
+                            <a class="nav-link collapse-item"
                                href="<?php echo site_url('setting'); ?>"><?php echo $this->lang->line('setting'); ?></a>
-                            <a class="collapse-item"
+                            <a class="nav-link collapse-item"
                                href="<?php echo site_url('notification'); ?>"><?php echo $this->lang->line('notification'); ?></a>
-                            <a class="collapse-item"
+                            <a class="nav-link collapse-item"
                                href="<?php echo site_url('user/group_list'); ?>"><?php echo $this->lang->line('group_list'); ?></a>
-                            <a class="collapse-item"
+                            <a class="nav-link collapse-item"
                                href="<?php echo site_url('qbank/category_list'); ?>"><?php echo $this->lang->line('category_list'); ?></a>
-                            <a class="collapse-item"
+                            <a class="nav-link collapse-item"
                                href="<?php echo site_url('qbank/level_list'); ?>"><?php echo $this->lang->line('level_list'); ?></a>
-                            <a class="collapse-item" hidden
+                            <a class="nav-link collapse-item" hidden
                                href="<?php echo site_url('user/career_list'); ?>"><?php echo $this->lang->line('career_list'); ?></a>
-                            <a class="collapse-item"
+                            <a class="nav-link collapse-item"
                                href="<?php echo site_url('account'); ?>"><?php echo $this->lang->line('account_type'); ?></a></a>
-                            <a class="collapse-item"
+                            <a class="nav-link collapse-item"
                                href="<?php echo site_url('user/custom_fields'); ?>"><?php echo $this->lang->line('custom_forms'); ?></a>
                             <div hidden>
-                                <a class="collapse-item"
+                                <a class="nav-link collapse-item"
                                    href="<?php echo site_url('payment_gateway'); ?>"><?php echo $this->lang->line('payment_history'); ?></a>
-                                <a class="collapse-item"
+                                <a class="nav-link collapse-item"
                                    href="<?php echo site_url('payment_gateway'); ?>"><?php echo $this->lang->line('advertisment'); ?></a>
                             </div>
                         </div>
@@ -454,7 +443,7 @@ $hres = $hquery->result_Array();
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
 
-                            <a class="collapse-item" href="https://savsoftquiz.com/support.php">Support</a>
+                            <a class="nav-link collapse-item" href="https://savsoftquiz.com/support.php">Support</a>
                         </div>
                     </div>
                 </li>
@@ -476,12 +465,12 @@ $hres = $hquery->result_Array();
                     <div id="collapseLanding" class="collapse" aria-labelledby="headingPages"
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-
-                            <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Menu</a>
-
-                            <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Pages/Post</a>
-                            <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Slider</a>
-                            <a class="collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Design</a>
+                            <a class="nav-link collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Menu</a>
+                            <a class="nav-link collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Pages/Post</a>
+                            <a class="nav-link collapse-item"
+                               href="<?php echo site_url('payment_gateway'); ?>">Slider</a>
+                            <a class="nav-link collapse-item"
+                               href="<?php echo site_url('payment_gateway'); ?>">Design</a>
                         </div>
                     </div>
                 </li>
@@ -601,7 +590,7 @@ $hres = $hquery->result_Array();
 
 
                             <a class="dropdown-item"
-                               href="<?php echo site_url('user/profile/' . $logged_in['uid']); ?>">
+                               href="<?php echo site_url('profile/'); ?>">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 <?php echo $this->lang->line('myaccount'); ?>
                             </a>
@@ -631,8 +620,7 @@ $hres = $hquery->result_Array();
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-
-                <center><?php
+                <div style="text-align: center;"><?php
                     if ($this->uri->segment(3) != 'ph'){
                     if ($this->uri->segment(2) != 'attempt' && $this->uri->segment(1) != 'install') {
                         $this->db->where("add_status", "Active");
@@ -646,34 +634,17 @@ $hres = $hquery->result_Array();
                                                                    target="new_add"><img
                                         src="<?php echo base_url('upload/' . $ad['banner']); ?>" class="img-responsive">
                                 </a> <?php
-
                             }
                         }
-
                     }
-
-                    ?></center>
-
+                    ?></div>
                 <?php if ($this->session->flashdata('message_header')) {
-
                     echo $this->session->flashdata('message_header');
                 } ?>
-
-
-                <?php
-
-                }
-                ?>
-
-
-
                 <?php
                 }
-                }
                 ?>
-		
-		 
-		
-  
-   
- 
+<?php
+}
+}
+?>

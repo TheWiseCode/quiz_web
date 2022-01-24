@@ -6,12 +6,10 @@ class Account_model extends CI_Model
     function account_list_all($limit)
     {
         $logged_in = $this->session->userdata('logged_in');
-        $this->db->limit($this->config->item('number_of_rows'),$limit);
-        $this->db->order_by('account_id','desc');
+        $this->db->limit($this->config->item('number_of_rows'), $limit);
+        $this->db->order_by('account_id', 'desc');
         $query = $this->db->get('account_type');
         return $query->result_array();
-
-
     }
 
     function account_list($limit)
@@ -29,11 +27,8 @@ class Account_model extends CI_Model
 
     function insert_account()
     {
-
-        //print_r($_POST); die;
         $userdata = array(
             'account_name' => $this->input->post('name'),
-
             'setting' => $this->input->post('setting'));
         if ($this->input->post('users')) {
             $userdata['users'] = implode(',', $this->input->post('users'));
@@ -50,13 +45,10 @@ class Account_model extends CI_Model
         if ($this->input->post('questions')) {
             $userdata['questions'] = implode(',', $this->input->post('questions'));
         }
-        if ($this->input->post('postulantes')) {
-            $userdata['postulantes'] = implode(',', $this->input->post('postulantes'));
+        if ($this->input->post('applicants')) {
+            $userdata['applicants'] = implode(',', $this->input->post('applicants'));
         }
         $this->db->insert('account_type', $userdata);
-        //print_r($this->db->last_query()); exit;
-
-
     }
 
     function get_edit_account($account_id)
@@ -68,7 +60,6 @@ class Account_model extends CI_Model
 
     function update_account($account_id)
     {
-
         $userdata = array(
             'account_name' => $this->input->post('name'),
             'setting' => $this->input->post('setting'));
@@ -104,10 +95,10 @@ class Account_model extends CI_Model
         } else {
             $userdata['appointment'] = "";
         }
-        if ($this->input->post('postulantes')) {
-            $userdata['postulantes'] = implode(',', $this->input->post('postulantes'));
+        if ($this->input->post('applicants')) {
+            $userdata['applicants'] = implode(',', $this->input->post('applicants'));
         } else {
-            $userdata['postulantes'] = "";
+            $userdata['applicants'] = "";
         }
         $this->db->where('account_id', $account_id);
         $this->db->update('account_type', $userdata);

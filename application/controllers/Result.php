@@ -37,7 +37,11 @@ class Result extends CI_Controller
         if (in_array('List', $setting_p) || in_array('List_all', $setting_p)) {
 
         } else {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         $data['limit'] = $limit;
@@ -67,7 +71,11 @@ class Result extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['results']);
         if (!in_array('List_all', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         if ($open != 0) {
@@ -82,7 +90,11 @@ class Result extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['results']);
         if (!in_array('Remove', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         if ($this->result_model->remove_result($rid)) {
@@ -112,7 +124,11 @@ class Result extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['results']);
         if (!in_array('List_all', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         $this->load->helper('download');
@@ -151,7 +167,11 @@ class Result extends CI_Controller
         if (in_array('List', $setting_p) || in_array('List_all', $setting_p)) {
 
         } else {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         // check any custom field pending to fill..

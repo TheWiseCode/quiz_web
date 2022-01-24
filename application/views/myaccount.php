@@ -5,7 +5,7 @@
 
 
     <div class="row">
-        <form method="post" action="<?php echo site_url('user/update_user/' . $uid); ?>">
+        <form method="post" action="<?php echo site_url('user/update/' . $uid); ?>">
 
             <div class="col-md-8">
                 <br>

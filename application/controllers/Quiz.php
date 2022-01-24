@@ -35,7 +35,11 @@ class Quiz extends CI_Controller
         if (in_array('List', $setting_p) || in_array('List_all', $setting_p)) {
 
         } else {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
 
@@ -87,7 +91,11 @@ class Quiz extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['quiz']);
         if (!in_array('Add', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
         $data['title'] = $this->lang->line('add_new_quiz');
@@ -116,7 +124,11 @@ class Quiz extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['quiz']);
         if (!in_array('Edit', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
 
@@ -229,7 +241,11 @@ class Quiz extends CI_Controller
 
         $logged_in = $this->session->userdata('logged_in');
         if ($logged_in['su'] != '1') {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
 
@@ -243,7 +259,11 @@ class Quiz extends CI_Controller
 
         } else {
 
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         $data['limit'] = $limit;
         $data['cid'] = $cid;
@@ -272,7 +292,11 @@ class Quiz extends CI_Controller
 
         $logged_in = $this->session->userdata('logged_in');
         if ($logged_in['su'] != "1") {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
             return;
         }
         for ($i = 1; $i <= $not; $i++) {
@@ -298,7 +322,11 @@ class Quiz extends CI_Controller
 
         $logged_in = $this->session->userdata('logged_in');
         if ($logged_in['su'] != "1") {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
             return;
         }
         for ($i = 1; $i <= $not; $i++) {
@@ -325,7 +353,11 @@ class Quiz extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['quiz']);
         if (!in_array('Add', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
 
 
@@ -359,7 +391,11 @@ class Quiz extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['quiz']);
         if (!in_array('Edit', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         $this->load->library('form_validation');
         $this->form_validation->set_rules('quiz_name', 'quiz_name', 'required');
@@ -391,7 +427,11 @@ class Quiz extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['quiz']);
         if (!in_array('Remove', $acp)) {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         if ($this->quiz_model->remove_quiz($quid)) {
             $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('removed_successfully') . " </div>");
@@ -417,7 +457,11 @@ class Quiz extends CI_Controller
             $data['quiz'] = $this->quiz_model->get_quiz($quid);
 
             if ($data['quiz']['with_login'] == 1) {
-                exit($this->lang->line('permission_denied'));
+                            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
             }
         }
         $gid = $logged_in['gid'];
@@ -442,7 +486,11 @@ class Quiz extends CI_Controller
             $data['quiz'] = $this->quiz_model->get_quiz($quid);
 
             if ($data['quiz']['with_login'] == 1) {
-                exit($this->lang->line('permission_denied'));
+                            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
             }
         }
         $gid = $logged_in['gid'];
@@ -466,7 +514,11 @@ class Quiz extends CI_Controller
         if (!in_array('Attempt', $acp)) {
             $data['quiz'] = $this->quiz_model->get_quiz($quid);
             if ($data['quiz']['with_login'] == 1) {
-                exit($this->lang->line('permission_denied'));
+                            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
             }
         }
         $data['quiz'] = $this->quiz_model->get_quiz($quid);
@@ -645,7 +697,11 @@ class Quiz extends CI_Controller
         }
         /*
         if(!$this->session->userdata('logged_in')){
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         */
 
@@ -798,7 +854,11 @@ class Quiz extends CI_Controller
 
         $logged_in = $this->session->userdata('logged_in');
         if ($logged_in['su'] != '1') {
-            exit($this->lang->line('permission_denied'));
+                        $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
         }
         $this->quiz_model->assign_score($rid, $qno, $score);
 

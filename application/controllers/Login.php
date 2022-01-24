@@ -142,7 +142,7 @@ class Login extends CI_Controller
             // row exist fetch userdata
             $user = $status['user'];
             $gids = $user['gid'];
-            if($gids == null)
+            if ($gids == null)
                 $gids = '-1';
             $uid = $user['uid'];
             $sl = "select * from savsoft_group where gid in ($gids) ";
@@ -280,8 +280,6 @@ class Login extends CI_Controller
 
     public function insert_user()
     {
-
-
         $this->load->helper('url');
         $this->load->library('form_validation');
         $this->form_validation->set_rules('email', 'Email', 'required|is_unique[savsoft_users.email]');
@@ -290,7 +288,7 @@ class Login extends CI_Controller
             $this->session->set_flashdata('message', "<div class='alert alert-danger'>" . validation_errors() . " </div>");
             redirect('login/registration/');
         } else {
-            if ($this->user_model->insert_user_2()) {
+            if ($this->user_model->insert_user_login()) {
                 if ($this->config->item('verify_email')) {
                     $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('account_registered_email_sent') . " </div>");
                 } else {

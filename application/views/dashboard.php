@@ -67,10 +67,6 @@
 
 
     </div>
-
-    <div class="row"></div>
-
-
     <div class="row" style="margin-top:20px;">
         <div class="col-lg-12">
             <div class="row">
@@ -123,9 +119,9 @@
                         <?php echo $this->lang->line('recently_registered'); ?>
                     </h6>
                 </div>
-                <div class="card-body table-responsive">
-                    <table class="table table-striped valign-middle">
-                        <thead>
+                <div class="card-body">
+                    <table class="table table-bordered table-responsive-md" id="table_dashboard">
+                        <thead class="thead-light">
                         <tr>
                             <th><?php echo $this->lang->line('email'); ?></th>
                             <th class="text-xs-right"><?php echo $this->lang->line('full_name'); ?></th>
@@ -155,7 +151,6 @@
                             <?php
                         }
                         ?>
-
                         </tbody>
                     </table>
                 </div>
@@ -259,77 +254,42 @@
 
             </div>
 
-
-            <!-- References -->
-
-            <div class="panel" hidden>
-                <div class="panel-heading">
-                    <div class="panel-title"><?php echo $this->lang->line('recent_sub'); ?></div>
-                </div>
-
-
-                <?php
-                if (count($payments) == 0) {
-                    ?>
-
-                    <div class="box m-y-2">
-                        <div class="box-cell valign-middle text-xs-center" style="width: 60px">
-                            <i class="ion-social-twitter font-size-28 line-height-1 text-info"></i>
-                        </div>
-                        <div class="box-cell p-r-3">
-                            <?php echo $this->lang->line('no_record_found'); ?>
-                            <div class="progress m-b-0" style="height: 5px; margin-top: 5px;">
-                                <div class="progress-bar progress-bar-info" style="width: 40%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <?php
-                }
-                $i = 0;
-                $colorcode = array(
-                    'success',
-                    'warning',
-                    'info',
-                    'danger'
-                );
-                foreach ($payments as $key => $val) {
-                    ?>
-                    <div class="alert alert-<?php echo $colorcode[$i]; ?>" style="margin:5px;">
-
-                        <a href="<?php echo site_url('user/edit_user/' . $val['uid']); ?>">   <?php echo $val['first_name'] . ' ' . $val['last_name']; ?></a>
-                        <?php echo $this->lang->line('subscribed'); ?>
-                        <?php echo $val['group_name']; ?>
-                        <button class="btn btn-<?php echo $colorcode[$i]; ?>">
-                            <?php echo $this->config->item(strtolower($val['payment_gateway']) . '_currency_prefix'); ?><?php echo $val['amount']; ?><?php echo $this->config->item(strtolower($val['payment_gateway']) . '_currency_sufix'); ?>
-                        </button>
-                    </div>
-
-
-                    <?php
-                    if ($i >= 4) {
-                        $i = 0;
-                    } else {
-                        $i += 1;
-                    }
-                }
-                ?>
-
-                <!-- / payments -->
-
-            </div>
         </div>
-
-
     </div>
 
-    <div class="row text-center" style="margin-top:30px;" hidden>
+</div>
 
-        <?php
-        echo "Page rendered in <strong> {elapsed_time} </strong> seconds. You may improve it by hosting on recommended hosting. <a href='http://savsoftquiz.com/affiliate.php' target='af'>Click here</a> ";
-        ?>
-    </div>
-
-    <script>
-        update_check('5');
-    </script>
+<script>
+    $(document).ready(function () {
+        let value = "Mostrar "
+        value += "<select class='custom-select custom-select-sm form-control form-control-sm'>";
+        value += "<option value='10'>10</option>" + "<option value='25'>25</option>" + "<option value='50'>50</option>" + "<option value='100'>100</option>" + "<option value='-1'>Todos</option>";
+        value += "</select>";
+        value += " registros por pagina";
+        $("#table_dashboard").DataTable({
+            responsive: true,
+            autoWidth: true,
+            "language": {
+                "lengthMenu": value,
+                "zeroRecords":
+                    "No pudimos encontrar nada, lo siento",
+                "info":
+                    "Mostrando pagina _PAGE_ de _PAGES_",
+                "infoEmpty":
+                    "Sin registros disponibles",
+                "infoFiltered":
+                    "(filtrado de _MAX_ registros totales)",
+                "search":
+                    "Buscar:",
+                "paginate":
+                    {
+                        "next":
+                            "Siguiente",
+                        "previous":
+                            "Anterior"
+                    }
+            }
+        });
+    });
+    update_check('5');
+</script>

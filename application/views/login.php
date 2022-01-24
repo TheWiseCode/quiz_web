@@ -43,8 +43,8 @@
                     <!-- Nested Row within Card Body -->
                     <div class="row">
                         <div class="col-lg-6 d-none d-lg-block  "
-                             style="background:url('<?php echo base_url(); ?>/photo/default/logo_sf.png');
-                                     background-position: center; background-size: 50%; background-repeat: no-repeat;"></div>
+                             style="background:url('<?php echo base_url('photo/default/logo_sf.png'); ?>');
+                                     background-position: center; background-size: 40%; background-repeat: no-repeat;"></div>
 
                         <div class="col-lg-6">
                             <div class="p-5">

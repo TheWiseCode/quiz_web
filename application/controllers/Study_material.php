@@ -30,7 +30,11 @@ $this->load->helper('form');
 	 					$logged_in=$this->session->userdata('logged_in');
                         $acp=explode(',',$logged_in['study_material']);
 			if(!in_array('List',$acp)){
-			exit($this->lang->line('permission_denied'));
+			            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
 			}
 			
 		
@@ -60,7 +64,11 @@ $this->load->helper('form');
 	 					$logged_in=$this->session->userdata('logged_in');
                         $acp=explode(',',$logged_in['study_material']);
 			if(!in_array('Add',$acp)){
-			exit($this->lang->line('permission_denied'));
+			            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
 			}
 			
 	$data['title']=$this->lang->line('study_material');
@@ -80,7 +88,11 @@ $this->load->helper('form');
 	$logged_in=$this->session->userdata('logged_in');
 			$user_p=explode(',',$logged_in['study_material']);
 			if(!in_array('Add',$user_p)){
-			exit($this->lang->line('permission_denied'));
+			            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
 			}
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('title', 'Title', 'required|is_unique[study_material.title]');
@@ -120,7 +132,11 @@ $this->load->helper('form');
 	 					$logged_in=$this->session->userdata('logged_in');
                         $acp=explode(',',$logged_in['study_material']);
 			if(!in_array('View',$acp)){
-			exit($this->lang->line('permission_denied'));
+			            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
 			}
 			
 	$data['title']=$this->lang->line('study_material');
@@ -139,10 +155,18 @@ $this->load->helper('form');
 			$logged_in=$this->session->userdata('logged_in');
 			$user_p=explode(',',$logged_in['study_material']);
 			if(!in_array('Remove',$user_p)){
-			exit($this->lang->line('permission_denied'));
+			            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
 			}
 			if($uid=='1'){
-					exit($this->lang->line('permission_denied'));
+					            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
 			}
 			$result=$this->Studymaterial_model->remove_studymaterial($stid);
 			if($result=='true'){
@@ -170,7 +194,11 @@ $this->load->helper('form');
 	 					$logged_in=$this->session->userdata('logged_in');
                         $acp=explode(',',$logged_in['study_material']);
 			if(!in_array('Edit',$acp)){
-			exit($this->lang->line('permission_denied'));
+			            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
 			}
 			
 	        $data['title']=$this->lang->line('study_material');
@@ -189,7 +217,11 @@ $this->load->helper('form');
 	$logged_in=$this->session->userdata('logged_in');
 			$user_p=explode(',',$logged_in['study_material']);
 			if(!in_array('Edit',$user_p)){
-			exit($this->lang->line('permission_denied'));
+			            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
 			}
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('title', 'Title', 'required');
