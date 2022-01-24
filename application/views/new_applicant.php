@@ -320,7 +320,25 @@ $uid = $this->session->userdata('logged_in')['uid'];
         if (code === undefined || code === '') {
             alert('Registre el codigo de postulante');
         } else {
-            window.open('testus:' + code + ',' + uid + ',' + '1');
+            let url = '<?php echo site_url('applicant/exist_cod_cd/');?>' + code;
+            $.ajax({
+                type: 'GET',
+                url: url,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (data) {
+                    data = jQuery.parseJSON(data);
+                    if(data['status'] == 'not_found'){
+                        window.open('testus:' + code + ',' + uid + ',' + '1');
+                    }else{
+                        alert('Codigo cd ya registrado');
+                    }
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
         }
     }
 

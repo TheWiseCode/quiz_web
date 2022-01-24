@@ -60,17 +60,19 @@
     </div>
 
 </div>
-<!--<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.1.0/js/dataTables.buttons.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.bootstrap4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.html5.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.print.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.colVis.min.js"></script>-->
 
+<link rel="stylesheet" type="text/css"
+      href="<?php echo base_url(); ?>vendor/datatables1/responsive/css/responsive.bootstrap4.css"/>s
+<link rel="stylesheet" type="text/css"
+      href="<?php echo base_url(); ?>vendor/datatables1/buttons/css/buttons.bootstrap4.css"/>s
+<script type="text/javascript"
+        src="<?php echo base_url(); ?>vendor/datatables1/buttons/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript"
+        src="<?php echo base_url(); ?>vendor/datatables1/buttons/js/buttons.bootstrap4.min.js"></script>
+<script type="text/javascript"
+        src="<?php echo base_url(); ?>vendor/datatables1/responsive/js/responsive.bootstrap4.min.js"></script>
+<script type="text/javascript"
+        src="<?php echo base_url(); ?>vendor/datatables1/responsive/js/responsive.dataTables.min.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -79,10 +81,7 @@
         value += "<option value='10'>10</option>" + "<option value='25'>25</option>" + "<option value='50'>50</option>" + "<option value='100'>100</option>" + "<option value='-1'>Todos</option>";
         value += "</select>";
         value += " registros por pagina";
-        $("#table_report").DataTable({
-            buttons: [
-                'pdf'
-            ],
+        let table = $("#table_report").DataTable({
             responsive: true,
             autoWidth: true,
             "language": {
@@ -106,23 +105,12 @@
                     }
             }
         });
-    });
-
-    /*$(document).ready(function () {
-        var table = $('#example').DataTable({
-            lengthChange: false,
-            language: {
-                "url": "https://cdn.datatables.net/plug-ins/1.11.4/i18n/es_es.json"
-            },
+        new $.fn.dataTable.Buttons(table, {
             buttons: [
-                {
-                    extend: 'excel',
-                    split: ['pdf', 'csv'],
-                }
+                'copy', 'excel', 'csv', 'pdf'
             ]
         });
-
         table.buttons().container()
-            .appendTo('#example_wrapper .col-md-6:eq(0)');
-    });*/
+            .appendTo($('.col-md-6:eq(0)', table.table().container()));
+    });
 </script>

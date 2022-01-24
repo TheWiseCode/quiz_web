@@ -782,9 +782,7 @@ class User extends CI_Controller
                 try {
                     $Spreadsheet = new SpreadsheetReader($Filepath);
                     $BaseMem = memory_get_usage();
-
                     $Sheets = $Spreadsheet->Sheets();
-
                     //echo '---------------------------------'.PHP_EOL;
                     //echo 'Spreadsheets:'.PHP_EOL;
                     //print_r($Sheets);
@@ -871,7 +869,8 @@ class User extends CI_Controller
             exit($this->lang->line('permission_denied'));
         }
         $data['limit'] = $limit;
-        $data['title'] = "Cantidad de inscriptos por especialidad";
+
+        $data['title'] = "Cantidad de inscriptos por Especialidad";
         $query = 'SELECT su.id_speciality id,e.name, COUNT(*) cantidad
         FROM savsoft_users su 
         inner join specialties as e on e.id=su.id_speciality

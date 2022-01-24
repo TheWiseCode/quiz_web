@@ -13,7 +13,7 @@
     ?>
     <title>
         <?php if ($hres[0]['setting_value'] == "") { ?>
-            echo "Titulo";
+            Inicio de Sesion
         <?php } else {
             echo $hres[0]['setting_value'];
         } ?>
@@ -42,9 +42,9 @@
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
                     <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block  "
-                             style="background:url('<?php echo base_url(); ?>/photo/default/logo_sf.png');
-                                     background-position: center; background-size: 50%; background-repeat: no-repeat;"></div>
+                        <div class="col-lg-6 d-none d-lg-block" hidden
+                             style="background:url('<?php echo base_url('photo/default/logo_sf.png'); ?>');
+                                     background-position: center; background-size: 40%; background-repeat: no-repeat;"></div>
 
                         <div class="col-lg-6">
                             <div class="p-5">
@@ -53,7 +53,7 @@
                                     $hquery = $this->db->query(" select * from savsoftquiz_setting where setting_name='App_Name' || setting_name='App_title' order by setting_id asc ");
                                     $hres = $hquery->result_Array();
                                     ?>
-                                    <h1 class="h4 text-gray-900 mb-4">
+                                    <h1 class="h4 text-gray-900 mb-4 font-weight-bold">
                                         <?php if ($hres[0]['setting_value'] == "") { ?>
                                             UAGRM Examenes
                                         <?php } else {
@@ -91,7 +91,6 @@
                                     <button type="submit" class="btn btn-primary btn-user btn-block font-weight-bold">
                                         <?php echo $this->lang->line('login'); ?>
                                     </button>
-
                                 </form>
 
                                 <div class="text-center" hidden>
@@ -102,21 +101,14 @@
                                         ?>
                                         &nbsp;&nbsp;&nbsp;<a class="small"
                                                              href="<?php echo site_url('quiz/open_quiz/0'); ?>"><?php echo $this->lang->line('open_quizzes'); ?></a>
-
                                         <?php
                                     }
                                     ?>
-
                                 </div>
 
                                 <div class="text-center" hidden>
                                     <a class="btn btn-danger btn-user btn-block"
                                        href="<?php echo site_url('login/pre_registration'); ?>"><?php echo $this->lang->line('register_new_account'); ?></a>
-
-                                    <p hidden style="margin-top:40px;""><a class="small" href="https://savsoftquiz.com"
-                                                                           style="float:right;">Powered by Savsoft Quiz
-                                        v5.0</a></p>
-
                                 </div>
                             </div>
                         </div>

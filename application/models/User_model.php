@@ -567,11 +567,11 @@ class User_model extends CI_Model
         $cod_cd = $this->input->post('code_student');
         $userdata = [
             'email' => $this->input->post('email'),
-            'password' => md5($this->input->post('ci')),
-            'ci' => $this->input->post('ci'),
+            'password' => md5(trim($this->input->post('ci'))),
+            'ci' => Trim($this->input->post('ci')),
             'exp' => $this->input->post('exp'),
-            'first_name' => $this->input->post('first_name'),
-            'last_name' => $this->input->post('last_name'),
+            'first_name' => trim($this->input->post('first_name')),
+            'last_name' => trim($this->input->post('last_name')),
             'cod_student' => $cod_cd,
             'contact_no' => $this->input->post('contact_no'),
             'gid' => $this->input->post('gid'),
@@ -786,7 +786,7 @@ class User_model extends CI_Model
         }
     }
 
-    function update_applicant($uid)
+    function update_applicant($uid, $data_photo)
     {
         $logged_in = $this->session->userdata('logged_in');
         $userdata = [
@@ -798,7 +798,6 @@ class User_model extends CI_Model
             'cod_student' => $this->input->post('code_student'),
             'contact_no' => $this->input->post('contact_no'),
             'gid' => $this->input->post('gid'),
-            'subscription_expired' => $this->input->post('subscription_expired'),
             'civil_status' => $this->input->post('civil_status'),
             'sexo' => $this->input->post('gender'),
             'address' => $this->input->post('address'),
@@ -806,6 +805,9 @@ class User_model extends CI_Model
             'id_university' => $this->input->post('university'),
             'id_speciality' => $this->input->post('specialties'),
         ];
+        if($data_photo){
+            $userdata['photo'] = $data_photo;
+        }
         $this->db->where('uid', $uid);
         if ($this->db->update('savsoft_users', $userdata)) {
             $this->db->where('uid', $uid);
@@ -973,14 +975,9 @@ class User_model extends CI_Model
             $this->db->or_where('savsoft_users.last_name', $search);
 
         }
-        $logged_in = $this->session->userdata('logged_in');
-        if ($logged_in['uid'] != '1') {
-            $uid = $logged_in['uid'];
-            $this->db->where('savsoft_users.inserted_by', $uid);
-        }
         $this->db->order_by('savsoft_users.uid', 'desc');
         $this->db->where('savsoft_users.su =', 4);
-        $this->db->where('savsoft_users.user_status =', 'Active');
+        $this->db->where('savsoft_users.user_status =', 'active');
         $query = $this->db->get('savsoft_users');
         return $query->result_array();
     }
@@ -1108,10 +1105,24 @@ class User_model extends CI_Model
         INNER JOIN university AS b ON b.id = a.id_university
         INNER JOIN specialties AS c ON c.id = a.id_speciality ORDER BY c.name,a.last_name ASC';
         $resultados = $this->db->query($query);
-
-
         return $resultados->result_array();
 
+    }
+
+    public function cod_cd_status($cod_cd){
+        try{
+            $this->db->where('postulante_code', $cod_cd);
+            $resultados = $this->db->get('postulantes_fingerprints');
+            $result = $resultados->result_array();
+            if(count($result) > 0){
+                return ['status' => 'founded'];
+            }else{
+                return ['status' => 'not_found'];
+            }
+        }catch (Exception $e){
+            echo $e;
+            return ['status' => 'error'];
+        }
     }
 }
 

@@ -1,3 +1,6 @@
+<?php
+$uid = $this->session->userdata('logged_in')['uid'];
+?>
 <style>
     label {
         font-weight: bold;
@@ -30,7 +33,7 @@
                 <tr>
                     <th>Id</th>
                     <th><?php echo $this->lang->line('email'); ?></th>
-                    <th><?php echo 'Nombre '; ?><?php echo 'Completo'; ?></th>
+                    <th><?php echo 'Nombre Completo'; ?></th>
                     <th><?php echo 'Telefono'; ?> </th>
                     <th><?php echo 'Codigo de postulante'; ?> </th>
                     <th><?php echo $this->lang->line('specialty'); ?> </th>
@@ -57,22 +60,26 @@
                             ?>
                         </td>
                         <td>
-                            <a hidden href="<?php echo site_url(
-                                'user2/view_user/' . $val['uid']
-                            ); ?>"><i class="fa fa-eye" title="View Profile"></i></a>
                             <a href="<?php echo site_url(
                                 'applicant/edit/' . $val['uid']
                             ); ?>"><i class="fa fa-edit" style="color:#3472f7;"></i></a>
+
                             <a href="javascript:remove_entry('applicant/remove/<?php echo $val['uid']; ?>',
-                            '<?php echo $this->lang->line('warning_remove') ?>');">
+                                '<?php echo $this->lang->line('warning_remove') ?>');">
                                 <i class="fa fa-trash" style="color:#3472f7;"></i>
                             </a>
+                            <a hidden href="<?php echo site_url(
+                                'user2/view_user/' . $val['uid']
+                            ); ?>"><i class="fa fa-eye" title="View Profile"></i></a>
                             <a title="Descargar Ficha Inscripcion" href="<?php echo site_url(
                                 'user/view_inscription/' . $val['uid']
                             ); ?>"><i class="fa fa-download" style="color:rgb(40,206,61);"></i></a>
                             <a title="Descargar Carnet Inscripcion" href="<?php echo site_url(
                                 'user/view_carnet/' . $val['uid']
                             ); ?>"><i class="fa fa-id-card" style="color:#f73434;"></i></a>
+                            <a title="Verificar postulante" href="#"
+                               onclick="launchBiometricReader('<?php echo $val['cod_student']; ?>')"
+                            ><i class="fa fa-fingerprint" style="color:#000000;"></i></a>
                         </td>
                     </tr>
                 <?php }
@@ -80,62 +87,6 @@
                 </tbody>
             </table>
         </div>
-    </div>
-
-    <a href="<?php echo site_url(
-        'applicant/index/' . $back
-    ); ?>" class="btn btn-primary"><?php echo $this->lang->line('back'); ?></a>
-    &nbsp;&nbsp;
-    <?php $next = $limit + $this->config->item('number_of_rows'); ?>
-
-    <a href="<?php echo site_url(
-        'applicant/index/' . $next
-    ); ?>" class="btn btn-primary"><?php echo $this->lang->line('next'); ?></a>
-
-    <div class="card mt-3" hidden>
-        <div class="card-header font-weight-bold"><?php echo $this->lang->line('import_users'); ?></div>
-
-        <div class="card-body">
-
-            <form method="post" enctype="multipart/form-data" action="<?php echo site_url(
-                'user/import'
-            ); ?>">
-                <div class="row mb-2">
-                    <input type="hidden" name="size" value="3500000">
-                    <div class="col col-md-6">
-                        <label for="xslfile"><?php echo $this->lang->line('upload_excel'); ?></label>
-                        <input type="file" name="xlsfile" accept=".xls" class="form-control">
-                    </div>
-                    <div class="col col-md-6">
-                        <label for="gid"><?php echo $this->lang->line('select_group'); ?>)</label>
-                        <select name="gid" required class="form-control">
-                            <option value=""><?php echo $this->lang->line('select_group'); ?></option>
-                            <?php foreach ($group_list as $key => $val) { ?>
-                                <option value="<?php echo $val['gid']; ?>" <?php if ($val['gid'] == $gid) {
-                                    echo 'selected';
-                                } ?> ><?php echo $val['group_name']; ?></option>
-                            <?php } ?>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-md-3">
-                        <input type="submit" value="<?php echo $this->lang->line('import') ?>"
-                               class="btn btn-secondary form-control">
-                    </div>
-                    <div class="col col-md-9">
-                        <div class="form-control">
-                            <a href="<?php echo base_url(); ?>sample/ejemplo lista de estudiantes.xls"
-                               target="new"><?php echo $this->lang->line('click_here'); ?></a> <?php echo $this->lang->line('upload_excel_info'); ?>
-                        </div>
-                    </div>
-                </div>
-
-            </form>
-
-        </div>
-
-
     </div>
 </div>
 <script>
@@ -145,7 +96,7 @@
         value += "<option value='10'>10</option>" + "<option value='25'>25</option>" + "<option value='50'>50</option>" + "<option value='100'>100</option>" + "<option value='-1'>Todos</option>";
         value += "</select>";
         value += " registros por pagina";
-        $("#table_uapplicants").DataTable({
+        let table = $("#table_uapplicants").DataTable({
             responsive: false,
             autoWidth: false,
             "language": {
@@ -169,5 +120,11 @@
                     }
             }
         });
+        table.responsive.recalc();
     });
+
+    function launchBiometricReader(cod_cd) {
+        let uid = '<?php echo $uid?>';
+        window.open('testus:' + cod_cd + ',' + uid + ',' + '0');
+    }
 </script>

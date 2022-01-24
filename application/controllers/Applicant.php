@@ -130,7 +130,7 @@ class Applicant extends CI_Controller
                     );
                     $this->error_display();
                 }
-            }else{
+            } else {
                 if ($finger_print_status['status'] == 'processed') {
                     $this->session->set_flashdata(
                         'message',
@@ -139,7 +139,7 @@ class Applicant extends CI_Controller
                         ' </div>'
                     );
                     $this->error_display();
-                }else{
+                } else {
                     $this->session->set_flashdata(
                         'message',
                         "<div class='alert alert-danger'>" .
@@ -275,7 +275,8 @@ class Applicant extends CI_Controller
         redirect('applicant');
     }
 
-    public function reports(){
+    public function reports()
+    {
 
     }
 
@@ -298,6 +299,11 @@ class Applicant extends CI_Controller
         $data['uploadSuccess'] = $this->upload->data();
         $photo = 'photo/users/' . $data['uploadSuccess']['orig_name'];
         return $photo;
+    }
+
+    public function exist_cod_cd($cod_cd)
+    {
+        print_r(json_encode($this->user_model->cod_cd_status($cod_cd)));
     }
 
 }

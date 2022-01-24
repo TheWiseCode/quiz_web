@@ -2110,3 +2110,89 @@ ERROR - 2022-01-23 12:03:46 --> Severity: error --> Exception: syntax error, une
 ERROR - 2022-01-23 12:05:21 --> Severity: error --> Exception: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) C:\xampp\htdocs\quiz\cridai\application\controllers\User.php 911
 ERROR - 2022-01-23 12:05:31 --> Severity: error --> Exception: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) C:\xampp\htdocs\quiz\cridai\application\controllers\User.php 911
 ERROR - 2022-01-23 12:06:08 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\cridai\application\views\list_post_specialty.php 76
+ERROR - 2022-01-23 16:12:57 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 198
+ERROR - 2022-01-23 17:39:23 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 42
+ERROR - 2022-01-23 17:39:23 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 92
+ERROR - 2022-01-23 17:39:23 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 129
+ERROR - 2022-01-23 17:39:23 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 145
+ERROR - 2022-01-23 17:39:23 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 161
+ERROR - 2022-01-23 17:39:23 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 182
+ERROR - 2022-01-23 17:39:55 --> Query error: Unknown column 'data_photo' in 'field list' - Invalid query: UPDATE `savsoft_users` SET `first_name` = 'WWADXV', `last_name` = '12321XV', `email` = 'wdawd2aw2VX2@hsgs.cne', `ci` = '21242412V', `exp` = 'PD', `cod_student` = 'ZZZZV', `contact_no` = '3342XV', `gid` = '1', `subscription_expired` = NULL, `civil_status` = 'Viudo(a)', `sexo` = 'Masculino', `address` = '23123XV', `nationality` = 'ARGENTINO(A)', `id_university` = '17', `id_speciality` = '41', `data_photo` = 'photo/users/ZZZZV_23012022_173949.jpeg'
+WHERE `uid` = '497'
+ERROR - 2022-01-23 17:40:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 42
+ERROR - 2022-01-23 17:40:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 92
+ERROR - 2022-01-23 17:40:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 129
+ERROR - 2022-01-23 17:40:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 145
+ERROR - 2022-01-23 17:40:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 161
+ERROR - 2022-01-23 17:40:16 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 182
+ERROR - 2022-01-23 17:40:29 --> Query error: Unknown column 'data_photo' in 'field list' - Invalid query: UPDATE `savsoft_users` SET `first_name` = 'WWADXV', `last_name` = '12321XV', `email` = 'wdawd2aw2VX2@hsgs.cne', `ci` = '21242412V', `exp` = 'PD', `cod_student` = 'ZZZZV', `contact_no` = '3342XV', `gid` = '1', `civil_status` = 'Viudo(a)', `sexo` = 'Masculino', `address` = '23123XV', `nationality` = 'ARGENTINO(A)', `id_university` = '17', `id_speciality` = '41', `data_photo` = 'photo/users/ZZZZV_23012022_174024.jpeg'
+WHERE `uid` = '497'
+ERROR - 2022-01-23 17:40:49 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 42
+ERROR - 2022-01-23 17:40:49 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 92
+ERROR - 2022-01-23 17:40:49 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 129
+ERROR - 2022-01-23 17:40:49 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 145
+ERROR - 2022-01-23 17:40:49 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 161
+ERROR - 2022-01-23 17:40:49 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 182
+ERROR - 2022-01-23 17:41:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 815
+ERROR - 2022-01-23 17:41:04 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 42
+ERROR - 2022-01-23 17:41:04 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 92
+ERROR - 2022-01-23 17:41:04 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 129
+ERROR - 2022-01-23 17:41:04 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 145
+ERROR - 2022-01-23 17:41:04 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 161
+ERROR - 2022-01-23 17:41:04 --> Severity: Warning --> Use of undefined constant selected - assumed 'selected' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\quiz\cridai\application\views\edit_applicant.php 182
+ERROR - 2022-01-23 17:45:10 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 138
+ERROR - 2022-01-23 17:45:10 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 145
+ERROR - 2022-01-23 17:45:10 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 172
+ERROR - 2022-01-23 17:45:10 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 198
+ERROR - 2022-01-23 17:45:10 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 272
+ERROR - 2022-01-23 17:45:10 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 296
+ERROR - 2022-01-23 17:46:35 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 198
+ERROR - 2022-01-23 17:55:05 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 198
+ERROR - 2022-01-23 18:04:12 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 198
+ERROR - 2022-01-23 18:05:34 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 198
+ERROR - 2022-01-23 18:26:32 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 198
+ERROR - 2022-01-23 18:52:18 --> Severity: error --> Exception: Call to a member function cod_cd_status() on null C:\xampp\htdocs\quiz\cridai\application\controllers\Applicant.php 306
+ERROR - 2022-01-23 18:53:17 --> Severity: error --> Exception: Call to a member function result_array() on string C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1122
+ERROR - 2022-01-23 18:53:35 --> Severity: error --> Exception: Call to a member function result_array() on string C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1122
+ERROR - 2022-01-23 18:54:37 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM savsoft_users WHERE cod_student = '123123'' at line 2 - Invalid query: SELECT *
+FROM SELECT * FROM savsoft_users WHERE cod_student = '123123'
+ERROR - 2022-01-23 18:54:38 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1123
+ERROR - 2022-01-23 18:54:47 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM savsoft_users WHERE cod_student = '123123'' at line 2 - Invalid query: SELECT *
+FROM SELECT * FROM savsoft_users WHERE cod_student = '123123'
+ERROR - 2022-01-23 18:54:47 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1123
+ERROR - 2022-01-23 18:55:37 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM savsoft_users WHERE cod_student = '1231231'' at line 2 - Invalid query: SELECT *
+FROM SELECT * FROM savsoft_users WHERE cod_student = '1231231'
+ERROR - 2022-01-23 18:55:38 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1123
+ERROR - 2022-01-23 18:56:54 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM savsoft_users WHERE cod_student = '2132132'' at line 2 - Invalid query: SELECT *
+FROM SELECT * FROM savsoft_users WHERE cod_student = '2132132'
+ERROR - 2022-01-23 18:56:54 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1123
+ERROR - 2022-01-23 18:58:11 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM savsoft_users WHERE cod_student = '2132132'' at line 2 - Invalid query: SELECT *
+FROM SELECT * FROM savsoft_users WHERE cod_student = '2132132'
+ERROR - 2022-01-23 18:58:12 --> Severity: error --> Exception: Call to a member function num_rows() on bool C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1123
+ERROR - 2022-01-23 18:58:39 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM savsoft_users WHERE cod_student = '2112312'' at line 2 - Invalid query: SELECT *
+FROM SELECT * FROM savsoft_users WHERE cod_student = '2112312'
+ERROR - 2022-01-23 18:58:39 --> Severity: error --> Exception: Call to a member function num_rows() on bool C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1123
+ERROR - 2022-01-23 18:59:28 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM savsoft_users WHERE cod_student = '12312312'' at line 2 - Invalid query: SELECT *
+FROM SELECT * FROM savsoft_users WHERE cod_student = '12312312'
+ERROR - 2022-01-23 18:59:29 --> Severity: error --> Exception: Call to a member function num_rows() on bool C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1123
+ERROR - 2022-01-23 18:59:41 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM savsoft_users WHERE cod_student = '12312312'' at line 2 - Invalid query: SELECT *
+FROM SELECT * FROM savsoft_users WHERE cod_student = '12312312'
+ERROR - 2022-01-23 18:59:41 --> Severity: error --> Exception: Call to a member function num_rows() on bool C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1123
+ERROR - 2022-01-23 20:55:14 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM savsoft_users WHERE cod_student = '500'' at line 2 - Invalid query: SELECT *
+FROM SELECT * FROM savsoft_users WHERE cod_student = '500'
+ERROR - 2022-01-23 20:55:15 --> Severity: error --> Exception: Call to a member function num_rows() on bool C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1123
+ERROR - 2022-01-23 20:55:23 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM savsoft_users WHERE cod_student = '500'' at line 2 - Invalid query: SELECT *
+FROM SELECT * FROM savsoft_users WHERE cod_student = '500'
+ERROR - 2022-01-23 20:55:34 --> Severity: error --> Exception: Call to a member function num_rows() on bool C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1123
+ERROR - 2022-01-23 20:56:02 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM savsoft_users WHERE cod_student = '500'' at line 2 - Invalid query: SELECT *
+FROM SELECT * FROM savsoft_users WHERE cod_student = '500'
+ERROR - 2022-01-23 20:56:26 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM savsoft_users WHERE cod_student = '2001'' at line 2 - Invalid query: SELECT *
+FROM SELECT * FROM savsoft_users WHERE cod_student = '2001'
+ERROR - 2022-01-23 20:57:43 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM postulantes_fingerprints WHERE postulante_code = '2001'' at line 2 - Invalid query: SELECT *
+FROM SELECT * FROM postulantes_fingerprints WHERE postulante_code = '2001'
+ERROR - 2022-01-23 20:58:26 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT * FROM postulantes_fingerprints WHERE postulante_code = '2001'' at line 2 - Invalid query: SELECT *
+FROM SELECT * FROM postulantes_fingerprints WHERE postulante_code = '2001'
+ERROR - 2022-01-23 20:58:29 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1121
+ERROR - 2022-01-23 21:01:22 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1122
+ERROR - 2022-01-23 21:01:29 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable C:\xampp\htdocs\quiz\cridai\application\models\User_model.php 1122
+ERROR - 2022-01-23 21:04:14 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\cridai\application\views\dashboard.php 198

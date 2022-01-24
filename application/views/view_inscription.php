@@ -46,7 +46,7 @@
 
     <tr>
         <th style="text-align: left;">
-            <img src="<?php echo base_url() . '/photo/logo.jpeg' ?>" align="left" width="140" height="140">
+            <img src="<?php echo base_url('photo/default/logo_cf.jpeg') ?>" align="left" width="140" height="140">
         </th>
         <th></th>
         <th></th>
@@ -138,10 +138,10 @@
 <table>
     <tr style="text-align: left;">
         <td><b>Inscripto por:</b> <?php
-                    foreach ($digitalizador_list as $key => $vals) {
-                    if ($vals['uid'] == $result['inserted_by']) {
-                        echo $vals['first_name'] . ' ' . $vals['last_name'];
-                    }
+            foreach ($digitalizador_list as $key => $vals) {
+                if ($vals['uid'] == $result['inserted_by']) {
+                    echo $vals['first_name'] . ' ' . $vals['last_name'];
+                }
             }
             ?></td>
 
