@@ -591,7 +591,6 @@ class User_model extends CI_Model
                     );
                 }
             }
-
             return true;
         } else {
             return false;

@@ -56,18 +56,25 @@
                                    placeholder="<?php echo $this->lang->line('contact_no'); ?>" autofocus>
                         </div>
 
-                        <div class="form-group">
-                            <label class="font-weight-bold"><?php echo $this->lang->line('account_type'); ?></label>
-                            <select class="form-control" name="su">
-                                <?php
-                                foreach ($account_type as $ak => $val) {
-                                    ?>
-                                    <option value="<?php echo $val['account_id']; ?>"><?php echo $val['account_name']; ?></option>
+                        <?php
+                        $su = $this->session->userdata('logged_in')['su'];
+                        if ($su == '1') {
+                            ?>
+                            <div class="form-group">
+                                <label class="font-weight-bold"><?php echo $this->lang->line('account_type'); ?></label>
+                                <select class="form-control" name="su">
                                     <?php
-                                }
-                                ?>
-                            </select>
-                        </div>
+                                    foreach ($account_type as $ak => $val) {
+                                        ?>
+                                        <option value="<?php echo $val['account_id']; ?>"><?php echo $val['account_name']; ?></option>
+                                        <?php
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            <?php
+                        }
+                        ?>
                         <div class="form-group">
                             <label for="inputEmail" class="font-weight-bold">
                                 <?php echo $this->lang->line('email_address'); ?></label>

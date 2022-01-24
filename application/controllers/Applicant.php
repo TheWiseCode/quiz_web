@@ -32,7 +32,7 @@ class Applicant extends CI_Controller
             $data[$key] = $value;
         }
         $this->session->set_flashdata('data_temp', $data);
-        redirect('applicantt/new_applicant/');
+        redirect('applicant/create/');
     }
 
     public function index($limit = '0')
@@ -76,13 +76,11 @@ class Applicant extends CI_Controller
             $data['group_list'] = $this->user_model->group_list();
             $data['career_list'] = $this->user_model->get_career_all();
             $data['account_type'] = $this->account_model->account_list(0);
-            $data['nationalities'] = [];
-            array_push($data['nationalities'], 'BOLIVIANO(A)');
-            $nat = $this->lang->line('nationalities');
-            usort($nat, function ($it1, $it2) {
+            $data['nationalities'] = $this->lang->line('nationalities');
+            usort($data['nationalities'], function ($it1, $it2) {
                 return $it1 > $it2;
             });
-            foreach ($nat as $n) array_push($data['nationalities'], $n);
+            $data['nationalities'] = array_merge(['BOLIVANO(A)'], $data['nationalities']);
             $this->load->view('header', $data);
             $this->load->view('new_applicant', $data);
             $this->load->view('footer', $data);

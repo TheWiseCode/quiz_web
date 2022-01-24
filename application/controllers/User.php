@@ -51,7 +51,7 @@ class User extends CI_Controller
                 $data = $this->session->flashdata('data_temp');
             }
             $logged_in = $this->session->userdata('logged_in');
-            $user_p = explode(',', $logged_in['user']);
+            $user_p = explode(',', $logged_in['users']);
             if (!in_array('Add', $user_p)) {
                 $data['title'] = $this->lang->line('permission_denied');
                 $this->load->view('header', $data);
@@ -59,7 +59,7 @@ class User extends CI_Controller
                 $this->load->view('footer', $data);
                 return;
             }
-            $data['title'] = $this->lang->line('add_new_') . ' ' . $this->lang->line('users_student');
+            $data['title'] = $this->lang->line('add_user');
             $data['group_list'] = $this->user_model->group_list();
             $data['career_list'] = $this->user_model->get_career_all();
             $data['account_type'] = $this->account_model->account_list(0);

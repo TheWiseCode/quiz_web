@@ -154,20 +154,20 @@ $hres = $hquery->result_Array();
 <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-            <div class="sidebar-brand-text mx-3"><?php if ($hres[0]['setting_value'] == "") { ?>
-                    UAGRM Examenes
-                <?php } else {
-                    echo $hres[0]['setting_value'];
-                } ?> </div>
-        </a>
-        <div style="text-align: center;"><span style="color:#ffffff;"><img style="width: 50%;"
-                                                                           src="<?php echo base_url() . 'photo/default/Logo_sf.png' ?>"
-                                                                           class="picture-src"
-                                                                           id="" title=""/> </span>
+        <div class="sidebar-brand-text mx-3">
+            <a class="sidebar-brand d-flex align-items-start justify-content-center" href="#">
+                <div class=""><?php if ($hres[0]['setting_value'] == "") { ?>
+                        UAGRM Examenes
+                    <?php } else {
+                        echo $hres[0]['setting_value'];
+                    } ?> </div>
+            </a>
+        </div>
+        <div style="text-align: center;">
+            <span style="color:#ffffff;">
+                <img style="width: 50%;" src="<?php echo base_url('photo/default/Logo_sf.png'); ?>"
+                     class="picture-src" id="" title=""/> </span>
             <div style="text-align: center;" hidden>
                 <span style="color:#ffffff;"><?php echo $hres[1]['setting_value']; ?> </span>
             </div>
@@ -185,14 +185,6 @@ $hres = $hquery->result_Array();
             <?php } ?>
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            <!-- Heading
-            <div class="sidebar-heading">
-              Interface
-            </div>
-      -->
-
-
             <?php
             if (in_array('List_all', explode(',', $logged_in['users']))) {
                 ?>

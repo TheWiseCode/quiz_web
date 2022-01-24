@@ -614,3 +614,4 @@ ERROR - 2022-01-22 17:39:29 --> Severity: Warning --> Division by zero C:\xampp\
 ERROR - 2022-01-22 17:40:00 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\derecho\application\views\dashboard.php 193
 ERROR - 2022-01-22 17:41:25 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\derecho\application\views\dashboard.php 193
 ERROR - 2022-01-22 17:42:03 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\derecho\application\views\dashboard.php 193
+ERROR - 2022-01-22 17:45:23 --> Severity: Warning --> Division by zero C:\xampp\htdocs\quiz\derecho\application\views\dashboard.php 193
