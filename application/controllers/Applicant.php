@@ -49,7 +49,7 @@ class Applicant extends CI_Controller
         $data['limit'] = $limit;
         $data['title'] = $this->lang->line('applicant_list');
         // fetching user list
-        $data['result'] = $this->user_model->user_list($limit);
+        $data['result'] = $this->user_model->applicant_list($limit);
         $data['career_list'] = $this->user_model->get_career_all();
         $data['group_list'] = $this->user_model->get_group_all($limit);
         $this->load->view('header', $data);
@@ -155,12 +155,11 @@ class Applicant extends CI_Controller
         $data['custom_form_user'] = $this->user_model->custom_form_user($uid);
         $data['custom_form'] = $this->user_model->custom_form('All');
         // fetching group list
-        $data['nationalities'] = [];
-        array_push($data['nationalities'], 'BOLIVIANO(A)');
-        $nat = $this->lang->line('nationalities');
-        usort($nat, function ($it1, $it2) {
+        $data['nationalities'] = $this->lang->line('nationalities');
+        usort($data['nationalities'], function ($it1, $it2) {
             return $it1 > $it2;
         });
+        $data['nationalities'] = array_merge(['BOLIVANO(A)'], $data['nationalities']);
         $data['career_list'] = $this->user_model->get_career_all();
         $data['group_list'] = $this->user_model->group_list();
         $data['account_type'] = $this->account_model->account_list(0);

@@ -29,29 +29,20 @@ class Login extends CI_Controller
             }
 
         }
-
-
         $data['title'] = $this->lang->line('login');
         $data['recent_quiz'] = $this->quiz_model->recent_quiz('5');
-
         $this->load->view('login', $data);
-
     }
 
     public function resend()
     {
-
-
         $this->load->helper('url');
         if ($this->input->post('email')) {
             $status = $this->user_model->resend($this->input->post('email'));
             $this->session->set_flashdata('message', $status);
             redirect('login/resend');
         }
-
-
         $data['title'] = $this->lang->line('resend_link');
-
         $this->load->view('header', $data);
         $this->load->view('resend', $data);
         $this->load->view('footer', $data);
@@ -91,7 +82,6 @@ class Login extends CI_Controller
         $d = array();
         foreach ($this->session->userdata('cart') as $k => $v) {
             if ($v[0] == $gid) {
-
             } else {
                 $d[] = $v;
             }
@@ -159,7 +149,6 @@ class Login extends CI_Controller
 
                 $sl3 = $this->db->query($sl2);
                 // echo $sl3->num_rows(); echo "<br>";
-
                 if ($sl3->num_rows() >= 1) {
 
                 } else {
@@ -188,8 +177,9 @@ class Login extends CI_Controller
                 redirect('dashboard');
 
             } else {
-                $burl = $this->config->item('base_url') . 'index.php/dashboard';
-                header("location:$burl");
+                redirect('quiz');
+                /*$burl = $this->config->item('base_url') . 'index.php/q';
+                header("location:$burl");*/
             }
         } else if ($status['status'] == '0') {
 

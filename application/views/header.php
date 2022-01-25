@@ -10,8 +10,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url(); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet"
-          type="text/css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/datatables1/datatables.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet">
     <!-- custom css -->
@@ -111,8 +110,9 @@
     </style>
     <script src="<?php echo base_url(); ?>vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="<?php echo base_url(); ?>vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="<?php echo base_url(); ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables1/datatables.min.js"></script>
+    <!--<script src="<?php /*echo base_url(); */ ?>vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?php /*echo base_url(); */ ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>-->
 
     <!-- Core plugin JavaScript-->
     <script src="<?php echo base_url(); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -210,11 +210,6 @@ $hres = $hquery->result_Array();
                                 ?>
                                 <a class="nav-link collapse-item"
                                    href="<?php echo site_url('user/index'); ?>"><?php echo $this->lang->line('user_list'); ?></a>
-                            <?php } ?>
-                            <?php
-                            if (in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
-                                <a hidden class="nav-link collapse-item"
-                                   href="<?php echo site_url('appointment/myappointment/'); ?>"><?php echo $this->lang->line('myappointment'); ?></a>
                             <?php } ?>
                         </div>
                     </div>
@@ -402,18 +397,12 @@ $hres = $hquery->result_Array();
                                href="<?php echo site_url('qbank/category_list'); ?>"><?php echo $this->lang->line('category_list'); ?></a>
                             <a class="nav-link collapse-item"
                                href="<?php echo site_url('qbank/level_list'); ?>"><?php echo $this->lang->line('level_list'); ?></a>
-                            <a class="nav-link collapse-item" hidden
+                            <a class="nav-link collapse-item"
                                href="<?php echo site_url('user/career_list'); ?>"><?php echo $this->lang->line('career_list'); ?></a>
                             <a class="nav-link collapse-item"
                                href="<?php echo site_url('account'); ?>"><?php echo $this->lang->line('account_type'); ?></a></a>
                             <a class="nav-link collapse-item"
                                href="<?php echo site_url('user/custom_fields'); ?>"><?php echo $this->lang->line('custom_forms'); ?></a>
-                            <div hidden>
-                                <a class="nav-link collapse-item"
-                                   href="<?php echo site_url('payment_gateway'); ?>"><?php echo $this->lang->line('payment_history'); ?></a>
-                                <a class="nav-link collapse-item"
-                                   href="<?php echo site_url('payment_gateway'); ?>"><?php echo $this->lang->line('advertisment'); ?></a>
-                            </div>
                         </div>
                     </div>
                 </li>
@@ -594,15 +583,6 @@ $hres = $hquery->result_Array();
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 <?php echo $this->lang->line('myaccount'); ?>
                             </a>
-
-                            <?php
-                            if (in_array('List', explode(',', $logged_in['appointment'])) && !in_array('List_all', explode(',', $logged_in['appointment']))) { ?>
-                                <a hidden class="dropdown-item"
-                                   href="<?php echo site_url('appointment/myappointment/'); ?>"><i
-                                            class="fas fa-mobile fa-sm fa-fw mr-2 text-gray-400"></i><?php echo $this->lang->line('myappointment'); ?>
-                                </a>
-                            <?php } ?>
-
 
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="<?php echo site_url('user/logout'); ?>">

@@ -29,9 +29,9 @@
                 <tr>
                     <th>Id</th>
                     <th><?php echo $this->lang->line('email'); ?></th>
-                    <th><?php echo 'Nombre '; ?><?php echo 'Completo'; ?></th>
-                    <th><?php echo 'Telefono'; ?> </th>
-                    <th><?php echo 'Codigo de postulante'; ?> </th>
+                    <th><?php echo $this->lang->line('complete_name'); ?></th>
+                    <th><?php echo $this->lang->line('contact_no'); ?> </th>
+                    <th><?php echo $this->lang->line('applicant_code'); ?> </th>
                     <th><?php echo $this->lang->line('action'); ?> </th>
                 </tr>
                 </thead>
@@ -40,8 +40,8 @@
                 foreach ($result as $key => $val) { ?>
                     <tr>
                         <td><?php echo $val['uid']; ?></td>
-                        <td><?php echo $val['email'] . ' ' . $val['wp_user']; ?></td>
-                        <td><?php echo $val['first_name'] . ' '; ?><?php echo $val['last_name']; ?></td>
+                        <td><?php echo $val['email'] ?></td>
+                        <td><?php echo $val['first_name'] . ' ' . $val['last_name']; ?></td>
                         <td><?php echo $val['contact_no']; ?></td>
                         <td><?php echo $val['cod_student']; ?> </td>
                         <td>
@@ -117,6 +117,7 @@
         $("#table_uapplicants").DataTable({
             responsive: true,
             autoWidth: true,
+            ordering: false,
             "language": {
                 "lengthMenu": value,
                 "zeroRecords":

@@ -44,7 +44,7 @@ class UserNew extends CI_Controller
         $data['limit'] = $limit;
         $data['title'] = $this->lang->line('userlist');
         // fetching user list
-        $data['result'] = $this->user_model->user_list_only_user($limit);
+        $data['result'] = $this->user_model->user_list($limit);
         $data['list_account_type'] = $this->user_model->get_account_type();
         //$data['career_list'] = $this->user_model->get_career_all();
         ///$data['group_list'] = $this->user_model->get_group_all($limit);

@@ -37,7 +37,7 @@ class User extends CI_Controller
         $data['limit'] = $limit;
         $data['title'] = $this->lang->line('userlist');
         // fetching user list
-        $data['result'] = $this->user_model->user_list_only_user($limit);
+        $data['result'] = $this->user_model->user_list($limit);
         $data['list_account_type'] = $this->user_model->get_account_type();
         $this->load->view('header', $data);
         $this->load->view('user_list', $data);
@@ -266,7 +266,7 @@ class User extends CI_Controller
         $name = date('dmY_His', time());
         $mi_imagen = 'wizard_picture';
         $config['upload_path'] = "photo/users";
-        $config['file_name'] =  $name . "";
+        $config['file_name'] = $name . "";
         $config['allowed_types'] = "*";
         $config['max_size'] = "50000";
         $config['max_width'] = "20000";

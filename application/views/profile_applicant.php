@@ -156,9 +156,8 @@
                         <div class="form-group">
                             <label for="contact_no"
                                    class="font-weight-bold"><?php echo $this->lang->line('contact_no'); ?></label>
-                            <input type="text" name="contact_no" class="form-control" value="<?php
-                            echo $result['contact_no'];
-                            ?>" tabindex="12" readonly
+                            <input type="text" name="contact_no" class="form-control"
+                                   value="<?php echo $result['contact_no']; ?>" tabindex="12"
                                    placeholder="<?php echo $this->lang->line('contact_no'); ?>" autofocus required>
                         </div>
                         <div class="form-group">
@@ -176,9 +175,8 @@
                         <div class="form-group">
                             <label for="inputEmail"
                                    class="font-weight-bold"><?php echo $this->lang->line('email_address'); ?></label>
-                            <input type="email" id="inputEmail" name="email" class="form-control" value="<?php
-                            echo $result['email'];
-                            ?>" tabindex="14" readonly
+                            <input type="email" id="inputEmail" name="email" class="form-control"
+                                   value="<?php echo $result['email']; ?>" tabindex="14"
                                    placeholder="<?php echo $this->lang->line('email_address'); ?>" required autofocus>
                         </div>
                         <div class="form-group">

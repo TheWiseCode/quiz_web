@@ -16,10 +16,8 @@
                                 <div class="form-group">
                                     <label for="code_student"
                                            class="font-weight-bold"><?php echo $this->lang->line('cod_cd'); ?></label>
-                                    <input type="text" name="code_student" class="form-control" value="<?php
-                                    if ($code_student != null)
-                                        echo $code_student;
-                                    ?>" tabindex="1"
+                                    <input type="text" name="code_student" class="form-control"
+                                           value="<?php echo $code_student; ?>" tabindex="1"
                                            placeholder="<?php echo $this->lang->line('cod_cd'); ?>" autofocus required>
                                 </div>
                                 <div class="form-group">
@@ -27,10 +25,8 @@
                                            class="font-weight-bold"><?php echo $this->lang->line('ci'); ?></label>
                                     <div class="row" id="civ_div1">
                                         <div class="input-group col col-md-12" id="ci_div">
-                                            <input type="text" name="ci" class="form-control" value="<?php
-                                            if ($ci != null)
-                                                echo $ci;
-                                            ?>" tabindex="2"
+                                            <input type="text" name="ci" class="form-control"
+                                                   value="<?php echo $ci; ?>" tabindex="2"
                                                    placeholder="<?php echo $this->lang->line('ci'); ?>"
                                                    autofocus required>
                                             <select class="form-control select2" name="exp" id="exp" tabindex="3">
@@ -64,19 +60,15 @@
                         <div class="form-group">
                             <label for="first_name"
                                    class="font-weight-bold"><?php echo $this->lang->line('first_name'); ?></label>
-                            <input type="text" name="first_name" class="form-control" value="<?php
-                            if ($first_name != null)
-                                echo $first_name;
-                            ?>" tabindex="4"
+                            <input type="text" name="first_name" class="form-control"
+                                   value="<?php echo $first_name; ?>" tabindex="4"
                                    placeholder="<?php echo $this->lang->line('first_name'); ?>" autofocus required>
                         </div>
                         <div class="form-group">
                             <label for="last_name"
                                    class="font-weight-bold"><?php echo $this->lang->line('last_name'); ?></label>
-                            <input type="text" name="last_name" class="form-control" value="<?php
-                            if ($last_name != null)
-                                echo $last_name;
-                            ?>" tabindex="5"
+                            <input type="text" name="last_name" class="form-control"
+                                   value="<?php echo $last_name; ?>" tabindex="5"
                                    placeholder="<?php echo $this->lang->line('last_name'); ?>" autofocus required>
                         </div>
                         <div class="form-group">
@@ -87,8 +79,7 @@
                                 $status = $this->lang->line('status_civil');
                                 for ($i = 0; $i < count($status); $i++) {
                                     echo "<option value='$status[$i]'";
-                                    if ($civil_status != null && $civil_status == $status[$i])
-                                        echo selected;
+                                    if ($civil_status == $status[$i]) echo selected;
                                     echo ">$status[$i]</option>";
                                 }
                                 ?>
@@ -103,8 +94,7 @@
                                 $genders = $this->lang->line('gender');
                                 foreach ($genders as $it) {
                                     echo "<option value='$it'";
-                                    if ($gender != null && $gender == $it)
-                                        echo selected;
+                                    if ($gender == $it) echo selected;
                                     echo ">$it</option>";
                                 }
                                 ?>
@@ -113,9 +103,8 @@
                         <div class="form-group">
                             <label for="address"
                                    class="font-weight-bold"><?php echo $this->lang->line('address'); ?></label>
-                            <input type="text" name="address" class="form-control" value="<?php
-                            if ($address != null) echo $address;
-                            ?>" tabindex="8"
+                            <input type="text" name="address" class="form-control"
+                                   value="<?php echo $address; ?>" tabindex="8"
                                    placeholder="<?php echo $this->lang->line('address'); ?>" autofocus>
                         </div>
                         <div class="form-group">
@@ -160,9 +149,8 @@
                         <div class="form-group">
                             <label for="contact_no"
                                    class="font-weight-bold"><?php echo $this->lang->line('contact_no'); ?></label>
-                            <input type="text" name="contact_no" class="form-control" value="<?php
-                            if ($contact_no != null) echo $contact_no;
-                            ?>" tabindex="12"
+                            <input type="text" name="contact_no" class="form-control"
+                                   value="<?php echo $contact_no; ?>" tabindex="12"
                                    placeholder="<?php echo $this->lang->line('contact_no'); ?>" autofocus required>
                         </div>
                         <div class="form-group">
@@ -180,9 +168,8 @@
                         <div class="form-group">
                             <label for="inputEmail"
                                    class="font-weight-bold"><?php echo $this->lang->line('email_address'); ?></label>
-                            <input type="email" id="inputEmail" name="email" class="form-control" value="<?php
-                            if ($email != null) echo $email;
-                            ?>" tabindex="14"
+                            <input type="email" id="inputEmail" name="email" class="form-control"
+                                   value="<?php echo $email; ?>" tabindex="14"
                                    placeholder="<?php echo $this->lang->line('email_address'); ?>" required autofocus>
                         </div>
                         <div class="form-group">
@@ -219,7 +206,7 @@
             if ($('#wizard_picture').get(0).files.length === 0 && 0) {
                 alert('<?php echo $this->lang->line('register_photo');?>');
                 return false;
-            }else{
+            } else {
                 $('#submit').trigger("click");
             }
         });

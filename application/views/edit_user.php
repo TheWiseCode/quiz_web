@@ -65,9 +65,12 @@
                                 <select class="form-control" name="su">
                                     <?php
                                     foreach ($account_type as $ak => $val) {
-                                        ?>
-                                        <option value="<?php echo $val['account_id']; ?>"><?php echo $val['account_name']; ?></option>
-                                        <?php
+                                        $id = $val['account_id'];
+                                        $name = $val['account_name'];
+                                        echo "<option value='$id'";
+                                        if($result['su'] == $id)
+                                            echo selected;
+                                        echo ">$name</option>";
                                     }
                                     ?>
                                 </select>

@@ -113,8 +113,8 @@
 
 
             <!-- recent users -->
-            <div class="card  shadow  py-2" style="margin-top:20px;">
-                <div class="card-header" style="padding:5px;">
+            <div class="card py-2 mt-2">
+                <div class="card-header" >
                     <h6 class="m-0 font-weight-bold text-primary">
                         <?php echo $this->lang->line('recently_registered'); ?>
                     </h6>

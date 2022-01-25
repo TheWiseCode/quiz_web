@@ -16,20 +16,16 @@
                                 <div class="form-group">
                                     <label for="first_name"
                                            class="font-weight-bold"><?php echo $this->lang->line('first_name'); ?></label>
-                                    <input type="text" name="first_name" class="form-control" value="<?php
-                                    if ($first_name != null)
-                                        echo $first_name;
-                                    ?>" tabindex="4"
+                                    <input type="text" name="first_name" class="form-control"
+                                           value="<?php echo $first_name; ?>" tabindex="4"
                                            placeholder="<?php echo $this->lang->line('first_name'); ?>" autofocus
                                            required>
                                 </div>
                                 <div class="form-group">
                                     <label for="last_name"
                                            class="font-weight-bold"><?php echo $this->lang->line('last_name'); ?></label>
-                                    <input type="text" name="last_name" class="form-control" value="<?php
-                                    if ($last_name != null)
-                                        echo $last_name;
-                                    ?>" tabindex="5"
+                                    <input type="text" name="last_name" class="form-control"
+                                           value="<?php echo $last_name; ?>" tabindex="5"
                                            placeholder="<?php echo $this->lang->line('last_name'); ?>" autofocus
                                            required>
                                 </div>
@@ -65,9 +61,11 @@
                                 <select class="form-control" name="su">
                                     <?php
                                     foreach ($account_type as $ak => $val) {
-                                        ?>
-                                        <option value="<?php echo $val['account_id']; ?>"><?php echo $val['account_name']; ?></option>
-                                        <?php
+                                        $id = $val['account_id'];
+                                        $name = $val['account_name'];
+                                        echo "<option value='$id' ";
+                                        if ($su == $id) echo selected;
+                                        echo ">$name</option>";
                                     }
                                     ?>
                                 </select>

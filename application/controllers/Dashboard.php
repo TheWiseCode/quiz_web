@@ -31,7 +31,7 @@ class Dashboard extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         //if (in_array('All', $acp)) {
-        $data['result'] = $this->user_model->user_list(0);
+        $data['result'] = $this->user_model->applicant_list(0);
         $data['active_users'] = $this->user_model->status_users('Active');
         $data['inactive_users'] = $this->user_model->status_users('Inactive');
         $data['payments'] = $this->user_model->recent_payments(10);

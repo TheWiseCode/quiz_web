@@ -27,36 +27,7 @@ class Profile extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $user_p = explode(',', $logged_in['users']);
         if (!in_array('Myaccount', $user_p)) {
-                        $data['title'] = $this->lang->line('permission_denied');
-            $this->load->view('header', $data);
-            $this->load->view('errors/403', $data);
-            $this->load->view('footer', $data);
-            return;
-        }
-        if ($this->user_model->update_profile_applicant($uid)) {
-            $this->session->set_flashdata(
-                'message',
-                "<div class='alert alert-success'>" .
-                $this->lang->line('data_updated_successfully') .
-                ' </div>'
-            );
-        } else {
-            $this->session->set_flashdata(
-                'message',
-                "<div class='alert alert-danger'>" .
-                $this->lang->line('error_to_update_data') .
-                ' </div>'
-            );
-        }
-        redirect('profile/');
-    }
-
-    public function update_user($uid)
-    {
-        $logged_in = $this->session->userdata('logged_in');
-        $user_p = explode(',', $logged_in['users']);
-        if (!in_array('Myaccount', $user_p)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -78,7 +49,8 @@ class Profile extends CI_Controller
             );
             redirect('profile/');
         } else {
-            if ($this->user_model->update_profile_user($uid)) {
+            $data_photo = $this->cargar_archivo(true);
+            if ($this->user_model->update_profile_applicant($uid, $data_photo)) {
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-success'>" .
@@ -97,6 +69,77 @@ class Profile extends CI_Controller
         }
     }
 
+    public function update_user($uid)
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $user_p = explode(',', $logged_in['users']);
+        if (!in_array('Myaccount', $user_p)) {
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
+        }
+        $rules = 0;
+        $this->load->library('form_validation');
+        $udata = $this->user_model->get_user($uid);
+        if ($udata['email'] != $this->input->post('email')) {
+            $rules = 1;
+            $this->form_validation->set_rules('email', 'Email', 'required|is_unique[savsoft_users.email]');
+        }
+        if ($rules && $this->form_validation->run() == false) {
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                validation_errors() .
+                ' </div>'
+            );
+            redirect('profile/');
+        } else {
+            $data_photo = $this->cargar_archivo();
+            if ($this->user_model->update_profile_user($uid, $data_photo)) {
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-success'>" .
+                    $this->lang->line('data_updated_successfully') .
+                    ' </div>'
+                );
+            } else {
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                    $this->lang->line('error_to_update_data') .
+                    ' </div>'
+                );
+            }
+            redirect('profile/');
+        }
+    }
+
+    function cargar_archivo($with_code = false)
+    {
+        $cd = '';
+        if ($with_code) {
+            $cd = $this->input->post('code_student') . '_';
+        }
+        $name = $cd . date('dmY_His', time());
+        $mi_imagen = 'wizard_picture';
+        $config['upload_path'] = "photo/users";
+        $config['file_name'] = $name . "";
+        $config['allowed_types'] = "*";
+        $config['max_size'] = "50000";
+        $config['max_width'] = "20000";
+        $config['max_height'] = "20000";
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+        if (!$this->upload->do_upload($mi_imagen)) {
+            return null;
+        }
+        $data['uploadSuccess'] = $this->upload->data();
+        $photo = 'photo/users/' . $data['uploadSuccess']['orig_name'];
+        return $photo;
+    }
+
     public function index()
     {
         $logged_in = $this->session->userdata('logged_in');
@@ -104,7 +147,7 @@ class Profile extends CI_Controller
         if (in_array('Myaccount', $user_p)) {
             $uid = $logged_in['uid'];
         } else {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);

@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row mb-3">
+    <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <h3 class="font-weight-bold"><?php echo $title; ?></h3>
         </div>
@@ -26,7 +26,7 @@
                     <th>Id</th>
                     <th><?php echo $this->lang->line('email'); ?></th>
                     <th><?php echo $this->lang->line('complete_name'); ?></th>
-                    <th><?php echo $this->lang->line('cellphone'); ?> </th>
+                    <th><?php echo $this->lang->line('contact_no'); ?> </th>
                     <th><?php echo $this->lang->line('account_type'); ?> </th>
                     <th><?php echo $this->lang->line('action'); ?> </th>
                 </tr>
@@ -62,6 +62,18 @@
         </div>
     </div>
 </div>
+<link rel="stylesheet" type="text/css"
+      href="<?php echo base_url(); ?>vendor/datatables1/responsive/css/responsive.bootstrap4.css"/>
+<link rel="stylesheet" type="text/css"
+      href="<?php echo base_url(); ?>vendor/datatables1/buttons/css/buttons.bootstrap4.css"/>
+<script type="text/javascript"
+        src="<?php echo base_url(); ?>vendor/datatables1/buttons/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript"
+        src="<?php echo base_url(); ?>vendor/datatables1/buttons/js/buttons.bootstrap4.min.js"></script>
+<script type="text/javascript"
+        src="<?php echo base_url(); ?>vendor/datatables1/responsive/js/responsive.bootstrap4.min.js"></script>
+<script type="text/javascript"
+        src="<?php echo base_url(); ?>vendor/datatables1/responsive/js/responsive.dataTables.min.js"></script>
 <script>
     $(document).ready(function () {
         let value = "Mostrar "
@@ -72,6 +84,7 @@
         $("#table_ulist").DataTable({
             responsive: true,
             autoWidth: true,
+            ordering: false,
             "language": {
                 "lengthMenu": value,
                 "zeroRecords":

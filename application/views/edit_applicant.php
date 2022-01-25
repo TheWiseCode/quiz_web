@@ -38,7 +38,9 @@
                                                 $expedidos = $this->lang->line('expedidos');
                                                 $names = $this->lang->line('name_expedidos');
                                                 for ($i = 0; $i < count($expedidos); $i++) {
-                                                    echo "<option value='$expedidos[$i]'>$names[$i]</option>";
+                                                    echo "<option value='$expedidos[$i]' ";
+                                                    if ($result['exp'] == $expedidos[$i]) echo selected;
+                                                    echo ">$names[$i]</option>";
                                                 }
                                                 ?>
                                             </select>
@@ -86,8 +88,7 @@
                                 $status = $this->lang->line('status_civil');
                                 for ($i = 0; $i < count($status); $i++) {
                                     echo "<option value='$status[$i]'";
-                                    if ($result['civil_status'] == $status[$i])
-                                        echo selected;
+                                    if ($result['civil_status'] == $status[$i]) echo selected;
                                     echo ">$status[$i]</option>";
                                 }
                                 ?>
@@ -102,8 +103,7 @@
                                 $genders = $this->lang->line('gender');
                                 foreach ($genders as $it) {
                                     echo "<option value='$it'";
-                                    if ($result['gender'] == $it)
-                                        echo selected;
+                                    if ($result['sexo'] == $it) echo selected;
                                     echo ">$it</option>";
                                 }
                                 ?>
@@ -112,9 +112,8 @@
                         <div class="form-group">
                             <label for="address"
                                    class="font-weight-bold"><?php echo $this->lang->line('address'); ?></label>
-                            <input type="text" name="address" class="form-control" value="<?php
-                            echo $result['address'];
-                            ?>" tabindex="8"
+                            <input type="text" name="address" class="form-control"
+                                   value="<?php echo $result['address']; ?>" tabindex="8"
                                    placeholder="<?php echo $this->lang->line('address'); ?>" autofocus>
                         </div>
                         <div class="form-group">
@@ -123,9 +122,9 @@
                             <select class="form-control" name="nationality" id="nationality" tabindex="9" required>
                                 <?php
                                 foreach ($nationalities as $val) {
-                                    ?>
-                                    <option value="<?php echo $val; ?>"><?php echo $val; ?></option>
-                                    <?php
+                                    echo "<option value='$val' ";
+                                    if ($result['nationality'] == $val) echo selected;
+                                    echo ">$val</option>";
                                 }
                                 ?>
                             </select>
@@ -136,9 +135,11 @@
                             <select class="form-control" name="first_career" id="first_opt_univ_degree">
                                 <?php
                                 foreach ($career_list as $key => $val) {
-                                    ?>
-                                    <option value="<?php echo $val['id']; ?>"><?php echo $val['name']; ?></option>
-                                    <?php
+                                    $id = $val['id'];
+                                    $name = $val['name'];
+                                    echo "<option value='$id' ";
+                                    if ($result['first_opt_univ_degree'] == $id) echo selected;
+                                    echo ">$name</option>";
                                 }
                                 ?>
                             </select>
@@ -149,9 +150,11 @@
                             <select class="form-control" name="second_career" id="second_opt_univ_degree">
                                 <?php
                                 foreach ($career_list as $key => $val) {
-                                    ?>
-                                    <option value="<?php echo $val['id']; ?>"><?php echo $val['name']; ?></option>
-                                    <?php
+                                    $id = $val['id'];
+                                    $name = $val['name'];
+                                    echo "<option value='$id' ";
+                                    if ($result['second_opt_univ_degree'] == $id) echo selected;
+                                    echo ">$name</option>";
                                 }
                                 ?>
                             </select>
@@ -159,9 +162,8 @@
                         <div class="form-group">
                             <label for="contact_no"
                                    class="font-weight-bold"><?php echo $this->lang->line('contact_no'); ?></label>
-                            <input type="text" name="contact_no" class="form-control" value="<?php
-                            echo $result['contact_no'];
-                            ?>" tabindex="12"
+                            <input type="text" name="contact_no" class="form-control"
+                                   value="<?php echo $result['contact_no']; ?>" tabindex="12"
                                    placeholder="<?php echo $this->lang->line('contact_no'); ?>" autofocus required>
                         </div>
                         <div class="form-group">
@@ -169,9 +171,11 @@
                             <select class="form-control" name="gid" id="gid" tabindex="13">
                                 <?php
                                 foreach ($group_list as $key => $val) {
-                                    ?>
-                                    <option value="<?php echo $val['gid']; ?>"><?php echo $val['group_name']; ?></option>
-                                    <?php
+                                    $id = $val['gid'];
+                                    $name = $val['group_name'];
+                                    echo "<option value='$id' ";
+                                    if ($result['gid'] == $id) echo selected;
+                                    echo ">$name</option>";
                                 }
                                 ?>
                             </select>

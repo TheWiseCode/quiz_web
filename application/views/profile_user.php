@@ -1,7 +1,8 @@
 <div class="container">
     <h3 class="font-weight-bold"><?php echo $title; ?></h3>
     <div class="row">
-        <form method="post" action="<?php echo site_url('profile/update_user/' . $uid); ?>" enctype="multipart/form-data">
+        <form method="post" action="<?php echo site_url('profile/update_user/' . $uid); ?>"
+              enctype="multipart/form-data">
             <div class="col-md-8">
                 <div class="login-panel panel panel-default">
                     <div class="panel-body">
@@ -49,12 +50,11 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="address"
-                                   class="font-weight-bold"><?php echo $this->lang->line('address'); ?></label>
-                            <input type="text" name="address" class="form-control" value="<?php
-                            echo $result['address'];
-                            ?>" tabindex="8"
-                                   placeholder="<?php echo $this->lang->line('address'); ?>" autofocus>
+                            <label for="contact_no"
+                                   class="font-weight-bold"><?php echo $this->lang->line('contact_no'); ?></label>
+                            <input type="text" name="contact_no" class="form-control"
+                                   value="<?php echo $result['contact_no']; ?>" tabindex="12"
+                                   placeholder="<?php echo $this->lang->line('contact_no'); ?>" autofocus required>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail"
