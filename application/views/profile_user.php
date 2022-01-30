@@ -3,7 +3,7 @@
     <div class="row">
         <form method="post" action="<?php echo site_url('profile/update_user/' . $uid); ?>"
               enctype="multipart/form-data">
-            <div class="col-md-8">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8">
                 <div class="login-panel panel panel-default">
                     <div class="panel-body">
                         <?php
@@ -11,9 +11,8 @@
                             echo $this->session->flashdata('message');
                         }
                         ?>
-
                         <div class="row">
-                            <div class="col col-md-9">
+                            <div class="col-12 col-sm-12 col-md-9 col-lg-9 order-2 order-sm-2 order-md-0">
                                 <div class="form-group">
                                     <label for="first_name"
                                            class="font-weight-bold"><?php echo $this->lang->line('first_name'); ?></label>
@@ -33,13 +32,13 @@
                                            required>
                                 </div>
                             </div>
-                            <div class="col col-md-3">
+                            <div class="col-12 col-sm-12 col-md-3 col-lg-3 order-0 order-sm-0 order-md-6">
                                 <label for="profile">&ensp;</label>
                                 <div class="form-group">
-                                    <div class="picture-container float-right" id="profile">
+                                    <div class="picture-container float-md-right float-lg-right" id="profile">
                                         <img src="<?php echo base_url($result['photo']) ?>"
                                              class="img-profile rounded rounded-1 border border-dark"
-                                             style="width: 130px; height: 130px"
+                                             style="height: 130px"
                                              id="wizardPicturePreview" title="Imagen de Perfil"
                                              onclick="openLoaderProfile()">
                                         <input type="file" id="wizard_picture" name="wizard_picture"
@@ -66,7 +65,7 @@
                         </div>
                         <div class="form-group">
                             <div class="row">
-                                <div class="col col-md-6">
+                                <div class="col-12 col-sm- 6 col-md-6 col-lg-6 mb-2">
                                     <button class="btn btn-success" tabindex="15" style="width: 100%;"
                                             id="pre_save"
                                             type="submit"><?php echo $this->lang->line('submit'); ?></button>
@@ -74,7 +73,7 @@
                                 <button onclick="" id="submit" type="submit"
                                         class="btn btn-primary" style="display: none">
                                 </button>
-                                <div class="col col-md-6">
+                                <div class="col-12 col-sm- 6 col-md-6 col-lg-6">
                                     <button type="button" class="btn btn-danger" onclick="window.history.back();"
                                             style="width: 100%;">
                                         <?php echo $this->lang->line('cancel'); ?>
@@ -88,32 +87,5 @@
             </div>
         </form>
     </div>
-    <script>
-        var image_loaded = false;
-
-        $(document).ready(function () {
-            $("#wizard_picture").change(function () {
-                readURL(this);
-            });
-            $('#pre_save').on('click', function (e) {
-                e.preventDefault();
-                $('#submit').trigger("click");
-            });
-        });
-
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-
-        function openLoaderProfile() {
-            $('#wizard_picture').click();
-        }
-    </script>
-
+</div>
 

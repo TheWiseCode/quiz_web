@@ -43,6 +43,7 @@ class Result_model extends CI_Model
         $this->db->order_by('rid', 'desc');
         $this->db->join('savsoft_users', 'savsoft_users.uid=savsoft_result.uid');
         $this->db->join('savsoft_quiz', 'savsoft_quiz.quid=savsoft_result.quid');
+        $this->db->join('savsoft_group', 'savsoft_quiz.gids=savsoft_group.gid');
         $query = $this->db->get('savsoft_result');
         return $query->result_array();
 

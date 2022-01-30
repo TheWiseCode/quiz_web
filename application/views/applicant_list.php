@@ -5,26 +5,25 @@
 </style>
 <div class="container">
     <div class="row mb-3">
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-9 col-lg-9">
             <h3 class="font-weight-bold"><?php echo $title; ?></h3>
         </div>
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <div class="float-right" style="padding-bottom: 1%;">
-                <a href="<?php echo site_url('applicant/create'); ?>"
-                   class="btn btn-labeled btn-primary">
+        <div class="col-sm-12 col-md-3 col-lg-3">
+            <a href="<?php echo site_url('applicant/create'); ?>"
+               class="btn btn-labeled btn-primary" style="width: 100%;">
                             <span class="btn-label">
                                 <i class="fa fa-plus"></i>
                             </span><?php echo $this->lang->line('add_applicant'); ?>
-                </a>
-            </div>
+            </a>
         </div>
     </div>
     <div class="row mt-3">
-        <div class="col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <?php if ($this->session->flashdata('message')) {
                 echo $this->session->flashdata('message');
             } ?>
-            <table class="table table-bordered table-responsive-md" id="table_uapplicants">
+            <table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg"
+                   id="table_uapplicants">
                 <thead class="thead-light">
                 <tr>
                     <th>Id</th>
@@ -45,12 +44,10 @@
                         <td><?php echo $val['contact_no']; ?></td>
                         <td><?php echo $val['cod_student']; ?> </td>
                         <td>
-                            <a hidden href="<?php echo site_url(
-                                'user2/view_user/' . $val['uid']
-                            ); ?>"><i class="fa fa-eye" title="View Profile"></i></a>
-                            <a href="<?php echo site_url(
-                                'applicant/edit/' . $val['uid']
-                            ); ?>"><i class="fa fa-edit" style="color:#3472f7;"></i></a>
+                            <a hidden href="<?php echo site_url('user2/view_user/' . $val['uid']); ?>">
+                                <i class="fa fa-eye" title="View Profile"></i></a>
+                            <a href="<?php echo site_url('applicant/edit/' . $val['uid']); ?>">
+                                <i class="fa fa-edit" style="color:#3472f7;"></i></a>
                             <a href="javascript:remove_entry('applicant/remove/<?php echo $val['uid']; ?>',
                             '<?php echo $this->lang->line('warning_remove') ?>');">
                                 <i class="fa fa-trash" style="color:#3472f7;"></i>
@@ -64,19 +61,18 @@
         </div>
     </div>
     <div class="row">
-        <div class="card mt-3 col col-md-12">
+        <div class="card mt-3 col-12 col-sm-12 col-md-12 col-lg-12">
             <div class="card-header font-weight-bold"><?php echo $this->lang->line('import_users'); ?></div>
             <div class="card-body">
-                <form method="post" enctype="multipart/form-data" action="<?php echo site_url(
-                    'user/import'
-                ); ?>">
-                    <div class="row mb-2">
-                        <input type="hidden" name="size" value="3500000">
-                        <div class="col col-md-6">
+                <form method="post" enctype="multipart/form-data"
+                      action="<?php echo site_url('user/import'); ?>">
+                    <input type="hidden" name="size" value="3500000">
+                    <div class="row">
+                        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6">
                             <label for="xslfile"><?php echo $this->lang->line('upload_excel'); ?></label>
                             <input type="file" name="xlsfile" accept=".xls" class="form-control">
                         </div>
-                        <div class="col col-md-6">
+                        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6">
                             <label for="gid"><?php echo $this->lang->line('select_group'); ?>)</label>
                             <select name="gid" required class="form-control">
                                 <option value=""><?php echo $this->lang->line('select_group'); ?></option>
@@ -89,18 +85,15 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <div class="form-group col-12 col-sm-12 col-md-3 col-lg-3">
                             <input type="submit" value="<?php echo $this->lang->line('import') ?>"
                                    class="btn btn-secondary form-control">
                         </div>
-                        <div class="col col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                            <div class="form-control">
-                                <a href="<?php echo base_url(); ?>sample/ejemplo lista de estudiantes.xls"
-                                   target="new"><?php echo $this->lang->line('click_here'); ?></a> <?php echo $this->lang->line('upload_excel_info'); ?>
-                            </div>
+                        <div class="form-group col-12 col-sm-12 col-md-9 col-lg-9">
+                            <a href="<?php echo base_url(); ?>sample/ejemplo lista de estudiantes.xls"
+                               target="new"><?php echo $this->lang->line('click_here'); ?></a> <?php echo $this->lang->line('upload_excel_info'); ?>
                         </div>
                     </div>
-
                 </form>
 
             </div>
@@ -116,8 +109,18 @@
         value += " registros por pagina";
         $("#table_uapplicants").DataTable({
             responsive: true,
-            autoWidth: true,
-            ordering: false,
+            autoWidth: false,
+            columnDefs: [
+                {responsivePriority: 1, targets: 4},
+            ],
+            /*"columns": [
+                { "width": "10%" },
+                { "width": "25%" },
+                { "width": "25%" },
+                { "width": "20%" },
+                { "width": "10%" },
+                { "width": "10%" },
+            ],*/
             "language": {
                 "lengthMenu": value,
                 "zeroRecords":

@@ -3,7 +3,7 @@
     <div class="row">
         <form enctype="multipart/form-data" id="form_new" method="post"
               action="<?php echo site_url('applicant/insert/'); ?>">
-            <div class="col-md-8">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8">
                 <div class="login-panel panel panel-default">
                     <div class="panel-body">
                         <?php
@@ -12,7 +12,7 @@
                         }
                         ?>
                         <div class="row">
-                            <div class="col col-md-9">
+                            <div class="col-12 col-sm-12 col-md-9 col-lg-9 order-2 order-sm-2 order-md-0">
                                 <div class="form-group">
                                     <label for="code_student"
                                            class="font-weight-bold"><?php echo $this->lang->line('cod_cd'); ?></label>
@@ -42,10 +42,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col col-md-3">
+                            <div class="col-12 col-sm-12 col-md-3 col-lg-3 order-0 order-sm-0 order-md-6">
                                 <label for="profile">&ensp;</label>
                                 <div class="form-group">
-                                    <div class="picture-container float-right" id="profile">
+                                    <div class="picture-container float-md-right float-lg-right" id="profile">
                                         <img src="<?php echo base_url() . 'images/profile.jpg' ?>"
                                              class="img-profile rounded rounded-1 border border-dark"
                                              style="width: 130px; height: 130px"
@@ -174,15 +174,15 @@
                         </div>
                         <div class="form-group">
                             <div class="row">
-                                <div class="col col-md-6">
-                                    <button class="btn btn-success" tabindex="15" style="width: 100%;"
-                                            id="pre_save"
+                                <div class="col-12 col-sm- 6 col-md-6 col-lg-6 mb-2">
+                                    <button class="btn btn-success" tabindex="15"
+                                            style="width: 100%;" id="pre_save"
                                             type="submit"><?php echo $this->lang->line('submit'); ?></button>
                                 </div>
                                 <button onclick="" id="submit" type="submit"
                                         class="btn btn-primary" style="display: none">
                                 </button>
-                                <div class="col col-md-6">
+                                <div class="col-12 col-sm- 6 col-md-6 col-lg-6">
                                     <button type="button" class="btn btn-danger" onclick="window.history.back();"
                                             style="width: 100%;">
                                         <?php echo $this->lang->line('cancel'); ?>

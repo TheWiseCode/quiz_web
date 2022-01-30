@@ -37,7 +37,7 @@ class Result extends CI_Controller
         if (in_array('List', $setting_p) || in_array('List_all', $setting_p)) {
 
         } else {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -71,7 +71,7 @@ class Result extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['results']);
         if (!in_array('List_all', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -90,7 +90,7 @@ class Result extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['results']);
         if (!in_array('Remove', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -124,7 +124,7 @@ class Result extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['results']);
         if (!in_array('List_all', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -167,7 +167,7 @@ class Result extends CI_Controller
         if (in_array('List', $setting_p) || in_array('List_all', $setting_p)) {
 
         } else {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -208,7 +208,8 @@ class Result extends CI_Controller
             if ($val == '0') {
                 $val = 1;
             }
-            if ($correct_incorrect[$key] == "1") {
+            $qtime[] = [$this->lang->line('q') . ($key + 1), intval($val)];
+            /*if ($correct_incorrect[$key] == "1") {
                 $qtime[] = array($this->lang->line('q') . " " . ($key + 1) . ") - " . $this->lang->line('correct') . " ", intval($val));
             } else if ($correct_incorrect[$key] == '2') {
                 $qtime[] = array($this->lang->line('q') . " " . ($key + 1) . ") - " . $this->lang->line('incorrect') . "", intval($val));
@@ -216,7 +217,7 @@ class Result extends CI_Controller
                 $qtime[] = array($this->lang->line('q') . " " . ($key + 1) . ") -" . $this->lang->line('unattempted') . " ", intval($val));
             } else if ($correct_incorrect[$key] == '3') {
                 $qtime[] = array($this->lang->line('q') . " " . ($key + 1) . ") - " . $this->lang->line('pending_evaluation') . " ", intval($val));
-            }
+            }*/
         }
         $data['qtime'] = json_encode($qtime);
         $data['percentile'] = $this->result_model->get_percentile($data['result']['quid'], $data['result']['uid'], $data['result']['score_obtained']);

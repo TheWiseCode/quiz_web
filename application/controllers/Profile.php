@@ -168,10 +168,10 @@ class Profile extends CI_Controller
         });
         $data['career_list'] = $this->user_model->get_career_all();
         $data['group_list'] = $this->user_model->group_list();
-
         $this->load->view('header', $data);
         if ($logged_in['su'] != '2') {
             $this->load->view('profile_user', $data);
+            //$this->load->view('camera_test', $data);
         } else {
             $this->load->view('profile_applicant', $data);
         }

@@ -12,7 +12,7 @@
                         }
                         ?>
                         <div class="row">
-                            <div class="col col-md-9">
+                            <div class="col-12 col-sm-12 col-md-9 col-lg-9 order-2 order-sm-2 order-md-0">
                                 <div class="form-group">
                                     <label for="first_name"
                                            class="font-weight-bold"><?php echo $this->lang->line('first_name'); ?></label>
@@ -32,10 +32,10 @@
                                            required>
                                 </div>
                             </div>
-                            <div class="col col-md-3">
+                            <div class="col-12 col-sm-12 col-md-3 col-lg-3 order-0 order-sm-0 order-md-6">
                                 <label for="profile">&ensp;</label>
                                 <div class="form-group">
-                                    <div class="picture-container float-right" id="profile">
+                                    <div class="picture-container float-md-right float-lg-right" id="profile">
                                         <img src="<?php echo base_url($result['photo']) ?>"
                                              class="img-profile rounded rounded-1 border border-dark"
                                              style="width: 130px; height: 130px"
@@ -68,7 +68,7 @@
                                         $id = $val['account_id'];
                                         $name = $val['account_name'];
                                         echo "<option value='$id'";
-                                        if($result['su'] == $id)
+                                        if ($result['su'] == $id)
                                             echo selected;
                                         echo ">$name</option>";
                                     }
@@ -88,15 +88,15 @@
 
                         <div class="form-group">
                             <div class="row">
-                                <div class="col col-md-6">
-                                    <button class="btn btn-success" tabindex="15" style="width: 100%;"
-                                            id="pre_save"
+                                <div class="col-12 col-sm- 6 col-md-6 col-lg-6 mb-2">
+                                    <button class="btn btn-success" tabindex="15"
+                                            style="width: 100%;" id="pre_save"
                                             type="submit"><?php echo $this->lang->line('submit'); ?></button>
                                 </div>
                                 <button onclick="" id="submit" type="submit"
                                         class="btn btn-primary" style="display: none">
                                 </button>
-                                <div class="col col-md-6">
+                                <div class="col-12 col-sm- 6 col-md-6 col-lg-6">
                                     <button type="button" class="btn btn-danger" onclick="window.history.back();"
                                             style="width: 100%;">
                                         <?php echo $this->lang->line('cancel'); ?>
@@ -104,11 +104,8 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
-
             </div>
         </form>
     </div>

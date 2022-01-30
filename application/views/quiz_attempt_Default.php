@@ -5,11 +5,9 @@
         font-size: 14px;
         padding: 4px;
     }
-
     .row {
         margin: 0px;
     }
-
 </style>
 
 
@@ -73,7 +71,7 @@
 
         <div style="float:right;width:150px; margin-right:10px;">
 
-            Time left: <span id='timer'>
+            Tiempo restante: <span id='timer'>
 	<script type="text/javascript">window.onload = CreateTimer("timer", <?php echo $seconds;?>);</script>
 </span>
         </div>
@@ -131,7 +129,7 @@
                        value="<?php echo $quiz['individual_time']; ?>">
 
                 <?php
-                $abc = array(
+                $abc = [
                     '0' => 'A',
                     '1' => 'B',
                     '2' => 'C',
@@ -143,7 +141,7 @@
                     '9' => 'I',
                     '10' => 'J',
                     '11' => 'K'
-                );
+                ];
                 foreach ($questions as $qk => $question) {
                     ?>
 
@@ -152,6 +150,8 @@
                         <div class="question_container">
 
                             <?php
+
+                            echo "<h1>" . $question['qid'] . "</h1>";
                             if (strip_tags($question['paragraph']) != "") {
                                 echo $this->lang->line('paragraph') . "<br>";
                                 echo $question['paragraph'] . "<hr>";
@@ -299,7 +299,7 @@
 
                             // matching
                             if ($question['question_type'] == ('match_the_column')) {
-                                $save_ans = array();
+                                $save_ans = [];
                                 foreach ($saved_answers as $svk => $saved_answer) {
                                     if ($question['qid'] == $saved_answer['qid']) {
                                         // $exp_match=explode('__',$saved_answer['q_option_match']);
@@ -310,14 +310,12 @@
                                 <input type="hidden" name="question_type[]" id="q_type<?php echo $qk; ?>" value="5">
                                 <?php
                                 $i = 0;
-                                $match_1 = array();
-                                $match_2 = array();
+                                $match_1 = [];
+                                $match_2 = [];
                                 foreach ($options as $ok => $option) {
                                     if ($option['qid'] == $question['qid']) {
                                         $match_1[] = $option['q_option'];
                                         $match_2[] = $option['q_option_match'];
-                                        ?>
-                                        <?php
                                         $i += 1;
                                     } else {
                                         $i = 0;
@@ -344,13 +342,12 @@
                                                             ?>
                                                             <option value="<?php echo $mval . '___' . $mval2; ?>" <?php $m1 = $mval . '___' . $mval2;
                                                             if (in_array($m1, $save_ans)) {
-                                                                echo 'selected';
+                                                                echo 'selected ';
                                                             } ?> ><?php echo $mval2; ?></option>
                                                             <?php
                                                         }
                                                         ?>
                                                     </select>
-
                                                 </td>
                                             </tr>
                                             <?php
@@ -473,7 +470,7 @@
     setInterval(increasectime, 1000);
     setInterval(setIndividual_time, 30000);
 
-    function save_show_next_question(nro){
+    function save_show_next_question(nro) {
         javascript:change_question();
         javascript:show_question(nro);
     }

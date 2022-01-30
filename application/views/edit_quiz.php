@@ -1,5 +1,16 @@
-<link href="<?php echo base_url('css/select2.min.css'); ?>" rel="stylesheet"/>
-<script src="<?php echo base_url('js/select2.min.js'); ?>"></script>
+<link rel="stylesheet" type="text/css"
+      href="<?php echo base_url('vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css'); ?>"/>
+
+<script type="text/javascript" src="<?php echo base_url('vendor/moment/js/moment.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('vendor/transition/js/transition.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('vendor/bootstrap/js/bootstrap-collapse.min.js'); ?>"></script>
+<script type="text/javascript"
+        src="<?php echo base_url('vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js'); ?>"></script>
+<style>
+    .my-hidden{
+        display: none;
+    }
+</style>
 <div class="container">
     <?php
     if (!$this->session->flashdata('addquestion')) {
@@ -12,119 +23,114 @@
         <?php
     }
     ?>
-
     <div class="row">
         <form method="post" action="<?php echo site_url('quiz/update_quiz/' . $quiz['quid']); ?>">
-
-            <div class="col-md-12">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <br>
                 <div class="login-panel panel panel-default">
                     <div class="panel-body">
-
                         <?php
                         if ($this->session->flashdata('message')) {
                             echo $this->session->flashdata('message');
                         }
                         ?>
-
                         <?php if ($quiz['with_login'] == 0) { ?>
-
                             <div class="form-group">
-                                <label for="inputEmail"
+                                <label for=""
                                        class="font-weight-bold"><?php echo $this->lang->line('open_quiz_url'); ?></label>
                                 <input type="text" onClick="this.select()"
                                        value="<?php echo site_url('quiz/quiz_detail/' . $quiz['quid'] . '/' . urlencode($quiz['quiz_name'])); ?>"
                                        class="form-control">
                             </div>
-
                             <?php
                         }
                         ?>
-                        <?php
-                        if (!$this->session->flashdata('addquestion')) {
-                            ?>
-                            <div class="form-group">
-                                <label for="inputEmail"
-                                       class="font-weight-bold"><?php echo $this->lang->line('quiz_name'); ?></label>
-                                <input type="text" name="quiz_name" value="<?php echo $quiz['quiz_name']; ?>"
-                                       class="form-control" placeholder="<?php echo $this->lang->line('quiz_name'); ?>"
-                                       required autofocus>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail"
-                                       class="font-weight-bold"><?php echo $this->lang->line('description'); ?></label>
-                                <textarea name="description"
-                                          class="form-control tinymce_textarea"><?php echo $quiz['description']; ?></textarea>
-                            </div>
-                            <a href="#" data-toggle="collapse"
-                               data-target="#advance_options"><?php echo $this->lang->line('advance_options'); ?></a>
-
-                            <?php
-                        }
-                        ?>
-
-
+                        <div class="form-group">
+                            <label for="quiz_name"
+                                   class="font-weight-bold"><?php echo $this->lang->line('quiz_name'); ?></label>
+                            <input type="text" name="quiz_name" value="<?php echo $quiz['quiz_name']; ?>"
+                                   class="form-control" placeholder="<?php echo $this->lang->line('quiz_name'); ?>"
+                                   required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="description"
+                                   class="font-weight-bold"><?php echo $this->lang->line('description'); ?></label>
+                            <textarea name="description"
+                                      class="form-control tinymce_textarea"><?php echo $quiz['description']; ?></textarea>
+                        </div>
+                        <a href="#" data-toggle="collapse"
+                           data-target="#advance_options"><?php echo $this->lang->line('advance_options'); ?></a>
                         <div id="advance_options" class="collapse">
                             <div class="form-group">
-                                <label for="inputEmail"
+                                <label for="start_date"
                                        class="font-weight-bold"><?php echo $this->lang->line('start_date'); ?></label>
-                                <input type="datetime-local" name="start_date"
-                                       value="<?php echo date('Y-m-d H:i:s', $quiz['start_date']); ?>"
-                                       class="form-control" placeholder="<?php echo $this->lang->line('start_date'); ?>"
-                                       required>
+                                <div class="input-group date my_datetime" id="">
+                                    <input type="text" value="<?php echo date('d/m/Y H:i:s', $quiz['start_date']); ?>"
+                                           name="start_date" class="form-control" required/>
+                                    <div class="input-group-addon input-group-append">
+                                        <div class="input-group-text">
+                                            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail"
+                                <label for="end_date"
                                        class="font-weight-bold"><?php echo $this->lang->line('end_date'); ?></label>
-                                <input type="datetime-local" name="end_date"
-                                       value="<?php echo date('Y-m-d H:i:s', $quiz['end_date']); ?>"
-                                       class="form-control" placeholder="<?php echo $this->lang->line('end_date'); ?>"
-                                       required>
+                                <div class="input-group date my_datetime" id="">
+                                    <input type="text" value="<?php echo date('d/m/Y H:i:s', $quiz['end_date']); ?>"
+                                           name="end_date" class="form-control" required/>
+                                    <div class="input-group-addon input-group-append">
+                                        <div class="input-group-text">
+                                            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail"
+                                <label for="duration"
                                        class="font-weight-bold"><?php echo $this->lang->line('duration'); ?></label>
                                 <input type="number" name="duration" value="<?php echo $quiz['duration']; ?>"
                                        class="form-control" placeholder="<?php echo $this->lang->line('duration'); ?>"
                                        required>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail"
+                                <label for="maximum_attempts"
                                        class="font-weight-bold"><?php echo $this->lang->line('maximum_attempts'); ?></label>
                                 <input type="number" name="maximum_attempts"
                                        value="<?php echo $quiz['maximum_attempts']; ?>" class="form-control"
                                        placeholder="<?php echo $this->lang->line('maximum_attempts'); ?>" required>
                             </div>
-                            <div class="form-group">
-                                <label for="inputEmail"
+                            <div class="form-group my-hidden">
+                                <label for="pass_percentage"
                                        class="font-weight-bold"><?php echo $this->lang->line('pass_percentage'); ?></label>
                                 <input type="number" name="pass_percentage"
                                        value="<?php echo $quiz['pass_percentage']; ?>" class="form-control"
                                        placeholder="<?php echo $this->lang->line('pass_percentage'); ?>" required>
                             </div>
-                            <div class="form-group">
-                                <label for="inputEmail"
+                            <div class="form-group my-hidden">
+                                <label for="correct_score"
                                        class="font-weight-bold"><?php echo $this->lang->line('correct_score'); ?></label>
                                 <input type="text" name="correct_score" value="<?php echo $quiz['correct_score']; ?>"
                                        class="form-control"
-                                       placeholder="<?php echo $this->lang->line('correct_score'); ?>" required>
+                                       placeholder="<?php echo $this->lang->line('correct_score'); ?>" >
                             </div>
-                            <div class="form-group">
-                                <label for="inputEmail"
+                            <div class="form-group my-hidden">
+                                <label for="incorrect_score"
                                        class="font-weight-bold"><?php echo $this->lang->line('incorrect_score'); ?></label>
                                 <input type="text" name="incorrect_score"
                                        value="<?php echo $quiz['incorrect_score']; ?>" class="form-control"
-                                       placeholder="<?php echo $this->lang->line('incorrect_score'); ?>" required>
+                                       placeholder="<?php echo $this->lang->line('incorrect_score'); ?>">
                             </div>
-                            <div class="form-group">
-                                <label for="inputEmail"
+                            <div class="form-group my-hidden">
+                                <label for="ip_address"
                                        class="font-weight-bold"><?php echo $this->lang->line('ip_address'); ?></label>
                                 <input type="text" name="ip_address" value="<?php echo $quiz['ip_address']; ?>"
                                        class="form-control"
                                        placeholder="<?php echo $this->lang->line('ip_address'); ?>">
                             </div>
-                            <div class="form-group">
-                                <label for="inputEmail"
+                            <div class="form-group my-hidden">
+                                <label for="view_answer"
                                        class="font-weight-bold"><?php echo $this->lang->line('view_answer'); ?></label>
                                 <br>
                                 <input type="radio" name="view_answer" value="1" <?php if ($quiz['view_answer'] == 1) {
@@ -134,8 +140,8 @@
                                     echo 'checked';
                                 } ?> > <?php echo $this->lang->line('no'); ?>
                             </div>
-                            <div class="form-group">
-                                <label for="inputEmail"
+                            <div class="form-group my-hidden">
+                                <label for="with_login"
                                        class="font-weight-bold"><?php echo $this->lang->line('open_quiz'); ?></label>
                                 <br>
                                 <input type="radio" name="with_login" value="0" <?php if ($quiz['with_login'] == 0) {
@@ -146,8 +152,8 @@
                                 } ?> > <?php echo $this->lang->line('no'); ?>
                             </div>
 
-                            <div class="form-group">
-                                <label for="inputEmail"
+                            <div class="form-group my-hidden">
+                                <label for="show_chart_rank"
                                        class="font-weight-bold"><?php echo $this->lang->line('show_rank'); ?></label>
                                 <br>
                                 <input type="radio" name="show_chart_rank"
@@ -163,7 +169,7 @@
                             <?php
                             if ($this->config->item('webcam') == true) {
                                 ?>
-                                <div class="form-group">
+                                <div class="form-group my-hidden">
                                     <label for="inputEmail"
                                            class="font-weight-bold"><?php echo $this->lang->line('capture_photo'); ?></label>
                                     <br>
@@ -181,19 +187,15 @@
                             } else {
                                 ?>
                                 <input type="hidden" name="camera_req" value="0">
-
                                 <?php
                             }
                             ?>
-
-
                             <div class="form-group">
                                 <label class="font-weight-bold"><?php echo $this->lang->line('assign_to_group'); ?></label>
                                 <br>
                                 <?php
                                 foreach ($group_list as $key => $val) {
                                     ?>
-
                                     <input type="checkbox" name="gids[]"
                                            value="<?php echo $val['gid']; ?>" <?php if (in_array($val['gid'], explode(',', $quiz['gids']))) {
                                         echo 'checked';
@@ -201,29 +203,20 @@
                                     <?php
                                 }
                                 ?>
-
                             </div>
-
-
-                            <div class="form-group">
-
+                            <div class="form-group my-hidden">
                                 <label class="font-weight-bold"><?php echo $this->lang->line('assign_to_student'); ?></label>
                                 <br>
-
-
                                 <select class="js-example-basic-multiple form-control" name="uids[]"
-                                        multiple="multiple" style="width: 400px">
+                                        multiple="multiple" style="width: 100%">
                                     <?php foreach ($user_list as $k => $uval) { ?>
                                         <option value="<?php echo $uval['uid']; ?>" <?php if (in_array($uval['uid'], explode(',', $quiz['uids']))) {
                                             echo 'selected';
                                         } ?>><?php echo $uval['first_name'] . ' ' . $uval['last_name'] . ' (' . $uval['email'] . ')'; ?></option>
                                     <?php } ?>
                                 </select>
-                                <script type="text/javascript">
-                                    $(".js-example-basic-multiple").select2();
-                                </script>
                             </div>
-                            <div class="form-group" hidden>
+                            <div class="form-group my-hidden">
                                 <label class="font-weight-bold"><?php echo $this->lang->line('quiz_template'); ?></label>
                                 <br>
                                 <select name="quiz_template">
@@ -236,24 +229,17 @@
                                         <?php
                                     }
                                     ?>
-
-
                                 </select>
                             </div>
-
-
-                            <div class="form-group" hidden>
-                                <label for="inputEmail"
+                            <div class="form-group my-hidden">
+                                <label for="quiz_price"
                                        class="font-weight-bold"><?php echo $this->lang->line('quiz_price'); ?></label>
                                 <br>
                                 <input type="text" name="quiz_price" value="<?php echo $quiz['quiz_price']; ?>"
                                        class="form-control" placeholder="<?php echo $this->lang->line('quiz_price'); ?>"
                                        required>
-
                             </div>
-
-
-                            <div class="form-group" hidden>
+                            <div class="form-group my-hidden">
                                 <label for="inputEmail"
                                        class="font-weight-bold"><?php echo $this->lang->line('generate_certificate'); ?></label>
                                 <br>
@@ -266,9 +252,8 @@
                                     echo 'checked';
                                 } ?> > <?php echo $this->lang->line('no'); ?>
                             </div>
-
-                            <div class="form-group" hidden>
-                                <label for="inputEmail"
+                            <div class="form-group my-hidden">
+                                <label for="certificate_text"
                                        class="font-weight-bold"><?php echo $this->lang->line('certificate_text'); ?></label>
                                 <textarea name="certificate_text" class="form-control"
                                           style="height:250px;"><?php echo $quiz['certificate_text']; ?></textarea><br>
@@ -276,12 +261,10 @@
                                 <br>
                                 {email}, {first_name}, {last_name}, {quiz_name}, {percentage_obtained},
                                 {score_obtained}, {result}, {generated_date}, {result_id}, {qr_code}
-
                                 <br><br>
                                 <a href="<?php echo site_url('result/preview_certificate/' . $quiz['quid']); ?>"
                                    target="preview_cert"
                                    class="btn btn-warning"><?php echo $this->lang->line('preview'); ?></a>
-
                                 <span style="color:#ff0000"><?php echo $this->lang->line('preview_warning'); ?></span>
                             </div>
                             <hr>
@@ -308,54 +291,46 @@
 
                                 <a href="<?php echo site_url('quiz/add_question/' . $quiz['quid']); ?>"
                                    class="btn btn-secondary"><?php echo $this->lang->line('add_question_into_quiz'); ?></a>
-
-                                <table class="table table-bordered" style="margin-top:10px;">
+                                <table class="table table-bordered" id="table_questions" style="margin-top:10px;">
+                                    <thead class="thead-light">
                                     <tr>
-                                        <th>#</th>
+                                        <th>Nro</th>
                                         <th><?php echo $this->lang->line('question'); ?></th>
                                         <th><?php echo $this->lang->line('question_type'); ?></th>
                                         <th><?php echo $this->lang->line('category_name'); ?></th>
                                         <th><?php echo $this->lang->line('level_name'); ?></th>
-                                        <th> <?php echo $this->lang->line('correct'); ?> </th>
-                                        <th><?php echo $this->lang->line('incorrect'); ?> </th>
-
+                                        <th hidden> <?php echo $this->lang->line('correct'); ?> </th>
+                                        <th hidden><?php echo $this->lang->line('incorrect'); ?> </th>
                                         <th><?php echo $this->lang->line('action'); ?> </th>
                                     </tr>
+                                    </thead>
+                                    <tbody>
                                     <?php
-                                    if (count($questions) == 0) {
-                                        ?>
-                                        <tr>
-                                            <td colspan="6"><?php echo $this->lang->line('no_question_added'); ?></td>
-                                        </tr>
-
-
-                                        <?php
-                                    }
+                                    $n = 1;
                                     foreach ($questions as $key => $val) {
                                         ?>
                                         <tr>
-                                            <td><?php echo $val['qid']; ?></td>
-                                            <td><?php echo substr(strip_tags($val['question']), 0, 50); ?></td>
+                                            <td><?php echo $n++; ?></td>
+                                            <td><?php echo strip_tags($val['question']); ?></td>
                                             <td><?php echo $this->lang->line($val['question_type']); ?></td>
                                             <td><?php echo $val['category_name']; ?></td>
                                             <td><?php echo $val['level_name']; ?></td>
-                                            <td><input type="text" style="width:60px;" name="i_correct[]"
-                                                       value="<?php if (isset($quiz['correct_score'][$key])) {
-                                                           echo explode(',', $quiz['correct_score'])[$key];
-                                                       } else {
-                                                           echo '1';
-                                                       } ?>"></td>
-                                            <td><input type="text" style="width:60px;" name="i_incorrect[]"
-                                                       value="<?php if (isset($quiz['incorrect_score'][$key])) {
-                                                           echo explode(',', $quiz['incorrect_score'])[$key];
-                                                       } else {
-                                                           echo '0';
-                                                       } ?>"></td>
+                                            <td hidden><input type="text" style="width:60px;" name="i_correct[]"
+                                                              value="<?php if (isset($quiz['correct_score'][$key])) {
+                                                                  echo explode(',', $quiz['correct_score'])[$key];
+                                                              } else {
+                                                                  echo '1';
+                                                              } ?>"></td>
+                                            <td hidden><input type="text" style="width:60px;" name="i_incorrect[]"
+                                                              value="<?php if (isset($quiz['incorrect_score'][$key])) {
+                                                                  echo explode(',', $quiz['incorrect_score'])[$key];
+                                                              } else {
+                                                                  echo '0';
+                                                              } ?>"></td>
                                             <td>
-
                                                 <a href="<?php echo site_url('quiz/remove_qid/' . $quiz['quid'] . '/' . $val['qid']); ?>"
-                                                   title="<?php echo $this->lang->line('remove_from_quiz'); ?>"><img
-                                                            src="<?php echo base_url('images/cross.png'); ?>"></a>
+                                                   title="<?php echo $this->lang->line('remove_from_quiz'); ?>">
+                                                    <i class="fa fa-times"></i></a>
                                                 <?php
                                                 if ($key == 0) {
                                                     ?>
@@ -363,20 +338,16 @@
                                                     <?php
                                                 } else {
                                                     ?>
-                                                    <a href="javascript:cancelmove('Up','<?php echo $quiz['quid']; ?>','<?php echo $val['qid']; ?>','<?php echo $key + 1; ?>');"><img
-                                                                src="<?php echo base_url(); ?>images/up.png"
-                                                                title="<?php echo $this->lang->line('up'); ?>"></a>
+                                                    <a href="javascript:cancelmove('Up','<?php echo $quiz['quid']; ?>','<?php echo $val['qid']; ?>','<?php echo $key + 1; ?>');">
+                                                        <i class="fa fa-arrow-up"></i></a>
                                                     <?php
                                                 }
-
                                                 if ($key == (count(explode(',', $quiz['qids'])) - 1)) {
-                                                    ?>
-                                                    <?php
+
                                                 } else {
                                                     ?>
-                                                    <a href="javascript:cancelmove('Down','<?php echo $quiz['quid']; ?>','<?php echo $val['qid']; ?>','<?php echo $key + 1; ?>');"><img
-                                                                src="<?php echo base_url(); ?>images/down.png"
-                                                                title="<?php echo $this->lang->line('down'); ?>"></a>
+                                                    <a href="javascript:cancelmove('Down','<?php echo $quiz['quid']; ?>','<?php echo $val['qid']; ?>','<?php echo $key + 1; ?>');">
+                                                        <i class="fa fa-arrow-down"></i></a>
                                                     <?php
                                                 }
                                                 ?>
@@ -386,13 +357,13 @@
                                         <?php
                                     }
                                     ?>
+                                    </tbody>
                                 </table>
                                 <?php
                             }
                             ?>
                             <?php
                         } else {
-
 
                         if (count($qcl) == 0) {
                             // echo $this->lang->line('no_question_added').'<br><br>';
@@ -412,19 +383,16 @@
                         foreach ($qcl
 
                         as $k => $vall) {
-
                         ?>
-
                         <div class="form-group">
                             <div class="row mb-2">
-                                <div class="col col-md-5">
+                                <div class="col-12 col-sm-12 col-md-5 col-lg-5">
                                     <label for=""><?php echo $this->lang->line('select_category'); ?></label>
                                     <select name="cid[]" class="form-control">
                                         <option value="0"><?php echo $this->lang->line('select_category'); ?></option>
                                         <?php
                                         foreach ($category_list as $key => $val) {
                                             ?>
-
                                             <option value="<?php echo $val['cid']; ?>" <?php if ($val['cid'] == $vall['cid']) {
                                                 echo 'selected';
                                             } ?> ><?php echo $val['category_name']; ?></option>
@@ -433,7 +401,7 @@
                                         ?>
                                     </select>
                                 </div>
-                                <div class="col col-md-4">
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                                     <label for=""><?php echo $this->lang->line('select_level'); ?></label>
                                     <select name="lid[]" class="form-control">
                                         <option value="0"><?php echo $this->lang->line('select_level'); ?></option>
@@ -448,7 +416,7 @@
                                         ?>
                                     </select>
                                 </div>
-                                <div class="col col-md-3">
+                                <div class="col-12 col-sm-12 col-md-3 col-lg-3">
                                     <label for=""><?php echo $this->lang->line('no_questions_added'); ?></label>
                                     <select name="noq[]" class="form-control">
                                         <option value="<?php echo $vall['noq']; ?>"><?php echo $vall['noq']; ?></option>
@@ -456,7 +424,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row my-hidden">
                                 <div class="col col-md-3">
                                     <div class="form-inline">
                                         <?php echo $this->lang->line('correct_score'); ?>&ensp;
@@ -476,33 +444,29 @@
                                 </div>
                             </div>
                             <hr>
-
-
                             <?php
                             }
                             ?>
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col col-md-6">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-2">
                                         <select name="cid[]" id="cid" class="form-control">
                                             <option value="0"><?php echo $this->lang->line('select_category'); ?></option>
                                             <?php
                                             foreach ($category_list as $key => $val) {
                                                 ?>
-
                                                 <option value="<?php echo $val['cid']; ?>"><?php echo $val['category_name']; ?></option>
                                                 <?php
                                             }
                                             ?>
                                         </select>
                                     </div>
-                                    <div class="col col-md-6">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                                         <select name="lid[]" onChange="no_q_available(this.value);"
                                                 class="form-control">
                                             <option value="0"><?php echo $this->lang->line('select_level'); ?></option>
                                             <?php
-                                            foreach ($level_list
-                                                     as $key => $val) {
+                                            foreach ($level_list as $key => $val) {
                                                 ?>
                                                 <option value="<?php echo $val['lid']; ?>"><?php echo $val['level_name']; ?></option>
                                                 <?php
@@ -511,11 +475,10 @@
                                         </select>
                                     </div>
                                 </div>
-
                                 <?php echo $this->lang->line('no_questions_available'); ?>
                                 <span id="no_q_available"></span>
                                 <br>
-                                <div class="row">
+                                <div class="row" hidden>
                                     <div class="col col-md-3">
                                         <div class="form-inline">
                                             <?php echo $this->lang->line('correct_score'); ?>&ensp;
@@ -531,17 +494,10 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-
-
                             <?php
-
                             }
-
                             ?>
-
-
                             <?php
                             if ($this->session->flashdata('addquestion') && $quiz['question_selection'] == '0') {
                                 ?>
@@ -553,7 +509,7 @@
                                 <?php
                             }
                             ?>
-                            <br><br><br>
+                            <br>
                             <?php echo $this->lang->line('open_quiz_warning'); ?>
                         </div>
                     </div>
@@ -569,12 +525,39 @@
 
 <div id="warning_div"
      style="padding:10px; position:fixed;z-index:100;display:none;width:100%;border-radius:5px;height:200px; border:1px solid #dddddd;left:4px;top:70px;background:#ffffff;">
-    <center><b> <?php echo $this->lang->line('to_which_position'); ?></b><br><input type="text" style="width:30px"
-                                                                                    id="qposition" value=""><br><br>
+    <div style="text-align: center;"><b> <?php echo $this->lang->line('to_which_position'); ?></b><br><input type="text"
+                                                                                                             style="width:30px"
+                                                                                                             id="qposition"
+                                                                                                             value=""><br><br>
         <a href="javascript:cancelmove();" class="btn btn-danger"
            style="cursor:pointer;"><?php echo $this->lang->line('cancel'); ?></a> &nbsp; &nbsp; &nbsp; &nbsp;
         <a href="javascript:movequestion();" class="btn btn-info"
            style="cursor:pointer;"><?php echo $this->lang->line('move'); ?></a>
 
-    </center>
+    </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.my_datetime').datetimepicker({
+            "allowInputToggle": true,
+            "showClose": true,
+            "showClear": true,
+            "showTodayButton": true,
+            "format": "DD/MM/YYYY HH:mm:ss",
+        });
+        $(".js-example-basic-multiple").select2();
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#table_questions").DataTable({
+            dom: '<"top"f>rt',
+            responsive: true,
+            autoWidth: false,
+            pageLength: -1,
+            language: {
+                search: "Buscar:"
+            }
+        });
+    });
+</script>

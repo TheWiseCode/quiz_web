@@ -1,26 +1,24 @@
 <div class="container">
-    <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    <div class="row mb-3">
+        <div class="col-sm-12 col-md-9 col-lg-9">
             <h3 class="font-weight-bold"><?php echo $title; ?></h3>
         </div>
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <div class="float-right" style="padding-bottom: 1%;">
-                <a href="<?php echo site_url('user/create'); ?>"
-                   class="btn btn-labeled btn-primary">
+        <div class="col-sm-12 col-md-3 col-lg-3">
+            <a href="<?php echo site_url('user/create'); ?>"
+               class="btn btn-labeled btn-primary" style="width: 100%;">
                             <span class="btn-label">
                                 <i class="fa fa-plus"></i>
                             </span><?php echo $this->lang->line('add_user'); ?>
-                </a>
-            </div>
+            </a>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <br>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <?php if ($this->session->flashdata('message')) {
                 echo $this->session->flashdata('message');
             } ?>
-            <table class="table table-bordered table-responsive-md" id="table_ulist">
+            <table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg"
+                   id="table_ulist">
                 <thead class="thead-light">
                 <tr>
                     <th>Id</th>
@@ -40,14 +38,11 @@
                         <td><?php echo $val['first_name'] . ' ' . $val['last_name']; ?></td>
                         <td><?php echo $val['contact_no']; ?></td>
                         <td><?php foreach ($list_account_type as $key => $val_su) {
-                                if ($val_su['account_id'] == $val['su']) {
-                                    echo $val_su['account_name'];
-                                }
+                                if ($val_su['account_id'] == $val['su']) echo $val_su['account_name'];
                             } ?> </td>
                         <td>
-                            <a href="<?php echo site_url(
-                                'user/edit/' . $val['uid']
-                            ); ?>"><i class="fas fa-edit" style="color:#3472f7;"></i></a>
+                            <a href="<?php echo site_url('user/edit/' . $val['uid']); ?>">
+                                <i class="fas fa-edit" style="color:#3472f7;"></i></a>
                             &ensp;
                             <a href="javascript:remove_entry('user/remove/<?php echo $val['uid']; ?>');">
                                 <i class="fas fa-trash" style="color:#3472f7;"></i>
@@ -62,18 +57,6 @@
         </div>
     </div>
 </div>
-<link rel="stylesheet" type="text/css"
-      href="<?php echo base_url(); ?>vendor/datatables1/responsive/css/responsive.bootstrap4.css"/>
-<link rel="stylesheet" type="text/css"
-      href="<?php echo base_url(); ?>vendor/datatables1/buttons/css/buttons.bootstrap4.css"/>
-<script type="text/javascript"
-        src="<?php echo base_url(); ?>vendor/datatables1/buttons/js/dataTables.buttons.min.js"></script>
-<script type="text/javascript"
-        src="<?php echo base_url(); ?>vendor/datatables1/buttons/js/buttons.bootstrap4.min.js"></script>
-<script type="text/javascript"
-        src="<?php echo base_url(); ?>vendor/datatables1/responsive/js/responsive.bootstrap4.min.js"></script>
-<script type="text/javascript"
-        src="<?php echo base_url(); ?>vendor/datatables1/responsive/js/responsive.dataTables.min.js"></script>
 <script>
     $(document).ready(function () {
         let value = "Mostrar "
@@ -83,8 +66,10 @@
         value += " registros por pagina";
         $("#table_ulist").DataTable({
             responsive: true,
-            autoWidth: true,
-            ordering: false,
+            autoWidth: false,
+            columnDefs: [
+                { responsivePriority: 1, targets: 2 },
+            ],
             "language": {
                 "lengthMenu": value,
                 "zeroRecords":

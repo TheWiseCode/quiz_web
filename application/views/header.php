@@ -7,7 +7,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-
+    <!-- DATATABLES STYLES-->
+    <link rel="stylesheet" type="text/css"
+          href="<?php echo base_url(); ?>vendor/datatables1/responsive/css/responsive.bootstrap4.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="<?php echo base_url(); ?>vendor/datatables1/buttons/css/buttons.bootstrap4.css"/>
+    <link href="<?php echo base_url('css/select2.min.css'); ?>" rel="stylesheet"/>
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/datatables1/datatables.min.css"/>
@@ -110,10 +115,18 @@
     </style>
     <script src="<?php echo base_url(); ?>vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables1/datatables.min.js"></script>
-    <!--<script src="<?php /*echo base_url(); */ ?>vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="<?php /*echo base_url(); */ ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>-->
 
+    <!--DATATABLES SCRIPTS-->
+    <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables1/datatables.min.js"></script>
+    <script type="text/javascript"
+            src="<?php echo base_url(); ?>vendor/datatables1/buttons/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript"
+            src="<?php echo base_url(); ?>vendor/datatables1/buttons/js/buttons.bootstrap4.min.js"></script>
+    <script type="text/javascript"
+            src="<?php echo base_url(); ?>vendor/datatables1/responsive/js/responsive.bootstrap4.min.js"></script>
+    <script type="text/javascript"
+            src="<?php echo base_url(); ?>vendor/datatables1/responsive/js/responsive.dataTables.min.js"></script>
+    <script src="<?php echo base_url('js/select2.min.js'); ?>"></script>
     <!-- Core plugin JavaScript-->
     <script src="<?php echo base_url(); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
 
@@ -417,96 +430,33 @@ $hres = $hquery->result_Array();
                 <?php
             }
             ?>
-
-            <?php
-            if (in_array('All', explode(',', $logged_in['setting'])) && false) {
-                ?>
-                <!-- Nav Item - Pages Collapse Menu -->
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupport"
-                       aria-expanded="true" aria-controls="collapseStudy">
-                        <i class="fas fa-fw fa-question-circle"></i>
-                        <span>Support</span>
-                    </a>
-                    <div id="collapseSupport" class="collapse" aria-labelledby="headingPages"
-                         data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-
-                            <a class="nav-link collapse-item" href="https://savsoftquiz.com/support.php">Support</a>
-                        </div>
-                    </div>
-                </li>
-
-                <?php
-            }
-            ?>
-            <?php
-            if (in_array('All', explode(',', $logged_in['setting'])) && false) {
-                ?>
-
-                <!-- Nav Item - Pages Collapse Menu -->
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLanding"
-                       aria-expanded="true" aria-controls="collapseStudy">
-                        <i class="fas fa-fw fa-puzzle-piece"></i>
-                        <span>Landing Page</span>
-                    </a>
-                    <div id="collapseLanding" class="collapse" aria-labelledby="headingPages"
-                         data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="nav-link collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Menu</a>
-                            <a class="nav-link collapse-item" href="<?php echo site_url('payment_gateway'); ?>">Pages/Post</a>
-                            <a class="nav-link collapse-item"
-                               href="<?php echo site_url('payment_gateway'); ?>">Slider</a>
-                            <a class="nav-link collapse-item"
-                               href="<?php echo site_url('payment_gateway'); ?>">Design</a>
-                        </div>
-                    </div>
-                </li>
-
-
-                <?php
-            }
-            ?>
-
     </ul>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
-
         <!-- Main Content -->
         <div id="content">
-
             <!-- Topbar -->
             <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
                 <!-- Sidebar Toggle (Topbar) -->
                 <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                     <i class="fa fa-bars"></i>
                 </button>
-
-
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
-
-
                     <?php
                     $logged_in = $this->session->userdata('logged_in');
                     // check sg invitation
                     $uid = $logged_in['uid'];
-                    $query = $this->db->query("select * from appointment_request 
-	join savsoft_users on savsoft_users.uid=appointment_request.request_by 
-	 where appointment_request.to_id='$uid' and appointment_request.appointment_status='pending' ");
+                    $sql = "select * from appointment_request join savsoft_users on savsoft_users.uid=appointment_request.request_by where appointment_request.to_id='$uid' and appointment_request.appointment_status='pending'";
+                    $query = $this->db->query($sql);
                     $invitations = $query->result_array();
 
-                    $query = $this->db->query("select * from savsoft_notification 
-	  where (savsoft_notification.uid='$uid' OR savsoft_notification.uid='0') AND (savsoft_notification.viewed='0')  ");
+                    $sql = "select * from savsoft_notification where (savsoft_notification.uid='$uid' OR savsoft_notification.uid='0') AND (savsoft_notification.viewed='0')";
+                    $query = $this->db->query($sql);
                     $notifications = $query->result_array();
-
                     ?>
-
-
                     <!-- Nav Item - Alerts -->
                     <li class="nav-item dropdown no-arrow mx-1">
                         <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
@@ -539,7 +489,6 @@ $hres = $hquery->result_Array();
                                 ?>
                                 <a class="dropdown-item d-flex align-items-center"
                                    href="<?php echo site_url('notification'); ?>">
-
                                     <div>
                                         <div class="small text-gray-500"><?php echo $notification['notification_date']; ?></div>
                                         <span class="font-weight-bold"><?php echo $notification['title']; ?> </span>
@@ -555,35 +504,26 @@ $hres = $hquery->result_Array();
                                 </div></a><?php
                             }
                             ?>
-
                         </div>
                     </li>
-
-
                     <div class="topbar-divider d-none d-sm-block"></div>
-
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-				
-				
-				
+
 				<?php echo $logged_in['first_name'] . ' ' . $logged_in['last_name']; ?> </span>
-                            <!-- <img class="img-profile rounded-circle" src=""> -->
+                             <img class="img-profile rounded-circle" src="<?php echo base_url($logged_in['photo']); ?>">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-
-
                             <a class="dropdown-item"
                                href="<?php echo site_url('profile/'); ?>">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 <?php echo $this->lang->line('myaccount'); ?>
                             </a>
-
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="<?php echo site_url('user/logout'); ?>">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -591,9 +531,7 @@ $hres = $hquery->result_Array();
                             </a>
                         </div>
                     </li>
-
                 </ul>
-
             </nav>
             <!-- End of Topbar -->
 
@@ -624,7 +562,25 @@ $hres = $hquery->result_Array();
                 <?php
                 }
                 ?>
-<?php
-}
-}
-?>
+                <?php
+                }
+                }
+                ?>
+                <script>
+                    $(document).ready(function () {
+                        $("body").toggleClass("sidebar-toggled");
+                        $(".sidebar").toggleClass("toggled");
+                        if ($(".sidebar").hasClass("toggled")) {
+                            $('.sidebar .collapse').collapse('hide');
+                        }
+                        ;
+                    });
+                    $("#sidebarToggle, #sidebarToggleTop").on('click', function (e) {
+                        $("body").toggleClass("sidebar-toggled");
+                        $(".sidebar").toggleClass("toggled");
+                        if ($(".sidebar").hasClass("toggled")) {
+                            $('.sidebar .collapse').collapse('hide');
+                        }
+                        ;
+                    });
+                </script>

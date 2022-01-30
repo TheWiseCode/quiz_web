@@ -7,17 +7,16 @@
     if ($logged_in['su'] == '1') {
         ?>
         <div class="row">
-
             <div class="col-lg-12">
                 <form method="post" action="<?php echo site_url('result/generate_report/'); ?>">
                     <div class=" ">
                         <div><h3 class="font-weight-bold"><?php echo $this->lang->line('generate_report'); ?> </h3>
                         </div>
                         <div class="row mb-2">
-                            <div class="col col-md 6">
+                            <div class="col-12 col-sm-12 col-md 6 col-lg-6">
                                 <label for="quid"
                                        class="font-weight-bold"><?php echo $this->lang->line('select_quiz'); ?></label>
-                                <select name="quid" class="form-control">
+                                <select name="quid" class="form-control" id="sel_quiz">
                                     <option value="0"><?php echo $this->lang->line('all'); ?></option>
                                     <?php
                                     foreach ($quiz_list as $qk => $quiz) {
@@ -28,10 +27,10 @@
                                     ?>
                                 </select>
                             </div>
-                            <div class="col col-md 6">
+                            <div class="col-12 col-sm-12 col-md 6 col-lg-6">
                                 <label for="gid"
                                        class="font-weight-bold"><?php echo $this->lang->line('select_group'); ?></label>
-                                <select name="gid" class="form-control">
+                                <select name="gid" class="form-control" id="sel_group">
                                     <option value="0"><?php echo $this->lang->line('all'); ?></option>
                                     <?php
                                     foreach ($group_list as $gk => $group) {
@@ -43,21 +42,8 @@
                                 </select>
                             </div>
                         </div>
-
-                        <div class="row mb-2">
-                            <div class="col col-md-6">
-                                <label for="date1" class="font-weight-bold"><?php echo "Fecha de inicio"; ?></label>
-                                <input type="date" name="date1" value="" class="form-control"
-                                       placeholder="<?php echo $this->lang->line('date_from'); ?>">
-                            </div>
-                            <div class="col col-md-6">
-                                <label for="date2" class="font-weight-bold"><?php echo "Fecha de fin"; ?></label>
-                                <input type="date" name="date2" value="" class="form-control"
-                                       placeholder="<?php echo $this->lang->line('date_to'); ?>">
-                            </div>
-                        </div>
                         <div class="row">
-                            <div class="col col-md-3">
+                            <div class="col-12 col-sm-12 col-md-3 col-lg-3">
                                 <button class="btn btn-info form-control"
                                         type="submit"><?php echo $this->lang->line('generate_report'); ?></button>
                             </div>
@@ -73,24 +59,8 @@
 
     <hr>
     <h3 class="font-weight-bold"><?php echo $title; ?></h3>
-
     <div class="row">
-        <div class="col-lg-6">
-            <form method="post" action="<?php echo site_url('result/index/'); ?>">
-                <div class="input-group">
-                    <input type="text" class="form-control" name="search"
-                           placeholder="<?php echo $this->lang->line('search'); ?>...">
-                    <span class="input-group-append">
-        <button class="btn btn-default" type="submit"><?php echo $this->lang->line('search'); ?></button>
-      </span>
-                </div><!-- /input-group -->
-            </form>
-        </div><!-- /.col-lg-6 -->
-    </div><!-- /.row -->
-
-
-    <div class="row">
-        <div class="col-md-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <?php
             if ($this->session->flashdata('message')) {
                 echo $this->session->flashdata('message');
@@ -103,50 +73,32 @@
                 <?php
             }
             ?>
-            <table class="table table-bordered">
-                <tr style="background: #3472f7; color: white;">
+            <table class="table table-bordered" id="table_result">
+                <thead class="thead-light">
+                <tr>
                     <th><?php echo $this->lang->line('result_id'); ?></th>
                     <th><?php echo $this->lang->line('first_name') . ' '; ?><?php echo $this->lang->line('last_name'); ?></th>
                     <th><?php echo $this->lang->line('quiz_name'); ?></th>
-                    <th><?php echo $this->lang->line('status'); ?>
-                        <select onChange="sort_result('<?php echo $limit; ?>',this.value);" class="">
-                            <option value="0"><?php echo $this->lang->line('all'); ?></option>
-                            <option value="<?php echo('pass'); ?>" <?php if ($status == ('pass')) {
-                                echo 'selected';
-                            } ?> ><?php echo $this->lang->line('pass'); ?></option>
-                            <option value="<?php echo('fail'); ?>" <?php if ($status == ('fail')) {
-                                echo 'selected';
-                            } ?> ><?php echo $this->lang->line('fail'); ?></option>
-                            <option value="<?php echo('pending'); ?>" <?php if ($status == ('pending')) {
-                                echo 'selected';
-                            } ?> ><?php echo $this->lang->line('pending'); ?></option>
-                        </select>
-                    </th>
+                    <th hidden><?php echo $this->lang->line('status'); ?></th>
+                    <th><?php echo $this->lang->line('group_name'); ?></th>
                     <th><?php echo $this->lang->line('percentage_obtained'); ?></th>
                     <th><?php echo $this->lang->line('action'); ?> </th>
                 </tr>
+                </thead>
+                <tbody>
                 <?php
-                if (count($result) == 0) {
-                    ?>
-                    <tr>
-                        <td colspan="6"><?php echo $this->lang->line('no_record_found'); ?></td>
-                    </tr>
-
-
-                    <?php
-                }
-
                 foreach ($result as $key => $val) {
                     ?>
                     <tr>
                         <td><?php echo $val['rid']; ?></td>
                         <td><?php echo $val['first_name'] . ' '; ?><?php echo $val['last_name']; ?></td>
                         <td><?php echo $val['quiz_name']; ?></td>
-                        <td><?php echo $this->lang->line($val['result_status']); ?></td>
+                        <td hidden><?php echo $this->lang->line($val['result_status']); ?></td>
+                        <td><?php echo $val['group_name']; ?></td>
                         <td><?php echo $val['percentage_obtained']; ?>%</td>
                         <td>
                             <a href="<?php echo site_url('result/view_result/' . $val['rid']); ?>">
-                                <i class="fas fa-eye"  style="color:#3472f7;"></i></a>
+                                <i class="fas fa-eye" style="color:#3472f7;"></i></a>
                             <?php
                             if ($logged_in['su'] == '1') {
                                 ?>
@@ -163,28 +115,11 @@
                     <?php
                 }
                 ?>
+                </tbody>
             </table>
         </div>
 
     </div>
-
-
-    <?php
-    if (($limit - ($this->config->item('number_of_rows'))) >= 0) {
-        $back = $limit - ($this->config->item('number_of_rows'));
-    } else {
-        $back = '0';
-    } ?>
-
-    <a href="<?php echo site_url('result/index/' . $back . '/' . $status); ?>"
-       class="btn btn-primary"><?php echo $this->lang->line('back'); ?></a>
-    &nbsp;&nbsp;
-    <?php
-    $next = $limit + ($this->config->item('number_of_rows')); ?>
-
-    <a href="<?php echo site_url('result/index/' . $next . '/' . $status); ?>"
-       class="btn btn-primary"><?php echo $this->lang->line('next'); ?></a>
-
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <?php
@@ -197,3 +132,78 @@
     ?>
 
 </div>
+<script>
+    var table;
+    $(document).ready(function () {
+        table = $("#table_result").DataTable({
+            "dom":
+                '<"top.row"' +
+                '<"col-md-4"l><"col-md-4"B><"col-md-4"f>' +
+                '<"clear">>' +
+                'rt' +
+                '<"bottom row"' +
+                '<"col-md-6"i><"col-md-6"p>' +
+                '<"clear">>',
+            lengthChange: true,
+            buttons: [
+                {
+                    extend: 'pdfHtml5',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                'colvis'
+            ],
+            responsive: true,
+            autoWidth: false,
+            lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "Todos"]],
+            language: {
+                //"url": 'dataTables.german.json',
+                buttons: {
+                    colvis: "Columnas Visibles",
+                },
+                lengthMenu: "Mostrando _MENU_ registros por pagina",
+                zeroRecords:
+                    "No pudimos encontrar nada, lo siento",
+                info:
+                    "Mostrando pagina _PAGE_ de _PAGES_",
+                infoEmpty:
+                    "Sin registros disponibles",
+                infoFiltered:
+                    "(filtrado de _MAX_ registros totales)",
+                search:
+                    "Buscar:",
+                paginate:
+                    {
+                        next:
+                            "Siguiente",
+                        previous:
+                            "Anterior"
+                    }
+            }
+        });
+        $('#sel_group').change(function(){
+            table.draw();
+        });
+        $('#sel_group').change(function(){
+            table.draw();
+        });
+        $.fn.dataTable.ext.search.push(function (settings, data, dataIndex) {
+            let groupText = $('#sel_group option:selected').text();
+            let quizText = $('#sel_quiz option:selected').text();
+            let group = $('#sel_group').val();
+            let quiz = $('#sel_quiz').val();
+            if(group == 0 && quiz == 0){
+                return true;
+            }
+            let testDt = data[2];
+            let groupDt = data[4];
+            if((quizText == testDt || quiz == 0) && (groupDt == groupText || group == 0)){
+                return true;
+            }
+            return false;
+        });
+    });
+</script>

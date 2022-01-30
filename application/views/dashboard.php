@@ -1,9 +1,7 @@
 <div class="container">
-    <div id="update_notice"></div>
-
     <div class="row">
-        <div class="col-md-4">
-            <div class="card border-left-primary shadow  py-2">
+        <div class="col-sm-12 col-md-4 col-lg-4 mb-2 mb-sm-2">
+            <div class="card border-left-primary shadow py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
@@ -21,10 +19,8 @@
                 </div>
             </div>
         </div>
-
-
-        <div class="col-md-4">
-            <div class="card border-left-success shadow  py-2">
+        <div class="col-sm-12 col-md-4 col-lg-4 mb-2 mb-sm-2">
+            <div class="card border-left-success shadow py-2 ">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
@@ -43,9 +39,8 @@
             </div>
 
         </div>
-
-        <div class="col-md-4">
-            <div class="card border-left-warning shadow  py-2">
+        <div class="col-sm-12 col-md-4 col-lg-4 mb-2 mb-sm-2">
+            <div class="card border-left-warning shadow py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
@@ -62,59 +57,52 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
-
     </div>
-    <div class="row" style="margin-top:20px;">
-        <div class="col-lg-12">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card border-left-success shadow  py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                        <a href="<?php echo site_url('user'); ?>">
-                                            <?php echo $this->lang->line('active_users'); ?>
-                                        </a>
-                                    </div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $active_users; ?></div>
-                                </div>
-                                <div class="col-auto">
-                                    <i class="fas fa-user fa-2x text-gray-300"></i>
-                                </div>
+    <div class="row" id="sec_row">
+        <div class="col-sm-12 col-md-4 col-lg-6 mb-2 mb-sm-2">
+            <div class="card border-left-success shadow py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                <a href="<?php echo site_url('user'); ?>">
+                                    <?php echo $this->lang->line('active_users'); ?>
+                                </a>
                             </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $active_users; ?></div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="card border-left-danger shadow  py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                        <a href="<?php echo site_url('user'); ?>">
-                                            <?php echo $this->lang->line('inactive_users'); ?>
-                                        </a>
-                                    </div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $inactive_users; ?></div>
-                                </div>
-                                <div class="col-auto">
-                                    <i class="fas fa-ban fa-2x text-gray-300"></i>
-                                </div>
-                            </div>
+                        <div class="col-auto">
+                            <i class="fas fa-user fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            <!-- recent users -->
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-6 mb-2 mb-sm-2">
+            <div class="card border-left-danger shadow py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                <a href="<?php echo site_url('user'); ?>">
+                                    <?php echo $this->lang->line('inactive_users'); ?>
+                                </a>
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $inactive_users; ?></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-ban fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-sm-12 col-md-12 col-lg-12">
             <div class="card py-2 mt-2">
-                <div class="card-header" >
+                <div class="card-header">
                     <h6 class="m-0 font-weight-bold text-primary">
                         <?php echo $this->lang->line('recently_registered'); ?>
                     </h6>
@@ -131,20 +119,13 @@
                         </thead>
                         <tbody>
                         <?php
-                        if (count($result) == 0) {
-                            ?>
-                            <tr>
-                                <td colspan="3"><?php echo $this->lang->line('no_record_found'); ?></td>
-                            </tr>
-                            <?php
-                        }
                         foreach ($result as $key => $val) {
                             ?>
                             <tr>
                                 <td>
                                     <a href="<?php echo site_url('user/edit_user/' . $val['uid']); ?>"><?php echo $val['email']; ?><?php echo $val['wp_user']; ?></a>
                                 </td>
-                                <td class="text-xs-right"><?php echo $val['first_name']; ?><?php echo $val['last_name']; ?></td>
+                                <td class="text-xs-right"><?php echo $val['first_name'] . ' ' . $val['last_name']; ?></td>
                                 <td class="text-xs-right"><?php echo $val['group_name']; ?></td>
                                 <td class="text-xs-right"><?php echo $val['contact_no']; ?></td>
                             </tr>
@@ -155,110 +136,9 @@
                     </table>
                 </div>
             </div>
-
-            <!-- recent users -->
-
-        </div>
-        <div class="col-lg-5">
-
-
-            <?php
-            $revenue_months2 = array();
-            foreach ($revenue_months as $fk => $fv) {
-                $revenue_months2[] = floatval($fv);
-            }
-            ?>
-
-            <?php
-
-            $months = $this->lang->line('months');
-            ?>
-
-            <div class="card shadow mb-4" hidden>
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $this->lang->line('revenue'); ?>
-
-                        <?php
-                        $todaymonth = date('M', time());
-                        if (date('m', time()) != 1) {
-                            $mm = date('m', time()) - 1;
-
-                        } else {
-
-                            $mm = date('m', time());
-
-                        }
-                        $pastmonth = $months[$mm - 1];
-                        $cal = number_format(((($revenue_months[$todaymonth] - $revenue_months[$pastmonth]) / $revenue_months[$pastmonth]) * 100), '2', '.', '');
-                        if ($cal < 0) {
-                            ?>
-                            <small class="font-weight-light text-muted" style="font-size:16px;color:#ff0000;"
-                                   title="<?php echo $this->lang->line('growth_lath_month'); ?>">
-                                <?php echo $cal; ?>% <i class="fa fa-arrow-down"></i>
-                            </small>
-                            <?php
-                        } else {
-                            ?>
-                            <small class="font-weight-light text-muted" style="font-size:16px;color:#72B159;"
-                                   title="<?php echo $this->lang->line('growth_lath_month'); ?>">
-                                <?php echo $cal; ?>% <i class="fa fa-arrow-up"></i>
-                            </small>
-                            <?php
-                        }
-                        ?>
-                        <?php echo $this->lang->line('past_days'); ?>
-
-                    </h6>
-
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-
-
-                    <div class="font-size-34"><small
-                                class="font-weight-light text-muted"><?php echo $this->config->item('base_currency_prefix'); ?></small>
-                        <strong><?php echo number_format(array_sum($revenue_months2), 2, '.', ''); ?></strong>
-                        <small class="font-weight-light text-muted"><?php echo $this->lang->line('this_year'); ?> </small>
-                    </div>
-                    <canvas id="myChart" width="340" height="340"></canvas>
-                </div>
-                <script>
-                    var ctx = document.getElementById("myChart");
-                    var myChart = new Chart(ctx, {
-                        type: 'line',
-                        data: {
-                            labels: <?php echo json_encode($months);?>,
-                            datasets: [{
-                                label: '<?php echo $this->lang->line('rev_paid_quiz');?>',
-                                data: <?php echo json_encode($revenue_months2);?>,
-                                backgroundColor:
-                                    'rgba(255, 188, 188, 0.2)',
-                                borderColor:
-                                    'rgba(153, 0, 0, 1)',
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero: true
-                                    }
-                                }]
-                            }
-                        }
-                    });
-                </script>
-
-
-            </div>
-
         </div>
     </div>
-
 </div>
-
 <script>
     $(document).ready(function () {
         let value = "Mostrar "
@@ -268,7 +148,7 @@
         value += " registros por pagina";
         $("#table_dashboard").DataTable({
             responsive: true,
-            autoWidth: true,
+            autoWidth: false,
             "language": {
                 "lengthMenu": value,
                 "zeroRecords":
@@ -291,5 +171,7 @@
             }
         });
     });
-    update_check('5');
+    if ($(window).width() < 514) {
+    } else {
+    }
 </script>

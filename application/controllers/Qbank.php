@@ -29,7 +29,7 @@ class Qbank extends CI_Controller
         $acp = explode(',', $logged_in['questions']);
         if (in_array('List_all', $acp) || in_array('List', $acp)) {
         } else {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -56,7 +56,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Remove', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -98,7 +98,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Add', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -143,7 +143,7 @@ class Qbank extends CI_Controller
             }
         }
 
-        $data['title'] =$this->lang->line('add_new_question');
+        $data['title'] = $this->lang->line('add_new_question');
         $this->load->view('header', $data);
         $this->load->view('pre_new_question', $data);
         $this->load->view('footer', $data);
@@ -154,7 +154,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Add', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -204,7 +204,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Add', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -254,7 +254,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Add', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -304,7 +304,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Add', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -354,7 +354,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Add', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -404,7 +404,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Edit', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -447,7 +447,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Edit', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -490,7 +490,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Edit', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -533,7 +533,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Edit', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -576,7 +576,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['questions']);
         if (!in_array('Edit', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -620,7 +620,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -639,7 +639,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -669,7 +669,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -692,7 +692,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -729,7 +729,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -751,7 +751,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -771,7 +771,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -801,7 +801,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -824,7 +824,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -871,7 +871,7 @@ class Qbank extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['quiz']);
         if (!in_array('Add', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -883,7 +883,7 @@ class Qbank extends CI_Controller
 
         if (isset($_FILES['xlsfile'])) {
             $config['upload_path'] = './xls/';
-            $config['allowed_types'] = 'xls';
+            $config['allowed_types'] = 'xls|xlsx';
             $config['max_size'] = 10000;
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('xlsfile')) {

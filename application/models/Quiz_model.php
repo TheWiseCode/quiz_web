@@ -5,9 +5,6 @@ class Quiz_model extends CI_Model
 
     function quiz_list($limit, $stat = '')
     {
-
-        $logged_in = $this->session->userdata('logged_in');
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['quiz']);
         if (!in_array('List_all', $acp)) {
@@ -29,26 +26,23 @@ class Quiz_model extends CI_Model
             $this->db->or_like('description', $search);
 
         }
-
-        if ($logged_in['uid'] != '1' && $logged_in['inserted_by'] != '0') {
-            $uid = $logged_in['inserted_by'];
-            $this->db->where('savsoft_quiz.inserted_by', $uid);
-        }
         if ($stat == "active") {
-            $where = ' end_date >= "' . time() . '" ';
+            $where = ' savsoft_quiz.end_date >= "' . time() . '" ';
             $this->db->where($where);
         }
         if ($stat == "archived") {
-            $where = ' end_date < "' . time() . '" ';
+            $where = ' savsoft_quiz.end_date < "' . time() . '" ';
             $this->db->where($where);
         }
         if ($stat == "upcoming") {
-            $where = ' start_date >= "' . time() . '" ';
+            $where = ' savsoft_quiz.start_date >= "' . time() . '" ';
             $this->db->where($where);
         }
 
-        $this->db->limit($this->config->item('number_of_rows'), $limit);
-        $this->db->order_by('quid', 'desc');
+        //$this->db->limit($this->config->item('number_of_rows'), $limit);
+        //$this->db->where('savsoft_result.result_status=', 'open');
+        //$this->db->join('savsoft_result', 'savsoft_quiz.quid=savsoft_result.quid', 'right');
+        $this->db->order_by('savsoft_quiz.quid', 'desc');
         $query = $this->db->get('savsoft_quiz');
         return $query->result_array();
 
@@ -84,7 +78,7 @@ class Quiz_model extends CI_Model
 
         if ($logged_in['uid'] != '1' && $logged_in['inserted_by'] != '0') {
             $uid = $logged_in['inserted_by'];
-            $this->db->where('savsoft_quiz.inserted_by', $uid);
+            //$this->db->where('savsoft_quiz.inserted_by', $uid);
         }
         if ($stat == "active") {
             $where = ' end_date >= "' . time() . '" ';
@@ -131,7 +125,7 @@ class Quiz_model extends CI_Model
 
         if ($logged_in['uid'] != '1') {
             $uid = $logged_in['uid'];
-            $this->db->where('savsoft_quiz.inserted_by', $uid);
+            //$this->db->where('savsoft_quiz.inserted_by', $uid);
         }
         $query = $this->db->get('savsoft_quiz');
         return $query->num_rows();
@@ -139,12 +133,13 @@ class Quiz_model extends CI_Model
 
     function insert_quiz()
     {
-
+        $sd = DateTime::createFromFormat('d/m/Y H:i:s', $this->input->post('start_date'));
+        $ed = DateTime::createFromFormat('d/m/Y H:i:s', $this->input->post('end_date'));
         $userdata = array(
             'quiz_name' => $this->input->post('quiz_name'),
             'description' => $this->input->post('description'),
-            'start_date' => strtotime($this->input->post('start_date')),
-            'end_date' => strtotime($this->input->post('end_date')),
+            'start_date' => $sd->getTimestamp(),
+            'end_date' => $ed->getTimestamp(),
             'duration' => $this->input->post('duration'),
             'maximum_attempts' => $this->input->post('maximum_attempts'),
             'pass_percentage' => $this->input->post('pass_percentage'),
@@ -179,12 +174,13 @@ class Quiz_model extends CI_Model
 
     function update_quiz($quid)
     {
-
+        $sd = DateTime::createFromFormat('d/m/Y H:i:s', $this->input->post('start_date'));
+        $ed = DateTime::createFromFormat('d/m/Y H:i:s', $this->input->post('end_date'));
         $userdata = array(
             'quiz_name' => $this->input->post('quiz_name'),
             'description' => $this->input->post('description'),
-            'start_date' => strtotime($this->input->post('start_date')),
-            'end_date' => strtotime($this->input->post('end_date')),
+            'start_date' => $sd->getTimestamp(),
+            'end_date' => $ed->getTimestamp(),
             'duration' => $this->input->post('duration'),
             'maximum_attempts' => $this->input->post('maximum_attempts'),
             'pass_percentage' => $this->input->post('pass_percentage'),
@@ -214,7 +210,6 @@ class Quiz_model extends CI_Model
         $query = $this->db->get('savsoft_quiz', $userdata);
         $quiz = $query->row_array();
         if ($quiz['question_selection'] == '1') {
-
             $this->db->where('quid', $quid);
             $this->db->delete('savsoft_qcl');
             $correct_i = array();
@@ -285,7 +280,6 @@ class Quiz_model extends CI_Model
         $logged_in = $this->session->userdata('logged_in');
         $uid = $logged_in['uid'];
         $this->db->where('uid', $uid);
-        $this->db->where('payment_status', 'Paid');
         $query = $this->db->get('savsoft_payment');
         $result = $query->result_array();
         $pquid = array();
@@ -605,7 +599,7 @@ class Quiz_model extends CI_Model
     function open_result($quid, $uid)
     {
         $result_open = $this->lang->line('open');
-        $query = $this->db->query("select * from savsoft_result  where savsoft_result.result_status='$result_open'  and savsoft_result.uid='$uid'  ");
+        $query = $this->db->query("select * from savsoft_result  where savsoft_result.result_status='open'  and savsoft_result.uid='$uid'  ");
         if ($query->num_rows() >= '1') {
             $result = $query->row_array();
             return $result['rid'];

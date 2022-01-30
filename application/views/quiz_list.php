@@ -2,43 +2,26 @@
     <?php
     $logged_in = $this->session->userdata('logged_in');
     $uid = $logged_in['uid'];
-
     ?>
-    <h3 class="font-weight-bold"><?php echo $title; ?></h3>
+    <div class="row mb-3">
+        <div class="col-sm-12 col-md-9 col-lg-9">
+            <h3 class="font-weight-bold"><?php echo $title; ?></h3>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-3">
+            <a href="<?php echo site_url('quiz/add_new'); ?>"
+               class="btn btn-labeled btn-primary" style="width: 100%;">
+                            <span class="btn-label">
+                                <i class="fa fa-plus"></i>
+                            </span><?php echo $this->lang->line('add_quiz'); ?>
+            </a>
+        </div>
+    </div>
     <?php
     $list_view = "table";
     $acp = explode(',', $logged_in['quiz']);
-    if (in_array('List_all', $acp)) {
-        ?>
-        <div class="row">
-
-            <div class="col-lg-6">
-                <form method="post" action="<?php echo site_url('quiz/index/0/' . $list_view); ?>">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="search"
-                               placeholder="<?php echo $this->lang->line('search'); ?>...">
-                        <span class="input-group-append">
-        <button class="btn btn-default" type="submit"><?php echo $this->lang->line('search'); ?></button>
-      </span>
-                    </div><!-- /input-group -->
-                </form>
-            </div><!-- /.col-lg-6 -->
-            <div class="col-lg-6">
-                <p style="float:right;">
-
-                </p>
-
-            </div>
-        </div><!-- /.row -->
-
-        <?php
-    }
     ?>
     <div class="row">
-
-
-        <div class="col-lg-4">
-
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
             <div class="card mb-4">
                 <div class="card-header" style="<?php if ($stat == 'active') {
                     echo 'background:#eeeeee;';
@@ -52,9 +35,7 @@
             </div>
         </div>
 
-
-        <div class="col-lg-4">
-
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
             <div class="card mb-4">
                 <div class="card-header" style="<?php if ($stat == 'upcoming') {
                     echo 'background:#eeeeee;';
@@ -68,9 +49,7 @@
             </div>
         </div>
 
-
-        <div class="col-lg-4">
-
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
             <div class="card mb-4">
                 <div class="card-header" style="<?php if ($stat == 'archived') {
                     echo 'background:#eeeeee;';
@@ -83,38 +62,28 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 
 
     <div class="row">
-
-        <div class="col-md-12">
-            <br>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <?php
             if ($this->session->flashdata('message')) {
                 echo $this->session->flashdata('message');
             }
             ?>
 
-            <table class="table table-bordered">
-                <tr style="background: #3472f7; color: white;">
-                    <th>#</th>
+            <table class="table table-bordered" id="table_quiz">
+                <thead class="thead-light">
+                <tr>
+                    <th>Id</th>
                     <th><?php echo $this->lang->line('quiz_name'); ?></th>
                     <th><?php echo $this->lang->line('noq'); ?></th>
                     <th><?php echo $this->lang->line('action'); ?> </th>
                 </tr>
+                </thead>
+                <tbody>
                 <?php
-                if (count($result) == 0) {
-                    ?>
-                    <tr>
-                        <td colspan="3"><?php echo $this->lang->line('no_record_found'); ?></td>
-                    </tr>
-
-
-                    <?php
-                }
                 foreach ($result as $key => $val) {
                     ?>
                     <tr>
@@ -124,80 +93,76 @@
                         <td>
                             <?php
                             if ($val['quiz_price'] == 0 || in_array($val['quid'], $purchased_quiz)) {
-                                if ($val['end_date'] >= time()) { ?>
-
+                                if ($val['end_date'] >= time()) {
+                                    ?>
                                     <a href="<?php echo site_url('quiz/quiz_detail/' . $val['quid']); ?>"
                                        class="btn btn-success"><?php echo $this->lang->line('attempt'); ?> </a>
-
                                     <?php
                                 }
-                                if ($val['end_date'] < time()) { ?>
-
+                                if ($val['end_date'] < time()) { ?><<
                                     <a href="#" class="btn btn-warning"><?php echo $this->lang->line('expired'); ?> </a>
-
                                     <?php
                                 }
                                 if ($val['start_date'] > time()) { ?>
-
                                     <a href="#"
                                        class="btn btn-primary"><?php echo $this->lang->line('upcoming'); ?> </a>
-
                                     <?php
                                 }
-
-                            } else {
-                                ?>
-                                <a href="<?php echo site_url('payment_gateway_2/subscribe/0/' . $uid . '/' . $val['quid']); ?>"
-                                   class="btn btn-primary"><?php echo $this->config->item('base_currency_prefix') . ' ' . $val['quiz_price'] . ' ' . $this->config->item('base_currency_sufix') . " " . $this->lang->line('paynow'); ?> </a>
-
-
-                                <?php
                             }
                             ?>
                             <?php
                             $acp = explode(',', $logged_in['quiz']);
-
                             if (in_array('List_all', $acp)) {
                                 ?>
-
                                 <a href="<?php echo site_url('quiz/edit_quiz/' . $val['quid']); ?>">
-                                    <i class="fas fa-edit"  style="color:#3472f7;"></i></a>
+                                    <i class="fas fa-edit" style="color:#3472f7;"></i></a>
                                 <a href="javascript:remove_entry('quiz/remove_quiz/<?php echo $val['quid']; ?>',
                                     '<?php echo $this->lang->line('warning_remove') ?>');">
-                                    <i class="fas fa-trash"  style="color:#3472f7;"></i>
+                                    <i class="fas fa-trash" style="color:#3472f7;"></i>
                                 </a>
                                 <?php
                             }
                             ?>
                         </td>
                     </tr>
-
                     <?php
                 }
                 ?>
+                </tbody>
             </table>
-
-
         </div>
-
     </div>
-    <br><br>
-
-    <?php
-    if (($limit - ($this->config->item('number_of_rows'))) >= 0) {
-        $back = $limit - ($this->config->item('number_of_rows'));
-    } else {
-        $back = '0';
-    } ?>
-
-    <a href="<?php echo site_url('quiz/index/' . $back . '/' . $list_view); ?>"
-       class="btn btn-primary"><?php echo $this->lang->line('back'); ?></a>
-    &nbsp;&nbsp;
-    <?php
-    $next = $limit + ($this->config->item('number_of_rows')); ?>
-
-    <a href="<?php echo site_url('quiz/index/' . $next . '/' . $list_view); ?>"
-       class="btn btn-primary"><?php echo $this->lang->line('next'); ?></a>
-
-
 </div>
+<script>
+    $(document).ready(function () {
+        let value = "Mostrar "
+        value += "<select class='custom-select custom-select-sm form-control form-control-sm'>";
+        value += "<option value='10'>10</option>" + "<option value='25'>25</option>" + "<option value='50'>50</option>" + "<option value='100'>100</option>" + "<option value='-1'>Todos</option>";
+        value += "</select>";
+        value += " registros por pagina";
+        $("#table_quiz").DataTable({
+            responsive: true,
+            autoWidth: false,
+            "language": {
+                "lengthMenu": value,
+                "zeroRecords":
+                    "No pudimos encontrar nada, lo siento",
+                "info":
+                    "Mostrando pagina _PAGE_ de _PAGES_",
+                "infoEmpty":
+                    "Sin registros disponibles",
+                "infoFiltered":
+                    "(filtrado de _MAX_ registros totales)",
+                "search":
+                    "Buscar:",
+                "paginate":
+                    {
+                        "next":
+                            "Siguiente",
+                        "previous":
+                            "Anterior"
+                    }
+            }
+        });
+    });
+</script>

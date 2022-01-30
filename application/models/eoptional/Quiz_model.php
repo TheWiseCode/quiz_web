@@ -5,9 +5,6 @@ class Quiz_model extends CI_Model
 
     function quiz_list($limit)
     {
-
-        $logged_in = $this->session->userdata('logged_in');
-
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['quiz']);
         if (!in_array('List_all', $acp)) {
@@ -16,7 +13,6 @@ class Quiz_model extends CI_Model
             $where = "FIND_IN_SET('" . $gid . "', gids) or FIND_IN_SET('" . $uid . "', uids)";
             $this->db->where($where);
         }
-
         if ($this->input->post('search') && in_array('List_all', $acp)) {
             $search = $this->input->post('search');
             $this->db->or_where('quid', $search);
@@ -24,14 +20,14 @@ class Quiz_model extends CI_Model
             $this->db->or_like('description', $search);
 
         }
-
         if ($logged_in['uid'] != '1' && $logged_in['inserted_by'] != '0') {
             $uid = $logged_in['inserted_by'];
-            $this->db->where('savsoft_quiz.inserted_by', $uid);
+            //$this->db->where('savsoft_quiz.inserted_by', $uid);
         }
-
-        $this->db->limit($this->config->item('number_of_rows'), $limit);
-        $this->db->order_by('quid', 'desc');
+        //$this->db->limit($this->config->item('number_of_rows'), $limit);
+        $this->db->join('savsoft_quiz', 'savsoft_quiz.quid=savsoft_result.quid');
+        $this->db->where('savsoft_result.result_status=', 'open');
+        $this->db->order_by('savsoft_quiz.quid', 'desc');
         $query = $this->db->get('savsoft_quiz');
         return $query->result_array();
 
@@ -218,8 +214,7 @@ class Quiz_model extends CI_Model
              }
         */
 
-        $query = $this->db->query("select * from savsoft_qbank join savsoft_category on savsoft_category.cid=savsoft_qbank.cid join savsoft_level on savsoft_level.lid=savsoft_qbank.lid 
-	 where savsoft_qbank.qid in ($qids) order by FIELD(savsoft_qbank.qid,$qids) 
+        $query = $this->db->query("select * from savsoft_qbank join savsoft_category on savsoft_category.cid=savsoft_qbank.cid join savsoft_level on savsoft_level.lid=savsoft_qbank.lid where savsoft_qbank.qid in ($qids) order by FIELD(savsoft_qbank.qid,$qids) 
 	 ");
         return $query->result_array();
 
@@ -514,7 +509,7 @@ class Quiz_model extends CI_Model
     function open_result($quid, $uid)
     {
         $result_open = $this->lang->line('open');
-        $query = $this->db->query("select * from savsoft_result  where savsoft_result.result_status='$result_open'  and savsoft_result.uid='$uid'  ");
+        $query = $this->db->query("select * from savsoft_result  where savsoft_result.result_status='open'  and savsoft_result.uid='$uid'  ");
         if ($query->num_rows() >= '1') {
             $result = $query->row_array();
             return $result['rid'];
