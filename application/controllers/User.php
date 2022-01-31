@@ -92,8 +92,50 @@ class User extends CI_Controller
             $this->load->view('footer', $data);
             return;
         }
+        
         $this->load->library('form_validation');
         $this->form_validation->set_rules('email', 'Email', 'required|is_unique[savsoft_users.email]');
+        if($this->input->post('password'))
+        {
+
+            if($_POST['password'] != $_POST['repeat_password'])
+            {
+
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                    'Las contraseñas no coinciden' .
+                        ' </div>'
+                );
+                
+                redirect('user/create/');
+            }
+            if(strlen($_POST['password']) < 6  || strlen($_POST['repeat_password']) < 6)
+            {
+                
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                    'Contraseña invalida, ingrese mínimo 6 carateres' .
+                    ' </div>'
+                );
+                
+                redirect('user/create/');
+            }
+            if(!ctype_alnum($_POST['password']) || !ctype_alnum($_POST['repeat_password']) )
+            {
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                    'Contraseña invalida, ingrese solo letras o números' .
+                    ' </div>'
+                );
+                
+                redirect('user/create/');
+            }
+        }
+        $this->form_validation->set_rules('password', 'Password', 'required');
+        $this->form_validation->set_rules('repeat_password', 'Password', 'required');
         if ($this->form_validation->run() == false) {
             $this->session->set_flashdata(
                 'message',
@@ -822,11 +864,7 @@ class User extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['quiz']);
         if (!in_array('Add', $acp)) {
-            $data['title'] = $this->lang->line('permission_denied');
-            $this->load->view('header', $data);
-            $this->load->view('errors/403', $data);
-            $this->load->view('footer', $data);
-            return;
+            exit($this->lang->line('permission_denied'));
         }
 
         $this->load->helper('xlsimport/php-excel-reader/excel_reader2');
@@ -845,7 +883,7 @@ class User extends CI_Controller
                     $error['error'] .
                     ' </div>'
                 );
-                redirect('user');
+                redirect('applicant');
                 exit();
             } else {
                 $data = ['upload_data' => $this->upload->data()];
@@ -915,7 +953,21 @@ class User extends CI_Controller
                     echo $E->getMessage();
                 }
 
-                $this->user_model->import_users($allxlsdata);
+                $list_invalid=$this->user_model->import_users($allxlsdata);
+                
+                if(!empty($list_invalid))
+                {
+                    $message_value_empty = $this->message($list_invalid);
+
+                    $this->session->set_flashdata(
+                        'message',
+                        "<div class='alert alert-danger'>" .
+                        $message_value_empty .
+                        ' </div>'
+                    );
+                    redirect('applicant');
+                }
+
 
             }
         } else {
@@ -927,6 +979,62 @@ class User extends CI_Controller
             $this->lang->line('data_imported_successfully') .
             ' </div>'
         );
-        redirect('user');
+        redirect('applicant');
+    }
+    function message($cadena)
+    {
+        
+        $cad ="";
+        foreach($cadena as $key => $value)
+        {
+            $cad = $cad.' '."Datos incompletos en la fila ";
+            $cad = $cad . $value['index'] .': '. 'Rellene los campos vacios: ';
+            
+            foreach($value['data'] as $key1 => $data)
+            {
+                	
+                switch ($key1) {
+                    case 'email':
+                        $cad = $cad.' '. "Correo, ";
+                        break;
+                    case 'ci':
+                        $cad = $cad.' '."CI, ";
+                        break;
+                    case 'exp':
+                        $cad = $cad.' '."Expedido, ";
+                        break;
+                    case 'first_name':
+                        $cad = $cad.' '."Nombre, ";
+                        break;
+                    case 'last_name':
+                        $cad = $cad.' '."Apellidos, ";
+                        break;
+                    case 'cod_student':
+                        $cad = $cad.' '."Codigo de postulante, ";
+                        break;
+                    case 'first_opt_univ_degree':
+                        $cad = $cad.' '."Primera opción de carrera, ";
+                        break;
+                    case 'second_opt_univ_degree':
+                        $cad = $cad.' '."Segunda opción de carrera, ";
+                        break;
+                    case 'contact_no':
+                        $cad = $cad.' '."Celular, ";
+                        break;
+                    case 'code_first': 
+                            $cad = $cad.' '."Código de  primera carrera, ";
+                        break;
+                    case 'code_second':
+                            $cad = $cad.' '."Código de  segunda carrera, ";
+                        break;
+                    
+                }
+
+            }
+            $cad = $cad. '<br>';
+            
+        }
+        
+        return  $cad;
     }
 }

@@ -65,6 +65,24 @@
                                    placeholder="<?php echo $this->lang->line('email_address'); ?>" required autofocus>
                         </div>
                         <div class="form-group">
+                            <label for="inputEmail" class="font-weight-bold">
+                                    <?php echo $this->lang->line('old_password'); ?></label>
+                                <input type="password" id="inputPassword" name="old_password" class="form-control"
+                                       placeholder="<?php echo $this->lang->line('old_password'); ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="font-weight-bold">
+                                    <?php echo $this->lang->line('new_password'); ?></label>
+                                <input type="password" id="inputPassword" name="new_password" class="form-control"
+                                       placeholder="<?php echo $this->lang->line('new_password'); ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="font-weight-bold">
+                                   <?php echo $this->lang->line('repeat_password'); ?></label>
+                                <input type="password" id="inputPassword" name="new_repeat_password" class="form-control"
+                                       placeholder="<?php echo $this->lang->line('repeat_password'); ?>">
+                        </div>
+                        <div class="form-group">
                             <div class="row">
                                 <div class="col col-md-6">
                                     <button class="btn btn-success" tabindex="15" style="width: 100%;"

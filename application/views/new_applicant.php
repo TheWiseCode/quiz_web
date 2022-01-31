@@ -12,12 +12,13 @@
                         }
                         ?>
                         <div class="row">
-                            <div class="col col-md-9">
+                            <div class="col col-md-7">
                                 <div class="form-group">
                                     <label for="code_student"
                                            class="font-weight-bold"><?php echo $this->lang->line('cod_cd'); ?></label>
-                                    <input type="text" name="code_student" class="form-control"
-                                           value="<?php echo $code_student; ?>" tabindex="1"
+                                    <input type="text" name="code_student" class="form-control" value="<?php
+                                    echo $code_student;
+                                    ?>" tabindex="1"
                                            placeholder="<?php echo $this->lang->line('cod_cd'); ?>" autofocus required>
                                 </div>
                                 <div class="form-group">
@@ -25,7 +26,7 @@
                                            class="font-weight-bold"><?php echo $this->lang->line('ci'); ?></label>
                                     <div class="row" id="civ_div1">
                                         <div class="input-group col col-md-12" id="ci_div">
-                                            <input type="text" name="ci" class="form-control"
+                                            <input type="text" name="ci" class="form-control" 
                                                    value="<?php echo $ci; ?>" tabindex="2"
                                                    placeholder="<?php echo $this->lang->line('ci'); ?>"
                                                    autofocus required>
@@ -39,21 +40,55 @@
                                                 ?>
                                             </select>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="col col-md-3">
-                                <label for="profile">&ensp;</label>
-                                <div class="form-group">
-                                    <div class="picture-container float-right" id="profile">
-                                        <img src="<?php echo base_url() . 'images/profile.jpg' ?>"
-                                             class="img-profile rounded rounded-1 border border-dark"
-                                             style="width: 130px; height: 130px"
-                                             id="wizardPicturePreview" title="Imagen de Perfil"
-                                             onclick="openLoaderProfile()">
-                                        <input type="file" id="wizard_picture" name="wizard_picture"
-                                               accept="image/*" hidden>
+                            <div class="col col-md-5">
+                                <label for="biometric_data"
+                                       class="font-weight-bold"><br></label>
+                                <div class="row rounded" id="biometric_data">
+                                    <div class="col col-md-6">
+                                        <div class="picture-container float-right" id="profile">
+                                            <img src="<?php echo base_url('images/profile.jpg') ?>"
+                                                 class="img-profile rounded rounded-1 border border-dark"
+                                                 style="width: 120px; height: 120px;"
+                                                 id="wizardPicturePreview" title="Imagen de Perfil"
+                                                 onclick="openLoaderProfile()">
+                                            <input type="file" id="wizard_picture" name="wizard_picture"
+                                                   accept="image/*" hidden>
+                                        </div>
                                     </div>
+                                    <?php if ($setting_fingerprint['setting_value'] == '1') { ?>
+                                        <div class="col col-md-6">
+                                        <div class="font-weight-bold">
+                                            <div class="fingerprint">
+                                                <a href="#" id="huella" onclick="launchBiometricReader()">
+                                                    <img src="<?php echo base_url('images/huella.png') ?>"
+                                                         class="img-fluid border border-dark rounded rounded-1"
+                                                         title="Huella"
+                                                         style="width: 120px; height: 120px;">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php }else {?>
+                                        <div class="col col-md-6">
+                                        <div class="font-weight-bold">
+                                            <div class="fingerprint">
+                                                <a href="#" id="huella" onclick="enablelaunchBiometricReader()">
+                                                    <img src="<?php echo base_url('images/huella.png') ?>"
+                                                         class="img-fluid border border-dark rounded rounded-1"
+                                                         title="Huella"
+                                                         style="width: 120px; height: 120px;">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php
+                                    }
+                                    ?>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -226,4 +261,35 @@
     function openLoaderProfile() {
         $('#wizard_picture').click();
     }
+    function launchBiometricReader() {
+        let code = document.getElementsByName("code_student")[0].value;
+        let uid = '<?php echo $uid?>';
+        if (code === undefined || code === '') {
+            alert('Registre el codigo de postulante');
+        } else {
+            let url = '<?php echo site_url('applicant/exist_cod_cd/');?>' + code;
+            $.ajax({
+                type: 'GET',
+                url: url,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (data) {
+                    data = jQuery.parseJSON(data);
+                    if(data['status'] == 'not_found'){
+                        window.open('testus:' + code + ',' + uid + ',' + '1');
+                    }else{
+                        alert('Ya existen huellas registradas al codigo cd: ' + code);
+                    }
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        }
+    }
+    function enablelaunchBiometricReader(){
+        alert('Huella no habilitada');
+    }
+
 </script>

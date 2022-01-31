@@ -817,6 +817,10 @@ class User_model extends CI_Model
             'address' => $this->input->post('address'),
             'nationality' => $this->input->post('nationality'),
         ];
+        if($this->input->post('new_password'))
+        {
+            $userdata['password'] = md5($this->input->post('new_password'));
+        }
         if($photo){
             $userdata['photo'] = $photo;
         }
@@ -851,7 +855,12 @@ class User_model extends CI_Model
             'last_name' => $this->input->post('last_name'),
             'email' => $this->input->post('email'),
             'contact_no' => $this->input->post('contact_no'),
+            
         ];
+        if($this->input->post('new_password'))
+        {
+            $userdata['password'] = md5($this->input->post('new_password'));
+        }
         if ($photo) {
             $userdata['photo'] = $photo;
         }
@@ -1011,58 +1020,8 @@ class User_model extends CI_Model
         return $gr['date_end'];
     }
 
-    function add_students($data)
-    {
-        return $this->db->insert('students', $data);
-    }
-
-    function import_users($user)
-    {
-        $usercid = $this->input->post('gid');
-
-
-        foreach ($user as $key => $singleuser) {
-
-            if ($key != 0) {
-                $cod_student = $singleuser['0'];
-                $ci = $singleuser['1'];
-                $exp = $singleuser['2'];
-                $name = $singleuser['3'];
-                $last_name = $singleuser['4'];
-                $firts_opt = $singleuser['5'];
-                $second_opt = $singleuser['6'];
-                $email = $singleuser['7'];
-                $phone = $singleuser['8'];
-
-                $insert_data = [
-                    'cod_student' => $cod_student,
-                    'exp' => $exp,
-                    'first_name' => $name,
-                    'last_name' => $last_name,
-                    'first_opt_univ_degree' => $firts_opt,
-                    'second_opt_univ_degree' => $second_opt,
-                    'email' => $email,
-                    'contact_no' => $phone,
-                    'ci' => $ci,
-                    'gid' => $usercid,
-                    'su' => 2,
-                    'password' => md5($ci . $exp),
-                    'photo' => 'photo/users/photo.jpeg',
-
-                ];
-
-
-                foreach ($insert_data as $value) {
-                    if ($value == '') {
-                        $insert_data = [];
-                    }
-                }
-                if ($insert_data != '') {
-                    $info = $this->db->insert('savsoft_users', $insert_data);
-                }
-            }
-        }
-    }
+    
+    
 
     function submit_photo($uid, $data_photo)
     {
@@ -1086,6 +1045,192 @@ class User_model extends CI_Model
 
 
     }
+    function add_students($data)
+    {
+        return $this->db->insert('students', $data);
+    }
+    function get_id_code_career($cod_career)
+    {
+
+        $this->db->where('university_careers.code_career', $cod_career);
+        $query = $this->db->get('university_careers');
+        return $query->row_array();
+    }
+    function add_career ($data)
+    {
+        $this->db->insert('university_careers', $data);
+        return  $this->db->insert_id();
+       
+      
+    }
+    function import_users($user)
+    {
+        $index=1;
+        $is_vacio_value = false;
+        $list_invalid=[];
+        $usercid = $this->input->post('gid');
+        $date_first;
+        $date_second;
+        //$prim = trim($singleuser['6']);
+
+        foreach ($user as $key => $singleuser) {
+            
+
+            if ($key != 0) {
+                	
+                $index = $index + 1;
+                	
+                $cod_student = trim($singleuser['0']);
+                $ci = trim($singleuser['1']);
+                $exp = trim($singleuser['2']);
+                $name = trim($singleuser['3']);
+                $last_name = trim($singleuser['4']);
+                $firts_opt = trim($singleuser['5']);
+                $code_first = trim($singleuser['6']);
+                $second_opt = trim($singleuser['7']);
+                $code_second = trim($singleuser['8']);
+                $email = trim($singleuser['9']);
+                $phone = trim($singleuser['10']);
+                
+                if($code_first != "" && $code_second != "" && $firts_opt != "" && $second_opt != "" )
+                {
+                    $id_first_career = $this->get_id_code_career($code_first);	
+                    $id_second_career = $this->get_id_code_career($code_second);
+                    
+                    if($id_first_career == [])
+                    {
+                        $data_career1 = [
+                            'name' => $firts_opt,
+                            'code_career' => $code_first,
+                        ];
+                        $firts_opt = $this->add_career($data_career1);
+                        //$firts_opt = $date_first['id'];
+                    }
+                    else{
+                        $firts_opt = $id_first_career['id'];
+                    
+                    }
+                    if($id_second_career == [])
+                    {
+                        
+                        $data_career2 = [
+                            'name' => $second_opt,
+                            'code_career' => $code_second,
+                        ];
+                        $second_opt = $this->add_career($data_career2);
+                        
+                        //$second_opt = $date_second['id'];
+                        
+                    }
+                    else{
+                        $second_opt = $id_second_career['id'];
+                    }
+                }else{
+                    $is_vacio_value = true;
+                }
+
+
+                $insert_data = [
+                    'cod_student' => $cod_student,
+                    'exp' => $exp,
+                    'first_name' => $name,
+                    'last_name' => $last_name,
+                    'first_opt_univ_degree' => $firts_opt,
+                    'second_opt_univ_degree' => $second_opt,
+                    'email' => $email,
+                    'contact_no' => $phone,
+                    'ci' => $ci,
+                    'gid' => $usercid,
+                    'su' => 2,
+                    'password' => md5($ci . $exp),
+                    'photo' => 'photo/users/photo.jpeg',
+
+                ];
+                
+
+
+                foreach ($insert_data as $value) {
+                    if ($value == '') {
+                        $is_vacio_value = true;
+                    }
+                }
+
+                if($is_vacio_value)
+                {
+                    $data_empty = $this->data_empty($insert_data,$code_first,$code_second);
+                    $date_invalid = [
+                        'index' => $index,
+                        'data' => $data_empty,
+                    ];
+                    if(!$this->is_all_empty($insert_data,$code_first,$code_second))
+                    {	
+                        array_push($list_invalid, $date_invalid);
+                    }
+
+                }
+                if (!$is_vacio_value) {
+                    $query= 'SELECT savsoft_users.cod_student 
+                    FROM savsoft_users
+                    WHERE cod_student ='. $insert_data['cod_student'];
+                    $resultados = $this->db->query($query);
+                    $date= $resultados->row_array();
+                    
+                    if($date == "")
+                    {
+                        $info = $this->db->insert('savsoft_users', $insert_data);
+                        
+                    }
+                }
+                
+            }
+            $is_vacio_value = false;
+        }
+        return $list_invalid;
+    }
+    function is_all_empty($cad,$code_first,$code_second)
+    {
+
+        foreach ($cad as $key => $value) {
+            if($key != 'gid' && $key != 'su' && $key != 'password' && $key != 'photo')
+            {
+                if(!empty($value))
+                {
+                    return false;
+                }
+            }
+        }
+        if($code_first != "")
+        {
+            return false;
+        }
+        if($code_second != "")
+        {
+            return false;
+        }
+
+        return true;
+    }
+    function data_empty($cad,$code_first,$code_second)
+    {
+        $cad_whit_empty=[];
+        foreach ($cad as $key => $value) {
+            if(empty($value)){
+                $cad_whit_empty += [$key => $value];
+            }
+        }
+        if($code_first == "")
+        {
+            $cad_whit_empty += ['code_first' => ""];
+        }
+        if($code_second == "")
+        {
+            $cad_whit_empty += ['code_second' => ""];
+        }
+        
+
+        return  $cad_whit_empty;
+    }
+   
 
     function cargar_archivo($with_code = false)
     {

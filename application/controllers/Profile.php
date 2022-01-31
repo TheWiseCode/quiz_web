@@ -36,6 +36,60 @@ class Profile extends CI_Controller
         $rules = 0;
         $this->load->library('form_validation');
         $udata = $this->user_model->get_user($uid);
+        $old_password= $udata['password'];
+
+        if($this->input->post('old_password') && $this->input->post('new_password') && $this->input->post('new_repeat_password') )
+        {
+            if($old_password == md5($_POST['old_password']))
+            {
+                if($_POST['new_password'] != $_POST['new_repeat_password'])
+                {
+
+                    $this->session->set_flashdata(
+                        'message',
+                        "<div class='alert alert-danger'>" .
+                        'Las contraseñas no coinciden' .
+                        ' </div>'
+                    );
+                    
+                    redirect('profile/');
+                }
+                if(strlen($_POST['new_password']) < 6  || strlen($_POST['new_repeat_password']) < 6)
+                {
+                
+                    $this->session->set_flashdata(
+                        'message',
+                        "<div class='alert alert-danger'>" .
+                        'Contraseña invalida, ingrese mínimo 6 carateres' .
+                        ' </div>'
+                    );
+                    redirect('profile/');
+                }
+                if(!ctype_alnum($_POST['new_password']) || !ctype_alnum($_POST['new_repeat_password']) )
+                {
+                    $this->session->set_flashdata(
+                        'message',
+                        "<div class='alert alert-danger'>" .
+                        'Contraseña invalida, ingrese solo letras o números' .
+                        ' </div>'
+                    );
+                    redirect('profile/');
+                }
+            }
+            else{
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                    'Contraseña invalida, ingrese correctamente su antigua contraseña' .
+                    ' </div>'
+                );
+                redirect('profile/');
+                
+            }
+        }
+        //exit();
+        $this->form_validation->set_rules('newpassword', 'Password', 'required');
+        $this->form_validation->set_rules('new_repeat_password', 'Password', 'required');
         if ($udata['email'] != $this->input->post('email')) {
             $rules = 1;
             $this->form_validation->set_rules('email', 'Email', 'required|is_unique[savsoft_users.email]');
@@ -81,8 +135,66 @@ class Profile extends CI_Controller
             return;
         }
         $rules = 0;
+        
+        
+        
+        
         $this->load->library('form_validation');
         $udata = $this->user_model->get_user($uid);
+        $old_password= $udata['password'];
+
+        if($this->input->post('old_password') && $this->input->post('new_password') && $this->input->post('new_repeat_password') )
+        {
+            if($old_password == md5($_POST['old_password']))
+            {
+                if($_POST['new_password'] != $_POST['new_repeat_password'])
+                {
+
+                    $this->session->set_flashdata(
+                        'message',
+                        "<div class='alert alert-danger'>" .
+                        'Las contraseñas no coinciden' .
+                        ' </div>'
+                    );
+                    
+                    redirect('profile/');
+                }
+                if(strlen($_POST['new_password']) < 6  || strlen($_POST['new_repeat_password']) < 6)
+                {
+                
+                    $this->session->set_flashdata(
+                        'message',
+                        "<div class='alert alert-danger'>" .
+                        'Contraseña invalida, ingrese mínimo 6 carateres' .
+                        ' </div>'
+                    );
+                    redirect('profile/');
+                }
+                if(!ctype_alnum($_POST['new_password']) || !ctype_alnum($_POST['new_repeat_password']) )
+                {
+                    $this->session->set_flashdata(
+                        'message',
+                        "<div class='alert alert-danger'>" .
+                        'Contraseña invalida, ingrese solo letras o números' .
+                        ' </div>'
+                    );
+                    redirect('profile/');
+                }
+            }
+            else{
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                    'Contraseña invalida, ingrese correctamente su antigua contraseña' .
+                    ' </div>'
+                );
+                redirect('profile/');
+                
+            }
+        }
+        
+        $this->form_validation->set_rules('newpassword', 'Password', 'required');
+        $this->form_validation->set_rules('new_repeat_password', 'Password', 'required');
         if ($udata['email'] != $this->input->post('email')) {
             $rules = 1;
             $this->form_validation->set_rules('email', 'Email', 'required|is_unique[savsoft_users.email]');
@@ -157,6 +269,7 @@ class Profile extends CI_Controller
         $data['title'] = $this->lang->line('my_account');
         // fetching user
         $data['result'] = $this->user_model->get_user($uid);
+        
         $data['custom_form_user'] = $this->user_model->custom_form_user($uid);
         $data['custom_form'] = $this->user_model->custom_form('All');
         // fetching group list

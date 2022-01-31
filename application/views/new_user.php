@@ -81,6 +81,18 @@
                                    placeholder="<?php echo $this->lang->line('email_address'); ?>" required autofocus>
                         </div>
                         <div class="form-group">
+                        <label for="inputEmail" class="font-weight-bold">
+                                <?php echo $this->lang->line('password'); ?></label>
+                            <input type="password" id="inputPassword" name="password" class="form-control"
+                                   placeholder="<?php echo $this->lang->line('password'); ?>" required>
+                        </div>
+                        <div class="form-group">
+                        <label for="inputEmail" class="font-weight-bold">
+                                <?php echo $this->lang->line('repeat_password'); ?></label>
+                            <input type="password" id="inputPassword" name="repeat_password" class="form-control"
+                                   placeholder="<?php echo $this->lang->line('repeat_password'); ?>" required>
+                        </div>
+                        <div class="form-group">
                             <div class="row">
                                 <div class="col col-md-6">
                                     <button class="btn btn-success" tabindex="15" style="width: 100%;"

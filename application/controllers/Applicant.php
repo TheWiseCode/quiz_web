@@ -50,6 +50,7 @@ class Applicant extends CI_Controller
         $data['title'] = $this->lang->line('applicant_list');
         // fetching user list
         $data['result'] = $this->user_model->applicant_list($limit);
+        	
         $data['career_list'] = $this->user_model->get_career_all();
         $data['group_list'] = $this->user_model->get_group_all($limit);
         $this->load->view('header', $data);
@@ -77,6 +78,10 @@ class Applicant extends CI_Controller
             $data['career_list'] = $this->user_model->get_career_all();
             $data['account_type'] = $this->account_model->account_list(0);
             $data['nationalities'] = $this->lang->line('nationalities');
+            $query = $this->db->query(" select * from savsoftquiz_setting where setting_name='Fingerprint_on'");
+            $result = $query->result_Array();
+
+            $data['setting_fingerprint'] = $result['0']['setting_value'];
             usort($data['nationalities'], function ($it1, $it2) {
                 return $it1 > $it2;
             });

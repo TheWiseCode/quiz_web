@@ -156,8 +156,8 @@
                         <div class="form-group">
                             <label for="contact_no"
                                    class="font-weight-bold"><?php echo $this->lang->line('contact_no'); ?></label>
-                            <input type="text" name="contact_no" class="form-control"
-                                   value="<?php echo $result['contact_no']; ?>" tabindex="12"
+                            <input type="text" name="contact_no" class="form-control" 
+                                   value="<?php echo $result['contact_no']; ?>" tabindex="12" readonly=""
                                    placeholder="<?php echo $this->lang->line('contact_no'); ?>" autofocus required>
                         </div>
                         <div class="form-group">
@@ -172,17 +172,37 @@
                                 ?>
                             </select>
                         </div>
+                        
                         <div class="form-group">
                             <label for="inputEmail"
                                    class="font-weight-bold"><?php echo $this->lang->line('email_address'); ?></label>
-                            <input type="email" id="inputEmail" name="email" class="form-control"
-                                   value="<?php echo $result['email']; ?>" tabindex="14"
+                            <input type="email" id="inputEmail" name="email" class="form-control" 
+                                   value="<?php echo $result['email']; ?>" tabindex="14" readonly=""
                                    placeholder="<?php echo $this->lang->line('email_address'); ?>" required autofocus>
+                    
+                        <div class="form-group">
+                            <label for="inputEmail" class="font-weight-bold">
+                                    <?php echo $this->lang->line('old_password'); ?></label>
+                                <input type="password" id="inputPassword" tabindex="15" name="old_password" class="form-control"
+                                       placeholder="<?php echo $this->lang->line('old_password'); ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="font-weight-bold">
+                                    <?php echo $this->lang->line('new_password'); ?></label>
+                                <input type="password" id="inputPassword"tabindex="16" name="new_password" class="form-control"
+                                       placeholder="<?php echo $this->lang->line('new_password'); ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="font-weight-bold">
+                                   <?php echo $this->lang->line('repeat_password'); ?></label>
+                                <input type="password" id="inputPassword" tabindex="17" name="new_repeat_password" class="form-control"
+                                       placeholder="<?php echo $this->lang->line('repeat_password'); ?>">
+                        </div>
                         </div>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col col-md-6">
-                                    <button class="btn btn-success" tabindex="15" style="width: 100%;"
+                                    <button class="btn btn-success" tabindex="18" style="width: 100%;"
                                             id="pre_save"
                                             type="submit"><?php echo $this->lang->line('submit'); ?></button>
                                 </div>

@@ -14,20 +14,7 @@
                         <div><h3 class="font-weight-bold"><?php echo $this->lang->line('generate_report'); ?> </h3>
                         </div>
                         <div class="row mb-2">
-                            <div class="col col-md 6">
-                                <label for="quid"
-                                       class="font-weight-bold"><?php echo $this->lang->line('select_quiz'); ?></label>
-                                <select name="quid" class="form-control">
-                                    <option value="0"><?php echo $this->lang->line('all'); ?></option>
-                                    <?php
-                                    foreach ($quiz_list as $qk => $quiz) {
-                                        ?>
-                                        <option value="<?php echo $quiz['quid']; ?>"><?php echo $quiz['quiz_name']; ?></option>
-                                        <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
+                            
                             <div class="col col-md 6">
                                 <label for="gid"
                                        class="font-weight-bold"><?php echo $this->lang->line('select_group'); ?></label>
@@ -42,15 +29,29 @@
                                     ?>
                                 </select>
                             </div>
+                            <div class="col col-md 6">
+                                <label for="quid"
+                                       class="font-weight-bold"><?php echo $this->lang->line('select_quiz'); ?></label>
+                                <select name="quid" class="form-control">
+                                    <option value="0"><?php echo $this->lang->line('all'); ?></option>
+                                    <?php
+                                    foreach ($quiz_list as $qk => $quiz) {
+                                        ?>
+                                        <option value="<?php echo $quiz['quid']; ?>"><?php echo $quiz['quiz_name']; ?></option>
+                                        <?php
+                                    }
+                                    ?>
+                                </select>
+                            </div>
                         </div>
 
-                        <div class="row mb-2">
+                        <div hidden class="row mb-2">
                             <div class="col col-md-6">
                                 <label for="date1" class="font-weight-bold"><?php echo "Fecha de inicio"; ?></label>
                                 <input type="date" name="date1" value="" class="form-control"
                                        placeholder="<?php echo $this->lang->line('date_from'); ?>">
                             </div>
-                            <div class="col col-md-6">
+                            <div  hidden class="col col-md-6">
                                 <label for="date2" class="font-weight-bold"><?php echo "Fecha de fin"; ?></label>
                                 <input type="date" name="date2" value="" class="form-control"
                                        placeholder="<?php echo $this->lang->line('date_to'); ?>">

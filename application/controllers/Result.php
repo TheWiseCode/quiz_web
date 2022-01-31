@@ -135,10 +135,144 @@ class Result extends CI_Controller
 
         $quid = $this->input->post('quid');
         $gid = $this->input->post('gid');
-        $result = $this->result_model->generate_report($quid, $gid);
-        $csvdata = $this->lang->line('result_id') . "," . $this->lang->line('email') . "," . $this->lang->line('first_name') . "," . $this->lang->line('last_name') . "," . $this->lang->line('group_name') . "," . $this->lang->line('quiz_name') . "," . $this->lang->line('score_obtained') . "," . $this->lang->line('percentage_obtained') . "," . $this->lang->line('status') . "\r\n";
-        foreach ($result as $rk => $val) {
-            $csvdata .= $val['rid'] . "," . $val['email'] . "," . $val['first_name'] . "," . $val['last_name'] . "," . $val['group_name'] . "," . $val['quiz_name'] . "," . $val['score_obtained'] . "," . $val['percentage_obtained'] . "," . $val['result_status'] . "\r\n";
+        //$result = $this->result_model->generate_report($quid, $gid);
+
+        if ($gid != '0') {
+            
+            $where = "where a.uid = b.uid and c.gid =b.gid"." and b.gid=".$gid;
+        }
+        else
+        {
+            $where = "where a.uid = b.uid and c.gid =b.gid";
+        }
+        $result = $this->db->query("
+        select a.rid ,a.quid ,c.group_name,b.*
+        from savsoft_result as a
+        inner join savsoft_users as b
+        inner join savsoft_group as c 
+   
+        ".$where."
+         group by b.uid 
+        order by b.last_name 
+        ");
+        $result = $result->result_Array();	
+
+        $lista_f = array();
+
+        foreach ($result as $key => $val) {
+            
+            $lista_f[$val['uid']]=[];
+            $lista_f[$val['uid']]["cod_student"]=$val['cod_student'];
+            $lista_f[$val['uid']]["full_name"]=$val['last_name']." ". $val['first_name'];
+            $lista_f[$val['uid']]["group_name"]=$val['group_name']; 
+
+            $lista_f[$val['uid']]['materia']=[];   
+            if ($quid != '0') {
+                //$this->db->where('savsoft_users.gid', $gid);
+                $where = "SELECT uid ,categories FROM savsoft_result WHERE uid =".$val['uid']." "."and quid =".$quid." "."  group by uid, categories";
+            }
+            else
+            {
+                $where = "SELECT uid ,categories FROM savsoft_result WHERE uid =".$val['uid']." "." group by uid, categories";
+            }
+            $result_d = $this->db->query($where);
+            $result_d = $result_d->result_array();	
+            
+            foreach ($result_d as $key => $val) {
+                $where="";
+                $lista_f[$val['uid']]['materia'][$val['categories']]=[];
+                if ($quid != '0') {
+                    //$this->db->where('savsoft_users.gid', $gid);
+                    $where =  "select  sq.quiz_name , sr.score_obtained 
+                    from savsoft_result sr
+                    inner join savsoft_quiz sq on sq.quid = sr.quid 
+                    where categories ='" .$val['categories']."'"." ". " and uid =" .$val['uid']." and sq.quid=".$quid;
+                }
+                else
+                {
+                    $where = "select  sq.quiz_name , sr.score_obtained 
+                    from savsoft_result sr
+                    inner join savsoft_quiz sq on sq.quid = sr.quid 
+                    where categories ='" .$val['categories']."'"." ". " and uid =" .$val['uid'];
+                }
+                $result_nota = $this->db->query(
+                    $where
+                );
+                $result_notaf = $result_nota->result_array();
+                foreach ($result_notaf as $key => $value) {
+                    $lista_f[$val['uid']]['materia'][$val['categories']][$key]= $value;
+                    $sum +=intval($value['score_obtained']);
+                    $cont += 1;
+                }
+                if($quid == '0')
+                {
+                    $lista_f[$val['uid']]['materia'][$val['categories']]['promedio_m']= $sum/$cont;
+                    $prom_f +=$sum/$cont;
+                    $cont_f +=1; 
+                    $sum=0;
+                    $cont=0;
+                }
+                
+            }
+            if($quid == '0')
+            {
+                $lista_f[$val['uid']]['promedio_f']=$prom_f/$cont_f ; 
+                $prom_f=0;
+                $cont_f=0; 
+            }
+            
+        }
+      
+        $b=true;
+        foreach ($lista_f as $key => $val)
+        {
+            if($b)
+            {
+                foreach($val['materia'] as $key => $value)
+                {
+
+                    foreach($value as $key1 => $value2){
+                        if($value2['quiz_name'] != "")
+                        {
+                            $name_quiz .=  $value2['quiz_name'] . ",";
+                        }
+                        else{
+                            $name_quiz .=  "Promedio" . ",";
+                        }
+                        
+                    }
+                }
+            }
+            $b=false;
+        }
+        if ($quid == '0') {
+            $name_quiz .= "Promedio Total";
+        }
+     
+        $csvdata = $this->lang->line('cod_postulante') . "," . $this->lang->line('full_name') . "," . $this->lang->line('group_name') . "," . $name_quiz . "\r\n"; //. "," . $this->lang->line('score_obtained') . "," . $this->lang->line('promedio') .  "," . $this->lang->line('promedioT') . "\r\n";
+        $cantM = 0;
+        $promT =0;
+        
+        foreach ($lista_f as $rk => $val) {
+            $csvdata .= $val['cod_student'] . "," . $val['full_name'] . "," . $val['group_name'];     //. "," . $val['categories'] . "," . $val['quiz_name'] . "," . $val['score_obtained'] ;
+          
+            foreach($val['materia'] as $key => $value)
+            {	
+                foreach($value as $key1 => $value2){
+
+                    if($value2['score_obtained'] != "")
+                    {
+                        $csvdata .= ",".  $value2['score_obtained'];
+                    }
+                    else{
+                        $csvdata .= ",".  $value2;
+                    }
+                    
+                }
+            }
+            $csvdata .= ",".$val['promedio_f'];
+            $csvdata .= "\r\n";
+          
         }
         $filename = time() . '.csv';
         force_download($filename, $csvdata);
