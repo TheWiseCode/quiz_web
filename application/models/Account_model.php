@@ -25,7 +25,7 @@ class Account_model extends CI_Model
 
     }
 
-    function insert_account()
+    function insert_account1()
     {
         $userdata = array(
             'account_name' => $this->input->post('name'),
@@ -102,6 +102,52 @@ class Account_model extends CI_Model
         }
         $this->db->where('account_id', $account_id);
         $this->db->update('account_type', $userdata);
+    }
+
+    function insert_account()
+    {
+        $userdata = [
+            'account_name' => $this->input->post('name'),
+            'setting' => $this->input->post('setting')
+        ];
+        if ($this->input->post('users')) {
+            $userdata['users'] = implode(',', $this->input->post('users'));
+        } else {
+            $userdata['users'] = "";
+        }
+        if ($this->input->post('quiz')) {
+            $userdata['quiz'] = implode(',', $this->input->post('quiz'));
+        } else {
+            $userdata['quiz'] = "";
+        }
+        if ($this->input->post('result')) {
+            $userdata['results'] = implode(',', $this->input->post('result'));
+        } else {
+            $userdata['results'] = "";
+        }
+        if ($this->input->post('questions')) {
+            $userdata['questions'] = implode(',', $this->input->post('questions'));
+        } else {
+            $userdata['questions'] = "";
+        }
+
+        if ($this->input->post('study_material')) {
+            $userdata['study_material'] = implode(',', $this->input->post('study_material'));
+        } else {
+            $userdata['study_material'] = "";
+        }
+
+        if ($this->input->post('appointment')) {
+            $userdata['appointment'] = implode(',', $this->input->post('appointment'));
+        } else {
+            $userdata['appointment'] = "";
+        }
+        if ($this->input->post('applicants')) {
+            $userdata['applicants'] = implode(',', $this->input->post('applicants'));
+        } else {
+            $userdata['applicants'] = "";
+        }
+        $this->db->insert('account_type', $userdata);
     }
 
     function remove_account($account_id)

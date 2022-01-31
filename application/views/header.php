@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="es">
 <head>
     <title> <?php echo $title; ?></title>
     <meta charset="utf-8">
@@ -20,7 +20,6 @@
           rel="stylesheet">
     <!-- custom css -->
     <link href="<?php echo base_url('css/style.css?q=' . time()); ?>" rel="stylesheet">
-
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url(); ?>css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -110,12 +109,10 @@
             width: 100%;
 
         }
-
-
     </style>
+
     <script src="<?php echo base_url(); ?>vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
     <!--DATATABLES SCRIPTS-->
     <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables1/datatables.min.js"></script>
     <script type="text/javascript"
@@ -129,10 +126,8 @@
     <script src="<?php echo base_url('js/select2.min.js'); ?>"></script>
     <!-- Core plugin JavaScript-->
     <script src="<?php echo base_url(); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
-
     <!-- Custom scripts for all pages-->
     <script src="<?php echo base_url(); ?>js/sb-admin-2.min.js"></script>
-
     <!-- Page level plugins -->
     <script src="<?php echo base_url(); ?>vendor/chart.js/Chart.min.js"></script>
 
@@ -229,8 +224,6 @@ $hres = $hquery->result_Array();
                 </li>
                 <?php
             }
-            ?>
-            <?php
             if (in_array('List_all', explode(',', $logged_in['applicants']))) {
                 ?>
                 <!-- Nav Item - Pages Collapse Menu -->
@@ -260,9 +253,6 @@ $hres = $hquery->result_Array();
                 </li>
                 <?php
             }
-            ?>
-
-            <?php
             if (in_array('List', explode(',', $logged_in['questions'])) || in_array('List_all', explode(',', $logged_in['questions']))) {
                 ?>
 
@@ -294,15 +284,7 @@ $hres = $hquery->result_Array();
                         </div>
                     </div>
                 </li>
-
-            <?php } ?>
-
-
-
-
-
-
-            <?php
+            <?php }
             if (in_array('List', explode(',', $logged_in['quiz'])) || in_array('List_all', explode(',', $logged_in['quiz']))) {
                 ?>
                 <!-- Nav Item - Pages Collapse Menu -->
@@ -335,8 +317,6 @@ $hres = $hquery->result_Array();
                 </li>
                 <?php
             }
-            ?>
-            <?php
             if (in_array('List', explode(',', $logged_in['results'])) || in_array('List_all', explode(',', $logged_in['results']))) {
                 ?>
                 <!-- Nav Item - Pages Collapse Menu -->
@@ -358,13 +338,9 @@ $hres = $hquery->result_Array();
                 </li>
                 <?php
             }
-            ?>
-
-            <?php
             $acp = explode(',', $logged_in['study_material']);
             if (in_array('List', $acp)) {
                 ?>
-
                 <!-- Nav Item - Pages Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStudy"
@@ -384,9 +360,6 @@ $hres = $hquery->result_Array();
 
                 <?php
             }
-            ?>
-
-            <?php
             if (in_array('All', explode(',', $logged_in['setting']))) {
                 ?>
                 <!-- Nav Item - Pages Collapse Menu -->
@@ -414,15 +387,13 @@ $hres = $hquery->result_Array();
                                href="<?php echo site_url('user/career_list'); ?>"><?php echo $this->lang->line('career_list'); ?></a>
                             <a class="nav-link collapse-item"
                                href="<?php echo site_url('account'); ?>"><?php echo $this->lang->line('account_type'); ?></a></a>
-                            <a class="nav-link collapse-item"
+                            <a class="nav-link collapse-item" hidden
                                href="<?php echo site_url('user/custom_fields'); ?>"><?php echo $this->lang->line('custom_forms'); ?></a>
                         </div>
                     </div>
                 </li>
                 <?php
             }
-            ?>
-            <?php
             if (!in_array('List_all', explode(',', $logged_in['quiz']))) {
                 ?>
                 <a hidden href="<?php echo site_url('user/switch_group'); ?>" class="btn btn-danger"
@@ -440,7 +411,7 @@ $hres = $hquery->result_Array();
             <!-- Topbar -->
             <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
                 <!-- Sidebar Toggle (Topbar) -->
-                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
                     <i class="fa fa-bars"></i>
                 </button>
                 <!-- Topbar Navbar -->
@@ -514,7 +485,7 @@ $hres = $hquery->result_Array();
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
 
 				<?php echo $logged_in['first_name'] . ' ' . $logged_in['last_name']; ?> </span>
-                             <img class="img-profile rounded-circle" src="<?php echo base_url($logged_in['photo']); ?>">
+                            <img class="img-profile rounded-circle" src="<?php echo base_url($logged_in['photo']); ?>">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -558,22 +529,34 @@ $hres = $hquery->result_Array();
                     ?></div>
                 <?php if ($this->session->flashdata('message_header')) {
                     echo $this->session->flashdata('message_header');
-                } ?>
-                <?php
                 }
-                ?>
-                <?php
+                }
                 }
                 }
                 ?>
                 <script>
+                    function getViewport() {
+                        const width = Math.max(
+                            document.documentElement.clientWidth,
+                            window.innerWidth || 0
+                        )
+                        if (width <= 576) return 'xs'
+                        if (width <= 768) return 'sm'
+                        if (width <= 992) return 'md'
+                        if (width <= 1200) return 'lg'
+                        return 'xl'
+                    }
+
                     $(document).ready(function () {
                         $("body").toggleClass("sidebar-toggled");
                         $(".sidebar").toggleClass("toggled");
                         if ($(".sidebar").hasClass("toggled")) {
                             $('.sidebar .collapse').collapse('hide');
                         }
-                        ;
+                        let view = getViewport();
+                        if (view != 'xs' && view != 'sm') {
+                            $('#sidebarToggleTop').click();
+                        }
                     });
                     $("#sidebarToggle, #sidebarToggleTop").on('click', function (e) {
                         $("body").toggleClass("sidebar-toggled");
@@ -581,6 +564,5 @@ $hres = $hquery->result_Array();
                         if ($(".sidebar").hasClass("toggled")) {
                             $('.sidebar .collapse').collapse('hide');
                         }
-                        ;
                     });
                 </script>

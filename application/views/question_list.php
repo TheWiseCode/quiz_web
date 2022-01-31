@@ -32,8 +32,8 @@
                     <th>Id</th>
                     <th><?php echo $this->lang->line('question'); ?></th>
                     <th><?php echo $this->lang->line('question_type'); ?></th>
-                    <th><?php echo $this->lang->line('category_name'); ?>
-                        / <?php echo $this->lang->line('level_name'); ?></th>
+                    <th><?php echo $this->lang->line('category_name'); ?></th>
+                    <th><?php echo $this->lang->line('level_name'); ?></th>
                     <th><?php echo $this->lang->line('percent_corrected'); ?></th>
                     <th><?php echo $this->lang->line('action'); ?> </th>
                 </tr>
@@ -46,8 +46,8 @@
                         <td><?php echo $val['qid']; ?></td>
                         <td><?php echo strip_tags($val['question']); ?></td>
                         <td><?php echo $this->lang->line($val['question_type']); ?></td>
-                        <td><?php echo $val['category_name']; ?> / <span
-                                    style="font-size:12px;"><?php echo $val['level_name']; ?></span></td>
+                        <td><?php echo $val['category_name']; ?></td>
+                        <td><?php echo $val['level_name']; ?></td>
                         <td><?php if ($val['no_time_served'] != '0') {
                                 $perc = ($val['no_time_corrected'] / $val['no_time_served']) * 100;
                                 ?>
@@ -63,10 +63,10 @@
                             $options = ['multiple_choice_single_answer', 'multiple_choice_multiple_answer',
                                 'match_the_column', 'short_answer', 'long_answer'];
                             $qn = 1;
-                            for ($i = 1; $i < 5; $i++) {
-                                if ($val['question_type'] == $options[$i - 1])
-                                    $qn = $options[$i - 1];
-                                $qn = $i;
+                            for ($i = 1; $i <= 5; $i++) {
+                                if ($val['question_type'] == $options[$i - 1]) {
+                                    $qn = $i;
+                                }
                             }
                             ?>
                             <a href="<?php echo site_url('qbank/edit_question_' . $qn . '/' . $val['qid']); ?>">
@@ -99,7 +99,7 @@
                             <input type="hidden" name="size" value="3500000">
                             <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
                                 <label for="xslfile"><?php echo $this->lang->line('upload_excel'); ?></label>
-                                <input type="file" name="xlsfile" accept=".xls" class="form-control">
+                                <input type="file" name="xlsfile" accept=".xls,.xlsx" class="form-control">
                             </div>
                         </div>
                         <div class="row">
@@ -156,6 +156,9 @@
         value += "</select>";
         value += " registros por pagina";
         $("#table_questions").DataTable({
+            dom: '<"top"<"row"<"col-12 col-sm-12 col-md-6 col-lg-6"l><"col-12 col-sm-12 col-md-6 col-lg-6"f>>>' +
+                'rt' +
+                '<"bottom"<"row"<"col-12 col-sm-12 col-md-6 col-lg-6"i><"col-12 col-sm-12 col-md-6 col-lg-6"p>>>',
             responsive: true,
             autoWidth: false,
             columnDefs: [

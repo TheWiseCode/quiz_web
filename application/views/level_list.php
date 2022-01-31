@@ -1,11 +1,6 @@
-<div class="container">
-
-
+<div class="">
     <h3 class="font-weight-bold"><?php echo $title; ?></h3>
-
-
     <div class="row">
-
         <div class="col-md-12">
             <br>
             <?php
@@ -42,7 +37,7 @@
 
 
                                 <a href="<?php echo site_url('qbank/pre_remove_level/' . $val['lid']); ?>">
-                                    <i class="fas fa-edit" style="color:#3472f7;"></i>
+                                    <i class="fas fa-trash" style="color:#3472f7;"></i>
                                 </a>
 
 
@@ -64,8 +59,5 @@
                 </table>
             </form>
         </div>
-
     </div>
-
-
 </div>

@@ -1,9 +1,5 @@
-<div class="container">
-
-
+<div class="">
     <h3 class="font-weight-bold"><?php echo $title; ?></h3>
-
-
     <div class="row">
 
         <div class="col-md-12">
@@ -28,8 +24,6 @@
                         <tr>
                             <td colspan="3"><?php echo $this->lang->line('no_record_found'); ?></td>
                         </tr>
-
-
                         <?php
                     }
 
@@ -39,11 +33,9 @@
                             <td><input type="text" class="form-control" value="<?php echo $val['category_name']; ?>"
                                        onBlur="updatecategory(this.value,'<?php echo $val['cid']; ?>');"></td>
                             <td>
-
                                 <a href="<?php echo site_url('qbank/pre_remove_category/' . $val['cid']); ?>">
-                                    <i class="fas fa-edit"  style="color:#3472f7;"></i>
+                                    <i class="fas fa-trash" style="color:#3472f7;"></i>
                                 </a>
-
                             </td>
                         </tr>
 

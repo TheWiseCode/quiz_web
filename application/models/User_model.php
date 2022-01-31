@@ -97,7 +97,6 @@ class User_model extends CI_Model
         return $this->lang->line('link_sent');
     }
 
-
     function reset_password($toemail)
     {
         $this->db->where('email', $toemail);
@@ -817,7 +816,7 @@ class User_model extends CI_Model
             'address' => $this->input->post('address'),
             'nationality' => $this->input->post('nationality'),
         ];
-        if($photo){
+        if ($photo) {
             $userdata['photo'] = $photo;
         }
         $this->db->where('uid', $uid);
@@ -1048,10 +1047,7 @@ class User_model extends CI_Model
                     'su' => 2,
                     'password' => md5($ci . $exp),
                     'photo' => 'photo/users/photo.jpeg',
-
                 ];
-
-
                 foreach ($insert_data as $value) {
                     if ($value == '') {
                         $insert_data = [];
@@ -1118,6 +1114,80 @@ class User_model extends CI_Model
         return $photo;
     }
 
+    function import_applicants($applicants)
+    {
+        $res = [
+            'status' => 'pending',
+            'failed' => []
+        ];
+        $group = $this->input->post('gid');
+        $status = ['s' => 'Soltero(a)', 'c' => 'Casado(a)', 'd' => 'Divorciado(a)', 'v' => 'Viudo(a)'];
+        $gender = ['m' => 'Masculino', 'f' => 'Femenino'];
+        $p = 0;
+        foreach ($applicants as $key => $applicant) {
+            if ($key > 1) {
+                $cod_student = $applicant['0'];
+                $ci = $applicant['1'];
+                $exp = $applicant['2'];
+                $name = $applicant['3'];
+                $last_name = $applicant['4'];
+                $career1 = $this->career_model->findByCode($applicant['5']);
+                $career2 = $this->career_model->findByCode($applicant['6']);
+                $email = $applicant['7'];
+                $phone = $applicant['8'];
+                $status_civ = $status[$applicant['9']];
+                $gender = $gender[$applicant['10']];
+                $address = $applicant['11'];
+                $nationality = $applicant['12'] == "" ? "Boliviano(a)" : $applicant['12'];
+                $insert_data = [
+                    'cod_student' => $cod_student,
+                    'exp' => $exp,
+                    'first_name' => $name,
+                    'last_name' => $last_name,
+                    'first_opt_univ_degree' => $career1['id'],
+                    'second_opt_univ_degree' => $career2['id'],
+                    'email' => $email,
+                    'contact_no' => $phone,
+                    'ci' => $ci,
+                    'civil_status' => $status_civ,
+                    'nationality' => $nationality,
+                    'address' => $address,
+                    'sexo' => $gender,
+                    'gid' => $group,
+                    'su' => 2,
+                    'password' => md5($ci),
+                    'photo' => 'images/profile.jpg',
+                ];
+                $sw = false;
+                foreach ($insert_data as $key => $value) {
+                    if ($value != '' && !in_array($key, ['nationality', 'sexo', 'password', 'photo', 'su', 'gid'])) {
+                        $sw = true;
+                        break;
+                    }
+                }
+                if (!$sw)
+                    break;
+                try {
+                    $b = $this->db->insert('savsoft_users', $insert_data);
+                    if ($b && $res['status'] == 'pending') {
+                        $res['status'] = 'inserted';
+                    } else if (!$b && $res['status'] == 'pending') {
+                        $res['status'] = 'failed';
+                    } else if ((!$b && $res['status'] == 'inserted') || ($b && $res['status'] == 'failed')) {
+                        $res['status'] = 'inserted_failed';
+                    }
+                    if (!$b) {
+                        $res['failed'][] = $p;
+                    }
+                } catch (Exception $e) {
+                    //$res['status'] = 'failed';
+                    //$res['failed'][] = $insert_data;
+                }
+            }
+            $p++;
+        }
+        return $res;
+    }
 }
 
 ?>

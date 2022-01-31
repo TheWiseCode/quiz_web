@@ -24,29 +24,32 @@ class Quiz_model extends CI_Model
             $this->db->or_where('quid', $search);
             $this->db->or_like('quiz_name', $search);
             $this->db->or_like('description', $search);
-
         }
         if ($stat == "active") {
             $where = ' savsoft_quiz.end_date >= "' . time() . '" ';
             $this->db->where($where);
-        }
-        if ($stat == "archived") {
+        }else if ($stat == "archived") {
             $where = ' savsoft_quiz.end_date < "' . time() . '" ';
             $this->db->where($where);
-        }
-        if ($stat == "upcoming") {
+        }else if ($stat == "upcoming") {
             $where = ' savsoft_quiz.start_date >= "' . time() . '" ';
             $this->db->where($where);
         }
-
         //$this->db->limit($this->config->item('number_of_rows'), $limit);
         //$this->db->where('savsoft_result.result_status=', 'open');
         //$this->db->join('savsoft_result', 'savsoft_quiz.quid=savsoft_result.quid', 'right');
         $this->db->order_by('savsoft_quiz.quid', 'desc');
-        $query = $this->db->get('savsoft_quiz');
-        return $query->result_array();
-
-
+        /*$query = "SELECT b.rid, b.result_status, a.* FROM savsoft_quiz a LEFT JOIN savsoft_result b on a.quid = b.quid";
+        if ($stat == "active") {
+            $query .= 'WHERE a.end_date >= ' . time();
+        }else if ($stat == "archived") {
+            $query .= 'WHERE a.end_date < ' . time();
+        }else if ($stat == "upcoming") {
+            $query .= 'WHERE a.start_date >= ' . time();
+        }
+        $query .= ' ORDER BY a.quid';*/
+        $res = $this->db->get('savsoft_quiz');
+        return $res->result_array();
     }
 
     function quizstat($stat)

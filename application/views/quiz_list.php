@@ -1,13 +1,13 @@
-<div class="container">
+<div class="">
     <?php
     $logged_in = $this->session->userdata('logged_in');
     $uid = $logged_in['uid'];
     ?>
     <div class="row mb-3">
-        <div class="col-sm-12 col-md-9 col-lg-9">
+        <div class="col-12 col-sm-12 col-md-9 col-lg-9">
             <h3 class="font-weight-bold"><?php echo $title; ?></h3>
         </div>
-        <div class="col-sm-12 col-md-3 col-lg-3">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3">
             <a href="<?php echo site_url('quiz/add_new'); ?>"
                class="btn btn-labeled btn-primary" style="width: 100%;">
                             <span class="btn-label">

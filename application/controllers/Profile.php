@@ -51,6 +51,8 @@ class Profile extends CI_Controller
         } else {
             $data_photo = $this->cargar_archivo(true);
             if ($this->user_model->update_profile_applicant($uid, $data_photo)) {
+                $logged_in['photo'] = $data_photo;
+                $this->session->set_flashdata('logged_in', $logged_in);
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-success'>" .
@@ -98,6 +100,8 @@ class Profile extends CI_Controller
         } else {
             $data_photo = $this->cargar_archivo();
             if ($this->user_model->update_profile_user($uid, $data_photo)) {
+                $logged_in['photo'] = $data_photo;
+                $this->session->set_flashdata('logged_in', $logged_in);
                 $this->session->set_flashdata(
                     'message',
                     "<div class='alert alert-success'>" .

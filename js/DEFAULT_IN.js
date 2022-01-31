@@ -234,7 +234,6 @@ function show_question(vqn) {
     if (vqn >= 1) {
         $('#backbtn').css('visibility', 'visible');
     }
-
     if (vqn < noq) {
         $('#nextbtn').css('visibility', 'visible');
     }

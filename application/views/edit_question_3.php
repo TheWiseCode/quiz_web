@@ -1,148 +1,159 @@
-<div class="container">
+<div class="">
 
-    <h3 class="font-weight-bold"><?php echo $title; ?></h3>
-    <div class="row">
-        <form method="post" action="<?php echo site_url('qbank/edit_question_3/' . $question['qid']); ?>">
+    <div class="d-flex justify-content-center">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+            <h3 class="font-weight-bold text-center"><?php echo $title; ?></h3>
+        </div>
+    </div>
 
-            <div class="col-md-8">
-                <br>
-                <div class="login-panel panel panel-default">
-                    <div class="panel-body">
-
-
-                        <?php
-                        if ($this->session->flashdata('message')) {
-                            echo $this->session->flashdata('message');
-                        }
-                        ?>
+    <div class="d-flex justify-content-center">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+            <form method="post" action="<?php echo site_url('qbank/edit_question_3/' . $question['qid']); ?>">
 
 
-                        <div class="form-group font-weight-bold">
-                            <?php echo $this->lang->line('match_the_column'); ?>
+                <?php
+                if ($this->session->flashdata('message')) {
+                    echo $this->session->flashdata('message');
+                }
+                ?>
+
+
+                <div class="form-group font-weight-bold">
+                    <?php echo $this->lang->line('match_the_column'); ?>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="font-weight-bold"><?php echo $this->lang->line('select_category'); ?></label>
+                            <select class="form-control" name="cid">
+                                <?php
+                                foreach ($category_list as $key => $val) {
+                                    ?>
+                                    <option value="<?php echo $val['cid']; ?>" <?php if ($question['cid'] == $val['cid']) {
+                                        echo 'selected';
+                                    } ?> ><?php echo $val['category_name']; ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
                         </div>
+                    </div>
 
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="font-weight-bold"><?php echo $this->lang->line('select_level'); ?></label>
+                            <select class="form-control" name="lid">
+                                <?php
+                                foreach ($level_list as $key => $val) {
+                                    ?>
+
+                                    <option value="<?php echo $val['lid']; ?>" <?php if ($question['lid'] == $val['lid']) {
+                                        echo 'selected';
+                                    } ?> ><?php echo $val['level_name']; ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <?php
+                if (strip_tags($question['paragraph']) != "") {
+                    ?>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="inputEmail"
+                                   class="font-weight-bold"><?php echo $this->lang->line('paragraph'); ?></label>
+                            <textarea name="paragraph"
+                                      class="form-control"><?php echo $question['paragraph']; ?></textarea>
+                        </div>
+                    </div>
+
+                    <?php
+                }
+                ?>
+
+
+                <div class="form-group">
+                    <label for="inputEmail"
+                           class="font-weight-bold"><?php echo $this->lang->line('question'); ?></label>
+                    <textarea name="question"
+                              class="form-control"><?php echo $question['question']; ?></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail"
+                           class="font-weight-bold"><?php echo $this->lang->line('description'); ?></label>
+                    <textarea name="description"
+                              class="form-control"><?php echo $question['description']; ?></textarea>
+                </div>
+                <?php
+                foreach ($options as $key => $val) {
+                    ?>
+                    <div class="form-group">
+                        <label for="inputEmail"
+                               class="font-weight-bold"><?php echo $this->lang->line('options'); ?> <?php echo $key + 1; ?>
+                            )</label> <br>
                         <div class="row">
-                            <div class="col col-md-6">
-                                <div class="form-group">
-                                    <label class="font-weight-bold"><?php echo $this->lang->line('select_category'); ?></label>
-                                    <select class="form-control" name="cid">
-                                        <?php
-                                        foreach ($category_list as $key => $val) {
-                                            ?>
-                                            <option value="<?php echo $val['cid']; ?>" <?php if ($question['cid'] == $val['cid']) {
-                                                echo 'selected';
-                                            } ?> ><?php echo $val['category_name']; ?></option>
-                                            <?php
-                                        }
-                                        ?>
-                                    </select>
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                                <input type="text" name="option[]" class="form-control"
+                                       value="<?php echo $val['q_option']; ?>">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-2 col-lg-2">
+                                <div class="d-flex justify-content-center">
+                                    <b style="font-size: x-large">=</b>
                                 </div>
                             </div>
-
-                            <div class="col col-md-6">
-                                <div class="form-group">
-                                    <label class="font-weight-bold"><?php echo $this->lang->line('select_level'); ?></label>
-                                    <select class="form-control" name="lid">
-                                        <?php
-                                        foreach($level_list as $key => $val){
-                                            ?>
-
-                                            <option value="<?php echo $val['lid'];?>" <?php if($question['lid']==$val['lid']){ echo 'selected'; } ?> ><?php echo $val['level_name'];?></option>
-                                            <?php
-                                        }
-                                        ?>
-                                    </select>
-                                </div>
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                                <input type="text" name="option2[]" class="form-control"
+                                       value="<?php echo $val['q_option_match']; ?>"
                             </div>
                         </div>
+                    </div>
+                    <?php
+                }
+                ?>
 
-                        <?php
-                        if (strip_tags($question['paragraph']) != "") {
-                            ?>
-
-                            <div class="row">
-                                <div class="form-group">
-                                    <label for="inputEmail"
-                                           class="font-weight-bold"><?php echo $this->lang->line('paragraph'); ?></label>
-                                    <textarea name="paragraph"
-                                              class="form-control"><?php echo $question['paragraph']; ?></textarea>
-                                </div>
-                            </div>
-
-                            <?php
-                        }
-                        ?>
-
-
-                        <div class="form-group">
-                            <label for="inputEmail"
-                                   class="font-weight-bold"><?php echo $this->lang->line('question'); ?></label>
-                            <textarea name="question"
-                                      class="form-control"><?php echo $question['question']; ?></textarea>
+                <div class="form-group mt-2">
+                    <div class="row">
+                        <div class="col-12 col-sm- 6 col-md-6 col-lg-6 mb-2">
+                            <button class="btn btn-success"
+                                    style="width: 100%;" id="pre_save"
+                                    type="submit"><?php echo $this->lang->line('submit'); ?></button>
                         </div>
-                        <div class="form-group">
-                            <label for="inputEmail"
-                                   class="font-weight-bold"><?php echo $this->lang->line('description'); ?></label>
-                            <textarea name="description"
-                                      class="form-control"><?php echo $question['description']; ?></textarea>
+                        <div class="col-12 col-sm- 6 col-md-6 col-lg-6">
+                            <button type="button" class="btn btn-danger" onclick="window.history.back();"
+                                    style="width: 100%;">
+                                <?php echo $this->lang->line('cancel'); ?>
+                            </button>
                         </div>
-                        <?php
-                        foreach ($options as $key => $val) {
-                            ?>
-                            <div class="form-group">
-                                <label for="inputEmail"
-                                       class="font-weight-bold"><?php echo $this->lang->line('options'); ?> <?php echo $key + 1; ?>
-                                    )</label> <br>
-                                <div class="row">
-                                    <div class="col col-md-5">
-                                        <input type="text" name="option[]" class="form-control"
-                                               value="<?php echo $val['q_option']; ?>">
-                                    </div>
-                                    =
-                                    <div class="col col-md-5">
-                                        <input type="text" name="option2[]" class="form-control"
-                                               value="<?php echo $val['q_option_match']; ?>"
-                                    </div>
-                                </div>
-                            </div>
-                            <?php
-                        }
-                        ?>
-
-
-                        <div class="row mt-2">
-                            <div class="col">
-                                <button class="btn btn-primary"
-                                        type="submit"><?php echo $this->lang->line('submit'); ?></button>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
 
-            </div>
-        </form>
+            </form>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-group">
+                        <table class="table table-bordered">
+                            <tr>
+                                <td><?php echo $this->lang->line('no_times_corrected'); ?></td>
+                                <td><?php echo $question['no_time_corrected']; ?></td>
+                            </tr>
+                            <tr>
+                                <td><?php echo $this->lang->line('no_times_incorrected'); ?></td>
+                                <td><?php echo $question['no_time_incorrected']; ?></td>
+                            </tr>
+                            <tr>
+                                <td><?php echo $this->lang->line('no_times_unattempted'); ?></td>
+                                <td><?php echo $question['no_time_unattempted']; ?></td>
+                            </tr>
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <table class="table table-bordered">
-                        <tr>
-                            <td><?php echo $this->lang->line('no_times_corrected'); ?></td>
-                            <td><?php echo $question['no_time_corrected']; ?></td>
-                        </tr>
-                        <tr>
-                            <td><?php echo $this->lang->line('no_times_incorrected'); ?></td>
-                            <td><?php echo $question['no_time_incorrected']; ?></td>
-                        </tr>
-                        <tr>
-                            <td><?php echo $this->lang->line('no_times_unattempted'); ?></td>
-                            <td><?php echo $question['no_time_unattempted']; ?></td>
-                        </tr>
+                        </table>
 
-                    </table>
-
+                    </div>
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@ class Account extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -48,7 +48,7 @@ class Account extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -62,12 +62,45 @@ class Account extends CI_Controller
         $this->load->view('footer', $data);
     }
 
+    function add_account()
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $acp = explode(',', $logged_in['setting']);
+        if (!in_array('All', $acp)) {
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
+        }
+        $data['title'] = $this->lang->line('add_account');
+        $this->load->view('header', $data);
+        $this->load->view('add_account', $data);
+        $this->load->view('footer', $data);
+    }
+
+    function insert_account()
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $acp = explode(',', $logged_in['setting']);
+        if (!in_array('All', $acp)) {
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
+        }
+        $this->Account_model->insert_account();
+        $this->session->set_flashdata('message', "<div class='alert alert-success'>" . $this->lang->line('account_updated') . " </div>");
+        redirect('account');
+    }
+
     function update_account($account_id)
     {
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -83,7 +116,7 @@ class Account extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);
@@ -105,7 +138,7 @@ class Account extends CI_Controller
         $logged_in = $this->session->userdata('logged_in');
         $acp = explode(',', $logged_in['setting']);
         if (!in_array('All', $acp)) {
-                        $data['title'] = $this->lang->line('permission_denied');
+            $data['title'] = $this->lang->line('permission_denied');
             $this->load->view('header', $data);
             $this->load->view('errors/403', $data);
             $this->load->view('footer', $data);

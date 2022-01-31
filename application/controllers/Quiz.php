@@ -486,7 +486,7 @@ class Quiz extends CI_Controller
             if ($this->session->userdata('logged_in_raw')) {
                 $logged_in = $this->session->userdata('logged_in_raw');
             } else {
-                $userdata = array(
+                $userdata = [
                     'email' => time(),
                     'password' => md5(rand(11111, 99999)),
                     'first_name' => 'Guest User',
@@ -494,7 +494,7 @@ class Quiz extends CI_Controller
                     'contact_no' => '',
                     'gid' => $this->config->item('default_gid'),
                     'su' => '0'
-                );
+                ];
                 $this->db->insert('savsoft_users', $userdata);
                 $uid = $this->db->insert_id();
                 $query = $this->db->query("select * from savsoft_users where uid='$uid' ");
@@ -510,7 +510,7 @@ class Quiz extends CI_Controller
             $open_result = $this->quiz_model->open_result($quid, $uid);
             if ($open_result != '0') {
                 // $this->session->set_userdata('rid', $open_result);
-                redirect('quiz/resume_pending/' . $open_result);
+                redirect('quiz/attempt/' . $open_result);
 
             }
             $data['quiz'] = $this->quiz_model->get_quiz($quid);
@@ -548,7 +548,7 @@ class Quiz extends CI_Controller
             $open_result = $this->quiz_model->open_result($quid, $uid);
             if ($open_result != '0') {
                 // $this->session->set_userdata('rid', $open_result);
-                redirect('quiz/resume_pending/' . $open_result);
+                redirect('quiz/attempt/' . $open_result);
             }
             $data['quiz'] = $this->quiz_model->get_quiz($quid);
             // validate assigned group
@@ -623,7 +623,6 @@ class Quiz extends CI_Controller
         $this->load->view('header', $data);
         $this->load->view('pending_quiz_message', $data);
         $this->load->view('footer', $data);
-
     }
 
     function attempt($rid, $selected_lang = 0)

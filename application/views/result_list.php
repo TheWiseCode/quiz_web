@@ -123,7 +123,7 @@
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <?php
-    if ($logged_in['su'] == '1') {
+    if ($logged_in['su'] == '1' && 0) {
         ?>
         <a href="<?php echo site_url('result/remove_result/0/1'); ?>"
            class="btn btn-primary"><?php echo $this->lang->line('cancel_opened'); ?></a>
@@ -138,7 +138,7 @@
         table = $("#table_result").DataTable({
             "dom":
                 '<"top.row"' +
-                '<"col-md-4"l><"col-md-4"B><"col-md-4"f>' +
+                '<"col-md-4"l><"col-md-4"><"col-md-4"f>' +
                 '<"clear">>' +
                 'rt' +
                 '<"bottom row"' +
@@ -184,10 +184,10 @@
                     }
             }
         });
-        $('#sel_group').change(function(){
+        $('#sel_group').change(function () {
             table.draw();
         });
-        $('#sel_group').change(function(){
+        $('#sel_group').change(function () {
             table.draw();
         });
         $.fn.dataTable.ext.search.push(function (settings, data, dataIndex) {
@@ -195,12 +195,12 @@
             let quizText = $('#sel_quiz option:selected').text();
             let group = $('#sel_group').val();
             let quiz = $('#sel_quiz').val();
-            if(group == 0 && quiz == 0){
+            if (group == 0 && quiz == 0) {
                 return true;
             }
             let testDt = data[2];
             let groupDt = data[4];
-            if((quizText == testDt || quiz == 0) && (groupDt == groupText || group == 0)){
+            if ((quizText == testDt || quiz == 0) && (groupDt == groupText || group == 0)) {
                 return true;
             }
             return false;

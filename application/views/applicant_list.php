@@ -60,42 +60,44 @@
             </table>
         </div>
     </div>
-    <div class="row">
-        <div class="card mt-3 col-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="card-header font-weight-bold"><?php echo $this->lang->line('import_users'); ?></div>
-            <div class="card-body">
-                <form method="post" enctype="multipart/form-data"
-                      action="<?php echo site_url('user/import'); ?>">
-                    <input type="hidden" name="size" value="3500000">
-                    <div class="row">
-                        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6">
-                            <label for="xslfile"><?php echo $this->lang->line('upload_excel'); ?></label>
-                            <input type="file" name="xlsfile" accept=".xls" class="form-control">
+    <div class="row mb-3">
+        <div class="mt-3 col-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="card">
+                <div class="card-header font-weight-bold"><?php echo $this->lang->line('import_users'); ?></div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data"
+                          action="<?php echo site_url('applicant/import'); ?>">
+                        <input type="hidden" name="size" value="3500000">
+                        <div class="row">
+                            <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6">
+                                <label for="xslfile"><?php echo $this->lang->line('upload_excel'); ?></label>
+                                <input type="file" name="xlsfile" accept=".xls,.xlsx" class="form-control">
+                            </div>
+                            <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6">
+                                <label for="gid"><?php echo $this->lang->line('select_group'); ?>)</label>
+                                <select name="gid" required class="form-control">
+                                    <option value=""><?php echo $this->lang->line('select_group'); ?></option>
+                                    <?php foreach ($group_list as $key => $val) { ?>
+                                        <option value="<?php echo $val['gid']; ?>" <?php if ($val['gid'] == $gid) {
+                                            echo 'selected';
+                                        } ?> ><?php echo $val['group_name']; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
                         </div>
-                        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-6">
-                            <label for="gid"><?php echo $this->lang->line('select_group'); ?>)</label>
-                            <select name="gid" required class="form-control">
-                                <option value=""><?php echo $this->lang->line('select_group'); ?></option>
-                                <?php foreach ($group_list as $key => $val) { ?>
-                                    <option value="<?php echo $val['gid']; ?>" <?php if ($val['gid'] == $gid) {
-                                        echo 'selected';
-                                    } ?> ><?php echo $val['group_name']; ?></option>
-                                <?php } ?>
-                            </select>
+                        <div class="row">
+                            <div class="form-group col-12 col-sm-12 col-md-3 col-lg-3">
+                                <input type="submit" value="<?php echo $this->lang->line('import') ?>"
+                                       class="btn btn-secondary form-control">
+                            </div>
+                            <div class="form-group col-12 col-sm-12 col-md-9 col-lg-9">
+                                <a href="<?php echo base_url(); ?>sample/ejemplo lista de estudiantes.xls"
+                                   target="new"><?php echo $this->lang->line('click_here'); ?></a> <?php echo $this->lang->line('upload_excel_info'); ?>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-12 col-sm-12 col-md-3 col-lg-3">
-                            <input type="submit" value="<?php echo $this->lang->line('import') ?>"
-                                   class="btn btn-secondary form-control">
-                        </div>
-                        <div class="form-group col-12 col-sm-12 col-md-9 col-lg-9">
-                            <a href="<?php echo base_url(); ?>sample/ejemplo lista de estudiantes.xls"
-                               target="new"><?php echo $this->lang->line('click_here'); ?></a> <?php echo $this->lang->line('upload_excel_info'); ?>
-                        </div>
-                    </div>
-                </form>
+                    </form>
 
+                </div>
             </div>
         </div>
     </div>

@@ -9,6 +9,7 @@ class Applicant extends CI_Controller
         $this->load->database();
         $this->load->helper('url');
         $this->load->model("user_model");
+        $this->load->model("career_model");
         $this->load->model("account_model");
         $this->lang->load('basic', $this->config->item('language'));
         // redirect if not loggedin
@@ -282,5 +283,94 @@ class Applicant extends CI_Controller
         $data['uploadSuccess'] = $this->upload->data();
         $photo = 'photo/users/' . $data['uploadSuccess']['orig_name'];
         return $photo;
+    }
+
+    public function import()
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $acp = explode(',', $logged_in['quiz']);
+        if (!in_array('Add', $acp)) {
+            $data['title'] = $this->lang->line('permission_denied');
+            $this->load->view('header', $data);
+            $this->load->view('errors/403', $data);
+            $this->load->view('footer', $data);
+            return;
+        }
+
+        $this->load->helper('xlsimport/php-excel-reader/excel_reader2');
+        $this->load->helper('xlsimport/spreadsheetreader.php');
+
+        if (isset($_FILES['xlsfile'])) {
+            $config['upload_path'] = './excel/';
+            $config['allowed_types'] = 'xls|xlsx';
+            $config['max_size'] = 10000;
+            $this->load->library('upload', $config);
+            if (!$this->upload->do_upload('xlsfile')) {
+                $error = ['error' => $this->upload->display_errors()];
+                $this->session->set_flashdata(
+                    'message',
+                    "<div class='alert alert-danger'>" .
+                    $error['error'] .
+                    ' </div>'
+                );
+                redirect('applicant');
+            } else {
+                $data = ['upload_data' => $this->upload->data()];
+                $Filepath = 'excel/' . basename($data['upload_data']['file_name']);
+                $allxlsdata = [];
+                date_default_timezone_set('UTC');
+                $StartMem = memory_get_usage();
+                try {
+                    $Spreadsheet = new SpreadsheetReader($Filepath);
+                    $BaseMem = memory_get_usage();
+                    $Sheets = $Spreadsheet->Sheets();
+                    foreach ($Sheets as $Index => $Name) {
+                        $Time = microtime(true);
+                        $Spreadsheet->ChangeSheet($Index);
+                        foreach ($Spreadsheet as $Key => $Row) {
+                            if ($Row) {
+                                //print_r($Row);
+                                $allxlsdata[] = $Row;
+                            } else {
+                                var_dump($Row);
+                            }
+                            $CurrentMem = memory_get_usage();
+                            if ($Key && $Key % 500 == 0) {
+                            }
+                        }
+                        break;
+                    }
+                } catch (Exception $e) {
+                    echo $e->getMessage();
+                }
+                $res = $this->user_model->import_applicants($allxlsdata);
+            }
+        } else {
+            echo 'Error: ' . $_FILES['file']['error'];
+        }
+
+        if ($res['status'] == 'failed') {
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-danger'>" .
+                $this->lang->line('failed') . '<br>Error excel, lineas: ' . implode(',', $res['failed']) .
+                ' </div>'
+            );
+        } else if ($res['status'] == 'inserted_failed') {
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-warning'>" .
+                $this->lang->line('inserted_failed') . '<br>Error excel, lineas: ' . implode(',', $res['failed']) .
+                ' </div>'
+            );
+        } else {
+            $this->session->set_flashdata(
+                'message',
+                "<div class='alert alert-success'>" .
+                $this->lang->line('data_imported_successfully') .
+                ' </div>'
+            );
+        }
+        redirect('applicant');
     }
 }

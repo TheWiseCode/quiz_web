@@ -532,51 +532,24 @@ class Qbank_model extends CI_Model
 
     function import_question($question)
     {
-        //echo "<pre>"; print_r($question);exit;
         $questioncid = $this->input->post('cid');
         $questiondid = $this->input->post('did');
         $prevqid = '';
         $prevtype = '';
         foreach ($question as $key => $singlequestion) {
-            //$ques_type=
-
-            //echo $ques_type;
-
             if ($key != 0) {
-                // echo "<pre>";print_r($singlequestion); exit;
-
                 $question = str_replace('"', '&#34;', $singlequestion['1']);
-                $question = str_replace('`', '&#39;', $question);
-                $question = str_replace('‘', '&#39;', $question);
-                $question = str_replace('’', '&#39;', $question);
-                $question = str_replace('â€œ', '&#34;', $question);
-                $question = str_replace('â€˜', '&#39;', $question);
-
-                $question = str_replace('â€™', '&#39;', $question);
-                $question = str_replace('â€', '&#34;', $question);
                 $question = str_replace("'", '&#39;', $question);
                 $question = str_replace("\n", '<br>', $question);
                 $description = str_replace('"', '&#34;', $singlequestion['2']);
                 $description = str_replace("'", '&#39;', $description);
                 $description = str_replace("\n", '<br>', $description);
                 $ques_type = $singlequestion['0'];
+                $question_types = ['multiple_choice_single_answer', 'multiple_choice_multiple_answer', 'match_the_column', 'short_answer', 'long_answer'];
                 if (trim($ques_type) != '') {
-                    if ($ques_type == '0') {
-                        $question_type = ('multiple_choice_single_answer');
+                    if(in_array($ques_type, ['0', '1', '2', '3', '4'])){
+                        $question_type = $question_types[$ques_type];
                     }
-                    if ($ques_type == '1') {
-                        $question_type = ('multiple_choice_multiple_answer');
-                    }
-                    if ($ques_type == '2') {
-                        $question_type = ('match_the_column');
-                    }
-                    if ($ques_type == '3') {
-                        $question_type = ('short_answer');
-                    }
-                    if ($ques_type == '4') {
-                        $question_type = ('long_answer');
-                    }
-
                     $insert_data = [
                         'cid' => $questioncid,
                         'lid' => $questiondid,
@@ -594,7 +567,7 @@ class Qbank_model extends CI_Model
                         $optionkeycounter = 4;
                         if ($ques_type == '0' || $ques_type == '') {
                             for ($i = 1; $i <= 10; $i++) {
-                                if ($singlequestion[$optionkeycounter] != '') {
+                                if ($singlequestion[$optionkeycounter] !== '') {
                                     if ($singlequestion['3'] == $i) {
                                         $correctoption = '1';
                                     } else {
@@ -602,14 +575,10 @@ class Qbank_model extends CI_Model
                                     }
                                     $insert_options = [
                                         'qid' => $qid,
-                                        'q_option' =>
-                                            $singlequestion[$optionkeycounter],
+                                        'q_option' => $singlequestion[$optionkeycounter],
                                         'score' => $correctoption,
                                     ];
-                                    $this->db->insert(
-                                        'savsoft_options',
-                                        $insert_options
-                                    );
+                                    $this->db->insert('savsoft_options',$insert_options);
                                     $prevoid[] = $this->db->insert_id();
                                     $optionkeycounter++;
                                 }
@@ -617,18 +586,14 @@ class Qbank_model extends CI_Model
                         }
                         //multiple type
                         if ($ques_type == '1') {
-                            $correct_options = explode(
-                                ',',
-                                $singlequestion['3']
-                            );
+                            $correct_options = explode(',',$singlequestion['3']);
                             $no_correct = count($correct_options);
                             $correctoptionm = [];
                             for ($i = 1; $i <= 10; $i++) {
                                 if ($singlequestion[$optionkeycounter] != '') {
                                     foreach ($correct_options as $valueop) {
                                         if ($valueop == $i) {
-                                            $correctoptionm[$i - 1] =
-                                                1 / $no_correct;
+                                            $correctoptionm[$i - 1] = 1 / $no_correct;
                                             break;
                                         } else {
                                             $correctoptionm[$i - 1] = 0;
@@ -638,25 +603,19 @@ class Qbank_model extends CI_Model
                             }
 
                             //print_r($correctoptionm);
-
                             for ($i = 1; $i <= 10; $i++) {
                                 if ($singlequestion[$optionkeycounter] != '') {
                                     $insert_options = [
                                         'qid' => $qid,
-                                        'q_option' =>
-                                            $singlequestion[$optionkeycounter],
+                                        'q_option' => $singlequestion[$optionkeycounter],
                                         'score' => $correctoptionm[$i - 1],
                                     ];
-                                    $this->db->insert(
-                                        'savsoft_options',
-                                        $insert_options
-                                    );
+                                    $this->db->insert('savsoft_options', $insert_options);
                                     $prevoid[] = $this->db->insert_id();
                                     $optionkeycounter++;
                                 }
                             }
                         }
-
                         //multiple type end
 
                         //match Answer
@@ -672,10 +631,7 @@ class Qbank_model extends CI_Model
                             $optionkeycounter = 4;
                             for ($i = 1; $i <= 10; $i++) {
                                 if ($singlequestion[$optionkeycounter] != '') {
-                                    $explode_match = explode(
-                                        '=',
-                                        $singlequestion[$optionkeycounter]
-                                    );
+                                    $explode_match = explode('=',$singlequestion[$optionkeycounter]);
                                     $correctoption = 1 / $qotion_match;
                                     $insert_options = [
                                         'qid' => $qid,
@@ -683,16 +639,12 @@ class Qbank_model extends CI_Model
                                         'q_option_match' => $explode_match[1],
                                         'score' => $correctoption,
                                     ];
-                                    $this->db->insert(
-                                        'savsoft_options',
-                                        $insert_options
-                                    );
+                                    $this->db->insert('savsoft_options',$insert_options);
                                     $prevoid[] = $this->db->insert_id();
                                     $optionkeycounter++;
                                 }
                             }
                         }
-
                         //end match answer
 
                         //short Answer
@@ -704,23 +656,18 @@ class Qbank_model extends CI_Model
                                     }
                                     $insert_options = [
                                         'qid' => $qid,
-                                        'q_option' =>
-                                            $singlequestion[$optionkeycounter],
+                                        'q_option' => $singlequestion[$optionkeycounter],
                                         'score' => $correctoption,
                                     ];
-                                    $this->db->insert(
-                                        'savsoft_options',
-                                        $insert_options
-                                    );
+                                    $this->db->insert('savsoft_options', $insert_options);
                                     $prevoid[] = $this->db->insert_id();
                                     $optionkeycounter++;
                                 }
                             }
                         }
-
                         //end Short answer
                     } //
-                } else {
+                }/* else {
                     $update_data = [
                         'question1' => $question,
                         'description1' => $description,
@@ -786,7 +733,6 @@ class Qbank_model extends CI_Model
                             }
                         }
                     }
-
                     //multiple type end
 
                     //match Answer
@@ -820,7 +766,6 @@ class Qbank_model extends CI_Model
                             }
                         }
                     }
-
                     //end match answer
 
                     //short Answer
@@ -843,9 +788,8 @@ class Qbank_model extends CI_Model
                             }
                         }
                     }
-
                     //end Short answer
-                }
+                }*/
             }
         }
     }

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="">
     <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-4 mb-2 mb-sm-2">
             <div class="card border-left-primary shadow py-2">
@@ -99,7 +99,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row mb-3">
         <div class="col col-sm-12 col-md-12 col-lg-12">
             <div class="card py-2 mt-2">
                 <div class="card-header">
