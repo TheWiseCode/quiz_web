@@ -261,6 +261,8 @@ $hres = $hquery->result_Array();
                                    href="<?php echo site_url('user/get_users'); ?>"><?php echo $this->lang->line('reports'); ?></a>
                                 <a class="nav-link collapse-item"
                                    href="<?php echo site_url('user/get_users_resume'); ?>"><?php echo $this->lang->line('specialty_list'); ?></a>
+                                <a class="nav-link collapse-item"
+                                   href="<?php echo site_url('user/get_users_by_quiz'); ?>"><?php echo $this->lang->line('list_quiz_by_applicant'); ?></a>
                             <?php } ?>
                         </div>
                     </div>

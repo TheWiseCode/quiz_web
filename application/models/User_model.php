@@ -961,6 +961,7 @@ class User_model extends CI_Model
     function get_user($uid)
     {
         $this->db->where('savsoft_users.uid', $uid);
+        //$this->db->where('savsoft_users.user_status =', 'active');
         $query = $this->db->get('savsoft_users');
         return $query->row_array();
     }
@@ -1103,10 +1104,24 @@ class User_model extends CI_Model
         $query= 'SELECT c.name specialties, a.last_name , a.first_name, a.cod_student,a.ci,a.nationality,a.contact_no, b.name university, a.email ,a.registered_date 
         FROM savsoft_users AS a 
         INNER JOIN university AS b ON b.id = a.id_university
-        INNER JOIN specialties AS c ON c.id = a.id_speciality ORDER BY c.name,a.last_name ASC';
+        INNER JOIN specialties AS c ON c.id = a.id_speciality 
+        WHERE a.user_status = "active"
+        ORDER BY c.name,a.last_name ASC';
         $resultados = $this->db->query($query);
         return $resultados->result_array();
 
+    }
+    function get_query_list_quiz(){
+        $query = 'SELECT a.uid, a.cod_student ,CONCAT(a.first_name," ",a.last_name) full_name,b.name ,c.serial_examen
+        FROM savsoft_users a
+        INNER JOIN specialties b
+        ON b.id = a.id_speciality 
+        INNER JOIN postulantes_examenes c
+        ON c.cod_cd = a.cod_student 
+        WHERE a.user_status = "active"
+        ORDER BY full_name asc';
+        $resultados = $this->db->query($query);
+        return $resultados->result_array();
     }
 
     public function cod_cd_status($cod_cd){

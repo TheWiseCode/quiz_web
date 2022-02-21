@@ -524,3 +524,4 @@ $lang['fingerprint_processed'] = "Ya Existen Huella Asociadas al Codigo CD: ";
 $lang['fingerprint_not_found'] = "Registre la huella de postulante por favor";
 $lang['reports'] = "Reporte de Postulantes";
 $lang['specialty_list'] = "Inscritos por Especialidad";
+$lang['list_quiz_by_applicant'] = "Exportacion de postulantes";

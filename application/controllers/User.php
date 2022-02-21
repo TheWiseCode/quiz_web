@@ -874,12 +874,29 @@ class User extends CI_Controller
         $query = 'SELECT su.id_speciality id,e.name, COUNT(*) cantidad
         FROM savsoft_users su 
         inner join specialties as e on e.id=su.id_speciality
+        WHERE su.user_status = "active"
         GROUP by su.id_speciality
         ORDER by e.name ASC';
         $resultados = $this->db->query($query);
         $data['result'] = $resultados->result_array();
         $this->load->view('header', $data);
         $this->load->view('resume_report', $data);
+        $this->load->view('footer', $data);
+    }
+    public function get_users_by_quiz()
+    {
+        $logged_in = $this->session->userdata('logged_in');
+        $user_p = explode(',', $logged_in['applicants']);
+        if (!in_array('List_all', $user_p)) {
+            exit($this->lang->line('permission_denied'));
+        }
+        $data['limit'] = $limit;
+
+        $data['title'] = "Lista de postulantes inscritos";
+        $data['result'] = $this->user_model->get_query_list_quiz();
+
+        $this->load->view('header', $data);
+        $this->load->view('report_quiz', $data);
         $this->load->view('footer', $data);
     }
 
