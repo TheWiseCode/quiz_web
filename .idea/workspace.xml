@@ -2,38 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/application/views/report_quiz.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/sq_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/sq_config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Applicant.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Applicant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-24.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-24.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-02-20.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-02-20.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/edit_applicant.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_applicant.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/list_post_specialty.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/list_post_specialty.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/new_applicant.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_applicant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/resume_report.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/resume_report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/view_report.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/122xx_1642748669.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/23012022_010300.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/23012022_011918.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/3021_24012022_005327.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/3041_24012022_005718.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/3333_24012022_023225.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/BORRAR1_24012022_044831.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/XXXX1_23012022_093342.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/ZZZZV_23012022_102018.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/ZZZZV_23012022_102133.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/ZZZZV_23012022_173949.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/ZZZZV_23012022_174024.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/ZZZZV_23012022_174059.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/ZZZZ_23012022_093937.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/ZZZZ_23012022_094150.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/_1642951124.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/_1642951143.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/_1642951200.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/users/xxx_1642736935.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +80,7 @@
     <configuration name="cridai" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="cridai" start_url="http://192.168.0.180:8080">
       <method v="2" />
     </configuration>
-    <configuration name="local" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="localhost" start_url="http://localhost:8080/quiz/FCJPSRRII/">
+    <configuration name="local" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="localhost" start_url="http://localhost:8080/cridai_quiz">
       <method v="2" />
     </configuration>
     <configuration name="web" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="cridai" start_url="http://localhost:8080/quiz/FCJPSRRII/">
@@ -147,6 +122,8 @@
       <workItem from="1645058478909" duration="12017000" />
       <workItem from="1645301490275" duration="3692000" />
       <workItem from="1645413687817" duration="125000" />
+      <workItem from="1645413843130" duration="371000" />
+      <workItem from="1645414234966" duration="290000" />
     </task>
     <servers />
   </component>

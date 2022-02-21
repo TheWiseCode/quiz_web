@@ -270,6 +270,12 @@ $hres = $hquery->result_Array();
                                 <a class="nav-link collapse-item"
                                    href="<?php echo site_url('user/get_users_resume'); ?>"><?php echo $this->lang->line('specialty_list'); ?>
                                 </a>
+                                <?php
+                                if ($logged_in['su'] == '1') { ?>
+                                    <a class="nav-link collapse-item"
+                                       href="<?php echo site_url('user/get_users_by_quiz'); ?>"><?php echo $this->lang->line('list_quiz_by_applicant'); ?></a>
+                                <?php } ?>
+
                                 <a class="nav-link collapse-item"
                                    title="Verificar postulante" href="#"
                                    onclick="verifyBiometric()"

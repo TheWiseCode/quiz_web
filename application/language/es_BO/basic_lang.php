@@ -525,3 +525,4 @@ $lang['fingerprint_not_found'] = "Registre la huella de postulante por favor";
 $lang['reports'] = "Reporte de Postulantes";
 $lang['specialty_list'] = "Inscritos por Especialidad";
 $lang['nro_boleta'] = "Pago de inscripción";
+$lang['list_quiz_by_applicant'] = "Exportacion de postulantes";
