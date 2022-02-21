@@ -3,8 +3,37 @@
   <component name="ChangeListManager">
     <list default="true" id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/sq_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/sq_config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Applicant.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Applicant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/logs/log-2022-01-24.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-01-24.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/edit_applicant.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/edit_applicant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/list_post_specialty.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/list_post_specialty.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/new_applicant.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/new_applicant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/resume_report.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/resume_report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/view_report.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/view_report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/122xx_1642748669.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/23012022_010300.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/23012022_011918.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/3021_24012022_005327.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/3041_24012022_005718.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/3333_24012022_023225.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/BORRAR1_24012022_044831.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/XXXX1_23012022_093342.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/ZZZZV_23012022_102018.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/ZZZZV_23012022_102133.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/ZZZZV_23012022_173949.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/ZZZZV_23012022_174024.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/ZZZZV_23012022_174059.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/ZZZZ_23012022_093937.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/ZZZZ_23012022_094150.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/_1642951124.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/_1642951143.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/_1642951200.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/users/xxx_1642736935.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +55,10 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/application/models/User_model.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/application/views/new_applicant.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
   </component>
   <component name="PhpDebugGeneral" xdebug_debug_port="9003" listening_started="true">
     <xdebug_debug_ports port="9003" />
@@ -111,6 +144,9 @@
       <workItem from="1642945778493" duration="17553000" />
       <workItem from="1642977995743" duration="9223000" />
       <workItem from="1643013567981" duration="1006000" />
+      <workItem from="1645058478909" duration="12017000" />
+      <workItem from="1645301490275" duration="3692000" />
+      <workItem from="1645413687817" duration="125000" />
     </task>
     <servers />
   </component>
@@ -273,9 +309,9 @@
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/controllers/Applicant.php</url>
-          <line>87</line>
-          <option name="timeStamp" value="51" />
+          <url>file://$PROJECT_DIR$/application/models/User_model.php</url>
+          <line>360</line>
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

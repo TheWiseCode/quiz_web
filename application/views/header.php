@@ -129,6 +129,14 @@
 
     <script>
         var base_url = "<?php echo base_url();?>";
+
+        function verifyBiometric() {
+            <?php
+            $uid = $this->session->userdata('logged_in')['uid'];
+            ?>
+            let uid = '<?php echo $uid?>';
+            window.open('testus:' + uid + ',' + '0');
+        }
     </script>
 
 
@@ -260,7 +268,12 @@ $hres = $hquery->result_Array();
                                 <a class="nav-link collapse-item"
                                    href="<?php echo site_url('user/get_users'); ?>"><?php echo $this->lang->line('reports'); ?></a>
                                 <a class="nav-link collapse-item"
-                                   href="<?php echo site_url('user/get_users_resume'); ?>"><?php echo $this->lang->line('specialty_list'); ?></a>
+                                   href="<?php echo site_url('user/get_users_resume'); ?>"><?php echo $this->lang->line('specialty_list'); ?>
+                                </a>
+                                <a class="nav-link collapse-item"
+                                   title="Verificar postulante" href="#"
+                                   onclick="verifyBiometric()"
+                                ><?php echo 'Verificar Postulante'; ?></a>
                             <?php } ?>
                         </div>
                     </div>

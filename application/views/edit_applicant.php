@@ -1,3 +1,6 @@
+<?php
+$uuid = $this->session->userdata('logged_in')['uid'];
+?>
 <div class="container">
     <h3 class="font-weight-bold"><?php echo $title; ?></h3>
     <div class="row">
@@ -13,7 +16,7 @@
                         }
                         ?>
                         <div class="row">
-                            <div class="col col-md-9">
+                            <div class="col col-md-7">
                                 <div class="form-group">
                                     <label for="code_student"
                                            class="font-weight-bold"><?php echo $this->lang->line('cod_cd'); ?></label>
@@ -49,17 +52,32 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col col-md-3">
-                                <label for="profile">&ensp;</label>
-                                <div class="form-group">
-                                    <div class="picture-container float-right" id="profile">
-                                        <img src="<?php echo base_url($result['photo']); ?>"
-                                             class="img-profile rounded rounded-1 border border-dark"
-                                             style="width: 130px; height: 130px"
-                                             id="wizardPicturePreview" title="Imagen de Perfil"
-                                             onclick="openLoaderProfile()">
-                                        <input type="file" id="wizard_picture" name="wizard_picture"
-                                               accept="image/*" hidden>
+                            <div class="col col-md-5">
+                                <label for="biometric_data"
+                                       class="font-weight-bold"><?php echo $this->lang->line('biometric_data') ?></label>
+                                <div class="row rounded" id="biometric_data">
+                                    <div class="col col-md-6">
+                                        <div class="picture-container float-right" id="profile">
+                                            <img src="<?php echo base_url($result['photo']); ?>"
+                                                 class="img-profile rounded rounded-1 border border-dark"
+                                                 style="width: 120px; height: 120px"
+                                                 id="wizardPicturePreview" title="Imagen de Perfil"
+                                                 onclick="openLoaderProfile()">
+                                            <input type="file" id="wizard_picture" name="wizard_picture"
+                                                   accept="image/*" hidden>
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-6">
+                                        <div class="font-weight-bold">
+                                            <div class="fingerprint">
+                                                <a href="#" id="huella" onclick="launchBiometricReader()">
+                                                    <img src="<?php echo base_url('images/huella.png') ?>"
+                                                         class="img-fluid border border-dark rounded rounded-1"
+                                                         title="Huella"
+                                                         style="width: 120px; height: 120px;">
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -101,12 +119,12 @@
                             <select class="form-control" name="gender" id="gender" tabindex="7"
                                     placeholder="<?php echo $this->lang->line('gender'); ?>">
                                 <?php
-                                $genders = $this->lang->line('gender');
+                                $genders = $this->lang->line('genders');
                                 foreach ($genders as $it) {
                                     echo "<option value='$it'";
-                                    if ($result['gender'] == $it)
+                                    if ($result['sexo'] == $it)
                                         echo selected;
-                                    echo ">$it</option>";
+                                    echo " >$it</option>";
                                 }
                                 ?>
                             </select>
@@ -199,6 +217,14 @@
                         }
                         ?>
                         <div class="form-group">
+                            <label for="nro_boleta"
+                                   class="font-weight-bold"><?php echo $this->lang->line('nro_boleta'); ?></label>
+                            <input type="text" name="nro_boleta" id="nro_boleta" class="form-control" value="<?php
+                            echo $result['nro_boleta'];
+                            ?>" tabindex="14"
+                                   placeholder="<?php echo $this->lang->line('nro_boleta'); ?>" autofocus required>
+                        </div>
+                        <div class="form-group">
                             <label for="inputEmail"
                                    class="font-weight-bold"><?php echo $this->lang->line('email_address'); ?></label>
                             <input type="email" id="inputEmail" name="email" value="<?php echo $result['email']; ?>"
@@ -284,6 +310,17 @@
 
     function openLoaderProfile() {
         $('#wizard_picture').click();
+    }
+
+    function launchBiometricReader() {
+        let code = document.getElementsByName("code_student")[0].value;
+        let uid = '<?php echo $uuid?>';
+        if (code === undefined || code === '') {
+            alert('Registre el codigo de postulante');
+        } else {
+            alert('testus:' + code + ',' + uid + ',' + '1');
+            window.open('testus:' + code + ',' + uid + ',' + '1');
+        }
     }
 </script>
 

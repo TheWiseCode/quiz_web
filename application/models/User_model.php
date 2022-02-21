@@ -324,6 +324,7 @@ class User_model extends CI_Model
 
     function num_users()
     {
+        $this->db->where('savsoft_users.su =', 2);
         $query = $this->db->get('savsoft_users');
         return $query->num_rows();
     }
@@ -340,7 +341,7 @@ class User_model extends CI_Model
         $this->db->distinct();
         $this->db->select('status');
         $this->db->from('postulantes_fingerprints');
-        $this->db->where('postulante_code = ', $cod_cd);
+        $this->db->where('postulante_code=', $cod_cd);
         $query = $this->db->get();
         return $query->num_rows() > 0 ? $query->result_array()[0] : ['status' => ''];
     }
@@ -352,6 +353,29 @@ class User_model extends CI_Model
             'status' => $status
         ];
         return $this->db->update('postulantes_fingerprints', $userdata);
+    }
+
+    function clear_and_update_fingerprint($cod_cd)
+    {
+        try {
+            $this->db->where('postulante_code', $cod_cd);
+            $this->db->where('status', 'processed');
+            $userdata = [
+                'status' => 'inactive'
+            ];
+            $res = $this->db->update('postulantes_fingerprints', $userdata);
+
+
+            $this->db->where('postulante_code', $cod_cd);
+            $this->db->where('status', 'pending');
+            $userdata = [
+                'status' => 'processed'
+            ];
+            $res = $this->db->update('postulantes_fingerprints', $userdata);
+        }catch (Exception $e){
+            return false;
+        }
+        return $res;
     }
 
     function user_list($limit)
@@ -583,6 +607,7 @@ class User_model extends CI_Model
             'nationality' => $this->input->post('nationality'),
             'id_university' => $id_uni,
             'id_speciality' => $id_spe,
+            'nro_boleta' => $this->input->post('nro_boleta'),
         ];
         if ($logged_in['uid'] != '1') {
             $userdata['inserted_by'] = $logged_in['uid'];
@@ -804,12 +829,14 @@ class User_model extends CI_Model
             'nationality' => $this->input->post('nationality'),
             'id_university' => $this->input->post('university'),
             'id_speciality' => $this->input->post('specialties'),
+            'nro_boleta' => $this->input->post('nro_boleta'),
         ];
         if($data_photo){
             $userdata['photo'] = $data_photo;
         }
         $this->db->where('uid', $uid);
         if ($this->db->update('savsoft_users', $userdata)) {
+            $res = $this->clear_and_update_fingerprint($this->input->post('code_student'));
             $this->db->where('uid', $uid);
             $this->db->delete('savsoft_users_custom');
             foreach ($_POST['custom'] as $ck => $cv) {
@@ -1100,7 +1127,7 @@ class User_model extends CI_Model
     function obtener_query(){
 
 
-        $query= 'SELECT c.name specialties, a.last_name , a.first_name, a.cod_student,a.ci,a.nationality,a.contact_no, b.name university, a.email ,a.registered_date 
+        $query= 'SELECT c.name specialties, a.last_name , a.first_name, a.cod_student,a.ci,a.nationality,a.contact_no, b.name university, a.email ,a.registered_date, a.nro_boleta
         FROM savsoft_users AS a 
         INNER JOIN university AS b ON b.id = a.id_university
         INNER JOIN specialties AS c ON c.id = a.id_speciality ORDER BY c.name,a.last_name ASC';

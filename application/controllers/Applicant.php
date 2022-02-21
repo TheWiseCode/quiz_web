@@ -71,7 +71,7 @@ class Applicant extends CI_Controller
             usort($data['nationalities'], function ($it1, $it2) {
                 return $it1 > $it2;
             });
-            $data['nationalities'] = array_merge(['BOLIVANO(A)'], $data['nationalities']);
+            $data['nationalities'] = array_merge(['BOLIVIANO(A)'], $data['nationalities']);
             $this->load->view('header', $data);
             $this->load->view('new_applicant', $data);
             $this->load->view('footer', $data);
@@ -175,7 +175,7 @@ class Applicant extends CI_Controller
         usort($data['nationalities'], function ($it1, $it2) {
             return $it1 > $it2;
         });
-        $data['nationalities'] = array_merge(['BOLIVANO(A)'], $data['nationalities']);
+        $data['nationalities'] = array_merge(['BOLIVIANO(A)'], $data['nationalities']);
         $data['group_list'] = $this->user_model->group_list();
         $data['account_type'] = $this->account_model->account_list(0);
         $this->load->view('header', $data);

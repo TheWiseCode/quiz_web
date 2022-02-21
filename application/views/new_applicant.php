@@ -120,12 +120,12 @@ $uid = $this->session->userdata('logged_in')['uid'];
                             <select class="form-control" name="gender" id="gender" tabindex="7"
                                     placeholder="<?php echo $this->lang->line('gender'); ?>">
                                 <?php
-                                $genders = $this->lang->line('gender');
+                                $genders = $this->lang->line('genders');
                                 foreach ($genders as $it) {
                                     echo "<option value='$it'";
                                     if ($gender == $it)
                                         echo selected;
-                                    echo ">$it</option>";
+                                    echo " >$it</option>";
                                 }
                                 ?>
                             </select>
@@ -249,6 +249,14 @@ $uid = $this->session->userdata('logged_in')['uid'];
                                 }
                                 ?>
                             </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nro_boleta"
+                                class="font-weight-bold"><?php echo $this->lang->line('nro_boleta'); ?></label>
+                                    <input type="text" name="nro_boleta" id="nro_boleta" class="form-control" value="<?php
+                                        echo $nro_boleta;
+                                    ?>" tabindex="14"
+                                           placeholder="<?php echo $this->lang->line('nro_boleta'); ?>" autofocus required>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail"

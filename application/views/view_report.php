@@ -21,6 +21,8 @@
                 <th>Número de contacto</th>
                 <th>Correo</th>
                 <th>Fecha de inscripción</th>
+                <th>Nro pago de inscripción</th>
+              
                 </thead>
                 <tbody>
 
@@ -36,6 +38,8 @@
                         <td><?php echo $val['contact_no']; ?></td>
                         <td><?php echo $val['email']; ?></td>
                         <td><?php echo $val['registered_date']; ?></td>
+                        <td><?php echo $val['nro_boleta']; ?></td>
+                        
                     </tr>
                     <?php
                 }
@@ -53,6 +57,7 @@
                     <th>Número de contacto</th>
                     <th>Correo</th>
                     <th>Fecha de inscripción</th>
+                    <th>Nro pago de inscripción</th>
                 </tr>
                 </tfoot>
             </table>
@@ -112,5 +117,5 @@
         });
         table.buttons().container()
             .appendTo($('.col-md-6:eq(0)', table.table().container()));
-    });
+        });
 </script>

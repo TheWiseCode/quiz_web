@@ -1,0 +1,174 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2022-01-29 09:48:33 --> Severity: Warning --> Division by zero C:\xampp\htdocs\cridai_quiz\application\views\dashboard.php 198
+ERROR - 2022-01-29 09:51:41 --> Severity: Warning --> Division by zero C:\xampp\htdocs\cridai_quiz\application\views\dashboard.php 198
+ERROR - 2022-01-29 09:59:11 --> Severity: Warning --> Division by zero C:\xampp\htdocs\cridai_quiz\application\views\dashboard.php 198
+ERROR - 2022-01-29 09:59:32 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\cridai_quiz\application\models\User_model.php 597
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\table_cell_frame_reflower.cls.php 103
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 138
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 139
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\inline_renderer.cls.php 109
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:39 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\dompdf.cls.php 722
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\dompdf.cls.php 742
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\stylesheet.cls.php 1103
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\text_renderer.cls.php 126
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 09:59:40 --> Severity: Warning --> A non-numeric value encountered C:\xampp\htdocs\cridai_quiz\application\libraries\dompdf\include\style.cls.php 1280
+ERROR - 2022-01-29 10:00:39 --> Severity: Warning --> Division by zero C:\xampp\htdocs\cridai_quiz\application\views\dashboard.php 198
+ERROR - 2022-01-29 10:02:45 --> Severity: Warning --> Division by zero C:\xampp\htdocs\cridai_quiz\application\views\dashboard.php 198
