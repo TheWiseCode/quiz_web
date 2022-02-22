@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dcdc9ad-a976-41af-a3fd-28dcf892e14e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/report_quiz.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/sq_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/sq_config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/es_BO/basic_lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/logs/log-2022-02-20.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2022-02-20.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +120,8 @@
       <workItem from="1645301490275" duration="3692000" />
       <workItem from="1645413687817" duration="125000" />
       <workItem from="1645413843130" duration="371000" />
-      <workItem from="1645414234966" duration="290000" />
+      <workItem from="1645414234966" duration="467000" />
+      <workItem from="1645481238583" duration="3079000" />
     </task>
     <servers />
   </component>
@@ -287,7 +285,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/models/User_model.php</url>
-          <line>360</line>
+          <line>361</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>

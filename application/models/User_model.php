@@ -325,6 +325,7 @@ class User_model extends CI_Model
     function num_users()
     {
         $this->db->where('savsoft_users.su =', 2);
+        $this->db->where('savsoft_users.user_status =', 'active');
         $query = $this->db->get('savsoft_users');
         return $query->num_rows();
     }

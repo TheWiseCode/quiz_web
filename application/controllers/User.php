@@ -917,6 +917,7 @@ class User extends CI_Controller
         $query = 'SELECT su.uid, su.cod_student, CONCAT(su.first_name," ",su.last_name) full_name, su.registered_date fecha_r
         FROM savsoft_users su 
         inner join specialties as e on e.id=su.id_speciality and e.id=' . $uid . '
+        WHERE su.user_status = "active"
         ORDER by su.first_name ASC';
         $resultados = $this->db->query($query);
         $data['result'] = $resultados->result_array();
